@@ -22,4 +22,11 @@ html{
 
 body{
   cursor: default;
+  overflow: hidden;
+}
+
+.content{
+  opacity: 0;
+  transition: $transition*3;
+  transition-delay: $transition*4;
 }

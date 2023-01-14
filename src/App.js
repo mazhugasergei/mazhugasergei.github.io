@@ -26,22 +26,12 @@ const App = () => {
   }, [lang])
 
   useEffect(()=>{
-    // hide loader
-    if(document.readyState === "complete") hideLoader()
+    if(document.readyState === "complete") onLoad()
     else{
-      window.addEventListener("load", hideLoader)
-      return () => window.removeEventListener("load", hideLoader)
+      window.addEventListener("load", onLoad)
+      return () => window.removeEventListener("load", onLoad)
     }
   }, [])
-
-  const hideLoader = () => {
-    const loader = document.querySelector('.loader')
-    setTimeout(()=>{
-      loader.style.transition = ".5s"
-      loader.style.opacity = 0
-      loader.style.pointerEvents = "none"
-    }, 200)
-  }
 
   // observer
   const observer = new IntersectionObserver(entries => {
@@ -49,19 +39,42 @@ const App = () => {
       if(entry.isIntersecting) entry.target.classList.remove('toAnimate')
     })
   })
-  // elements to observe
-  document.querySelectorAll('.toAnimate').forEach(item => observer.observe(item))
+
+  const onLoad = () => {
+    const loader = document.querySelector('.loader')
+    loader.querySelector('path').style.strokeDasharray = "100 100"
+    setTimeout(()=>{
+      // hide loader
+      loader.style.opacity = 0
+      loader.style.pointerEvents = "none"
+      document.body.style.overflow = "unset"
+      document.querySelector('.content').style.opacity = 1
+      // elements to observe
+      document.querySelectorAll('.toAnimate').forEach(item => observer.observe(item))
+    }, 750)
+  }
 
   return (
     <>
-      <div className="loader"/>
-      <Header header={text && text.header} />
-      <main className="wrapper">
-        <Hero hero={text && text.hero} />
-        <About about={text && text.about} />
-        <Works works={text && text.works} />
-      </main>
-      <Footer footer={ text && text.footer } />
+      <div className="loader">
+        <svg viewBox="0 0 36 36">
+          <path
+            stroke-dasharray="30, 100"
+            d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+          />
+        </svg>
+      </div>
+      <div className="content">
+        <Header header={text && text.header} />
+        <main className="wrapper">
+          <Hero hero={text && text.hero} />
+          <About about={text && text.about} />
+          <Works works={text && text.works} />
+        </main>
+        <Footer footer={ text && text.footer } />
+      </div>
     </>
   )
 }
