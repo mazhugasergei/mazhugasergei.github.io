@@ -7,7 +7,8 @@
   },
   "hero": {
     "heading": "Hi, I'm Sergei!",
-    "paragraph": "A front-end web developer from Vladivostok. Though I'm still a student, it can't stop me from chasing my dream of being a professional web developer."
+    "paragraph": "A front-end web developer from Vladivostok. Though I'm still a student, it can't stop me from chasing my dream of being a professional web developer.",
+    "contact": "Contact"
   },
   "about": {
     "heading": "Where it all starts",
@@ -25,6 +26,11 @@
         "url": "markuswedler.github.io/optic-shop",
         "title": "Optic Shop",
         "paragraph": "A small colorful home page of an optician's web shop."
+      },
+      "kbooks": {
+        "url": "ashot2003.github.io/kbooks/",
+        "title": "KBooks",
+        "paragraph": "A collection of books written by my friend."
       }
     }
   },
