@@ -1,8 +1,22 @@
-@import "./variables/imports";
-@import "./ui/imports";
-@import "./layout/imports";
-@import "./components/imports";
-@import "./sections/imports";
+//
+@import "./variables/wrapper";
+@import "./variables/colors";
+@import "./variables/animations";
+//
+@import "./ui/fonts";
+@import "./ui/typography";
+@import "./ui/logo";
+@import "./ui/list";
+//
+@import "./layout/wrapper";
+//
+@import "./components/loader";
+@import "./components/header";
+@import "./components/footer";
+//
+@import "./sections/hero";
+@import "./sections/about";
+@import "./sections/works";
 
 *{
   padding: 0;
