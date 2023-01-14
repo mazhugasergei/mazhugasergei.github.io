@@ -2,7 +2,7 @@ import { useEffect } from "react"
 
 const About = ({ about }) => {
   const skillsNames = ["HTML & CSS", "JavaScript", "React & Next.js", "Git & GitHub"]
-  const skillsPercentages = [97, 98, 64, 76]
+  const skillsPercentages = [97, 98, 72, 76]
 
   useEffect(()=>{
     const header = document.querySelector('header')
