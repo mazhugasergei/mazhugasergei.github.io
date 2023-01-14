@@ -39,6 +39,7 @@
         position: fixed;
         top: calc(48px + .5rem);
         right: 1.5rem;
+        transform-origin: top right;
       }
       @media (min-width: 769px){
         display: flex;
@@ -71,6 +72,7 @@
     input:checked ~ ul{
       visibility: visible;
       opacity: 1;
+      animation: $transition list;
     }
   
 

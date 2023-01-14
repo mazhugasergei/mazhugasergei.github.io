@@ -10,6 +10,29 @@
   }
 }
 
+@-webkit-keyframes list {
+  0% {
+    transform: scale(0.98);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes list {
+  0% {
+    transform: scale(0.98);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 body {
   font-family: "Inter", "Noto Sans JP", sans-serif;
 }
@@ -144,13 +167,13 @@ header .logo {
   header ul {
     background: #242424;
     border-radius: 0.32rem;
-    transition: 0.15s;
     padding: 0.25rem 0.75rem;
     visibility: hidden;
     opacity: 0;
     position: fixed;
     top: calc(48px + 0.5rem);
     right: 1.5rem;
+    transform-origin: top right;
   }
   header ul li:not(:last-child) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -202,6 +225,8 @@ header ul li {
 header input:checked ~ ul {
   visibility: visible;
   opacity: 1;
+  -webkit-animation: 0.15s list;
+          animation: 0.15s list;
 }
 header label {
   cursor: pointer;
@@ -265,14 +290,18 @@ footer .languages input[type=checkbox]:focus ~ label {
 footer .languages input[type=checkbox]:checked ~ .list {
   opacity: 1;
   visibility: visible;
-  transform: unset;
-  transition: 0.15s;
+  -webkit-animation: 0.15s list;
+          animation: 0.15s list;
 }
 footer .languages input[type=checkbox]:checked ~ label {
   background: #F7F7F7;
 }
 footer .languages label {
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -297,10 +326,9 @@ footer .languages label img {
     background-color: canvasText;
   }
 }
-footer .languages ul {
+footer .languages .list {
   background: #242424;
   border-radius: 0.32rem;
-  transition: 0.15s;
   padding: 0.25rem 0.75rem;
   opacity: 0;
   visibility: hidden;
@@ -308,35 +336,34 @@ footer .languages ul {
   bottom: 100%;
   left: 10%;
   transform-origin: left bottom;
-  transform: scale(0.98);
   transition: 0s;
   padding: 0.25rem 0.75rem;
 }
-footer .languages ul li:not(:last-child) {
+footer .languages .list li:not(:last-child) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 @media (forced-colors) {
-  footer .languages ul {
+  footer .languages .list {
     outline: 1px solid transparent;
   }
 }
-footer .languages ul li {
+footer .languages .list li {
   cursor: pointer;
   color: #fff;
   padding: 0.85rem 1rem 0.85rem 0.5rem;
 }
-footer .languages ul li {
+footer .languages .list li {
   padding: 0.6rem 2rem 0.6rem 0.5rem;
 }
-footer .languages ul li div {
+footer .languages .list li div {
   pointer-events: none;
   white-space: nowrap;
   line-height: 1.4;
 }
-footer .languages ul li div:nth-child(1) {
+footer .languages .list li div:nth-child(1) {
   font-weight: 600;
 }
-footer .languages ul li div:nth-child(2) {
+footer .languages .list li div:nth-child(2) {
   color: gray;
 }
 footer .links {
@@ -641,7 +668,7 @@ section.works .works a {
   transition: 0.15s;
 }
 section.works .works a:hover {
-  transform: scale(1.1);
+  transform: scale(1.075);
   box-shadow: 0 0 30px rgba(170, 170, 170, 0.5);
 }
 section.works .works a .img {

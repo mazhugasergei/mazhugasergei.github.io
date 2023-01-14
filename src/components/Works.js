@@ -20,11 +20,6 @@ const Works = ({ works }) => {
             <p>{ works.cards[name].paragraph }</p>
           </a>
         ))}
-        <a href="https://markuswedler.github.io/test" target="_blank">
-          <div className="img"/>
-          <h3>Лабораторные</h3>
-          <p></p>
-        </a>
       </div>
     </section>
   )
