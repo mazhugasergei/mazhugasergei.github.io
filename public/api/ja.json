@@ -26,6 +26,11 @@
         "url": "markuswedler.github.io/optic-shop",
         "title": "Optic Shop",
         "paragraph": "オプティックショップのメインページ。"
+      },
+      "kbooks": {
+        "url": "ashot2003.github.io/kbooks/",
+        "title": "KBooks",
+        "paragraph": "友人が書いた本のコレクション。"
       }
     }
   },
