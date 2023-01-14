@@ -15,7 +15,7 @@ const About = ({ about }) => {
   return (
     <section className="about" id="about">
       <div className="container">
-        <div>
+        <div className="story">
           <img src="/images/directions.svg"/>
           <h2>{ about && about.heading }</h2>
           <p>{ about && about.paragraph }</p>
