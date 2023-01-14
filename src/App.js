@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Header from "./components/layout/Header"
 import Footer from "./components/layout/Footer"
 // components
+import Loader from "./components/layout/Loader"
 import Hero from "./components/Hero"
 import About from "./components/About"
 import Works from "./components/Works"
@@ -56,16 +57,7 @@ const App = () => {
 
   return (
     <>
-      <div className="loader">
-        <svg viewBox="0 0 36 36">
-          <path
-            stroke-dasharray="30, 100"
-            d="M18 2.0845
-              a 15.9155 15.9155 0 0 1 0 31.831
-              a 15.9155 15.9155 0 0 1 0 -31.831"
-          />
-        </svg>
-      </div>
+      <Loader/>
       <div className="content">
         <Header header={text && text.header} />
         <main className="wrapper">

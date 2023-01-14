@@ -22,6 +22,11 @@
       stroke: $main;
       stroke-width: 2;
       transition: $transition*4;
+      @keyframes loaderAppearance{
+        from{ opacity: 0; }
+        to{ opacity: 1; }
+      }
+      animation: $transition*2 loaderAppearance;
     }
   }
 }
