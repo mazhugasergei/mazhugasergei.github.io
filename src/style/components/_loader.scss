@@ -22,11 +22,12 @@
       stroke: $main;
       stroke-width: 2;
       transition: $transition*4;
+      stroke-dasharray: 30 100;
       @keyframes loaderAppearance{
-        from{ opacity: 0; }
-        to{ opacity: 1; }
+        from{ stroke-dasharray: 0 100; }
+        to{ stroke-dasharray: 30 100; }
       }
-      animation: $transition*2 loaderAppearance;
+      animation: $transition*5 loaderAppearance forwards;
     }
   }
 }

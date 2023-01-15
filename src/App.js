@@ -42,8 +42,10 @@ const App = () => {
   })
 
   const onLoad = () => {
+    // complete loader circle
     const loader = document.querySelector('.loader')
-    loader.querySelector('path').style.strokeDasharray = "100 100"
+    loader.querySelector('path').style.animation = "none"
+    setTimeout(()=>{ loader.querySelector('path').style.strokeDasharray = "100, 100" })
     setTimeout(()=>{
       // hide loader
       loader.style.opacity = 0
