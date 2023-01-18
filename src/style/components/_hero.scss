@@ -8,6 +8,9 @@ section.hero{
   }
   
   .pfp{
+    @media (max-width: 426px){
+      background-size: 85%;
+    }
     @media (max-width: 769px){
       max-width: 20rem;
       margin: 0 auto 2rem;

@@ -408,6 +408,11 @@ section.hero .pfp {
   position: relative;
   z-index: -1;
 }
+@media (max-width: 426px) {
+  section.hero .pfp {
+    background-size: 85%;
+  }
+}
 @media (max-width: 769px) {
   section.hero .pfp {
     max-width: 20rem;
