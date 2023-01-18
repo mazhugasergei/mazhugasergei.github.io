@@ -15,7 +15,6 @@
     "paragraph": "Als Kind bin ich mit Legos aufgewachsen. Eines Tages habe ich gemerkt, dass Web-Entwicklung im grunde gleich funktioniert. Man erschafft etwas aus verschiedenen Bausteinen und nach und nach nimmt es Gestalt an. Wie auch beim Lego bauen funktioniert Web-Entwicklung einfach besser in einem Team und macht natürlich auch mehr spaß!"
   },
   "works": {
-    "title": "Meine Arbeiten",
     "cards": {
       "amv-theatres": {
         "url": "amvtheatres.vercel.app",

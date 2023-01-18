@@ -15,7 +15,6 @@
     "paragraph": "幼少からレゴで遊ぶのが好きだった私は。ある日突然Web開発の世界に入り。さまざまな形から何かを生み出すということは、ただそれだけでなくもっと複雑だということを理解しました。"
   },
   "works": {
-    "title": "作品",
     "cards": {
       "amv-theatres": {
         "url": "amvtheatres.vercel.app",
