@@ -7,7 +7,6 @@ const About = ({ about }) => {
   useEffect(()=>{
     const header = document.querySelector('header')
     const section = document.querySelector('section#about')
-    const animated = document.querySelectorAll('section#about .animate')
     // set link stop
     section.style.scrollMargin = header.offsetHeight + 40 + "px"
   }, [])
