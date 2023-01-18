@@ -683,8 +683,8 @@ section.works .works a {
   transition: 0.15s;
 }
 section.works .works a:hover {
-  transform: scale(1.075);
-  box-shadow: 0 0 30px rgba(170, 170, 170, 0.5);
+  transform: scale(1.035);
+  box-shadow: 0 0 35px rgba(202, 202, 202, 0.3);
 }
 section.works .works a .img {
   width: 5rem;
