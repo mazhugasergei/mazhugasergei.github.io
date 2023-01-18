@@ -11,7 +11,6 @@ const Works = ({ works }) => {
 
   return (
     <section className="works" id="works">
-      <h2 className="title">{ works && works.title }</h2>
       <div className="works">{
         works && Object.keys(works.cards).map(name => (
           <a href={ "https://" + works.cards[name].url } target="_blank" key={name}>
