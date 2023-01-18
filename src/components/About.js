@@ -19,19 +19,22 @@ const About = ({ about }) => {
           <h2>{ about && about.heading }</h2>
           <p>{ about && about.paragraph }</p>
         </div>
-        <ul className="skills toAnimate">
-          {
-            skillsNames.map((skill, i) => (
-              <li key={i}>
-                <h4>{ skill }</h4>
-                <span className="percentage" style={{ left: skillsPercentages[i] + "%", transitionDelay: .03 * i + "s" }}>{ skillsPercentages[i] + "%" }</span>
-                <div className="progress-bar">
-                  <div className="progress" style={{ width: skillsPercentages[i] + "%", transitionDelay: .03 * i + "s" }} />
-                </div>
-              </li>
-            ))
-          }
-        </ul>
+        <div className="cont">
+          <h2>My skills</h2>
+          <ul className="skills toAnimate">
+            {
+              skillsNames.map((skill, i) => (
+                <li key={i}>
+                  <h4>{ skill }</h4>
+                  <span className="percentage" style={{ left: skillsPercentages[i] + "%", transitionDelay: .03 * i + "s" }}>{ skillsPercentages[i] + "%" }</span>
+                  <div className="progress-bar">
+                    <div className="progress" style={{ width: skillsPercentages[i] + "%", transitionDelay: .03 * i + "s" }} />
+                  </div>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
     </section>
   )

@@ -48,7 +48,6 @@ section.about{
   }
 
   .skills{
-    @media (max-width: 769px){ padding-top: 2.5rem; }
     display: grid;
     gap: 1.25rem;
     &.toAnimate{

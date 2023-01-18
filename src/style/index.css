@@ -604,11 +604,6 @@ section.about .skills {
   display: grid;
   gap: 1.25rem;
 }
-@media (max-width: 769px) {
-  section.about .skills {
-    padding-top: 2.5rem;
-  }
-}
 section.about .skills.toAnimate .percentage {
   left: 0 !important;
 }
