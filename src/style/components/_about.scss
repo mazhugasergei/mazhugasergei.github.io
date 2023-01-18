@@ -52,7 +52,7 @@ section.about{
       position: relative;
       .percentage{
         position: absolute;
-        bottom: 0.8125rem;
+        bottom: 15px;
         transform: translateX(-50%);
         font-size: .7rem;
         color: #fff;
@@ -65,7 +65,7 @@ section.about{
           bottom: 0;
           left: 50%;
           transform: translate(-50%, 100%);
-          border: 0.1875rem solid transparent;
+          border: 3px solid transparent;
           border-top-color: $main;
           @media (forced-colors){
             border-color: canvas;
@@ -78,7 +78,7 @@ section.about{
       }
       .progress-bar{
         position: relative;
-        height: 10px;
+        height: 12px;
         background: lighten($main, 80);
         border-radius: 100vmax;
         margin-top: .375rem;

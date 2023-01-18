@@ -1,8 +1,8 @@
 import { useEffect } from "react"
 
 const About = ({ about }) => {
-  const skillsNames = ["HTML & CSS", "JavaScript", "React & Next.js", "Git & GitHub"]
-  const skillsPercentages = [97, 98, 72, 76]
+  const skillsNames = ["HTML & CSS", "React & Next.js", "Git & GitHub"]
+  const skillsPercentages = [98, 72, 76]
 
   useEffect(()=>{
     const header = document.querySelector('header')
