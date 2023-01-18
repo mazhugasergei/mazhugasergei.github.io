@@ -76,15 +76,6 @@ p {
   margin-right: auto;
 }
 
-main.wrapper {
-  padding-top: 4.5rem;
-}
-@media (min-width: 769px) {
-  main.wrapper {
-    padding-top: 0 !important;
-  }
-}
-
 .loader {
   position: fixed;
   z-index: 1000;
@@ -546,6 +537,11 @@ section.hero .arrow-down img {
   width: 2rem;
 }
 
+@media (max-width: 426px) {
+  section.about {
+    padding: 0;
+  }
+}
 @media (max-width: 769px) {
   section.about {
     margin-top: 4rem;
@@ -553,12 +549,13 @@ section.hero .arrow-down img {
 }
 section.about .container {
   background: #F7F7F7;
-  border-radius: 3rem;
-  padding: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 @media (min-width: 426px) {
   section.about .container {
-    padding: 4rem;
+    border-radius: 3.5rem;
+    padding: 3.5rem;
   }
 }
 @media (min-width: 769px) {
@@ -567,6 +564,11 @@ section.about .container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 0 2rem;
+    padding: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  section.about .container {
     padding: 4rem 5rem;
   }
 }
@@ -721,14 +723,20 @@ input:focus-visible + label {
 html {
   scroll-behavior: smooth;
 }
-
-body {
+html body {
   cursor: default;
   overflow: hidden;
 }
-
-.content {
+html body .content {
   opacity: 0;
   transition: 0.45s;
   transition-delay: 0.6s;
+}
+html body .content main {
+  padding-top: 4.5rem;
+}
+@media (min-width: 769px) {
+  html body .content main {
+    padding-top: 0 !important;
+  }
 }/*# sourceMappingURL=index.css.map */

@@ -62,7 +62,7 @@ const App = () => {
       <Loader/>
       <div className="content">
         <Header header={text && text.header} />
-        <main className="wrapper">
+        <main>
           <Hero hero={text && text.hero} />
           <About about={text && text.about} />
           <Works works={text && text.works} />

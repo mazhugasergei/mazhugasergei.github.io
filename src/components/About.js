@@ -13,8 +13,8 @@ const About = ({ about }) => {
   }, [])
 
   return (
-    <section className="about" id="about">
-      <div className="container">
+    <section className="about wrapper" id="about">
+      <div className="container wrapper">
         <div className="story">
           <img src="/images/thinking.svg"/>
           <h2>{ about && about.heading }</h2>

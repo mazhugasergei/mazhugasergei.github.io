@@ -32,15 +32,17 @@ input:focus-visible + label{
 
 html{
   scroll-behavior: smooth;
-}
-
-body{
-  cursor: default;
-  overflow: hidden;
-}
-
-.content{
-  opacity: 0;
-  transition: $transition*3;
-  transition-delay: $transition*4;
+  body{
+    cursor: default;
+    overflow: hidden;
+    .content{
+      opacity: 0;
+      transition: $transition*3;
+      transition-delay: $transition*4;
+      main{
+        padding-top: 4.5rem;
+        @media (min-width: 769px){ padding-top: 0 !important; }
+      }
+    }
+  }
 }

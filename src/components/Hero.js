@@ -20,7 +20,7 @@ const Hero = ({ hero }) => {
   }, [])
 
   return (
-    <section className="hero">
+    <section className="hero wrapper">
       <div className="pfp" style={{ backgroundImage: "url('/images/pfp.svg')" }}/>
       <div className="container">
         <h2>{ hero && hero.heading }</h2>
