@@ -21,7 +21,7 @@ const Hero = ({ hero }) => {
 
   return (
     <section className="hero">
-      <div className="pfp" style={{ backgroundImage: "url('/images/pfp.jpg')" }}/>
+      <div className="pfp" style={{ backgroundImage: "url('/images/pfp.svg')" }}/>
       <div className="container">
         <h2>{ hero && hero.heading }</h2>
         <p>{ hero && hero.paragraph }</p>

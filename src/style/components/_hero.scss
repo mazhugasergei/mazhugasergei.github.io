@@ -1,7 +1,8 @@
 section.hero{
   @media (min-width: 769px){
     height: 100vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 0 2rem;
   }
@@ -9,19 +10,17 @@ section.hero{
   .pfp{
     @media (max-width: 769px){
       max-width: 20rem;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 2rem;
+      margin: 0 auto 2rem;
     }
     @media (min-width: 769px){
-      max-width: 38rem;
+      max-width: 30rem;
+      justify-self: center;
     }
     width: 100%;
     aspect-ratio: 1/1;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    filter: grayscale(100%) brightness(135%);
     position: relative;
     z-index: -1;
   }

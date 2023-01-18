@@ -79,7 +79,7 @@ section.about{
       .progress-bar{
         position: relative;
         height: 12px;
-        background: lighten($main, 80);
+        background: rgb(#000, .03);
         border-radius: 100vmax;
         margin-top: .375rem;
         .progress{
