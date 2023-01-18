@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 :root {
@@ -427,6 +428,9 @@ section.hero .pfp {
     max-width: 30rem;
     justify-self: center;
   }
+}
+section.hero h2 {
+  font-family: "Roboto Mono", monospace;
 }
 section.hero p {
   padding: 0.25rem 0 0.68rem;
