@@ -16,7 +16,7 @@ const About = ({ about }) => {
     <section className="about" id="about">
       <div className="container">
         <div className="story">
-          <img src="/images/directions.svg"/>
+          <img src="/images/thinking.svg"/>
           <h2>{ about && about.heading }</h2>
           <p>{ about && about.paragraph }</p>
         </div>
