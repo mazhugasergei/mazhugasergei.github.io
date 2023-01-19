@@ -591,11 +591,6 @@ section.about img {
   display: block;
   width: 6rem;
 }
-@media (forced-colors) {
-  section.about img {
-    background: canvasText;
-  }
-}
 section.about h2 {
   margin-top: 1.2rem;
   margin-bottom: 0.75rem;
