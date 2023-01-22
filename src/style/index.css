@@ -711,7 +711,7 @@ section.works .works a {
   transition: 0.15s;
 }
 section.works .works a:hover {
-  transform: scale(1.035);
+  transform: scale(1.03);
   box-shadow: 0 0 40px rgba(202, 202, 202, 0.15);
 }
 section.works .works a img {
