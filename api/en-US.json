@@ -11,10 +11,15 @@
     "contact": "Contact"
   },
   "about": {
+    "title": "About me",
+    "subtitle": "My story and skills",
     "heading": "Where it all starts",
-    "paragraph": "As a kid I grew up with Lego. One day I realized that web development basically works the same way. You create something out of different building blocks and little by little it takes shape. Just like building Lego, Web Development simply works better in a team and is of course more fun!"
+    "paragraph": "As a kid I grew up with Lego. One day I realized that web development basically works the same way. You create something out of different building blocks and little by little it takes shape. Just like building Lego, Web Development simply works better in a team and is of course more fun!",
+    "skills": "My Skills"
   },
   "works": {
+    "title": "My Works",
+    "subtitle": "Most recent works",
     "cards": {
       "amv-theatres": {
         "url": "amvtheatres.vercel.app",
