@@ -71,7 +71,7 @@ h1 {
 }
 
 h5 {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 @media (min-width: 769px) {
   h5 {
@@ -166,6 +166,11 @@ header {
   position: fixed;
   top: 0;
 }
+@media (max-width: 426px) {
+  header {
+    padding: 0 !important;
+  }
+}
 @media (min-width: 769px) {
   header {
     left: 50%;
@@ -177,6 +182,11 @@ header > .wrapper {
   align-items: center;
   border-bottom: 0.0625rem solid transparent;
   transition: 0.15s;
+}
+@media (max-width: 426px) {
+  header > .wrapper {
+    padding: 0.5rem var(--wrapper-padding) !important;
+  }
 }
 @media (max-width: 769px) {
   header > .wrapper {
@@ -324,7 +334,7 @@ footer .languages input[type=checkbox]:checked ~ .list {
           animation: 0.15s list;
 }
 footer .languages input[type=checkbox]:checked ~ label {
-  background: #F7F7F7;
+  background: rgba(0, 0, 0, 0.027);
 }
 footer .languages label {
   cursor: pointer;
@@ -340,7 +350,7 @@ footer .languages label {
   margin-left: -0.8rem;
 }
 footer .languages label:hover {
-  background: #F7F7F7;
+  background: rgba(0, 0, 0, 0.027);
 }
 footer .languages label ion-icon {
   --ionicon-stroke-width: 2.7rem;
@@ -696,28 +706,20 @@ section.works .works a {
   display: flex;
   flex-flow: column;
   background: #fff;
-  border-radius: 2rem;
-  padding: 2rem;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
   transition: 0.15s;
 }
 section.works .works a:hover {
   transform: scale(1.035);
   box-shadow: 0 0 40px rgba(202, 202, 202, 0.15);
 }
-section.works .works a .img {
-  width: 5rem;
-  aspect-ratio: 1/1;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-bottom: auto;
+section.works .works a img {
+  width: 100%;
+  border-radius: 0.5rem;
 }
-@media (forced-colors) {
-  section.works .works a .img {
-    background-color: canvasText;
-  }
-}
-section.works .works a p {
-  margin-top: 0.75rem;
+section.works .works a h3 {
+  padding: 1rem 0 0.3rem;
 }
 
 * {
@@ -734,11 +736,11 @@ input:focus-visible + label {
 
 html {
   scroll-behavior: smooth;
+  background: #fafafa;
 }
 html body {
   cursor: default;
   overflow: hidden;
-  background: #fafafa;
 }
 html body .content {
   opacity: 0;

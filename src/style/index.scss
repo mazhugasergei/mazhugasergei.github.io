@@ -32,10 +32,10 @@ input:focus-visible + label{
 
 html{
   scroll-behavior: smooth;
+  background: #fafafa;
   body{
     cursor: default;
     overflow: hidden;
-    background: #fafafa;
     .content{
       opacity: 0;
       transition: $transition*3;

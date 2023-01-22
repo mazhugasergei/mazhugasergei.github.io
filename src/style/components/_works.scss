@@ -12,25 +12,19 @@ section.works{
       flex-flow: column;
       background: #fff;
       // border: .0625rem solid rgb(#000, .1);
-      border-radius: 2rem;
-      padding: 2rem;
+      border-radius: 1.25rem;
+      padding: 1.25rem;
       transition: $transition;
       &:hover{
         transform: scale(1.035);
         box-shadow: 0 0 40px rgb(#cacaca, .15);
       }
-      .img{
-        width: 5rem;
-        aspect-ratio: 1/1;
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-bottom: auto;
-        @media (forced-colors){
-          background-color: canvasText;
-        }
+      img{
+        width: 100%;
+        border-radius: .5rem;
       }
-      p{
-        margin-top: .75rem;
+      h3{
+        padding: 1rem 0 .3rem;
       }
     }
   }

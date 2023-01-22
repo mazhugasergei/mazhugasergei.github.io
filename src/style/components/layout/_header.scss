@@ -1,4 +1,7 @@
   header{
+    @media (max-width: 426px){
+      padding: 0 !important;
+    }
     @media (min-width: 769px){
       left: 50%;
       transform: translateX(-50%);
@@ -10,6 +13,9 @@
     top: 0;
     
     & > .wrapper{
+    @media (max-width: 426px){
+      padding: .5rem var(--wrapper-padding) !important;
+    }
       @media (max-width: 769px){
         padding: .5rem 0;
       }

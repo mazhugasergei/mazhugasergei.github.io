@@ -26,7 +26,7 @@ footer{
           animation: $transition list;
         }
         ~ label{
-          background: #F7F7F7;
+          background: rgb(#000, .027);
         }
       }
     }
@@ -41,7 +41,7 @@ footer{
       padding: .6rem .8rem;
       margin-left: -0.8rem;
       &:hover{
-        background: $light;
+        background: rgb(#000, .027);
       }
       ion-icon{
         --ionicon-stroke-width: 2.7rem;
