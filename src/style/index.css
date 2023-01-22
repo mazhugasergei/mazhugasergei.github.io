@@ -596,6 +596,7 @@ section.about .container {
   }
 }
 section.about .container h1 {
+  font-size: 1.875rem;
   margin-top: 1.2rem;
   margin-bottom: 0.75rem;
 }
@@ -608,20 +609,23 @@ section.about img {
   display: block;
   width: 6rem;
 }
-section.about .skills {
+section.about .cont h1 {
+  margin-bottom: 1rem;
+}
+section.about .cont .skills {
   display: grid;
   gap: 1.25rem;
 }
-section.about .skills.toAnimate .percentage {
+section.about .cont .skills.toAnimate .percentage {
   left: 0 !important;
 }
-section.about .skills.toAnimate .progress {
+section.about .cont .skills.toAnimate .progress {
   width: 0 !important;
 }
-section.about .skills li {
+section.about .cont .skills li {
   position: relative;
 }
-section.about .skills li .percentage {
+section.about .cont .skills li .percentage {
   position: absolute;
   bottom: 15px;
   transform: translateX(-50%);
@@ -631,7 +635,7 @@ section.about .skills li .percentage {
   border-radius: 0.3rem;
   padding: 0.5rem;
 }
-section.about .skills li .percentage::after {
+section.about .cont .skills li .percentage::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -641,40 +645,40 @@ section.about .skills li .percentage::after {
   border-top-color: #2F2E41;
 }
 @media (forced-colors) {
-  section.about .skills li .percentage::after {
+  section.about .cont .skills li .percentage::after {
     border-color: canvas;
     border-top-color: canvasText;
   }
 }
 @media (forced-colors) {
-  section.about .skills li .percentage {
+  section.about .cont .skills li .percentage {
     background: canvasText;
   }
 }
-section.about .skills li .progress-bar {
+section.about .cont .skills li .progress-bar {
   position: relative;
   height: 12px;
   background: rgba(0, 0, 0, 0.03);
   border-radius: 100vmax;
   margin-top: 0.375rem;
 }
-section.about .skills li .progress-bar .progress {
+section.about .cont .skills li .progress-bar .progress {
   background: #2F2E41;
   border-top-left-radius: 100vmax;
   border-bottom-left-radius: 100vmax;
   height: 100%;
 }
 @media (forced-colors) {
-  section.about .skills li .progress-bar .progress {
+  section.about .cont .skills li .progress-bar .progress {
     background: canvasText;
   }
 }
 @media (prefers-reduced-motion) {
-  section.about .skills li .percentage, section.about .skills li .progress {
+  section.about .cont .skills li .percentage, section.about .cont .skills li .progress {
     transition: 0;
   }
 }
-section.about .skills li .percentage, section.about .skills li .progress {
+section.about .cont .skills li .percentage, section.about .cont .skills li .progress {
   transition: 0.3s;
 }
 

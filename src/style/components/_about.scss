@@ -26,6 +26,7 @@ section.about{
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
     h1{
+      font-size: 1.875rem;
       margin-top: 1.2rem;
       margin-bottom: .75rem;
     }
@@ -38,63 +39,68 @@ section.about{
     width: 6rem;
   }
 
-  .skills{
-    display: grid;
-    gap: 1.25rem;
-    &.toAnimate{
-      .percentage{ left: 0 !important; }
-      .progress{ width: 0 !important; }
+  .cont{
+    h1{
+      margin-bottom: 1rem;
     }
-    li{
-      position: relative;
-      .percentage{
-        position: absolute;
-        bottom: 15px;
-        transform: translateX(-50%);
-        font-size: .7rem;
-        color: #fff;
-        background: $main;
-        border-radius: .3rem;
-        padding: .5rem;
-        &::after{
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translate(-50%, 100%);
-          border: 3px solid transparent;
-          border-top-color: $main;
-          @media (forced-colors){
-            border-color: canvas;
-            border-top-color: canvasText;
-          }
-        }
-        @media (forced-colors){
-          background: canvasText;
-        }
+    .skills{
+      display: grid;
+      gap: 1.25rem;
+      &.toAnimate{
+        .percentage{ left: 0 !important; }
+        .progress{ width: 0 !important; }
       }
-      .progress-bar{
+      li{
         position: relative;
-        height: 12px;
-        background: rgb(#000, .03);
-        border-radius: 100vmax;
-        margin-top: .375rem;
-        .progress{
+        .percentage{
+          position: absolute;
+          bottom: 15px;
+          transform: translateX(-50%);
+          font-size: .7rem;
+          color: #fff;
           background: $main;
-          border-top-left-radius: 100vmax;
-          border-bottom-left-radius: 100vmax;
-          height: 100%;
+          border-radius: .3rem;
+          padding: .5rem;
+          &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 100%);
+            border: 3px solid transparent;
+            border-top-color: $main;
+            @media (forced-colors){
+              border-color: canvas;
+              border-top-color: canvasText;
+            }
+          }
           @media (forced-colors){
             background: canvasText;
           }
         }
+        .progress-bar{
+          position: relative;
+          height: 12px;
+          background: rgb(#000, .03);
+          border-radius: 100vmax;
+          margin-top: .375rem;
+          .progress{
+            background: $main;
+            border-top-left-radius: 100vmax;
+            border-bottom-left-radius: 100vmax;
+            height: 100%;
+            @media (forced-colors){
+              background: canvasText;
+            }
+          }
+        }
+        // transitions turned off
+        @media(prefers-reduced-motion){
+          .percentage, .progress{ transition: 0; }
+        }
+        // observer animation
+        .percentage, .progress{ transition: $transition*2; }
       }
-      // transitions turned off
-      @media(prefers-reduced-motion){
-        .percentage, .progress{ transition: 0; }
-      }
-      // observer animation
-      .percentage, .progress{ transition: $transition*2; }
     }
   }
 }

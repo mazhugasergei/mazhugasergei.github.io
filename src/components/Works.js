@@ -11,7 +11,7 @@ const Works = ({ works }) => {
 
   return (
     <section className="works wrapper" id="works">
-    <div className="title"><h1>My Works</h1><h5>Most recent works</h5></div>
+    <div className="title"><h1>{ works && works.title }</h1><h5>{ works && works.subtitle }</h5></div>
       <div className="works">{
         works && Object.keys(works.cards).map(name => (
           <a href={ "https://" + works.cards[name].url } target="_blank" key={name}>

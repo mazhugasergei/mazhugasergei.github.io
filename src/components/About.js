@@ -13,7 +13,7 @@ const About = ({ about }) => {
 
   return (
     <section className="about wrapper" id="about">
-      <div className="title"><h1>About Me</h1><h5>My story and skills</h5></div>
+      <div className="title"><h1>{ about && about.title }</h1><h5>{ about && about.subtitle }</h5></div>
       <div className="container wrapper">
         <div className="story">
           <img src="/images/thinking.svg"/>
@@ -21,7 +21,7 @@ const About = ({ about }) => {
           <p>{ about && about.paragraph }</p>
         </div>
         <div className="cont">
-          <h1>My skills</h1>
+          <h1>{ about && about.skills }</h1>
           <ul className="skills toAnimate">
             {
               skillsNames.map((skill, i) => (
