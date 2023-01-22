@@ -47,13 +47,36 @@ a {
   color: #2F2E41;
 }
 
+.title {
+  text-align: center;
+  padding: 7rem 0;
+}
+.title h5 {
+  color: #aaa;
+  font-weight: 500;
+}
+
 .logo, h1, h2, h3, h4, h5, h6 {
   font-family: "Rubik", sans-serif;
   color: #2F2E41;
 }
 
-h2 {
+h1 {
   font-size: 1.875rem;
+}
+@media (min-width: 769px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h5 {
+  font-size: 0.75rem;
+}
+@media (min-width: 769px) {
+  h5 {
+    font-size: 1rem;
+  }
 }
 
 p {
@@ -425,7 +448,7 @@ section.hero .pfp {
     justify-self: center;
   }
 }
-section.hero h2 {
+section.hero h1 {
   font-family: "Roboto Mono", monospace;
 }
 section.hero p {
@@ -435,7 +458,7 @@ section.hero .btn {
   overflow: hidden;
   display: inline-flex;
   position: relative;
-  border-radius: 100vmax;
+  border-radius: 0.75rem;
   background: #2F2E41;
   color: #fff;
   font-weight: 500;
@@ -492,7 +515,7 @@ section.hero .btn .hover-cont {
   left: 100%;
   height: 100%;
   width: 100%;
-  border-radius: 100vmax;
+  border-radius: 0.75rem;
   background: #45435f;
   transition: 0.15s;
 }
@@ -549,7 +572,6 @@ section.hero .arrow-down img {
 }
 section.about .container {
   background: #fff;
-  border: 0.0625rem solid rgba(0, 0, 0, 0.1);
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
 }
@@ -573,6 +595,10 @@ section.about .container {
     padding: 4rem 5rem;
   }
 }
+section.about .container h1 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.75rem;
+}
 section.about img {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -581,10 +607,6 @@ section.about img {
   pointer-events: none;
   display: block;
   width: 6rem;
-}
-section.about h2 {
-  margin-top: 1.2rem;
-  margin-bottom: 0.75rem;
 }
 section.about .skills {
   display: grid;
@@ -659,7 +681,7 @@ section.about .skills li .percentage, section.about .skills li .progress {
 section.works .works {
   display: grid;
   gap: 2.25rem;
-  padding: 5rem 0;
+  padding-bottom: 5rem;
 }
 @media (min-width: 426px) {
   section.works .works {
@@ -670,14 +692,13 @@ section.works .works a {
   display: flex;
   flex-flow: column;
   background: #fff;
-  border: 0.0625rem solid rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
   padding: 2rem;
   transition: 0.15s;
 }
 section.works .works a:hover {
   transform: scale(1.035);
-  box-shadow: 0 0 35px rgba(202, 202, 202, 0.2);
+  box-shadow: 0 0 40px rgba(202, 202, 202, 0.15);
 }
 section.works .works a .img {
   width: 5rem;

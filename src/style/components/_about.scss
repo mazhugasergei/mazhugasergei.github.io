@@ -22,9 +22,13 @@ section.about{
       padding: 4rem 5rem;
     }
     background: #fff;
-    border: .0625rem solid rgb(#000, .1);
+    // border: .0625rem solid rgb(#000, .1);
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
+    h1{
+      margin-top: 1.2rem;
+      margin-bottom: .75rem;
+    }
   }
 
   img{
@@ -32,11 +36,6 @@ section.about{
     pointer-events: none;
     display: block;
     width: 6rem;
-  }
-
-  h2{
-    margin-top: 1.2rem;
-    margin-bottom: .75rem;
   }
 
   .skills{

@@ -8,19 +8,20 @@ const About = ({ about }) => {
     const header = document.querySelector('header')
     const section = document.querySelector('section#about')
     // set link stop
-    section.style.scrollMargin = header.offsetHeight + 40 + "px"
+    section.style.scrollMargin = header.offsetHeight + "px"
   }, [])
 
   return (
     <section className="about wrapper" id="about">
+      <div className="title"><h1>About Me</h1><h5>My story and skills</h5></div>
       <div className="container wrapper">
         <div className="story">
           <img src="/images/thinking.svg"/>
-          <h2>{ about && about.heading }</h2>
+          <h1>{ about && about.heading }</h1>
           <p>{ about && about.paragraph }</p>
         </div>
         <div className="cont">
-          <h2>My skills</h2>
+          <h1>My skills</h1>
           <ul className="skills toAnimate">
             {
               skillsNames.map((skill, i) => (

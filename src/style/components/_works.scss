@@ -5,19 +5,19 @@ section.works{
     }
     display: grid;
     gap: 2.25rem;
-    padding: 5rem 0;
+    padding-bottom: 5rem;
     
     a{
       display: flex;
       flex-flow: column;
       background: #fff;
-      border: .0625rem solid rgb(#000, .1);
+      // border: .0625rem solid rgb(#000, .1);
       border-radius: 2rem;
       padding: 2rem;
       transition: $transition;
       &:hover{
         transform: scale(1.035);
-        box-shadow: 0 0 35px rgb(#cacaca, .2);
+        box-shadow: 0 0 40px rgb(#cacaca, .15);
       }
       .img{
         width: 5rem;
