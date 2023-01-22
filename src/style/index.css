@@ -196,7 +196,7 @@ header .logo {
 }
 @media (max-width: 769px) {
   header ul {
-    background: #242424;
+    background: #202020;
     border-radius: 0.32rem;
     padding: 0.25rem 0.75rem;
     visibility: hidden;
@@ -357,7 +357,7 @@ footer .languages label img {
   }
 }
 footer .languages .list {
-  background: #242424;
+  background: #202020;
   border-radius: 0.32rem;
   padding: 0.25rem 0.75rem;
   opacity: 0;
