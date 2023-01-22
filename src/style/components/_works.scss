@@ -10,13 +10,14 @@ section.works{
     a{
       display: flex;
       flex-flow: column;
-      border: .0625rem solid #ccc;
+      background: #fff;
+      border: .0625rem solid rgb(#000, .1);
       border-radius: 2rem;
       padding: 2rem;
       transition: $transition;
       &:hover{
         transform: scale(1.035);
-        box-shadow: 0 0 35px rgb(#cacaca, .3);
+        box-shadow: 0 0 35px rgb(#cacaca, .2);
       }
       .img{
         width: 5rem;

@@ -139,7 +139,7 @@ p {
 header {
   position: relative;
   z-index: 999;
-  background: #fff;
+  background: #fafafa;
   position: fixed;
   top: 0;
 }
@@ -547,13 +547,9 @@ section.hero .arrow-down img {
     padding: 0;
   }
 }
-@media (max-width: 769px) {
-  section.about {
-    margin-top: 4rem;
-  }
-}
 section.about .container {
-  background: #F7F7F7;
+  background: #fff;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.1);
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
 }
@@ -575,11 +571,6 @@ section.about .container {
 @media (min-width: 1024px) {
   section.about .container {
     padding: 4rem 5rem;
-  }
-}
-@media (min-width: 769px) {
-  section.about .title {
-    grid-column: 3/1;
   }
 }
 section.about img {
@@ -678,14 +669,15 @@ section.works .works {
 section.works .works a {
   display: flex;
   flex-flow: column;
-  border: 0.0625rem solid #ccc;
+  background: #fff;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
   padding: 2rem;
   transition: 0.15s;
 }
 section.works .works a:hover {
   transform: scale(1.035);
-  box-shadow: 0 0 35px rgba(202, 202, 202, 0.3);
+  box-shadow: 0 0 35px rgba(202, 202, 202, 0.2);
 }
 section.works .works a .img {
   width: 5rem;
@@ -721,6 +713,7 @@ html {
 html body {
   cursor: default;
   overflow: hidden;
+  background: #fafafa;
 }
 html body .content {
   opacity: 0;

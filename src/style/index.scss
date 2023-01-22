@@ -35,6 +35,7 @@ html{
   body{
     cursor: default;
     overflow: hidden;
+    background: #fafafa;
     .content{
       opacity: 0;
       transition: $transition*3;
