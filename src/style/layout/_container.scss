@@ -1,0 +1,14 @@
+.container{
+  @media (min-width: 426px){
+    border-radius: 3.5rem;
+    padding: 3.5rem;
+  }
+  @media (min-width: 769px){
+    padding: 4rem;
+  }
+  @media (min-width: 1024px){
+    padding: 4rem 5rem;
+  }
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}

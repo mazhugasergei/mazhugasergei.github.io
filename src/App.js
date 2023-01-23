@@ -8,6 +8,7 @@ import Loader from "./components/layout/Loader"
 import Hero from "./components/Hero"
 import About from "./components/About"
 import Works from "./components/Works"
+import Contact from "./components/Contact"
 
 
 const App = () => {
@@ -66,6 +67,7 @@ const App = () => {
           <Hero hero={text && text.hero} />
           <About about={text && text.about} />
           <Works works={text && text.works} />
+          {/* <Contact/> */}
         </main>
         <Footer footer={ text && text.footer } />
       </div>

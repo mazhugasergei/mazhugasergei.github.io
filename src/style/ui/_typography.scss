@@ -1,4 +1,4 @@
-body{
+body, textarea, button{
   font-family: "Inter", "Noto Sans JP", sans-serif;
 }
 
@@ -37,5 +37,12 @@ h5{
 
 p{
   color: $text;
+}
+
+p, input, textarea{
+  font-size: 1rem;
   line-height: 1.625;
+}
+input, textarea{
+  font-size: 1rem;
 }

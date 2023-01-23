@@ -83,19 +83,4 @@ footer{
       }
     }
   }
-
-  .links{
-    display: flex;
-    gap: 1rem;
-    a{
-      display: flex;
-      align-items: center;
-      @media (forced-colors){
-        background-color: canvasText;
-      }
-    }
-    img{
-      width: 1rem;
-    }
-  }
 }

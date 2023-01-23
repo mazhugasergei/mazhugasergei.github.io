@@ -2,29 +2,18 @@ section.about{
   @media (max-width: 426px){
     padding: 0;
   }
-  @media (max-width: 769px){
-    // margin-top: 4rem;
-  }
 
   .container{
-    @media (min-width: 426px){
-      border-radius: 3.5rem;
-      padding: 3.5rem;
-    }
     @media (min-width: 769px){
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
       gap: 0 2rem;
-      padding: 4rem;
     }
     @media (min-width: 1024px){
       padding: 4rem 5rem;
     }
     background: #fff;
-    // border: .0625rem solid rgb(#000, .1);
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
     h1{
       font-size: 1.875rem;
       margin-top: 1.2rem;

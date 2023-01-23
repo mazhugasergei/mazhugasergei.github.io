@@ -7,8 +7,10 @@
 @import "./ui/typography";
 @import "./ui/logo";
 @import "./ui/list";
+@import "./ui/btn";
 //
 @import "./layout/wrapper";
+@import "./layout/container";
 //
 @import "./components/layout/loader";
 @import "./components/layout/header";
@@ -17,6 +19,7 @@
 @import "./components/hero";
 @import "./components/about";
 @import "./components/works";
+@import "./components/contact";
 
 *{
   padding: 0;
@@ -32,7 +35,7 @@ input:focus-visible + label{
 
 html{
   scroll-behavior: smooth;
-  background: #fafafa;
+  background: $bg;
   body{
     cursor: default;
     overflow: hidden;

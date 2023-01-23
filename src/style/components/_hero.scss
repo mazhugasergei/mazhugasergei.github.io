@@ -40,14 +40,7 @@ section.hero{
     overflow: hidden;
     display: inline-flex;
     position: relative;
-    border-radius: .75rem;
-    background: $main;
-    color: #fff;
-    font-weight: 500;
-    transition: $transition;
-    @media (forced-colors){
-      outline: 1px solid transparent;
-    }
+    padding: 0;
     &:hover{
       .text{
         transform: translateX(-2rem);

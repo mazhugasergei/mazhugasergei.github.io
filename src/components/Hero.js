@@ -22,7 +22,7 @@ const Hero = ({ hero }) => {
   return (
     <section className="hero wrapper">
       <div className="pfp" style={{ backgroundImage: "url('/images/pfp.svg')" }}/>
-      <div className="container">
+      <div className="cont">
         <h1>{ hero && hero.heading }</h1>
         <p>{ hero && hero.paragraph }</p>
         <a href="mailto:ghbdtnghbdtn8@gmail.com" className="btn">

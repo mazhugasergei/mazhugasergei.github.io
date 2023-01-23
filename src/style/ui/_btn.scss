@@ -1,0 +1,14 @@
+.btn{
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: .75rem;
+  background: $main;
+  border: none;
+  transition: $transition;
+  padding: .95rem 1.25rem;
+  @media (forced-colors){
+    outline: 1px solid transparent;
+  }
+}
