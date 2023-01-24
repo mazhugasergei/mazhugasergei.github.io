@@ -70,7 +70,7 @@ const App = () => {
           <Hero hero={text && text.hero} />
           <About about={text && text.about} />
           <Works works={text && text.works} />
-          <Contact/>
+          {/* <Contact/> */}
         </main>
         <Footer footer={ text && text.footer } />
       </div>

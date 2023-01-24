@@ -452,6 +452,23 @@ footer .languages .list li div:nth-child(1) {
 footer .languages .list li div:nth-child(2) {
   color: gray;
 }
+footer .links {
+  display: flex;
+  gap: 0.8rem;
+}
+footer .links a {
+  display: flex;
+  align-items: center;
+}
+@media (forced-colors) {
+  footer .links a {
+    background-color: canvasText;
+  }
+}
+footer .links img {
+  width: 1rem;
+  filter: invert(1);
+}
 
 @media (min-width: 769px) {
   section.hero {
