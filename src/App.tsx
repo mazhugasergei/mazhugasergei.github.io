@@ -1,5 +1,5 @@
 // react
-import { useEffect, useState } from "react"
+import { useLayoutEffect, useEffect, useState } from "react"
 // layout components
 import Header from "./components/layout/Header"
 import Footer from "./components/layout/Footer"
@@ -22,7 +22,7 @@ const App = () => {
   else if(navigator.language == "ru") lang = "ru"
   else lang = "en-US"
   // get text
-  useEffect(()=>{
+  useLayoutEffect(()=>{
     fetch('/api/' + lang + '.json')
       .then(res => { return res.json() })
       .then(data => setText(data))
