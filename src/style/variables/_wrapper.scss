@@ -1,0 +1,4 @@
+:root{
+  --wrapper-padding: 24px;
+  @media (min-width: 1025px){ --wrapper-padding: 60px; }
+}

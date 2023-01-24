@@ -1,0 +1,30 @@
+section.works{
+  .works{
+    @media (min-width: 426px){
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    }
+    display: grid;
+    gap: 2.25rem;
+    margin-bottom: 5rem;
+    a{
+      display: flex;
+      flex-flow: column;
+      background: #fff;
+      // border: .0625rem solid rgb(#000, .1);
+      border-radius: 1.25rem;
+      padding: 1.25rem;
+      transition: $transition;
+      &:hover{
+        transform: scale(1.03);
+        box-shadow: 0 0 40px rgb(#cacaca, .15);
+      }
+      img{
+        width: 100%;
+        border-radius: .5rem;
+      }
+      h3{
+        padding: 1rem 0 .3rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+//
+@import "./variables/wrapper";
+@import "./variables/colors";
+@import "./variables/animations";
+//
+@import "./ui/fonts";
+@import "./ui/typography";
+@import "./ui/logo";
+@import "./ui/list";
+@import "./ui/btn";
+//
+@import "./layout/wrapper";
+@import "./layout/container";
+//
+@import "./components/layout/loader";
+@import "./components/layout/header";
+@import "./components/layout/footer";
+//
+@import "./components/hero";
+@import "./components/about";
+@import "./components/works";
+@import "./components/contact";
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus-visible,
+input:focus-visible + label{
+  outline: .125rem solid $main;
+  outline-offset: .125rem;
+}
+
+html{
+  scroll-behavior: smooth;
+  background: $bg;
+  body{
+    cursor: default;
+    overflow: hidden;
+    .content{
+      opacity: 0;
+      transition: $transition*3;
+      transition-delay: $transition*4;
+      main{
+        padding-top: 4.5rem;
+        @media (min-width: 769px){ padding-top: 0 !important; }
+      }
+    }
+  }
+}

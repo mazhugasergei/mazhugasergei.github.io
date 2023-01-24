@@ -1,0 +1,44 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "works": "Works",
+    "contact": "Contact"
+  },
+  "hero": {
+    "heading": "Hi, I'm Sergei!",
+    "paragraph": "A front-end web developer from Vladivostok. Though I'm still a student, it can't stop me from chasing my dream of being a professional web developer.",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "My story and skills",
+    "heading": "Where it all starts",
+    "paragraph": "As a kid I grew up with Lego. One day I realized that web development basically works the same way. You create something out of different building blocks and little by little it takes shape. Just like building Lego, Web Development simply works better in a team and is of course more fun!",
+    "skills": "My Skills"
+  },
+  "works": {
+    "title": "My Works",
+    "subtitle": "Most recent projects",
+    "cards": {
+      "amv-theatres": {
+        "url": "amvtheatres.vercel.app",
+        "title": "AMV Theatres",
+        "paragraph": "Website of a cinema which was created as part of a university project."
+      },
+      "optic-shop": {
+        "url": "markuswedler.github.io/optic-shop",
+        "title": "Optic Shop",
+        "paragraph": "A small colorful home page of an optician's web shop."
+      },
+      "kbooks": {
+        "url": "ashot2003.github.io/kbooks/",
+        "title": "KBooks",
+        "paragraph": "A collection of books written by my friend."
+      }
+    }
+  },
+  "footer": {
+    "language": "English"
+  }
+}

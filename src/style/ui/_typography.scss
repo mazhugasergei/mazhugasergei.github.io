@@ -1,0 +1,48 @@
+body, textarea, button{
+  font-family: "Inter", "Noto Sans JP", sans-serif;
+}
+
+
+ul{
+  list-style: none;
+}
+
+
+a{
+  text-decoration: none;
+  color: $main;
+}
+
+.title{
+  text-align: center;
+  h5{
+    color: #aaa;
+    font-weight: 500;
+  }
+  padding: 7rem 0;
+}
+
+.logo, h1, h2, h3, h4, h5, h6{
+  font-family: "Rubik", sans-serif;
+  color: $main;
+}
+h1{
+  font-size: 1.875rem;
+  @media (min-width: 769px){ font-size: 2.5rem; }
+}
+h5{
+  font-size: .8rem;
+  @media (min-width: 769px){ font-size: 1rem; }
+}
+
+p{
+  color: $text;
+}
+
+p, input, textarea{
+  font-size: 1rem;
+  line-height: 1.625;
+}
+input, textarea{
+  font-size: 1rem;
+}

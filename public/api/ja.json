@@ -1,0 +1,44 @@
+{
+  "header": {
+    "home": "ホーム",
+    "about": "私について",
+    "works": "作品",
+    "contact": "お問い合わせ"
+  },
+  "hero": {
+    "heading": "どうも、セルゲイです",
+    "paragraph": "現在ウラジオストクに拠点を置いているFront-End Web開発者です。私わまだ学生ですが、プロのWeb開発者になるという夢を追いかけずにはいられないのです。その間いくつかのWebサイトを作成し、開発してきました。",
+    "contact": "お問い合わせ"
+  },
+  "about": {
+    "title": "私について",
+    "subtitle": "私のストーリーとスキル",
+    "heading": "起点",
+    "paragraph": "幼少からレゴで遊ぶのが好きだった私は。ある日突然Web開発の世界に入り。さまざまな形から何かを生み出すということは、ただそれだけでなくもっと複雑だということを理解しました。",
+    "skills": "私のスキル"
+  },
+  "works": {
+    "title": "作品",
+    "subtitle": "最近の作品",
+    "cards": {
+      "amv-theatres": {
+        "url": "amvtheatres.vercel.app",
+        "title": "AMV Theatres",
+        "paragraph": "大学の授業企画で作った映画館のサイト"
+      },
+      "optic-shop": {
+        "url": "markuswedler.github.io/optic-shop",
+        "title": "Optic Shop",
+        "paragraph": "オプティックショップのメインページ。"
+      },
+      "kbooks": {
+        "url": "ashot2003.github.io/kbooks/",
+        "title": "KBooks",
+        "paragraph": "友人が書いた本のコレクション。"
+      }
+    }
+  },
+  "footer": {
+    "language": "日本語"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "Über mich",
+    "works": "Meine Arbeiten",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "heading": "Hi, Ich bin Sergei!",
+    "paragraph": "Ich bin ein Front-End Web-Entwickler aus Wladiwostok. Obwohl ich noch Studiere, hält mich dies nicht davon ab ein professioneller Web-Entwickler zu werden.",
+    "contact": "Kontakt"
+  },
+  "about": {
+    "title": "Über mich",
+    "subtitle": "Meine Geschichte und Fähigkeiten",
+    "heading": "Wie alles begann",
+    "paragraph": "Als Kind bin ich mit Legos aufgewachsen. Eines Tages habe ich gemerkt, dass Web-Entwicklung im grunde gleich funktioniert. Man erschafft etwas aus verschiedenen Bausteinen und nach und nach nimmt es Gestalt an. Wie auch beim Lego bauen funktioniert Web-Entwicklung einfach besser in einem Team und macht natürlich auch mehr spaß!",
+    "skills": "Meine Fähigkeiten"
+  },
+  "works": {
+    "title": "Meine Arbeiten",
+    "subtitle": "Neueste Arbeiten",
+    "cards": {
+      "amv-theatres": {
+        "url": "amvtheatres.vercel.app",
+        "title": "AMV Theatres",
+        "paragraph": "Website eines Kinos welche im zuge eines Uni-Projektes erstellt wurde."
+      },
+      "optic-shop": {
+        "url": "markuswedler.github.io/optic-shop",
+        "title": "Optic Shop",
+        "paragraph": "Eine kleine bunte Startseite eines Optiker Web-Shop"
+      },
+      "kbooks": {
+        "url": "ashot2003.github.io/kbooks/",
+        "title": "KBooks",
+        "paragraph": "Eine Sammlung von Büchern, die von meinem Freund geschrieben wurden."
+      }
+    }
+  },
+  "footer": {
+    "language": "Deutsch"
+  }
+}

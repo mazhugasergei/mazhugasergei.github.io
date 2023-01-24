@@ -1,0 +1,113 @@
+  header{
+    @media (max-width: 426px){
+      padding: 0 !important;
+    }
+    @media (min-width: 769px){
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    position: relative;
+    z-index: 999;
+    background: #fafafa;
+    position: fixed;
+    top: 0;
+    
+    & > .wrapper{
+    @media (max-width: 426px){
+      padding: .5rem var(--wrapper-padding) !important;
+    }
+      @media (max-width: 769px){
+        padding: .5rem 0;
+      }
+      @media (min-width: 769px){
+        padding: .8rem 0;
+      }
+      display: flex;
+      align-items: center;
+      border-bottom: .0625rem solid transparent;
+      transition: $transition;
+    }
+
+
+    input{ display: none; }
+
+
+    .logo{
+      margin-right: auto;
+    }
+  
+
+    ul{
+      @media (max-width: 769px){
+        @include list-a;
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        top: calc(48px + .5rem);
+        right: 1.5rem;
+        transform-origin: top right;
+      }
+      @media (min-width: 769px){
+        display: flex;
+        margin-right: -0.9rem;
+      }
+      li{
+        @media (min-width: 769px){
+          border-bottom: none;
+        }
+        display: flex;
+        a{
+          @media (min-width: 769px){
+            position: relative;
+            font-weight: 500;
+            transition: $transition;
+            padding: 0 .9rem;
+            &:hover{
+              div{ background-size: 100% .12rem; }
+            }
+            div{
+              white-space: nowrap;
+              background: linear-gradient(0deg, $text, $text) no-repeat bottom left / 0 .12rem;
+              transition: $transition;
+              padding: .5rem 0;
+            }
+          }
+        }
+      }
+    }
+    input:checked ~ ul{
+      visibility: visible;
+      opacity: 1;
+      animation: $transition list;
+    }
+  
+
+    label{
+      @media (min-width: 769px){ display: none; }
+      cursor: pointer;
+      position: relative;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      margin-right: -12px;
+      &::before, &::after{
+        content: '';
+        width: 18px;
+        height: 2.4px;
+        background: $main;
+        transition: $transition;
+        @media (forced-colors){
+          background: canvasText;
+        }
+      }
+      &::before{ margin-bottom: 6px; }
+    }
+    input:checked ~ label{
+      &::before{ margin-bottom: -2px; transform: rotate(45deg); }
+      &::after{ transform: rotate(-45deg); }
+    }
+  }
