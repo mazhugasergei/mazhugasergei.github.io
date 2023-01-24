@@ -19,7 +19,7 @@
   },
   "works": {
     "title": "My Works",
-    "subtitle": "Most recent works",
+    "subtitle": "Most recent projects",
     "cards": {
       "amv-theatres": {
         "url": "amvtheatres.vercel.app",

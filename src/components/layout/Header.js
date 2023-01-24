@@ -36,7 +36,7 @@ const Header = ({ header }) => {
           <li><a href="#"><div>{ header && header.home }</div></a></li>
           <li><a href="#about"><div>{ header && header.about }</div></a></li>
           <li><a href="#works"><div>{ header && header.works }</div></a></li>
-          <li><a href="#contact"><div>{ header && header.contact }</div></a></li>
+          {/* <li><a href="#contact"><div>{ header && header.contact }</div></a></li> */}
         </ul>
         <label htmlFor="menuBtn"/>
       </div>

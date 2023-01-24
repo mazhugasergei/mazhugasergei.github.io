@@ -707,6 +707,7 @@ section.about .cont .skills li .percentage, section.about .cont .skills li .prog
 section.works .works {
   display: grid;
   gap: 2.25rem;
+  margin-bottom: 5rem;
 }
 @media (min-width: 426px) {
   section.works .works {
