@@ -53,10 +53,10 @@ const Footer = ({ footer }) => {
           </ul>
         </div>
         <div className="links">
-          <a target="_blank" href="https://www.linkedin.com/in/sergei-mazhuga-274618247/"><img src="/images/contact/links_logos/linkedin.svg"/></a>
-          <a target="_blank" href="https://github.com/markuswedler"><img src="/images/contact/links_logos/github.svg"/></a>
-          <a target="_blank" href="https://www.youtube.com/channel/UC07C6734bBfcNVL2Za8Y_-A"><img src="/images/contact/links_logos/youtube.svg"/></a>
-          <a target="_blank" href="https://dev.to/markuswedler"><img src="/images/contact/links_logos/devto.svg"/></a>
+          <a target="_blank" href="https://www.linkedin.com/in/sergei-mazhuga-274618247/"><img src="/images/links_logos/linkedin.svg"/></a>
+          <a target="_blank" href="https://github.com/markuswedler"><img src="/images/links_logos/github.svg"/></a>
+          <a target="_blank" href="https://www.youtube.com/channel/UC07C6734bBfcNVL2Za8Y_-A"><img src="/images/links_logos/youtube.svg"/></a>
+          <a target="_blank" href="https://dev.to/markuswedler"><img src="/images/links_logos/devto.svg"/></a>
         </div>
       </div>
     </footer>
