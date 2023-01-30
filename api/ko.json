@@ -1,0 +1,44 @@
+{
+  "header": {
+    "home": "홈",
+    "about": "소개",
+    "works": "작업물",
+    "contact": "연락처"
+  },
+  "hero": {
+    "heading": "안녕하세요 전 세르게이라고 합니다!",
+    "paragraph": "블라디보스토크에 있는 프론트 엔드 개발자에요. 아직 학생이긴 하지만 웹 전문 개발자가 되고 싶은 내 꿈은 무엇도 방해할 수 없어요.",
+    "contact": "연락처"
+  },
+  "about": {
+    "title": "소개",
+    "subtitle": "이야기 및 능력",
+    "heading": "모든 것의 시작점",
+    "paragraph": "전 어린 시절을 레고와 함께 보냈어요. 그러던 어느날 전 웹 개발이 레고 놀이와 똑같다는 걸 발견했죠. 서로 다른 블록을 쌓아가면서 조금씩 새로운 무언가가 모양을 갖춰나가는 거에요. 레고 놀이와 마찬가지로 웹 개발도 다른 사람들과 함께 하면 더 신나고 재밌어요!",
+    "skills": "능력"
+  },
+  "works": {
+    "title": "작업물",
+    "subtitle": "최근 프로젝트",
+    "cards": {
+      "amv-theatres": {
+        "url": "amvtheatres.vercel.app",
+        "title": "AMV Theatres",
+        "paragraph": "대학 프로젝트의 일환으로 만든 영화관 웹사이트"
+      },
+      "optic-shop": {
+        "url": "markuswedler.github.io/optic-shop",
+        "title": "Optic Shop",
+        "paragraph": "안경 제작사 웹 샵의 다채로운 작은 웹 페이지"
+      },
+      "kbooks": {
+        "url": "ashot2003.github.io/kbooks/",
+        "title": "KBooks",
+        "paragraph": "친구가 집필한 책 컬렉션"
+      }
+    }
+  },
+  "footer": {
+    "language": "한국어"
+  }
+}
