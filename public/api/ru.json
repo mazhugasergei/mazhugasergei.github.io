@@ -24,17 +24,20 @@
       "amv-theatres": {
         "url": "amvtheatres.vercel.app",
         "title": "AMV Theatres",
-        "paragraph": "Сайт кинотеатра, созданный для университетского курсового проекта."
+        "paragraph": "Сайт кинотеатра, созданный для университетского курсового проекта.",
+        "using": "Next.js SCSS Firebase"
       },
       "optic-shop": {
         "url": "markuswedler.github.io/optic-shop",
         "title": "Optic Shop",
-        "paragraph": "Небольшая красочная домашняя страница оптического интернет-магазина."
+        "paragraph": "Небольшая красочная домашняя страница оптического интернет-магазина.",
+        "using": "ReactJS SCSS"
       },
       "kbooks": {
         "url": "ashot2003.github.io/kbooks/",
         "title": "KBooks",
-        "paragraph": "Сборник книг, написанных моим другом."
+        "paragraph": "Сборник книг, написанных моим другом.",
+        "using": "ReactJS SCSS JSON"
       }
     }
   },

@@ -24,17 +24,20 @@
       "amv-theatres": {
         "url": "amvtheatres.vercel.app",
         "title": "AMV Theatres",
-        "paragraph": "大学の授業企画で作った映画館のサイト"
+        "paragraph": "大学の授業企画で作った映画館のサイト",
+        "using": "Next.js SCSS Firebase"
       },
       "optic-shop": {
         "url": "markuswedler.github.io/optic-shop",
         "title": "Optic Shop",
-        "paragraph": "オプティックショップのメインページ。"
+        "paragraph": "オプティックショップのメインページ。",
+        "using": "ReactJS SCSS"
       },
       "kbooks": {
         "url": "ashot2003.github.io/kbooks/",
         "title": "KBooks",
-        "paragraph": "友人が書いた本のコレクション。"
+        "paragraph": "友人が書いた本のコレクション。",
+        "using": "ReactJS SCSS JSON"
       }
     }
   },

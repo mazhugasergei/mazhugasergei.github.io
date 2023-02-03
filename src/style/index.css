@@ -748,7 +748,12 @@ section.works .works a img {
   border-radius: 0.5rem;
 }
 section.works .works a h3 {
-  padding: 1rem 0 0.3rem;
+  margin: 0.1rem 0 0.35rem;
+}
+section.works .works a .using {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 1rem 0 0.2rem;
 }
 
 section.contact {
