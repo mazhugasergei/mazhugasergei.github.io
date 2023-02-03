@@ -24,17 +24,20 @@
       "amv-theatres": {
         "url": "amvtheatres.vercel.app",
         "title": "AMV Theatres",
-        "paragraph": "Website of a cinema which was created as part of a university project."
+        "paragraph": "Website of a cinema which was created as part of a university project.",
+        "using": "Next.js SCSS Firebase"
       },
       "optic-shop": {
         "url": "markuswedler.github.io/optic-shop",
         "title": "Optic Shop",
-        "paragraph": "A small colorful home page of an optician's web shop."
+        "paragraph": "A small colorful home page of an optician's web shop.",
+        "using": "ReactJS SCSS"
       },
       "kbooks": {
         "url": "ashot2003.github.io/kbooks/",
         "title": "KBooks",
-        "paragraph": "A collection of books written by my friend."
+        "paragraph": "A collection of books written by my friend.",
+        "using": "ReactJS SCSS JSON"
       }
     }
   },
