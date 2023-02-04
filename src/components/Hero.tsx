@@ -2,8 +2,8 @@
 import { useEffect } from "react"
 // types
 import { heroType } from "../Types"
-// ionicons
-import IonIcon from '@reacticons/ionicons'
+// icons
+import { IoMailOutline } from "react-icons/io5"
 
 const Hero = ({ hero }: { hero: heroType | undefined }) => {
   useEffect(()=>{
@@ -33,7 +33,7 @@ const Hero = ({ hero }: { hero: heroType | undefined }) => {
         <p>{ hero && hero.paragraph }</p>
         <a href="mailto:ghbdtnghbdtn8@gmail.com" className="btn">
           <div className="text">{ hero && hero.contact }</div>
-          <div className="hover-cont"><IonIcon name="mail-outline"/></div>
+          <div className="hover-cont"><IoMailOutline style={{ fontSize: "1.15rem" }}/></div>
         </a>
       </div>
       <a href="#about" className="arrow-down"><img src="/images/arrow_down_1.svg" alt="" /></a>

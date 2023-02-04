@@ -13,6 +13,9 @@ section.works{
       border-radius: 1.25rem;
       padding: 1.25rem;
       transition: $transition;
+      @media (forced-colors){
+        outline: .0625rem solid transparent;
+      }
       &:hover{
         transform: scale(1.03);
         box-shadow: 0 0 40px rgb(#cacaca, .15);

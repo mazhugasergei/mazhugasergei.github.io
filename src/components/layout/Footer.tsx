@@ -2,8 +2,10 @@
 import { useEffect } from "react"
 // types
 import { footerType } from "../../Types"
-// ionicons
-import IonIcon from '@reacticons/ionicons'
+// icons
+import { BsGlobe } from "react-icons/bs"
+import { MdKeyboardArrowDown } from "react-icons/md"
+import { FaLinkedin, FaGithub, FaYoutube, FaDev } from "react-icons/fa"
 
 const Footer = ({ footer }: { footer: footerType | undefined }) => {
   useEffect(()=>{
@@ -40,9 +42,9 @@ const Footer = ({ footer }: { footer: footerType | undefined }) => {
         <div className="languages">
           <input type="checkbox" id="languages"/>
           <label htmlFor="languages">
-            <IonIcon name="globe-outline"/>
+            <BsGlobe />
             <span>{ footer && footer.language }</span>
-            <img src="/images/arrow_down_2.svg" />
+            <MdKeyboardArrowDown />
           </label>
           <ul className="list">
             <li className="lang" data-lang="en-US">
@@ -68,10 +70,10 @@ const Footer = ({ footer }: { footer: footerType | undefined }) => {
           </ul>
         </div>
         <div className="links">
-          <a target="_blank" href="https://www.linkedin.com/in/sergei-mazhuga-274618247/"><img src="/images/links_logos/linkedin.svg"/></a>
-          <a target="_blank" href="https://github.com/markuswedler"><img src="/images/links_logos/github.svg"/></a>
-          <a target="_blank" href="https://www.youtube.com/channel/UC07C6734bBfcNVL2Za8Y_-A"><img src="/images/links_logos/youtube.svg"/></a>
-          <a target="_blank" href="https://dev.to/markuswedler"><img src="/images/links_logos/devto.svg"/></a>
+          <a target="_blank" href="https://www.linkedin.com/in/sergei-mazhuga-274618247/"><FaLinkedin/></a>
+          <a target="_blank" href="https://github.com/markuswedler"><FaGithub/></a>
+          <a target="_blank" href="https://www.youtube.com/channel/UC07C6734bBfcNVL2Za8Y_-A"><FaYoutube/></a>
+          <a target="_blank" href="https://dev.to/markuswedler"><FaDev/></a>
         </div>
       </div>
     </footer>

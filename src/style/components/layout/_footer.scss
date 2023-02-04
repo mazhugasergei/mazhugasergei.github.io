@@ -36,24 +36,15 @@ footer{
       user-select: none;
       display: flex;
       align-items: center;
-      gap: .25rem;
       border-radius: .2rem;
       padding: .6rem .8rem;
       margin-left: -0.8rem;
       &:hover{
         background: rgb(#000, .027);
       }
-      ion-icon{
-        --ionicon-stroke-width: 2.7rem;
-      }
       span{
         font-weight: 600;
-      }
-      img{
-        width: .5rem;
-        @media (forced-colors){
-          background-color: canvasText;
-        }
+        margin: 0 .1rem 0 .33rem;
       }
     }
 
@@ -86,13 +77,11 @@ footer{
   
   .links{
     display: flex;
-    gap: .8rem;
+    gap: .4rem;
     a{
       display: flex;
       align-items: center;
-      @media (forced-colors){
-        background-color: canvasText;
-      }
+      padding: 0.2rem;
     }
     img{
       width: 1rem;

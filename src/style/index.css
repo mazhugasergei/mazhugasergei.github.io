@@ -390,7 +390,6 @@ footer .languages label {
           user-select: none;
   display: flex;
   align-items: center;
-  gap: 0.25rem;
   border-radius: 0.2rem;
   padding: 0.6rem 0.8rem;
   margin-left: -0.8rem;
@@ -398,19 +397,9 @@ footer .languages label {
 footer .languages label:hover {
   background: rgba(0, 0, 0, 0.027);
 }
-footer .languages label ion-icon {
-  --ionicon-stroke-width: 2.7rem;
-}
 footer .languages label span {
   font-weight: 600;
-}
-footer .languages label img {
-  width: 0.5rem;
-}
-@media (forced-colors) {
-  footer .languages label img {
-    background-color: canvasText;
-  }
+  margin: 0 0.1rem 0 0.33rem;
 }
 footer .languages .list {
   background: #202020;
@@ -454,16 +443,12 @@ footer .languages .list li div:nth-child(2) {
 }
 footer .links {
   display: flex;
-  gap: 0.8rem;
+  gap: 0.4rem;
 }
 footer .links a {
   display: flex;
   align-items: center;
-}
-@media (forced-colors) {
-  footer .links a {
-    background-color: canvasText;
-  }
+  padding: 0.2rem;
 }
 footer .links img {
   width: 1rem;
@@ -523,7 +508,7 @@ section.hero .btn:hover .text {
 section.hero .btn:hover .hover-cont {
   left: 0;
 }
-section.hero .btn:hover .hover-cont ion-icon {
+section.hero .btn:hover .hover-cont svg {
   transform-origin: left bottom;
   -webkit-animation: 0.3s jump ease-out;
           animation: 0.3s jump ease-out;
@@ -572,10 +557,6 @@ section.hero .btn .hover-cont {
     outline: 1px solid transparent;
     left: calc(100% + 1px);
   }
-}
-section.hero .btn .hover-cont ion-icon {
-  font-size: 1.15rem;
-  --ionicon-stroke-width: 2.5rem;
 }
 section.hero .arrow-down {
   position: absolute;
@@ -738,6 +719,11 @@ section.works .works a {
   border-radius: 1.25rem;
   padding: 1.25rem;
   transition: 0.15s;
+}
+@media (forced-colors) {
+  section.works .works a {
+    outline: 0.0625rem solid transparent;
+  }
 }
 section.works .works a:hover {
   transform: scale(1.03);

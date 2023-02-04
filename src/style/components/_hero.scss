@@ -47,7 +47,7 @@ section.hero{
       }
       .hover-cont{
         left: 0;
-        ion-icon{
+        svg{
           @keyframes jump{
             0%{
               transform: rotate(0);
@@ -83,10 +83,6 @@ section.hero{
       @media (forced-colors){
         outline: 1px solid transparent;
         left: calc(100% + 1px);
-      }
-      ion-icon{
-        font-size: 1.15rem;
-        --ionicon-stroke-width: 2.5rem;
       }
     }
   }
