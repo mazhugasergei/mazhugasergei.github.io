@@ -1,5 +1,7 @@
 // react
 import { useLayoutEffect, useEffect, useState } from "react"
+// types
+import { textType } from "./Types"
 // layout components
 import Header from "./components/layout/Header"
 import Footer from "./components/layout/Footer"
@@ -8,11 +10,10 @@ import Loader from "./components/layout/Loader"
 import Hero from "./components/Hero"
 import About from "./components/About"
 import Works from "./components/Works"
-import Contact from "./components/Contact"
-
+// import Contact from "./components/Contact"
 
 const App = () => {
-  const [text, setText] = useState<any>()
+  const [text, setText] = useState<textType>()
 
   // get localization
   let lang: string | null

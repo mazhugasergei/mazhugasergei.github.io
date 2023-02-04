@@ -1,14 +1,19 @@
+// react
 import { useEffect } from "react"
+// types
+import { aboutType } from "../Types"
 
-const About = ({ about }) => {
+const About = ({ about }: { about: aboutType | undefined }) => {
   const skillsNames = ["HTML & CSS", "React & Next.js", "Git & GitHub"]
   const skillsPercentages = [98, 72, 76]
 
   useEffect(()=>{
-    const header = document.querySelector('header')
-    const section = document.querySelector('section#about')
+    const header: HTMLElement | null = document.querySelector('header')
+    const section: HTMLElement | null = document.querySelector('section#about')
     // set link stop
-    section.style.scrollMargin = header.offsetHeight + "px"
+    if(header && section){
+      section.style.scrollMargin = header.offsetHeight + "px"
+    }
   }, [])
 
   return (

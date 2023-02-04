@@ -1,23 +1,34 @@
+// react
 import { useEffect } from "react"
+// types
+import { footerType } from "../../Types"
+// ionicons
+import IonIcon from '@reacticons/ionicons'
 
-const Footer = ({ footer }) => {
+const Footer = ({ footer }: { footer: footerType | undefined }) => {
   useEffect(()=>{
     // close language select menu on outside click
     document.addEventListener("click", (e) => {
-      const label = document.querySelector('footer .languages label')
-      const input = document.querySelector('footer .languages input')
-      if(!label.contains(e.target) && !input.contains(e.target)) input.checked = false
+      const label: HTMLLabelElement | null = document.querySelector('footer .languages label')
+      const input: HTMLInputElement | null = document.querySelector('footer .languages input')
+      if(label && input){
+        if(!label.contains(e.target as Node | null) && !input.contains(e.target as Node | null)) input.checked = false
+      }
     })
     document.addEventListener("touchstart", (e) => {
-      const label = document.querySelector('footer .languages label')
-      const input = document.querySelector('footer .languages input')
-      const list = document.querySelector('footer .languages ul')
-      if(!label.contains(e.target) && !input.contains(e.target) && !list.contains(e.target)) input.checked = false
+      const label: HTMLLabelElement | null = document.querySelector('footer .languages label')
+      const input: HTMLInputElement | null = document.querySelector('footer .languages input')
+      const list: HTMLDataListElement | null = document.querySelector('footer .languages ul')
+      if(label && input && list){
+        if(!label.contains(e.target as Node | null) && !input.contains(e.target as Node | null) && !list.contains(e.target as Node | null)) input.checked = false
+      }
     })
     // change language onclick event
     document.querySelectorAll('footer .languages .lang').forEach(lang => {
       lang.addEventListener("click", (e)=>{
-        localStorage.setItem('lang', e.target.dataset.lang)
+        const li: HTMLElement | null = e.target as HTMLElement
+        const lang: string = li?.dataset.lang as string
+        localStorage.setItem('lang', lang)
         window.location.replace('/')
       })
     })
@@ -29,7 +40,7 @@ const Footer = ({ footer }) => {
         <div className="languages">
           <input type="checkbox" id="languages"/>
           <label htmlFor="languages">
-            <ion-icon name="globe-outline"/>
+            <IonIcon name="globe-outline"/>
             <span>{ footer && footer.language }</span>
             <img src="/images/arrow_down_2.svg" />
           </label>

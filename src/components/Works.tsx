@@ -1,12 +1,14 @@
 // react
 import { useEffect } from "react"
+// types
+import { worksType } from "../Types"
 
-const Works = ({ works }) => {
+const Works = ({ works }: { works: worksType | undefined }) => {
   useEffect(()=>{
-    const header = document.querySelector('header')
-    const section = document.querySelector('section#works')
+    const header: HTMLElement | null = document.querySelector('header')
+    const section: HTMLElement | null = document.querySelector('section#works')
     // set link stop
-    section.style.scrollMargin = header.offsetHeight + "px"
+    if(header && section) section.style.scrollMargin = header.offsetHeight + "px"
   }, [])
 
   return (
