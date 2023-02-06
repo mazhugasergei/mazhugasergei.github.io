@@ -560,38 +560,39 @@ section.hero .btn .hover-cont {
 }
 section.hero .arrow-down {
   position: absolute;
-  bottom: 5%;
-  transition: 0.15s;
-  -webkit-animation: 1s arrow_down ease-in alternate infinite;
-          animation: 1s arrow_down ease-in alternate infinite;
   left: 50%;
+  bottom: 5%;
+  transform: translate(-50%, -10%);
+  transition: 0.15s;
 }
 @media (max-width: 769px) {
   section.hero .arrow-down {
     display: none;
   }
 }
-@-webkit-keyframes arrow_down {
-  from {
-    transform: translate(-50%, -10%);
-  }
-  to {
-    transform: translate(-50%, 10%);
-  }
-}
-@keyframes arrow_down {
-  from {
-    transform: translate(-50%, -10%);
-  }
-  to {
-    transform: translate(-50%, 10%);
-  }
-}
-section.hero .arrow-down ion-icon {
-  font-size: 2rem;
-}
-section.hero .arrow-down img {
+section.hero .arrow-down svg {
   width: 2rem;
+  height: 2rem;
+}
+section.hero .arrow-down svg line {
+  -webkit-animation: 1s mouseWheel ease-in alternate infinite;
+          animation: 1s mouseWheel ease-in alternate infinite;
+}
+@-webkit-keyframes mouseWheel {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(7%);
+  }
+}
+@keyframes mouseWheel {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(7%);
+  }
 }
 
 @media (max-width: 426px) {
@@ -733,13 +734,13 @@ section.works .works a img {
   width: 100%;
   border-radius: 0.5rem;
 }
-section.works .works a h3 {
-  margin: 0.1rem 0 0.35rem;
-}
 section.works .works a .using {
   font-size: 0.8rem;
   color: #888;
   margin: 1rem 0 0.2rem;
+}
+section.works .works a h3 {
+  margin: 0.1rem 0 0.35rem;
 }
 
 section.contact {

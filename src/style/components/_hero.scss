@@ -90,19 +90,24 @@ section.hero{
   .arrow-down{
     @media (max-width: 769px){ display: none; }
     position: absolute;
-    bottom: 5%;
-    transition: $transition;
-    @keyframes arrow_down{
-      from{ transform: translate(-50%, -10%); }
-      to{ transform: translate(-50%, 10%); }
-    }
-    animation: 1s arrow_down ease-in alternate infinite;
     left: 50%;
-    ion-icon{
-      font-size: 2rem;
-    }
-    img{
+    bottom: 5%;
+    transform: translate(-50%, -10%);
+    transition: $transition;
+    svg{
       width: 2rem;
+      height: 2rem;
+      line{
+        @keyframes mouseWheel{
+          0%{
+            transform: translateY(0);
+          }
+          100%{
+            transform: translateY(7%);
+          }
+        }
+        animation: 1s mouseWheel ease-in alternate infinite;
+      }
     }
   }
 }

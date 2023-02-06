@@ -4,6 +4,8 @@ import { useEffect } from "react"
 import { heroType } from "../Types"
 // icons
 import { MdOutlineMail } from "react-icons/md"
+import { FiArrowDown } from "react-icons/fi"
+import { TbMouse } from "react-icons/tb"
 
 const Hero = ({ hero }: { hero: heroType | undefined }) => {
   useEffect(()=>{
@@ -36,7 +38,7 @@ const Hero = ({ hero }: { hero: heroType | undefined }) => {
           <div className="hover-cont"><MdOutlineMail style={{ fontSize: "1.15rem" }}/></div>
         </a>
       </div>
-      <a href="#about" className="arrow-down"><img src="/images/arrow_down_1.svg" alt="" /></a>
+      <a href="#about" className="arrow-down"><TbMouse/></a>
     </section>
   )
 }
