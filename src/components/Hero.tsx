@@ -3,7 +3,7 @@ import { useEffect } from "react"
 // types
 import { heroType } from "../Types"
 // icons
-import { IoMailOutline } from "react-icons/io5"
+import { MdOutlineMail } from "react-icons/md"
 
 const Hero = ({ hero }: { hero: heroType | undefined }) => {
   useEffect(()=>{
@@ -33,7 +33,7 @@ const Hero = ({ hero }: { hero: heroType | undefined }) => {
         <p>{ hero && hero.paragraph }</p>
         <a href="mailto:ghbdtnghbdtn8@gmail.com" className="btn">
           <div className="text">{ hero && hero.contact }</div>
-          <div className="hover-cont"><IoMailOutline style={{ fontSize: "1.15rem" }}/></div>
+          <div className="hover-cont"><MdOutlineMail style={{ fontSize: "1.15rem" }}/></div>
         </a>
       </div>
       <a href="#about" className="arrow-down"><img src="/images/arrow_down_1.svg" alt="" /></a>
