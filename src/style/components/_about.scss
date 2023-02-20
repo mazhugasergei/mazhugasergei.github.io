@@ -33,63 +33,25 @@ section.about{
       margin-bottom: 1rem;
     }
     .skills{
-      display: grid;
-      gap: 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
       &.toAnimate{
-        .percentage{ left: 0 !important; }
-        .progress{ width: 0 !important; }
+        li{
+          opacity: 0;
+          transform: translateX(-1rem);
+        }
       }
       li{
-        position: relative;
-        .percentage{
-          position: absolute;
-          bottom: 15px;
-          transform: translateX(-50%);
-          font-size: .7rem;
-          color: #fff;
-          background: $main;
-          border-radius: .3rem;
-          padding: .5rem;
-          &::after{
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%, 100%);
-            border: 3px solid transparent;
-            border-top-color: $main;
-            @media (forced-colors){
-              border-color: canvas;
-              border-top-color: canvasText;
-            }
-          }
-          @media (forced-colors){
-            background: canvasText;
-          }
-        }
-        .progress-bar{
-          position: relative;
-          height: 12px;
-          background: rgb(#000, .03);
-          border-radius: 100vmax;
-          margin-top: .375rem;
-          .progress{
-            background: $main;
-            border-top-left-radius: 100vmax;
-            border-bottom-left-radius: 100vmax;
-            height: 100%;
-            @media (forced-colors){
-              background: canvasText;
-            }
-          }
-        }
-        // transitions turned off
-        @media(prefers-reduced-motion){
-          .percentage, .progress{ transition: 0; }
-        }
-        // observer animation
-        .percentage, .progress{ transition: $transition*2; }
+        background: #999DA5;
+        color: #fff;
+        font-weight: 500;
+        padding: 0.4444444444rem 0.6666666667rem;
+        border-radius: 0.3333333333rem;
+        transition: $transition;
       }
     }
   }
 }
+
+// @media(prefers-reduced-motion)

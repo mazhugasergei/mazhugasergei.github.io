@@ -4,8 +4,7 @@ import { useEffect } from "react"
 import { aboutType } from "../Types"
 
 const About = ({ about }: { about: aboutType | undefined }) => {
-  const skillsNames = ["HTML & CSS", "React & Next.js", "Git & GitHub"]
-  const skillsPercentages = [98, 72, 76]
+  const skillsNames = ["Problem solving", "JavaScript", "REST API", "TypeScript", "React", "Redux", "Next.js", "SCSS", "Git", "GitHub", "C++", "Npm", "Yarn", "Figma", "Microsoft Offce", "iWork", "Photoshop", "PremierePro", "AfterEffects"]
 
   useEffect(()=>{
     const header: HTMLElement | null = document.querySelector('header')
@@ -30,13 +29,7 @@ const About = ({ about }: { about: aboutType | undefined }) => {
           <ul className="skills toAnimate">
             {
               skillsNames.map((skill, i) => (
-                <li key={i}>
-                  <h4>{ skill }</h4>
-                  <span className="percentage" style={{ left: skillsPercentages[i] + "%", transitionDelay: .03 * i + "s" }}>{ skillsPercentages[i] + "%" }</span>
-                  <div className="progress-bar">
-                    <div className="progress" style={{ width: skillsPercentages[i] + "%", transitionDelay: .03 * i + "s" }} />
-                  </div>
-                </li>
+                <li style={{transitionDelay: 0.1 * i/3 + "s"}} key={i}>{ skill }</li>
               ))
             }
           </ul>

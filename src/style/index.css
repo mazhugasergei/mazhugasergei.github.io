@@ -11,18 +11,6 @@
   }
 }
 
-@-webkit-keyframes list {
-  0% {
-    transform: scale(0.98);
-  }
-  50% {
-    transform: scale(1.02);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 @keyframes list {
   0% {
     transform: scale(0.98);
@@ -160,16 +148,7 @@ input, textarea {
   top: 50%;
   width: 50px;
   height: 50px;
-  -webkit-animation: 1s loader linear infinite;
-          animation: 1s loader linear infinite;
-}
-@-webkit-keyframes loader {
-  from {
-    transform: translate(-50%, -50%) rotate(0);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
+  animation: 1s loader linear infinite;
 }
 @keyframes loader {
   from {
@@ -185,16 +164,7 @@ input, textarea {
   stroke-width: 2;
   transition: 0.6s;
   stroke-dasharray: 30 100;
-  -webkit-animation: 0.75s loaderAppearance forwards;
-          animation: 0.75s loaderAppearance forwards;
-}
-@-webkit-keyframes loaderAppearance {
-  from {
-    stroke-dasharray: 0 100;
-  }
-  to {
-    stroke-dasharray: 30 100;
-  }
+  animation: 0.75s loaderAppearance forwards;
 }
 @keyframes loaderAppearance {
   from {
@@ -312,8 +282,7 @@ header ul li {
 header input:checked ~ ul {
   visibility: visible;
   opacity: 1;
-  -webkit-animation: 0.15s list;
-          animation: 0.15s list;
+  animation: 0.15s list;
 }
 header label {
   cursor: pointer;
@@ -376,8 +345,7 @@ footer .languages input[type=checkbox]:focus ~ label {
 footer .languages input[type=checkbox]:checked ~ .list {
   opacity: 1;
   visibility: visible;
-  -webkit-animation: 0.15s list;
-          animation: 0.15s list;
+  animation: 0.15s list;
 }
 footer .languages input[type=checkbox]:checked ~ label {
   background: rgba(0, 0, 0, 0.027);
@@ -386,7 +354,6 @@ footer .languages label {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   display: flex;
   align-items: center;
@@ -510,19 +477,7 @@ section.hero .btn:hover .hover-cont {
 }
 section.hero .btn:hover .hover-cont svg {
   transform-origin: left bottom;
-  -webkit-animation: 0.3s jump ease-out;
-          animation: 0.3s jump ease-out;
-}
-@-webkit-keyframes jump {
-  0% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: rotate(-7deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
+  animation: 0.3s jump ease-out;
 }
 @keyframes jump {
   0% {
@@ -575,16 +530,7 @@ section.hero .arrow-down svg {
   height: 2rem;
 }
 section.hero .arrow-down svg line {
-  -webkit-animation: 1s mouseWheel ease-in alternate infinite;
-          animation: 1s mouseWheel ease-in alternate infinite;
-}
-@-webkit-keyframes mouseWheel {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(7%);
-  }
+  animation: 1s mouseWheel ease-in alternate infinite;
 }
 @keyframes mouseWheel {
   0% {
@@ -624,7 +570,6 @@ section.about .container h1 {
 section.about img {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   pointer-events: none;
   display: block;
@@ -634,73 +579,21 @@ section.about .cont h1 {
   margin-bottom: 1rem;
 }
 section.about .cont .skills {
-  display: grid;
-  gap: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
-section.about .cont .skills.toAnimate .percentage {
-  left: 0 !important;
-}
-section.about .cont .skills.toAnimate .progress {
-  width: 0 !important;
+section.about .cont .skills.toAnimate li {
+  opacity: 0;
+  transform: translateX(-1rem);
 }
 section.about .cont .skills li {
-  position: relative;
-}
-section.about .cont .skills li .percentage {
-  position: absolute;
-  bottom: 15px;
-  transform: translateX(-50%);
-  font-size: 0.7rem;
+  background: #999DA5;
   color: #fff;
-  background: #2F2E41;
-  border-radius: 0.3rem;
-  padding: 0.5rem;
-}
-section.about .cont .skills li .percentage::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 100%);
-  border: 3px solid transparent;
-  border-top-color: #2F2E41;
-}
-@media (forced-colors) {
-  section.about .cont .skills li .percentage::after {
-    border-color: canvas;
-    border-top-color: canvasText;
-  }
-}
-@media (forced-colors) {
-  section.about .cont .skills li .percentage {
-    background: canvasText;
-  }
-}
-section.about .cont .skills li .progress-bar {
-  position: relative;
-  height: 12px;
-  background: rgba(0, 0, 0, 0.03);
-  border-radius: 100vmax;
-  margin-top: 0.375rem;
-}
-section.about .cont .skills li .progress-bar .progress {
-  background: #2F2E41;
-  border-top-left-radius: 100vmax;
-  border-bottom-left-radius: 100vmax;
-  height: 100%;
-}
-@media (forced-colors) {
-  section.about .cont .skills li .progress-bar .progress {
-    background: canvasText;
-  }
-}
-@media (prefers-reduced-motion) {
-  section.about .cont .skills li .percentage, section.about .cont .skills li .progress {
-    transition: 0;
-  }
-}
-section.about .cont .skills li .percentage, section.about .cont .skills li .progress {
-  transition: 0.3s;
+  font-weight: 500;
+  padding: 0.4444444444rem 0.6666666667rem;
+  border-radius: 0.3333333333rem;
+  transition: 0.15s;
 }
 
 section.works .works {
