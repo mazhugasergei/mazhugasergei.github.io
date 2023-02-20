@@ -40,6 +40,10 @@ section.about{
         li{
           opacity: 0;
           transform: translateX(-1rem);
+          @media(prefers-reduced-motion){
+            opacity: unset;
+            transform: unset;
+          }
         }
       }
       li{

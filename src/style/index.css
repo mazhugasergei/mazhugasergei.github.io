@@ -587,6 +587,12 @@ section.about .cont .skills.toAnimate li {
   opacity: 0;
   transform: translateX(-1rem);
 }
+@media (prefers-reduced-motion) {
+  section.about .cont .skills.toAnimate li {
+    opacity: unset;
+    transform: unset;
+  }
+}
 section.about .cont .skills li {
   background: #999DA5;
   color: #fff;
