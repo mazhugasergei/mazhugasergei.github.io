@@ -35,7 +35,7 @@ export type worksType = {
       url: string | null,
       title: string | null,
       paragraph: string | null,
-      using: string | null
+      using: string[] | null
     }
   }
 }
