@@ -25,25 +25,25 @@
         "url": "amvtheatres.vercel.app",
         "title": "AMV Theatres",
         "paragraph": "대학 프로젝트의 일환으로 만든 영화관 웹사이트",
-        "using": "Next.js SCSS Firebase"
+        "using": ["Next.js", "SCSS", "Firebase"]
       },
       "optic-shop": {
         "url": "markuswedler.github.io/optic-shop",
         "title": "Optic Shop",
         "paragraph": "안경 제작사 웹 샵의 다채로운 작은 웹 페이지",
-        "using": "ReactJS SCSS"
+        "using": ["ReactJS", "SCSS"]
       },
       "kbooks": {
         "url": "ashot2003.github.io/kbooks/",
         "title": "KBooks",
         "paragraph": "친구가 집필한 책 컬렉션",
-        "using": "ReactJS SCSS JSON"
+        "using": ["ReactJS", "SCSS", "React Router", "JSON"]
       },
       "posts": {
         "url": "github.com/Belphin/posts-list-coop",
         "title": "Posts (in progress)",
         "paragraph": "Advanced Posts Website currently being made in a team with my Ukrainian friend.",
-        "using": "Next.js SCSS Redux MongoDB"
+        "using": ["Next.js", "SCSS", "Redux", "MongoDB"]
       }
     }
   },
