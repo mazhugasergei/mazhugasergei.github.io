@@ -38,6 +38,12 @@
         "title": "KBooks",
         "paragraph": "友人が書いた本のコレクション。",
         "using": "ReactJS SCSS JSON"
+      },
+      "posts": {
+        "url": "github.com/Belphin/posts-list-coop",
+        "title": "Posts (in progress)",
+        "paragraph": "Advanced Posts Website currently being made in a team with my Ukrainian friend.",
+        "using": "Next.js SCSS Redux MongoDB"
       }
     }
   },
