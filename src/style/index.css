@@ -95,7 +95,13 @@ input, textarea {
   background: #2F2E41;
   border: none;
   transition: 0.15s;
-  padding: 0.95rem 1.25rem;
+  padding: 0.75rem 1.25rem;
+}
+.btn.outline {
+  color: #2F2E41;
+  background: none;
+  outline: 0.125rem solid #2F2E41;
+  outline-offset: -0.125rem;
 }
 @media (forced-colors) {
   .btn {
@@ -463,19 +469,23 @@ section.hero h1 {
 section.hero p {
   padding: 0.25rem 0 0.68rem;
 }
-section.hero .btn {
+section.hero .buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+section.hero .buttons .btn.contact {
   overflow: hidden;
   display: inline-flex;
   position: relative;
   padding: 0;
 }
-section.hero .btn:hover .text {
+section.hero .buttons .btn.contact:hover .text {
   transform: translateX(-2rem);
 }
-section.hero .btn:hover .hover-cont {
+section.hero .buttons .btn.contact:hover .hover-cont {
   left: 0;
 }
-section.hero .btn:hover .hover-cont svg {
+section.hero .buttons .btn.contact:hover .hover-cont svg {
   transform-origin: left bottom;
   animation: 0.3s jump ease-out;
 }
@@ -490,11 +500,11 @@ section.hero .btn:hover .hover-cont svg {
     transform: rotate(0);
   }
 }
-section.hero .btn .text {
+section.hero .buttons .btn.contact .text {
   transition: 0.15s;
   padding: 0.75rem 1.25rem;
 }
-section.hero .btn .hover-cont {
+section.hero .buttons .btn.contact .hover-cont {
   overflow: hidden;
   display: grid;
   place-items: center;
@@ -508,10 +518,14 @@ section.hero .btn .hover-cont {
   transition: 0.15s;
 }
 @media (forced-colors) {
-  section.hero .btn .hover-cont {
+  section.hero .buttons .btn.contact .hover-cont {
     outline: 1px solid transparent;
     left: calc(100% + 1px);
   }
+}
+section.hero .buttons .btn.download-cv {
+  display: flex;
+  gap: 0.2rem;
 }
 section.hero .arrow-down {
   position: absolute;

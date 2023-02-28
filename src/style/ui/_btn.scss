@@ -7,7 +7,13 @@
   background: $main;
   border: none;
   transition: $transition;
-  padding: .95rem 1.25rem;
+  padding: .75rem 1.25rem;
+  &.outline{
+    color: $main;
+    background: none;
+    outline: .125rem solid $main;
+    outline-offset: -0.125rem;
+  }
   @media (forced-colors){
     outline: 1px solid transparent;
   }

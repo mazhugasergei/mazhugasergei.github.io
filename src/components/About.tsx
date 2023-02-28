@@ -20,7 +20,7 @@ const About = ({ about }: { about: aboutType | undefined }) => {
       <div className="title"><h1>{ about && about.title }</h1><h5>{ about && about.subtitle }</h5></div>
       <div className="container wrapper">
         <div className="story">
-          <img src="/images/thinking.svg"/>
+          <img src="/assets/images/thinking.svg"/>
           <h1>{ about && about.heading }</h1>
           <p>{ about && about.paragraph }</p>
         </div>

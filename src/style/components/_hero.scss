@@ -36,53 +36,63 @@ section.hero{
     padding: .25rem 0 .68rem;
   }
 
-  .btn{
-    overflow: hidden;
-    display: inline-flex;
-    position: relative;
-    padding: 0;
-    &:hover{
-      .text{
-        transform: translateX(-2rem);
-      }
-      .hover-cont{
-        left: 0;
-        svg{
-          @keyframes jump{
-            0%{
-              transform: rotate(0);
-            }
-            50%{
-              transform: rotate(-7deg);
-            }
-            100%{
-              transform: rotate(0);
+  .buttons{
+    display: flex;
+    gap: .75rem;
+    .btn{
+      &.contact{
+        overflow: hidden;
+        display: inline-flex;
+        position: relative;
+        padding: 0;
+        &:hover{
+          .text{
+            transform: translateX(-2rem);
+          }
+          .hover-cont{
+            left: 0;
+            svg{
+              @keyframes jump{
+                0%{
+                  transform: rotate(0);
+                }
+                50%{
+                  transform: rotate(-7deg);
+                }
+                100%{
+                  transform: rotate(0);
+                }
+              }
+              transform-origin: left bottom;
+              animation: $transition*2 jump ease-out;
             }
           }
-          transform-origin: left bottom;
-          animation: $transition*2 jump ease-out;
+        }
+        .text{
+          transition: $transition;
+          padding: .75rem 1.25rem;
+        }
+        .hover-cont{
+          overflow: hidden;
+          display: grid;
+          place-items: center;
+          position: absolute;
+          top: 0;
+          left: 100%;
+          height: 100%;
+          width: 100%;
+          border-radius: .75rem;
+          background: lighten($main, 10);
+          transition: $transition;
+          @media (forced-colors){
+            outline: 1px solid transparent;
+            left: calc(100% + 1px);
+          }
         }
       }
-    }
-    .text{
-      transition: $transition;
-      padding: .75rem 1.25rem;
-    }
-    .hover-cont{
-      overflow: hidden;
-      display: grid;
-      place-items: center;
-      position: absolute;
-      top: 0;
-      left: 100%;
-      height: 100%;
-      width: 100%;
-      border-radius: .75rem;
-      background: lighten($main, 10);
-      transition: $transition;
-      @media (forced-colors){
-        outline: 1px solid transparent;
-        left: calc(100% + 1px);
+      &.download-cv{
+        display: flex;
+        gap: .2rem;
       }
     }
   }

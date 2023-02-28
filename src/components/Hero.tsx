@@ -4,7 +4,7 @@ import { useEffect } from "react"
 import { heroType } from "../Types"
 // icons
 import { MdOutlineMail } from "react-icons/md"
-import { FiArrowDown } from "react-icons/fi"
+import { FiDownload } from "react-icons/fi"
 import { TbMouse } from "react-icons/tb"
 
 const Hero = ({ hero }: { hero: heroType | undefined }) => {
@@ -29,14 +29,17 @@ const Hero = ({ hero }: { hero: heroType | undefined }) => {
 
   return (
     <section className="hero wrapper">
-      <div className="pfp" style={{ backgroundImage: "url('/images/pfp.svg')" }}/>
+      <div className="pfp" style={{ backgroundImage: "url('/assets/images/pfp.svg')" }}/>
       <div className="cont">
         <h1>{ hero && hero.heading }</h1>
         <p>{ hero && hero.paragraph }</p>
-        <a href="mailto:ghbdtnghbdtn8@gmail.com" className="btn">
-          <div className="text">{ hero && hero.contact }</div>
-          <div className="hover-cont"><MdOutlineMail style={{ fontSize: "1.15rem" }}/></div>
-        </a>
+        <div className="buttons">
+          <a href="mailto:ghbdtnghbdtn8@gmail.com" className="btn contact">
+            <div className="text">{ hero && hero.contact }</div>
+            <div className="hover-cont"><MdOutlineMail style={{ fontSize: "1.15rem" }}/></div>
+          </a>
+          <a download={"Mazhuga Sergei CV"} href="/assets/cv.pdf" className="btn outline download-cv">Download CV<FiDownload style={{ fontSize: "1.15rem" }} /></a>
+        </div>
       </div>
       <a href="#about" className="arrow-down"><TbMouse/></a>
     </section>
