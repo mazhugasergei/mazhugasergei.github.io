@@ -92,16 +92,23 @@ input, textarea {
   font-size: 1rem;
   font-weight: 500;
   border-radius: 0.75rem;
+  transform: translateZ(0);
   background: #2F2E41;
   border: none;
   transition: 0.15s;
   padding: 0.75rem 1.25rem;
 }
 .btn.outline {
+  position: relative;
   color: #2F2E41;
   background: none;
-  outline: 0.125rem solid #2F2E41;
-  outline-offset: -0.125rem;
+}
+.btn.outline::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 0.125rem solid #2F2E41;
+  border-radius: inherit;
 }
 @media (forced-colors) {
   .btn {
