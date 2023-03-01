@@ -93,6 +93,18 @@ section.hero{
       &.download-cv{
         display: flex;
         gap: .2rem;
+        svg{
+          polyline, line{
+            transition: $transition;
+          }
+        }
+        &:hover{
+          svg{
+            polyline, line{
+              transform: translateY(10%);
+            }
+          }
+        }
       }
     }
   }

@@ -534,6 +534,12 @@ section.hero .buttons .btn.download-cv {
   display: flex;
   gap: 0.2rem;
 }
+section.hero .buttons .btn.download-cv svg polyline, section.hero .buttons .btn.download-cv svg line {
+  transition: 0.15s;
+}
+section.hero .buttons .btn.download-cv:hover svg polyline, section.hero .buttons .btn.download-cv:hover svg line {
+  transform: translateY(10%);
+}
 section.hero .arrow-down {
   position: absolute;
   left: 50%;
