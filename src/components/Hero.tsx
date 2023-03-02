@@ -38,7 +38,7 @@ const Hero = ({ hero }: { hero: heroType | undefined }) => {
             <div className="text">{ hero && hero.contact }</div>
             <div className="hover-cont"><MdOutlineMail style={{ fontSize: "1.15rem" }}/></div>
           </a>
-          <a download={"Mazhuga Sergei CV"} href="/assets/Resume.pdf" className="btn outline download-cv">Download CV<FiDownload style={{ fontSize: "1.15rem" }} /></a>
+          <a download={"Mazhuga Sergei CV"} href="/assets/CV.pdf" className="btn outline download-cv">Download CV<FiDownload style={{ fontSize: "1.15rem" }} /></a>
         </div>
       </div>
       <a href="#about" className="arrow-down"><TbMouse/></a>
