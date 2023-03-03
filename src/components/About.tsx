@@ -4,7 +4,7 @@ import { useEffect } from "react"
 import { aboutType } from "../Types"
 
 const About = ({ about }: { about: aboutType | undefined }) => {
-  const skillsNames = ["Problem solving", "JavaScript", "REST API", "TypeScript", "React", "React Router", "Redux Toolkit", "Next.js", "HTML", "CSS", "SCSS", "Git", "GitHub", "C++", "Npm", "Yarn", "Figma", "Microsoft Offce", "iWork", "Photoshop", "PremierePro", "AfterEffects"]
+  const skillsNames = ["Problem solving", "JavaScript", "REST API", "TypeScript", "React", "React Router", "Redux Toolkit", "React Query", "Next.js", "HTML", "CSS", "SCSS", "Git", "GitHub", "C++", "Npm", "Yarn", "Figma", "Microsoft Offce", "iWork", "Photoshop", "PremierePro", "AfterEffects"]
 
   useEffect(()=>{
     const header: HTMLElement | null = document.querySelector('header')
