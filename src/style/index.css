@@ -666,7 +666,7 @@ section.works .works a .using {
   margin: 1rem 0 0.2rem;
 }
 section.works .works a h3 {
-  margin: 0.1rem 0 0.35rem;
+  margin: 0.35rem 0;
 }
 
 section.contact {
