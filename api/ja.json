@@ -31,13 +31,19 @@
         "url": "markuswedler.github.io/optic-shop",
         "title": "Optic Shop",
         "paragraph": "オプティックショップのメインページ。",
-        "using": ["ReactJS", "SCSS"]
+        "using": ["React", "SCSS"]
       },
       "kbooks": {
         "url": "ashot2003.github.io/kbooks/",
         "title": "KBooks",
         "paragraph": "友人が書いた本のコレクション。",
-        "using": ["ReactJS", "SCSS", "React Router", "JSON"]
+        "using": ["React", "SCSS", "React Router", "JSON"]
+      },
+      "posa": {
+        "url": "markuswedler.github.io/posa",
+        "title": "Posa Fotoservice",
+        "paragraph": "Gallery Web App for my German fiend who loves photographing",
+        "using": ["React", "SCSS", "TypeScript", "Supabase"]
       },
       "posts": {
         "url": "github.com/Belphin/posts-list-coop",
