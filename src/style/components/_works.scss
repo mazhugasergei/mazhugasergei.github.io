@@ -11,8 +11,8 @@ section.works{
       flex-flow: column;
       background: #fff;
       border-radius: 1.25rem;
-      padding: 1.25rem;
       transition: $transition;
+      padding: 1.25rem;
       @media (forced-colors){
         outline: .0625rem solid transparent;
       }
