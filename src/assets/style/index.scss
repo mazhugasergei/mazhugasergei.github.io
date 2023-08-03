@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+@import "./ui/layout";
+@import "./ui/colors";
+@import "./ui/typography";
+@import "./ui/buttons";
+@import "./components/header/header";
+@import "./components/footer/footer";
