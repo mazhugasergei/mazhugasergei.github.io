@@ -1,0 +1,19 @@
+menu{
+  position: absolute;
+  background: $primary;
+  border-radius: $list-menu--border-radius;
+  padding: $list-menu--padding;
+  &.hidden{ display: none; }
+  li{
+    &:not(:last-child) a span{ border-bottom: .0625rem solid #ffffff1a; }
+    a{
+      display: block;
+      padding: 0 .75rem;
+      span{
+        display: block;
+        color: #fff;
+        padding: $list-menu--span--padding;
+      }
+    }
+  }
+}

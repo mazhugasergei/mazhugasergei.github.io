@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 * {
   box-sizing: border-box;
@@ -11,15 +11,19 @@ html {
   scroll-behavior: smooth;
 }
 
-:root {
-  --padding-inline: 1.5rem;
+body {
+  height: 200vh;
 }
 
 body {
   background: #FAFAFA;
 }
 
-body {
+:root {
+  --padding-inline: 1.5rem;
+}
+
+body, button {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
@@ -33,7 +37,9 @@ a {
 }
 
 button {
+  cursor: pointer;
   background: none;
+  font-size: 1rem;
   border: none;
 }
 
@@ -44,6 +50,7 @@ body {
 header {
   position: fixed;
   top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,30 +68,10 @@ header .logo {
   font-weight: 700;
 }
 header menu {
-  position: absolute;
   top: 3.5rem;
   right: var(--padding-inline);
-  background: #272727;
-  border-radius: 0.32rem;
-  padding: 0.25rem 0;
-}
-header menu.hidden {
-  display: none;
-}
-header menu li:not(:last-child) a span {
-  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1019607843);
-}
-header menu li a {
-  display: block;
-  padding: 0 0.75rem;
-}
-header menu li a span {
-  display: block;
-  color: #fff;
-  padding: 0.85rem 1rem 0.85rem 0.5rem;
 }
 header .menu-btn {
-  cursor: pointer;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -109,4 +96,72 @@ header .menu-btn.menu-opened::before {
 }
 header .menu-btn.menu-opened::after {
   transform: rotate(45deg);
+}
+
+footer {
+  padding: 0 var(--padding-inline);
+}
+footer .wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.0625rem solid rgba(56, 56, 56, 0.1019607843);
+  padding: 2rem 0;
+}
+footer .lang-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+  margin-left: -0.8rem;
+}
+footer .lang-btn:hover {
+  background: rgba(0, 0, 0, 0.031372549);
+  border-radius: 0.25rem;
+}
+footer .lang-btn span {
+  font-weight: 600;
+  margin: 0 0.1rem 0 0.33rem;
+}
+footer menu {
+  bottom: calc(100% - 2rem);
+  left: 0.75rem;
+}
+footer .social {
+  display: flex;
+  gap: 0.3rem;
+}
+footer .social a {
+  box-sizing: content-box;
+  display: grid;
+  place-items: center;
+  width: 1rem;
+  height: 1rem;
+  padding: 0.3rem;
+}
+footer .social a:hover {
+  background: rgba(0, 0, 0, 0.031372549);
+  border-radius: 0.25rem;
+}
+
+menu {
+  position: absolute;
+  background: #272727;
+  border-radius: 0.32rem;
+  padding: 0.25rem 0;
+}
+menu.hidden {
+  display: none;
+}
+menu li:not(:last-child) a span {
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1019607843);
+}
+menu li a {
+  display: block;
+  padding: 0 0.75rem;
+}
+menu li a span {
+  display: block;
+  color: #fff;
+  padding: 0.85rem 1rem 0.85rem 0.5rem;
 }/*# sourceMappingURL=index.css.map */

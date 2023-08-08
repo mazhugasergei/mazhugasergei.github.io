@@ -1,0 +1,43 @@
+footer{
+  padding: 0 var(--padding-inline);
+
+  .wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: .0625rem solid $border;
+    padding: 2rem 0;
+  }
+
+  .lang-btn{
+    display: flex;
+    align-items: center;
+    padding: .6rem .8rem;
+    margin-left: -0.8rem;
+    @include hoverable;
+    span{
+      font-weight: 600;
+      margin: 0 .1rem 0 .33rem;
+    }
+  }
+
+  menu{
+    bottom: calc(100% - 2rem);
+    left: .75rem;
+  }
+
+  .social{
+    display: flex;
+    gap: .3rem;
+    a{
+      box-sizing: content-box;
+      display: grid;
+      place-items: center;
+      width: 1rem;
+      height: 1rem;
+      padding: .3rem;
+      @include hoverable;
+    }
+  }
+}

@@ -8,9 +8,14 @@ html{
   scroll-behavior: smooth;
 }
 
-@import "./ui/layout";
+body{
+  height: 200vh;
+}
+
 @import "./ui/colors";
+@import "./ui/layout";
 @import "./ui/typography";
 @import "./ui/buttons";
 @import "./components/header/header";
 @import "./components/footer/footer";
+@import "./components/menu/menu";

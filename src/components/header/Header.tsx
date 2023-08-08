@@ -1,5 +1,7 @@
 // react
 import { useEffect, useRef, useState } from "react"
+// components
+import { Menu, Link } from "components/menu/Menu"
 
 export default () => {
   const header = useRef<HTMLElement>(null)
@@ -8,7 +10,7 @@ export default () => {
   useEffect(()=>{
     // header border on scroll
     document.addEventListener("scroll", () => {
-      if(header.current) window.scrollY ? header.current.classList.add("page-scrolled") : header.current.classList.remove("page-scrolled")
+      header.current && header.current.classList.toggle("page-scrolled", Boolean(window.scrollY))
     })
   }, [])
 
@@ -17,15 +19,15 @@ export default () => {
       {/* Logo */}
       <a href="/" className="logo">Sergei</a>
 
-      {/* Menu */}
-      <menu className={menuOpened ? "" : "hidden"}>
-        <li><a href="#home"><span>Home</span></a></li>
-        <li><a href="#about"><span>About</span></a></li>
-        <li><a href="#works"><span>Works</span></a></li>
-      </menu>
-
       {/* Menu Btn */}
       <button className={`menu-btn ${menuOpened ? "menu-opened" : ""}`} onClick={() => setMenuOpened(prevState => !prevState)} />
+
+      {/* Menu aka Nav */}
+      <Menu className={menuOpened ? "" : "hidden"}>
+        <Link href="#">Home</Link>
+        <Link href="#about">About</Link>
+        <Link href="#works">Works</Link>
+      </Menu>
     </header>
   )
 }

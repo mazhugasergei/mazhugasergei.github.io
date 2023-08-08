@@ -5,6 +5,7 @@ body{
 header{
   position: fixed;
   top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +13,7 @@ header{
   background: $bg;
   border-bottom: .0625rem solid transparent;
   padding: 1rem var(--padding-inline);
-  &.page-scrolled{ border-bottom-color: #3838381a; }
+  &.page-scrolled{ border-bottom-color: $border; }
 
   .logo{
     font-family: 'Rubik', sans-serif;
@@ -21,31 +22,11 @@ header{
   }
 
   menu{
-    position: absolute;
     top: 3.5rem;
     right: var(--padding-inline);
-    background: $primary;
-    border-radius: $list-menu--border-radius;
-    padding: $list-menu--padding;
-    &.hidden{
-      display: none;
-    }
-    li{
-      &:not(:last-child) a span{ border-bottom: .0625rem solid #ffffff1a; }
-      a{
-        display: block;
-        padding: 0 .75rem;
-        span{
-          display: block;
-          color: #fff;
-          padding: $list-menu__span--padding;
-        }
-      }
-    }
   }
 
   .menu-btn{
-    cursor: pointer;
     display: flex;
     flex-flow: column;
     justify-content: center;

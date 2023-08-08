@@ -1,6 +1,14 @@
 $bg: #FAFAFA;
 $primary: #272727;
+$border: #3838381a;
 
 body{
   background: $bg;
+}
+
+@mixin hoverable{
+  &:hover{
+    background: #00000008;
+    border-radius: .25rem;
+  }
 }
