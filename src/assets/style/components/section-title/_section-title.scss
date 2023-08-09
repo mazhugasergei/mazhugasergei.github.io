@@ -1,0 +1,14 @@
+.section-title{
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  padding: 7rem 0;
+  h1{
+    font-size: 1.875rem;
+    margin-bottom: -0.15rem;
+  }
+  p{
+    color: $section-title--paragraph;
+    font-size: .8rem;
+    font-weight: 500;
+  }
+}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap");
 * {
@@ -192,6 +192,21 @@ menu li a span {
   display: block;
   color: #fff;
   padding: 0.85rem 1rem 0.85rem 0.5rem;
+}
+
+.section-title {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  padding: 7rem 0;
+}
+.section-title h1 {
+  font-size: 1.875rem;
+  margin-bottom: -0.15rem;
+}
+.section-title p {
+  color: #aaa;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 section.hero {

@@ -1,9 +1,7 @@
 // images
 import { ReactComponent as PFP } from "assets/images/pfp.svg"
 // icons
-import { MdOutlineMail } from "react-icons/md"
 import { FiDownload } from "react-icons/fi"
-import { FaChevronDown } from "react-icons/fa"
 
 export default () => {
   return (
