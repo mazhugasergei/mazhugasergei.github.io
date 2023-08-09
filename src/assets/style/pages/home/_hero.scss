@@ -1,0 +1,23 @@
+section.hero{
+  padding: 0 var(--padding-inline);
+
+  .pfp{
+    display: block;
+    width: 85%;
+    height: auto;
+    margin: 1.2rem auto 3.75rem;
+  }
+
+  h1{
+    font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+    font-size: 1.875rem;
+  }
+
+  p{
+    padding: .25rem 0 .68rem;
+  }
+
+  .btn:not(.outline){
+    margin-right: .75rem;
+  }
+}

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -12,11 +12,16 @@ html {
 }
 
 body {
-  height: 200vh;
+  background: #FAFAFA;
 }
 
-body {
-  background: #FAFAFA;
+body, button {
+  color: #272727;
+}
+
+p {
+  color: #4d4d4d;
+  line-height: 1.625;
 }
 
 :root {
@@ -25,6 +30,7 @@ body {
 
 body, button {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #272727;
 }
 
 ul, menu {
@@ -41,6 +47,28 @@ button {
   background: none;
   font-size: 1rem;
   border: none;
+}
+
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+}
+a.btn:not(.outline) {
+  color: #fff;
+  background: #272727;
+}
+a.btn:not(.outline):hover {
+  opacity: 0.9;
+}
+a.btn.outline {
+  box-shadow: inset 0 0 0 0.125rem #272727;
+}
+a.btn svg {
+  font-size: 1.15rem;
+  margin-left: 0.2rem;
 }
 
 body {
@@ -164,4 +192,24 @@ menu li a span {
   display: block;
   color: #fff;
   padding: 0.85rem 1rem 0.85rem 0.5rem;
+}
+
+section.hero {
+  padding: 0 var(--padding-inline);
+}
+section.hero .pfp {
+  display: block;
+  width: 85%;
+  height: auto;
+  margin: 1.2rem auto 3.75rem;
+}
+section.hero h1 {
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
+  font-size: 1.875rem;
+}
+section.hero p {
+  padding: 0.25rem 0 0.68rem;
+}
+section.hero .btn:not(.outline) {
+  margin-right: 0.75rem;
 }/*# sourceMappingURL=index.css.map */

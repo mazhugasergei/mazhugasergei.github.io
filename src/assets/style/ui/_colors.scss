@@ -1,14 +1,25 @@
 $bg: #FAFAFA;
 $primary: #272727;
 $border: #3838381a;
+$paragraph: #4d4d4d;
+$hoverable: #00000008;
 
 body{
   background: $bg;
 }
 
+body, button{
+  color: $primary;
+}
+
+p{
+  color: $paragraph;
+  line-height: 1.625;
+}
+
 @mixin hoverable{
   &:hover{
-    background: #00000008;
+    background: $hoverable;
     border-radius: .25rem;
   }
 }

@@ -1,7 +1,10 @@
+// react
+import { useEffect } from "react"
 // components
 import Header from "components/header/Header"
 import Footer from "components/footer/Footer"
-import { useEffect } from "react"
+// pages
+import Home from "pages/Home/Home"
 
 export default () => {
   useEffect(()=>{
@@ -13,6 +16,7 @@ export default () => {
   return (
     <>
       <Header />
+      <Home />
       <Footer />
     </>
   )
