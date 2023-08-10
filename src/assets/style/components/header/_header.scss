@@ -33,6 +33,7 @@ header{
     align-items: center;
     width: 3rem;
     height: 3rem;
+    background: none !important;
     padding: .75rem;
     margin-right: -0.75rem;
     &::before, &::after{

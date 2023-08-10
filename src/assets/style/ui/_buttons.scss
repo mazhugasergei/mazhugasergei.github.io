@@ -1,3 +1,4 @@
+// resets
 button{
   cursor: pointer;
   background: none;
@@ -5,6 +6,7 @@ button{
   border: none;
 }
 
+// cta btn & outline btn
 a.btn{
   display: inline-flex;
   align-items: center;
@@ -21,5 +23,13 @@ a.btn{
   svg{
     font-size: 1.15rem;
     margin-left: .2rem;
+  }
+}
+
+// menu btn
+.menu-btn{
+  @include hoverable;
+  &.menu-opened{
+    background: $hoverable;
   }
 }

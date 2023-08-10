@@ -1,5 +1,5 @@
 // react
-import { useState } from "react"
+import { useEffect, useState } from "react"
 // components
 import { Menu, Link } from "components/menu/Menu"
 // icons
@@ -7,14 +7,27 @@ import { BsGlobe } from "react-icons/bs"
 import { MdKeyboardArrowDown } from "react-icons/md"
 import { FaLinkedin, FaGithub, FaYoutube, FaDev } from "react-icons/fa"
 
+interface Languages {
+  name: string,
+  translation: string,
+  code: string
+}
+
 export default () => {
-  const [menuOpened, setMenuOpened] = useState(false)
+  const [languages, setLanguages] = useState<Languages[]>([])
+  const [menuOpened, setMenuOpened] = useState<boolean>(false)
+
+  useEffect(()=>{
+    fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/localizations/languages.json`)
+      .then(res => res.json())
+      .then(data => setLanguages(data.languages))
+  }, [])
 
   return (
     <footer>
       <div className="wrapper">
         {/* Language switch button */}
-        <button className="lang-btn hoverable" onClick={() => setMenuOpened(prevState => !prevState)}>
+        <button className={`menu-btn lang-btn ${menuOpened ? "menu-opened" : ""}`} onClick={() => setMenuOpened(prevState => !prevState)}>
           <BsGlobe />
           <span>English</span>
           <MdKeyboardArrowDown />
@@ -22,9 +35,14 @@ export default () => {
 
         {/* Language selection Menu */}
         <Menu opened={menuOpened}>
-          <Link href="">1</Link>
-          <Link href="">2</Link>
-          <Link href="">3</Link>
+          { languages && languages.map(language => (
+            <Link href="" langCode={ language.code } key={language.code}>
+              <>
+                <div className="lang">{ language.name }</div>
+                <div className="lang-eng">{ language.translation }</div>
+              </>
+            </Link>
+          )) }
         </Menu>
 
         {/* Social links */}

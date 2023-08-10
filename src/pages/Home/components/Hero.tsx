@@ -13,10 +13,10 @@ export default () => {
   return (
     <section className="hero">
       <PFP className="pfp" />
-      <h1>Hi, I'm Sergei!</h1>
-      <p>A front-end web developer from Vladivostok with 3+ years of coding experience and a passion for creating visually stunning and intuitive websites.</p>
-      <a className="btn" href="mailto:ghbdtnghbdtn8@gmail.com">Contact</a>
-      <a className="btn outline" href="https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/Sergei_Mazhuga_CV.pdf" download>Download CV<FiDownload /></a>
+      <h1>{ localization.hero?.title }</h1>
+      <p>{ localization.hero?.paragraph }</p>
+      <a className="btn" href="mailto:ghbdtnghbdtn8@gmail.com">{ localization.hero?.contact }</a>
+      <a className="btn outline" href="https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/Sergei_Mazhuga_CV.pdf" download>{ localization.hero?.download_cv }<FiDownload /></a>
     </section>
   )
 }
