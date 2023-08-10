@@ -16,7 +16,7 @@ export const LocalizationProvider = ({ children }: { children: any }) => {
     fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_localizations/main/localizations/${ availableLocalizations.includes(window.navigator.language) ? window.navigator.language : "en-US" }.json`)
       .then(res => res.json())
       .then(data => setLocalization(data))
-  }, [])
+  }, []) 
 
   return (
     <LocalizationContext.Provider value={localization}>
