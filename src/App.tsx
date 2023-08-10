@@ -1,5 +1,5 @@
-// react
-import { useEffect } from "react"
+// context
+import LocalizationProvider from "components/LocalizationContext"
 // components
 import Header from "components/header/Header"
 import Footer from "components/footer/Footer"
@@ -7,17 +7,11 @@ import Footer from "components/footer/Footer"
 import Home from "pages/Home/Home"
 
 export default () => {
-  useEffect(()=>{
-    fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_localizations/main/en-US.json`)
-      .then(res => res.json())
-      // .then(data => console.log(data))
-  }, [])
-
   return (
-    <>
+    <LocalizationProvider>
       <Header />
       <Home />
       <Footer />
-    </>
+    </LocalizationProvider>
   )
 }

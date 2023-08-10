@@ -11,10 +11,10 @@ export const Link = (props : { href: string, children: string }) => {
   )
 }
 
-export const Menu = ({ children, className }: { children: React.ReactElement[], className: string }) => {
+export const Menu = (props: { children: React.ReactElement[], opened: boolean }) => {
   return (
-    <menu className={ className }>
-      { React.Children.map(children, (child : React.ReactElement) => (
+    <menu className={props.opened ? "" : "hidden"}>
+      { React.Children.map(props.children, (child : React.ReactElement) => (
         <Link href={ child.props.href }>{ child.props.children }</Link>
       )) }
     </menu>

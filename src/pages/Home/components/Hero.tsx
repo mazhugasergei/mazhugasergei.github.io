@@ -1,9 +1,15 @@
+// react
+import { useContext } from "react"
+// context
+import { LocalizationContext } from "components/LocalizationContext"
 // images
 import { ReactComponent as PFP } from "assets/images/pfp.svg"
 // icons
 import { FiDownload } from "react-icons/fi"
 
 export default () => {
+  const localization = useContext(LocalizationContext)
+
   return (
     <section className="hero">
       <PFP className="pfp" />

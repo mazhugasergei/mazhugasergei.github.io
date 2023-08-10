@@ -21,7 +21,7 @@ export default () => {
         </button>
 
         {/* Language selection Menu */}
-        <Menu className={menuOpened ? "" : "hidden"}>
+        <Menu opened={menuOpened}>
           <Link href="">1</Link>
           <Link href="">2</Link>
           <Link href="">3</Link>

@@ -1,21 +1,24 @@
 // react
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, useContext } from "react"
+// context
+import { LocalizationContext } from "components/LocalizationContext"
 // components
 import { Menu, Link } from "components/menu/Menu"
 
 export default () => {
-  const header = useRef<HTMLElement>(null)
+  const localization = useContext(LocalizationContext)
   const [menuOpened, setMenuOpened] = useState(false)
 
+  // header border on scroll
+  const headerRef = useRef<HTMLElement>(null)
   useEffect(()=>{
-    // header border on scroll
     document.addEventListener("scroll", () => {
-      header.current && header.current.classList.toggle("page-scrolled", Boolean(window.scrollY))
+      headerRef.current && headerRef.current.classList.toggle("page-scrolled", Boolean(window.scrollY))
     })
   }, [])
 
   return (
-    <header ref={header}>
+    <header ref={headerRef}>
       {/* Logo */}
       <a href="/" className="logo">Sergei</a>
 
@@ -23,10 +26,10 @@ export default () => {
       <button className={`menu-btn ${menuOpened ? "menu-opened" : ""}`} onClick={() => setMenuOpened(prevState => !prevState)} />
 
       {/* Menu aka Nav */}
-      <Menu className={menuOpened ? "" : "hidden"}>
-        <Link href="#">Home</Link>
-        <Link href="#about">About</Link>
-        <Link href="#works">Works</Link>
+      <Menu opened={menuOpened}>
+        <Link href="#">{ localization.header?.home }</Link>
+        <Link href="#about">{ localization.header?.about }</Link>
+        <Link href="#works">{ localization.header?.works }</Link>
       </Menu>
     </header>
   )
