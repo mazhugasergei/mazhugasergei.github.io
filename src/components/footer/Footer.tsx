@@ -35,7 +35,7 @@ export default () => {
         </button>
 
         {/* Language selection Menu */}
-        <Menu opened={menuOpened}>
+        <Menu handleMenuClick={{ menuOpened, setMenuOpened }}>
           { languages && languages.map(language => (
             <Link href="" langCode={ language.code } key={language.code}>
               <div className="title">{ language.name }</div>

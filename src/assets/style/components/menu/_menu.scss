@@ -3,6 +3,7 @@ menu{
   background: $primary;
   border-radius: $list-menu--border-radius;
   padding: $list-menu--padding;
+  &:not(.hidden){ animation: $transition menuAnimation; }
   &.hidden{ display: none; }
   li{
     &:not(:last-child) a .text-cont{ border-bottom: .0625rem solid #ffffff1a; }

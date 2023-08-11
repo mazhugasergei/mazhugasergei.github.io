@@ -12,6 +12,7 @@ body, button, a{ color: $primary; }
 p{ color: $paragraph; }
 
 @mixin hoverable{
+  transition: $transition;
   &:hover{
     background: $hoverable;
     border-radius: .25rem;

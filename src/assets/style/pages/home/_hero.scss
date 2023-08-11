@@ -17,4 +17,11 @@ section.hero{
   .btn:not(.outline){
     margin-right: .75rem;
   }
+
+  .btn.outline{
+    polyline, line{ transition: transform $transition; }
+    &:hover svg{
+      polyline, line{ transform: translateY(6%); }
+    }
+  }
 }

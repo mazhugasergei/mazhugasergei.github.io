@@ -11,6 +11,7 @@ section.works{
     background: #fff;
     border: .0625rem solid $border;
     border-radius: 1.25rem;
+    transition: transform $transition, box-shadow $transition;
     padding: 1.25rem;
 
     &:hover{

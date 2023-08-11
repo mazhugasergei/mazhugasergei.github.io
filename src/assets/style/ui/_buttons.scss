@@ -12,6 +12,7 @@ a.btn{
   align-items: center;
   font-weight: 500;
   border-radius: .75rem;
+  transition: opacity $transition;
   padding: .75rem 1.25rem;
   &:not(.outline){
     color: #fff;
@@ -29,7 +30,5 @@ a.btn{
 // menu btn
 .menu-btn{
   @include hoverable;
-  &.menu-opened{
-    background: $hoverable;
-  }
+  &.menu-opened{ background: $hoverable; }
 }

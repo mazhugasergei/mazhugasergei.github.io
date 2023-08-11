@@ -12,6 +12,7 @@ header{
   width: 100%;
   background: $bg;
   border-bottom: .0625rem solid transparent;
+  transition: border-color $transition;
   padding: 1rem var(--padding-inline);
   &.page-scrolled{ border-bottom-color: $border; }
 
@@ -24,6 +25,7 @@ header{
   menu{
     top: 3.5rem;
     right: var(--padding-inline);
+    transform-origin: top right;
   }
 
   .menu-btn{

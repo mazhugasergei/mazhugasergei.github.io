@@ -8,13 +8,14 @@ interface LinkType {
 }
 
 export const Link = (props: LinkType) => {
-  const handleChangeLocalization = () => {
+  const handleClick = () => {
+    // change localization
     props.langCode && localStorage.setItem("localization", props.langCode)
   }
 
   return (
     <li>
-      <a href={ props.href } onClick={handleChangeLocalization}>
+      <a href={ props.href } onClick={handleClick}>
         <div className="text-cont">{ props.children }</div>
       </a>
     </li>
@@ -23,12 +24,15 @@ export const Link = (props: LinkType) => {
 
 interface MenuType {
   children?: React.ReactElement | React.ReactElement[],
-  opened: boolean
+  handleMenuClick: {
+    menuOpened: boolean,
+    setMenuOpened: (value: boolean) => void
+  }
 }
 
 export const Menu = (props: MenuType) => {
   return (
-    <menu className={props.opened ? "" : "hidden"}>
+    <menu className={props.handleMenuClick.menuOpened ? "" : "hidden"} onClick={() => props.handleMenuClick.setMenuOpened(false)}>
       { props.children }
     </menu>
   )
