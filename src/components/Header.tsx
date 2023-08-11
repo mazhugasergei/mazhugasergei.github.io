@@ -3,7 +3,7 @@ import { useEffect, useRef, useState, useContext } from "react"
 // context
 import { LocalizationContext } from "components/LocalizationContext"
 // components
-import { Menu, Link } from "components/menu/Menu"
+import { Menu, Link } from "components/Menu"
 
 export default () => {
   const localization = useContext(LocalizationContext)
@@ -27,9 +27,12 @@ export default () => {
 
       {/* Menu aka Nav */}
       <Menu handleMenuClick={{ menuOpened, setMenuOpened }}>
-        <Link href="#">{ localization.header?.home }</Link>
-        <Link href="#about">{ localization.header?.about }</Link>
-        <Link href="#works">{ localization.header?.works }</Link>
+        { localization.header && Object.keys(localization.header).map(ObjKey => (
+          <Link href={ObjKey} key={ObjKey}>
+            <div className="title">{ localization.header[ObjKey].title }</div>
+            <div className="subtitle">{ localization.header[ObjKey].subtitle }</div>
+          </Link>
+        )) }
       </Menu>
     </header>
   )

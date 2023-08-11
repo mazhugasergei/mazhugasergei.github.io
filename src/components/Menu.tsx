@@ -4,7 +4,7 @@ import React from "react"
 interface LinkType {
   href?: string,
   langCode?: string,
-  children: string | React.ReactElement[]
+  children: string | React.ReactElement | React.ReactElement[]
 }
 
 export const Link = (props: LinkType) => {

@@ -1,7 +1,7 @@
 // react
 import { useEffect, useState } from "react"
 // components
-import { Menu, Link } from "components/menu/Menu"
+import { Menu, Link } from "components/Menu"
 // icons
 import { BsGlobe } from "react-icons/bs"
 import { MdKeyboardArrowDown } from "react-icons/md"

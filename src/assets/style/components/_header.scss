@@ -43,6 +43,7 @@ header{
       width: 1.125rem;
       height: .15rem;
       background: $primary;
+      transition: $transition;
     }
     &::before{
       margin-bottom: .375rem;
