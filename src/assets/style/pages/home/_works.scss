@@ -1,0 +1,37 @@
+section.works{
+  padding-bottom: 3.5rem;
+
+  .works{
+    display: grid;
+    gap: 2.25rem;
+  }
+
+  .work{
+    display: block;
+    background: #fff;
+    border: .0625rem solid $border;
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+
+    &:hover{
+      box-shadow: 0 0 2.5rem #c9c9c926;
+      transform: scale(1.03);
+    }
+    
+    img{
+      display: block;
+      width: 100%;
+      border-radius: .5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .used{
+      color: #888;
+      font-size: .8rem;
+    }
+
+    .title{
+      margin: .35rem 0;
+    }
+  }
+}

@@ -15,13 +15,12 @@ body {
   background: #FAFAFA;
 }
 
-body, button {
+body, button, a {
   color: #272727;
 }
 
 p {
   color: #4d4d4d;
-  line-height: 1.625;
 }
 
 :root {
@@ -32,9 +31,20 @@ p {
   padding: 0 var(--padding-inline);
 }
 
+section {
+  scroll-margin: 5rem 0;
+}
+
 body, button {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #272727;
+}
+
+h1, h2, h3, .section-title {
+  font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1, h2 {
+  font-size: 1.875rem;
 }
 
 ul, menu {
@@ -42,13 +52,11 @@ ul, menu {
 }
 
 a {
-  color: #272727;
   text-decoration: none;
 }
 
-h2 {
-  font-family: "Rubik", sans-serif;
-  font-size: 1.875rem;
+p {
+  line-height: 1.625;
 }
 
 button {
@@ -215,12 +223,10 @@ menu li a .text-cont .subtitle {
 }
 
 .section-title {
-  font-family: "Rubik", sans-serif;
   text-align: center;
   padding: 7rem 0;
 }
 .section-title h1 {
-  font-size: 1.875rem;
   margin-bottom: -0.15rem;
 }
 .section-title p {
@@ -237,7 +243,6 @@ section.hero .pfp {
 }
 section.hero h1 {
   font-family: "Roboto Mono", "Courier New", Courier, monospace;
-  font-size: 1.875rem;
 }
 section.hero p {
   padding: 0.25rem 0 0.68rem;
@@ -271,4 +276,36 @@ section.about .skills .skill {
   background: #999da5;
   border-radius: 0.3333333333rem;
   padding: 0.4444444444rem 0.6666666667rem;
+}
+
+section.works {
+  padding-bottom: 3.5rem;
+}
+section.works .works {
+  display: grid;
+  gap: 2.25rem;
+}
+section.works .work {
+  display: block;
+  background: #fff;
+  border: 0.0625rem solid rgba(56, 56, 56, 0.1019607843);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+}
+section.works .work:hover {
+  box-shadow: 0 0 2.5rem rgba(201, 201, 201, 0.1490196078);
+  transform: scale(1.03);
+}
+section.works .work img {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+section.works .work .used {
+  color: #888;
+  font-size: 0.8rem;
+}
+section.works .work .title {
+  margin: 0.35rem 0;
 }/*# sourceMappingURL=index.css.map */

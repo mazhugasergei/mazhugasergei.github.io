@@ -19,7 +19,7 @@ export default () => {
   }, [])
 
   return (
-    <section className="about">
+    <section className="about" id="about">
       <SectionTitle title={ localization.about?.section_title.title } subtitle={ localization.about?.section_title.subtitle } />
       <div className="container">
         <Thinking className="img" />
