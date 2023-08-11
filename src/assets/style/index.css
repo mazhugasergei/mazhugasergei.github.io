@@ -159,14 +159,6 @@ footer .lang-btn span {
 footer menu {
   bottom: calc(100% - 2rem);
   left: 0.75rem;
-  line-height: 1.4;
-}
-footer menu .lang {
-  white-space: nowrap;
-  font-weight: 600;
-}
-footer menu .lang-eng {
-  color: #808080;
 }
 footer .social {
   display: flex;
@@ -194,17 +186,26 @@ menu {
 menu.hidden {
   display: none;
 }
-menu li:not(:last-child) a span {
+menu li:not(:last-child) a .text-cont {
   border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1019607843);
 }
 menu li a {
   display: block;
   padding: 0 0.75rem;
 }
-menu li a span {
+menu li a .text-cont {
   display: block;
   color: #fff;
   padding: 0.85rem 1rem 0.85rem 0.5rem;
+}
+menu li a .text-cont .title, menu li a .text-cont .subtitle {
+  line-height: 1.4;
+}
+menu li a .text-cont .title {
+  font-weight: 600;
+}
+menu li a .text-cont .subtitle {
+  color: #808080;
 }
 
 .section-title {

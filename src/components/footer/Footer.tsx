@@ -37,10 +37,8 @@ export default () => {
         <Menu opened={menuOpened}>
           { languages && languages.map(language => (
             <Link href="" langCode={ language.code } key={language.code}>
-              <>
-                <div className="lang">{ language.name }</div>
-                <div className="lang-eng">{ language.translation }</div>
-              </>
+              <div className="title">{ language.name }</div>
+              <div className="subtitle">{ language.translation }</div>
             </Link>
           )) }
         </Menu>

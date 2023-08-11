@@ -5,14 +5,17 @@ menu{
   padding: $list-menu--padding;
   &.hidden{ display: none; }
   li{
-    &:not(:last-child) a span{ border-bottom: .0625rem solid #ffffff1a; }
+    &:not(:last-child) a .text-cont{ border-bottom: .0625rem solid #ffffff1a; }
     a{
       display: block;
       padding: 0 .75rem;
-      span{
+      .text-cont{
         display: block;
         color: #fff;
         padding: $list-menu--span--padding;
+        .title, .subtitle{ line-height: 1.4; }
+        .title{ font-weight: 600; }
+        .subtitle{ color: #808080; }
       }
     }
   }

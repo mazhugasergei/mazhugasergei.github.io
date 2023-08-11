@@ -1,24 +1,21 @@
 // react
-import React, { MouseEvent } from "react"
+import React from "react"
 
 interface LinkType {
   href?: string,
   langCode?: string,
-  children: string | React.ReactElement
+  children: string | React.ReactElement[]
 }
 
 export const Link = (props: LinkType) => {
-  const handleChangeLocalization = (e: MouseEvent<HTMLAnchorElement>) => {
-    if(props.langCode){
-      e.preventDefault()
-      console.log(props.langCode)
-    }
+  const handleChangeLocalization = () => {
+    props.langCode && localStorage.setItem("localization", props.langCode)
   }
 
   return (
     <li>
       <a href={ props.href } onClick={handleChangeLocalization}>
-        <span>{ props.children }</span>
+        <div className="text-cont">{ props.children }</div>
       </a>
     </li>
   )
