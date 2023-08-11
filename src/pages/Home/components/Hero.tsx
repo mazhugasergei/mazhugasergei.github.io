@@ -3,7 +3,7 @@ import { useContext } from "react"
 // context
 import { LocalizationContext } from "components/LocalizationContext"
 // images
-import { ReactComponent as PFP } from "assets/images/pfp.svg"
+import { ReactComponent as PFP } from "assets/images/hero/pfp.svg"
 // icons
 import { FiDownload } from "react-icons/fi"
 

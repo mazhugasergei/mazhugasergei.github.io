@@ -17,6 +17,7 @@ export default () => {
   const [languages, setLanguages] = useState<Languages[]>([])
   const [menuOpened, setMenuOpened] = useState<boolean>(false)
 
+  // fetch languages list
   useEffect(()=>{
     fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/localizations/languages.json`)
       .then(res => res.json())
