@@ -10,8 +10,10 @@ export default () => {
   return (
     <LocalizationProvider>
       <Header />
-      <Home />
-      <Footer />
+      <div className="wrapper">
+        <Home />
+        <Footer />
+      </div>
     </LocalizationProvider>
   )
 }

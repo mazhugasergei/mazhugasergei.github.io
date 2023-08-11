@@ -28,6 +28,10 @@ p {
   --padding-inline: 1.5rem;
 }
 
+.wrapper {
+  padding: 0 var(--padding-inline);
+}
+
 body, button {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #272727;
@@ -140,9 +144,6 @@ header .menu-btn.menu-opened::after {
   transform: rotate(45deg);
 }
 
-footer {
-  padding: 0 var(--padding-inline);
-}
 footer .wrapper {
   position: relative;
   display: flex;
@@ -228,9 +229,6 @@ menu li a .text-cont .subtitle {
   font-weight: 500;
 }
 
-section.hero {
-  padding: 0 var(--padding-inline);
-}
 section.hero .pfp {
   display: block;
   width: 85%;
@@ -248,9 +246,9 @@ section.hero .btn:not(.outline) {
   margin-right: 0.75rem;
 }
 
-section.about .wrapper {
+section.about .container {
   background: #fff;
-  padding: 3.5rem var(--padding-inline);
+  padding: 3.5rem 0;
 }
 section.about .img {
   width: 6rem;

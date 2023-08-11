@@ -21,7 +21,7 @@ export default () => {
   return (
     <section className="about">
       <SectionTitle title={ localization.about?.section_title.title } subtitle={ localization.about?.section_title.subtitle } />
-      <div className="wrapper">
+      <div className="container">
         <Thinking className="img" />
         <h2>{ localization.about?.description.title }</h2>
         <p>{ localization.about?.description.paragraph }</p>
