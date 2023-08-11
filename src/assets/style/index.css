@@ -8,6 +8,7 @@
 }
 
 html {
+  cursor: default;
   scroll-behavior: smooth;
 }
 
