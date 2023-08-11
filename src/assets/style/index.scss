@@ -13,10 +13,10 @@ html{
 @import "./ui/layout";
 @import "./ui/typography";
 @import "./ui/buttons";
-@import "./components/header/header";
-@import "./components/footer/footer";
-@import "./components/menu/menu";
-@import "./components/section-title/section-title";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/menu";
+@import "./components/section-title";
 @import "./pages/home/hero";
 @import "./pages/home/about";
 @import "./pages/home/works";
