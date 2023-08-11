@@ -28,7 +28,7 @@ export default () => {
       {/* Menu aka Nav */}
       <Menu handleMenuClick={{ menuOpened, setMenuOpened }}>
         { localization.header && Object.keys(localization.header).map(ObjKey => (
-          <Link href={ObjKey} key={ObjKey}>
+          <Link href={`#${ObjKey === "home" ? "" : ObjKey}`} key={ObjKey}>
             <div className="title">{ localization.header[ObjKey].title }</div>
             <div className="subtitle">{ localization.header[ObjKey].subtitle }</div>
           </Link>
