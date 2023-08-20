@@ -5,8 +5,13 @@
 }
 
 html{
-  cursor: default;
   scroll-behavior: smooth;
+}
+
+body{
+  cursor: default;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @import "./ui/animations";

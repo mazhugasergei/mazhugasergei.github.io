@@ -1,9 +1,23 @@
 section.hero{
+  @media (width > 48rem){
+    height: var(--dvh, 100vh);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+
   .pfp{
     display: block;
     width: 85%;
     height: auto;
     margin: 1.2rem auto 3.75rem;
+    @media (26.5625rem < width <= 48rem){ width: 20rem; }
+    @media (width > 48rem){
+      width: 100%;
+      max-width: 30rem;
+      margin: 0 auto;
+    }
   }
 
   h1{

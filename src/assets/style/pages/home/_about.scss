@@ -1,7 +1,28 @@
 section.about{
   .container{
     background: #fff;
-    padding: 3.5rem 0;
+    padding: 3.5rem var(--padding-inline);
+
+    @media (width <= 26.5625rem){
+      margin: 0 calc(-1 * var(--padding-inline));
+    }
+    @media (width > 26.5625rem){
+      border: .0625rem solid $border;
+      border-radius: 3.5rem;
+      padding: 3.5rem;
+    }
+
+    @media (width > 48rem){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 2rem;
+      padding: 4rem;
+    }
+
+    @media (width > 64rem){
+      padding: 4rem 5rem;
+    }
   }
 
   .img{

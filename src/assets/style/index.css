@@ -8,8 +8,13 @@
 }
 
 html {
-  cursor: default;
   scroll-behavior: smooth;
+}
+
+body {
+  cursor: default;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @keyframes menuAnimation {
@@ -36,11 +41,19 @@ p {
 }
 
 :root {
+  --dvh: 100dvh;
   --padding-inline: 1.5rem;
+}
+@media (width > 64rem) {
+  :root {
+    --padding-inline: 3.75rem;
+  }
 }
 
 .wrapper {
+  max-width: calc(82.5rem + var(--padding-inline) * 2);
   padding: 0 var(--padding-inline);
+  margin: 0 auto;
 }
 
 section {
@@ -57,6 +70,11 @@ h1, h2, h3, .section-title {
 
 h1, h2 {
   font-size: 1.875rem;
+}
+@media (width > 48rem) {
+  h1, h2 {
+    font-size: 2.5rem;
+  }
 }
 
 ul, menu {
@@ -112,24 +130,41 @@ a.btn svg {
   background: rgba(0, 0, 0, 0.031372549);
 }
 
-body {
-  padding-top: 5.0625rem;
+@media (width <= 48rem) {
+  body {
+    padding-top: 5.0625rem;
+  }
 }
 
 header {
   position: fixed;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
+  width: 100%;
+  max-width: calc(82.5rem + var(--padding-inline) * 2);
+  background: #FAFAFA;
+}
+@media (width > 48rem) {
+  header {
+    padding: 0 var(--padding-inline);
+  }
+}
+header .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  background: #FAFAFA;
   border-bottom: 0.0625rem solid transparent;
   transition: border-color 0.15s;
   padding: 1rem var(--padding-inline);
 }
-header.page-scrolled {
+@media (width > 48rem) {
+  header .wrapper {
+    padding: 1.2rem 0;
+  }
+}
+header .wrapper.page-scrolled {
   border-bottom-color: rgba(56, 56, 56, 0.1019607843);
 }
 header .logo {
@@ -142,6 +177,32 @@ header menu {
   right: var(--padding-inline);
   transform-origin: top right;
 }
+@media (width > 48rem) {
+  header menu {
+    position: static;
+    display: flex !important;
+    gap: 0.25rem;
+    background: none;
+    padding: 0;
+  }
+  header menu li:last-child a {
+    margin-right: -0.9rem;
+  }
+  header menu a {
+    transition: 0.15s;
+    padding: 0.5rem 0.9rem !important;
+  }
+  header menu a:hover {
+    background: rgba(0, 0, 0, 0.031372549);
+    border-radius: 0.25rem;
+  }
+  header menu a .text-cont {
+    color: #272727 !important;
+    font-weight: 500;
+    border: none !important;
+    padding: 0 !important;
+  }
+}
 header .menu-btn {
   display: flex;
   flex-flow: column;
@@ -152,6 +213,11 @@ header .menu-btn {
   background: none !important;
   padding: 0.75rem;
   margin-right: -0.75rem;
+}
+@media (width > 48rem) {
+  header .menu-btn {
+    display: none;
+  }
 }
 header .menu-btn::before, header .menu-btn::after {
   content: "";
@@ -257,12 +323,38 @@ menu li a .text-cont .subtitle {
   font-size: 0.8rem;
   font-weight: 500;
 }
+@media (width > 48rem) {
+  .section-title p {
+    font-size: 1rem;
+  }
+}
 
+@media (width > 48rem) {
+  section.hero {
+    height: var(--dvh, 100vh);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+}
 section.hero .pfp {
   display: block;
   width: 85%;
   height: auto;
   margin: 1.2rem auto 3.75rem;
+}
+@media (26.5625rem < width <= 48rem) {
+  section.hero .pfp {
+    width: 20rem;
+  }
+}
+@media (width > 48rem) {
+  section.hero .pfp {
+    width: 100%;
+    max-width: 30rem;
+    margin: 0 auto;
+  }
 }
 section.hero h1 {
   font-family: "Roboto Mono", "Courier New", Courier, monospace;
@@ -282,7 +374,33 @@ section.hero .btn.outline:hover svg polyline, section.hero .btn.outline:hover sv
 
 section.about .container {
   background: #fff;
-  padding: 3.5rem 0;
+  padding: 3.5rem var(--padding-inline);
+}
+@media (width <= 26.5625rem) {
+  section.about .container {
+    margin: 0 calc(-1 * var(--padding-inline));
+  }
+}
+@media (width > 26.5625rem) {
+  section.about .container {
+    border: 0.0625rem solid rgba(56, 56, 56, 0.1019607843);
+    border-radius: 3.5rem;
+    padding: 3.5rem;
+  }
+}
+@media (width > 48rem) {
+  section.about .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem;
+  }
+}
+@media (width > 64rem) {
+  section.about .container {
+    padding: 4rem 5rem;
+  }
 }
 section.about .img {
   width: 6rem;

@@ -8,5 +8,6 @@
     color: $section-title--paragraph;
     font-size: .8rem;
     font-weight: 500;
+    @media (width > 48rem){ font-size: 1rem; }
   }
 }

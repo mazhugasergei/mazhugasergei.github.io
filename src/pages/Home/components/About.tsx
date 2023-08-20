@@ -22,13 +22,17 @@ export default () => {
     <section className="about" id="about">
       <SectionTitle title={ localization.about?.section_title.title } subtitle={ localization.about?.section_title.subtitle } />
       <div className="container">
-        <Thinking className="img" />
-        <h2>{ localization.about?.description.title }</h2>
-        <p>{ localization.about?.description.paragraph }</p>
-        <h2>{ localization.about?.skills.title }</h2>
-        <ul className="skills">
-          { skills.map(skill => <li className="skill" key={skill}>{ skill }</li>) }
-        </ul>
+        <div className="cont">
+          <Thinking className="img" />
+          <h2>{ localization.about?.description.title }</h2>
+          <p>{ localization.about?.description.paragraph }</p>
+        </div>
+        <div className="cont">
+          <h2>{ localization.about?.skills.title }</h2>
+          <ul className="skills">
+            { skills.map(skill => <li className="skill" key={skill}>{ skill }</li>) }
+          </ul>
+        </div>
       </div>
     </section>
   )

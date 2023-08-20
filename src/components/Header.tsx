@@ -10,30 +10,33 @@ export default () => {
   const [menuOpened, setMenuOpened] = useState(false)
 
   // header border on scroll
-  const headerRef = useRef<HTMLElement>(null)
+  const headerWrapperRef = useRef<HTMLDivElement>(null)
   useEffect(()=>{
     document.addEventListener("scroll", () => {
-      headerRef.current && headerRef.current.classList.toggle("page-scrolled", Boolean(window.scrollY))
+      headerWrapperRef.current && headerWrapperRef.current.classList.toggle("page-scrolled", Boolean(window.scrollY))
     })
   }, [])
 
   return (
-    <header ref={headerRef}>
-      {/* Logo */}
-      <a href="/" className="logo">Sergei</a>
+    <header>
+      <div className="wrapper" ref={headerWrapperRef}>
+        {/* Logo */}
+        <a href="/" className="logo">Sergei</a>
 
-      {/* Menu Btn */}
-      <button className={`menu-btn ${menuOpened ? "menu-opened" : ""}`} onClick={() => setMenuOpened(prevState => !prevState)} />
+        {/* Menu Btn */}
+        <button className={`menu-btn ${menuOpened ? "menu-opened" : ""}`} onClick={() => setMenuOpened(prevState => !prevState)} />
 
-      {/* Menu aka Nav */}
-      <Menu handleMenuClick={{ menuOpened, setMenuOpened }}>
-        { localization.header && Object.keys(localization.header).map(ObjKey => (
-          <Link href={`#${ObjKey === "home" ? "" : ObjKey}`} key={ObjKey}>
-            <div className="title">{ localization.header[ObjKey].title }</div>
-            <div className="subtitle">{ localization.header[ObjKey].subtitle }</div>
-          </Link>
-        )) }
-      </Menu>
+        {/* Menu aka Nav */}
+        <Menu handleMenuClick={{ menuOpened, setMenuOpened }}>
+          { localization.header && Object.keys(localization.header).map(ObjKey => (
+            <Link href={`#${ObjKey === "home" ? "" : ObjKey}`} key={ObjKey}>
+              { localization.header[ObjKey].title }
+              {/* <div className="title">{ localization.header[ObjKey].title }</div>
+              <div className="subtitle">{ localization.header[ObjKey].subtitle }</div> */}
+            </Link>
+          )) }
+        </Menu>
+      </div>
     </header>
   )
 }

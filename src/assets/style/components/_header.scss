@@ -1,20 +1,33 @@
 body{
-  padding-top: 5.0625rem;
+  @media (width <= 48rem){ padding-top: 5.0625rem; }
 }
 
 header{
   position: fixed;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
+  max-width: calc(82.5rem + var(--padding-inline) * 2);
   background: $bg;
-  border-bottom: .0625rem solid transparent;
-  transition: border-color $transition;
-  padding: 1rem var(--padding-inline);
-  &.page-scrolled{ border-bottom-color: $border; }
+  @media (width > 48rem){
+    padding: 0 var(--padding-inline);
+  }
+
+  .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .0625rem solid transparent;
+    transition: border-color $transition;
+    padding: 1rem var(--padding-inline);
+    @media (width > 48rem){
+      padding: 1.2rem 0;
+    }
+
+    &.page-scrolled{ border-bottom-color: $border; }
+  }
 
   .logo{
     font-family: 'Rubik', sans-serif;
@@ -26,9 +39,28 @@ header{
     top: 3.5rem;
     right: var(--padding-inline);
     transform-origin: top right;
+    @media (width > 48rem){
+      position: static;
+      display: flex !important;
+      gap: .25rem;
+      background: none;
+      padding: 0;
+      li:last-child a{ margin-right: -0.9rem; }
+      a{
+        @include hoverable;
+        padding: .5rem .9rem !important;
+        .text-cont{
+          color: $primary !important;
+          font-weight: 500;
+          border: none !important;
+          padding: 0 !important;
+        }
+      }
+    }
   }
 
   .menu-btn{
+    @media (width > 48rem){ display: none; }
     display: flex;
     flex-flow: column;
     justify-content: center;
