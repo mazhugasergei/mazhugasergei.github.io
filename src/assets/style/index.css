@@ -121,10 +121,10 @@ a.btn svg {
 
 .menu-btn {
   transition: 0.15s;
+  border-radius: 0.4rem;
 }
 .menu-btn:hover {
   background: rgba(0, 0, 0, 0.031372549);
-  border-radius: 0.25rem;
 }
 .menu-btn.menu-opened {
   background: rgba(0, 0, 0, 0.031372549);
@@ -190,11 +190,11 @@ header menu {
   }
   header menu a {
     transition: 0.15s;
+    border-radius: 0.4rem;
     padding: 0.5rem 0.9rem !important;
   }
   header menu a:hover {
     background: rgba(0, 0, 0, 0.031372549);
-    border-radius: 0.25rem;
   }
   header menu a .text-cont {
     color: #272727 !important;
@@ -271,10 +271,10 @@ footer .social a {
   height: 1rem;
   padding: 0.3rem;
   transition: 0.15s;
+  border-radius: 0.4rem;
 }
 footer .social a:hover {
   background: rgba(0, 0, 0, 0.031372549);
-  border-radius: 0.25rem;
 }
 
 menu {
@@ -370,6 +370,18 @@ section.hero .btn.outline polyline, section.hero .btn.outline line {
 }
 section.hero .btn.outline:hover svg polyline, section.hero .btn.outline:hover svg line {
   transform: translateY(6%);
+}
+section.hero .arrow-down {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+}
+section.hero .arrow-down svg {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 section.about .container {

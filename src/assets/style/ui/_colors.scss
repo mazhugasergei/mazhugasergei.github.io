@@ -13,8 +13,8 @@ p{ color: $paragraph; }
 
 @mixin hoverable{
   transition: $transition;
+  border-radius: .4rem;
   &:hover{
     background: $hoverable;
-    border-radius: .25rem;
   }
 }

@@ -38,4 +38,17 @@ section.hero{
       polyline, line{ transform: translateY(6%); }
     }
   }
+
+  .arrow-down{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    padding: .5rem;
+    svg{
+      display: block;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
 }
