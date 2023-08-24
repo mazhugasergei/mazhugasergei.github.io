@@ -1,5 +1,5 @@
 // react
-import { useContext } from "react"
+import { useContext, useRef } from "react"
 // context
 import { LocalizationContext } from "components/LocalizationContext"
 // images
@@ -10,6 +10,14 @@ import { FaChevronDown } from "react-icons/fa"
 
 export default () => {
   const localization = useContext(LocalizationContext)
+  const arrowDownRef = useRef<HTMLAnchorElement>(null)
+
+  document.addEventListener("scroll", ()=>{
+    if(arrowDownRef.current){
+      if(window.scrollY) arrowDownRef.current.classList.add('hidden')
+      else arrowDownRef.current.classList.remove('hidden')
+    }
+  })
 
   return (
     <section className="hero">
@@ -23,7 +31,7 @@ export default () => {
         <a className="btn outline" href="https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/Sergei_Mazhuga_CV.pdf" download>{ localization.hero?.download_cv }<FiDownload /></a>
       </div>
       {/* Arrow down */}
-      <a href="#about" className="arrow-down"><FaChevronDown /></a>
+      <a ref={arrowDownRef} href="#about" className="arrow-down"><FaChevronDown /></a>
     </section>
   )
 }

@@ -376,7 +376,11 @@ section.hero .arrow-down {
   left: 50%;
   bottom: 5%;
   transform: translateX(-50%);
+  transition: 0.15s;
   padding: 0.5rem;
+}
+section.hero .arrow-down.hidden {
+  opacity: 0;
 }
 section.hero .arrow-down svg {
   display: block;
@@ -442,10 +446,12 @@ section.works {
 }
 section.works .works {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
   gap: 2.25rem;
 }
 section.works .work {
   display: block;
+  height: 100%;
   background: #fff;
   border: 0.0625rem solid rgba(56, 56, 56, 0.1019607843);
   border-radius: 1.25rem;

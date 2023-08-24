@@ -3,11 +3,13 @@ section.works{
 
   .works{
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
     gap: 2.25rem;
   }
 
   .work{
     display: block;
+    height: 100%;
     background: #fff;
     border: .0625rem solid $border;
     border-radius: 1.25rem;

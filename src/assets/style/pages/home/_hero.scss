@@ -44,7 +44,9 @@ section.hero{
     left: 50%;
     bottom: 5%;
     transform: translateX(-50%);
+    transition: $transition;
     padding: .5rem;
+    &.hidden{ opacity: 0; }
     svg{
       display: block;
       width: 1.2rem;
