@@ -40,10 +40,13 @@ section.about{
     gap: .6rem;
     flex-wrap: wrap;
     .skill{
+      opacity: 0;
       color: #fff;
       font-weight: 500;
       background: #999da5;
       border-radius: .3333333333rem;
+      transform: translateX(-2rem);
+      transition: $transition;
       padding: .4444444444rem .6666666667rem;
     }
   }
