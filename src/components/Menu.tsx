@@ -1,5 +1,5 @@
 // react
-import React from "react"
+import React, { useEffect, useRef } from "react"
 
 
 
@@ -28,15 +28,29 @@ export const Link = (props: LinkType) => {
 
 interface MenuType {
   children?: React.ReactElement | React.ReactElement[],
-  handleMenuClick: {
+  menuOpenedState: {
     menuOpened: boolean,
     setMenuOpened: (value: boolean) => void
   }
 }
 
 export const Menu = (props: MenuType) => {
+  const menuRef = useRef<HTMLMenuElement>(null)
+
+  const handleClickOutside = (e: Event) => {
+    // if clicked element is not menu's button, close the menu
+    if(menuRef.current && !menuRef.current.parentElement?.querySelector('.menu-btn')?.contains(e.target as Node))
+      props.menuOpenedState.setMenuOpened(false)
+  }
+
+  useEffect(()=>{
+    // close menu on outside click / scroll
+    window.addEventListener('click', handleClickOutside)
+    window.addEventListener('scroll', handleClickOutside)
+  }, [])
+
   return (
-    <menu className={props.handleMenuClick.menuOpened ? "" : "hidden"} onClick={() => props.handleMenuClick.setMenuOpened(false)}>
+    <menu ref={menuRef} className={props.menuOpenedState.menuOpened ? "" : "hidden"}>
       { props.children }
     </menu>
   )

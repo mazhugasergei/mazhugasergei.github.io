@@ -27,7 +27,7 @@ export default () => {
         <button className={`menu-btn ${menuOpened ? "menu-opened" : ""}`} onClick={() => setMenuOpened(prevState => !prevState)} />
 
         {/* Menu aka Nav */}
-        <Menu handleMenuClick={{ menuOpened, setMenuOpened }}>
+        <Menu menuOpenedState={{ menuOpened, setMenuOpened }}>
           { localization.header && Object.keys(localization.header).map(ObjKey => (
             <Link href={`#${ObjKey === "home" ? "" : ObjKey}`} key={ObjKey}>
               { localization.header[ObjKey].title }
