@@ -1,6 +1,8 @@
 // react
 import React from "react"
 
+
+
 interface LinkType {
   href?: string,
   langCode?: string,
@@ -21,6 +23,8 @@ export const Link = (props: LinkType) => {
     </li>
   )
 }
+
+
 
 interface MenuType {
   children?: React.ReactElement | React.ReactElement[],
