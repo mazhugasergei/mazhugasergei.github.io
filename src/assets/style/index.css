@@ -453,7 +453,10 @@ section.works .works {
   gap: 2.25rem;
 }
 section.works .work {
-  display: block;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  gap: 1.2rem;
   height: 100%;
   background: #fff;
   border: 0.0625rem solid rgba(56, 56, 56, 0.1019607843);
@@ -469,7 +472,6 @@ section.works .work img {
   display: block;
   width: 100%;
   border-radius: 0.5rem;
-  margin-bottom: 1.2rem;
 }
 section.works .work .used {
   color: #888;

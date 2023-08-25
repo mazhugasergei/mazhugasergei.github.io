@@ -9,7 +9,7 @@ import { FaLinkedin, FaGithub, FaYoutube, FaDev } from "react-icons/fa"
 
 interface Languages {
   name: string,
-  translation: string,
+  nameEN: string,
   code: string
 }
 
@@ -19,7 +19,7 @@ export default () => {
 
   // fetch languages list
   useEffect(()=>{
-    fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/localizations/languages.json`)
+    fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/localizations/assets/languages.json`)
       .then(res => res.json())
       .then(data => setLanguages(data.languages))
   }, [])
@@ -39,7 +39,7 @@ export default () => {
           { languages && languages.map(language => (
             <Link href="" langCode={ language.code } key={language.code}>
               <div className="title">{ language.name }</div>
-              <div className="subtitle">{ language.translation }</div>
+              <div className="subtitle">{ language.nameEN }</div>
             </Link>
           )) }
         </Menu>

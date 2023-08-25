@@ -18,7 +18,7 @@ export default () => {
 
   // fetch tesch used in works
   useEffect(()=>{
-    fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/localizations/works.json`)
+    fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/localizations/assets/works.json`)
       .then(res => res.json())
       .then(data => setWorks(data.works))
   }, [])
@@ -27,13 +27,15 @@ export default () => {
     <section className="works" id="works">
       <SectionTitle title="My Works" subtitle="Most recent projects" />
       <ul className="works">
-        { localization.works && Object.keys(localization.works).map(ObjKey => (
+        { localization.works && works && Object.keys(works).map(ObjKey => (
           <li key={ObjKey}>
-            <a className="work" target="_blank" href={works && works[ObjKey].url}>
-              <img src={`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/images/${ObjKey}.png`} />
-              <ul className="used">{ works && works[ObjKey].used.join(" | ") }</ul>
-              <h3 className="title">{ localization.works[ObjKey].title }</h3>
-              <p>{ localization.works[ObjKey].desc }</p>
+            <a className="work" target="_blank" href={works[ObjKey].url}>
+              <img src={`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/images/${ObjKey}.jpg`} />
+              <div className="text-content">
+                <ul className="used">{ works[ObjKey].used.join(" | ") }</ul>
+                <h3 className="title">{ localization.works[ObjKey].title }</h3>
+                <p>{ localization.works[ObjKey].desc }</p>
+              </div>
             </a>
           </li>
         )) }
