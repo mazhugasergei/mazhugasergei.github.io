@@ -40,6 +40,7 @@ section.hero{
   }
 
   .arrow-down{
+    @media (width <= 48rem){ display: none; }
     position: absolute;
     left: 50%;
     bottom: 5%;

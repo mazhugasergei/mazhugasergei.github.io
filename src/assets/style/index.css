@@ -379,6 +379,11 @@ section.hero .arrow-down {
   transition: 0.15s;
   padding: 0.5rem;
 }
+@media (width <= 48rem) {
+  section.hero .arrow-down {
+    display: none;
+  }
+}
 section.hero .arrow-down.hidden {
   opacity: 0;
 }
