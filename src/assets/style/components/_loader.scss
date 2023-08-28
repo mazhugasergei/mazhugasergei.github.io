@@ -1,0 +1,27 @@
+.loader{
+  position: absolute;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #fff;
+
+  .progress-cont{
+    overflow: hidden;
+    height: .25rem;
+    background: #0000002d;
+    margin: 0 1rem;
+    @keyframes loader {
+      from { width: 0; }
+      to { width: min(20rem, 70%); }
+    }
+    animation: .5s loader forwards;
+  }
+
+  .progress{
+    display: block;
+    width: 0;
+    height: 100%;
+    background: $primary;
+  }
+}

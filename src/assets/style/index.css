@@ -17,6 +17,10 @@ body {
   margin-right: auto;
 }
 
+.content {
+  opacity: 0;
+}
+
 @keyframes menuAnimation {
   0% {
     transform: scale(0.98);
@@ -130,6 +134,36 @@ a.btn svg {
   background: rgba(0, 0, 0, 0.031372549);
 }
 
+.loader {
+  position: absolute;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #fff;
+}
+.loader .progress-cont {
+  overflow: hidden;
+  height: 0.25rem;
+  background: rgba(0, 0, 0, 0.1764705882);
+  margin: 0 1rem;
+  animation: 0.5s loader forwards;
+}
+@keyframes loader {
+  from {
+    width: 0;
+  }
+  to {
+    width: min(20rem, 70%);
+  }
+}
+.loader .progress {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: #272727;
+}
+
 @media (width <= 48rem) {
   body {
     padding-top: 5.0625rem;
@@ -141,7 +175,7 @@ header {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000;
+  z-index: 999;
   width: 100%;
   max-width: calc(82.5rem + var(--padding-inline) * 2);
   background: #FAFAFA;
