@@ -29,6 +29,7 @@ export default () => {
       setTimeout(()=>{
         if(loader.current) loader.current.style.display = "none"
         if(content) content.style.opacity = "1"
+        document.body.style.overflow = "unset"
       }, loadingProgressTransition + loaderTransition)
     }
 
