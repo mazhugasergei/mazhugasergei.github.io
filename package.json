@@ -1,6 +1,6 @@
 {
   "name": "mazhugasergei.github.io",
-  "homepage": "https://mazhugasergei.github.io",
+  "homepage": "https://mazhugasergei.github.io/",
   "private": true,
   "dependencies": {
     "@types/jest": "^27.5.2",
