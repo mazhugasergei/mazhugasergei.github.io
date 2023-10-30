@@ -13,7 +13,7 @@ export default () => {
   
   // fetch skills list
   useEffect(()=>{
-    fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/localizations/assets/skills.json`)
+    fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io/files/localizations/assets/skills.json`)
       .then(res => res.json())
       .then(data => setSkills(data.skills))
   }, [])

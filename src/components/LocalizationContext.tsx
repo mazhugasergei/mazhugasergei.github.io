@@ -19,14 +19,14 @@ export default ({ children }: { children: ReactElement[] }) => {
 
   // fetch languages list
   useEffect(()=>{
-    fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/localizations/assets/languages.json`)
+    fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io/files/localizations/assets/languages.json`)
       .then(res => res.json())
       .then(data => setAvailableLocalizations(data.languages))
   }, [])
 
   // fetch the localization
   useEffect(()=>{
-    availableLocalizations && fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/localizations/${
+    availableLocalizations && fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io/files/localizations/${
       // check if there's localization value set in localStorage and there's such localization available
       localStorage.getItem('localization') && availableLocalizations.some(obj => obj.code === localStorage.getItem('localization')) ?
         // and set it if so

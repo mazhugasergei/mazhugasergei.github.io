@@ -19,7 +19,7 @@ export default () => {
 
   // fetch languages list
   useEffect(()=>{
-    fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/localizations/assets/languages.json`)
+    fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io/files/localizations/assets/languages.json`)
       .then(res => res.json())
       .then(data => setLanguages(data.languages))
   }, [])

@@ -18,7 +18,7 @@ export default () => {
 
   // fetch tesch used in works
   useEffect(()=>{
-    fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/localizations/assets/works.json`)
+    fetch(`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io/files/localizations/assets/works.json`)
       .then(res => res.json())
       .then(data => setWorks(data.works))
   }, [])
@@ -30,7 +30,7 @@ export default () => {
         { localization.works && works && Object.keys(works).map(ObjKey => (
           <li key={ObjKey}>
             <a className="work" target="_blank" href={works[ObjKey].url}>
-              <img src={`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io_files/main/images/${ObjKey}.jpg`} />
+              <img src={`https://raw.githubusercontent.com/mazhugasergei/mazhugasergei.github.io/files/images/${ObjKey}.jpg`} />
               <div className="text-content">
                 <ul className="used">{ works[ObjKey].used.join(" | ") }</ul>
                 <h3 className="title">{ localization.works[ObjKey].title }</h3>
