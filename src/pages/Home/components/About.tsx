@@ -31,8 +31,16 @@ export default () => {
 
   // observe skills
   useEffect(()=>{
-    const skills = document.querySelector('section.about .skills')
-    skills && skillsObserver.observe(skills)
+    const onLoad = () => {
+      const skills = document.querySelector('section.about .skills')
+      setTimeout(()=>{ skills && skillsObserver.observe(skills) }, Number(process.env.REACT_APP_LOADER_TRANSITION)*2)
+    }
+
+    if(document.readyState === "complete") onLoad()
+    else{
+      window.addEventListener("load", onLoad)
+      return () => window.removeEventListener("load", onLoad)
+    }
   }, [])
 
   return (

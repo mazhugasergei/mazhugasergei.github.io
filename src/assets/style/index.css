@@ -134,78 +134,48 @@ a.btn svg {
   background: rgba(0, 0, 0, 0.031372549);
 }
 
-.loader-cont {
+.loader {
   position: fixed;
-  inset: 0;
   z-index: 1000;
-}
-
-.sk-folding-cube {
-  position: absolute;
-  top: 48%;
-  left: 48%;
-  width: 2.5rem;
-  height: 2.5rem;
-  transform: rotateZ(45deg);
-}
-
-.sk-folding-cube .sk-cube {
-  float: left;
-  width: 50%;
-  height: 50%;
-  position: relative;
-  transform: scale(1.1);
-}
-
-.sk-folding-cube .sk-cube:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-color: #272727;
-  animation: sk-foldCubeAngle 2.4s infinite linear both;
-  transform-origin: 100% 100%;
+  background: #fff;
+  transition: 0.6s;
 }
-
-.sk-folding-cube .sk-cube2 {
-  transform: scale(1.1) rotateZ(90deg);
+.loader svg {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  animation: 1s loader linear infinite;
 }
-
-.sk-folding-cube .sk-cube3 {
-  transform: scale(1.1) rotateZ(180deg);
-}
-
-.sk-folding-cube .sk-cube4 {
-  transform: scale(1.1) rotateZ(270deg);
-}
-
-.sk-folding-cube .sk-cube2:before {
-  animation-delay: 0.3s;
-}
-
-.sk-folding-cube .sk-cube3:before {
-  animation-delay: 0.6s;
-}
-
-.sk-folding-cube .sk-cube4:before {
-  animation-delay: 0.9s;
-}
-@keyframes sk-foldCubeAngle {
-  0%, 10% {
-    transform: perspective(12.5rem) rotateX(-180deg);
-    opacity: 0;
+@keyframes loader {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
   }
-  25%, 75% {
-    transform: perspective(12.5rem) rotateX(0deg);
-    opacity: 1;
-  }
-  90%, 100% {
-    transform: perspective(12.5rem) rotateY(180deg);
-    opacity: 0;
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+.loader svg path {
+  fill: none;
+  stroke: #272727;
+  stroke-width: 2;
+  transition: 0.6s;
+  stroke-dasharray: 30 100;
+  animation: 0.75s loaderAppearance forwards;
+}
+@keyframes loaderAppearance {
+  from {
+    stroke-dasharray: 0 100;
+  }
+  to {
+    stroke-dasharray: 30 100;
+  }
+}
+
 @media (width <= 48rem) {
   body {
     padding-top: 5.0625rem;

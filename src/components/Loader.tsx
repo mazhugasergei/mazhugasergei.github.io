@@ -3,23 +3,29 @@ import { useEffect, useRef } from "react"
 
 export default () => {
   const loader = useRef<HTMLDivElement>(null)
-  const loaderTransition = 600
 
   useEffect(()=>{
     const content = document.querySelector<HTMLDivElement>('.content')
 
     // initial styling
-    setTimeout(() => { if(content) content.style.transition = `${loaderTransition}ms` })
-    if(loader.current) loader.current.style.transition = `${loaderTransition}ms`
+    setTimeout(() => { if(content) content.style.transition = `${process.env.REACT_APP_LOADER_TRANSITION}ms` })
+    if(loader.current) loader.current.style.transition = `${process.env.REACT_APP_LOADER_TRANSITION}ms`
 
     // onload
     const onLoad = () => {
-      if(loader.current) loader.current.style.opacity = "0"
+      const loader: HTMLElement | null = document.querySelector('.loader')
+      const path: SVGPathElement | null | undefined = loader?.querySelector('path')
+      const content: HTMLElement | null = document.querySelector('.content')
+      // complete loader circle
+      path!.style.animation = "none"
+      setTimeout(()=>{ path!.style.strokeDasharray = "100, 100" })
       setTimeout(()=>{
-        if(loader.current) loader.current.style.display = "none"
-        if(content) content.style.opacity = "1"
+        // hide loader
+        loader!.style.opacity = "0"
+        loader!.style.pointerEvents = "none"
         document.body.style.overflow = "unset"
-      }, loaderTransition)
+        setTimeout(()=>{ content!.style.opacity = "1" }, Number(process.env.REACT_APP_LOADER_TRANSITION))
+      }, Number(process.env.REACT_APP_LOADER_TRANSITION))
     }
 
     if(document.readyState === "complete") onLoad()
@@ -30,15 +36,15 @@ export default () => {
   }, [])
   
   return (
-    <div className="loader-cont" ref={loader}>
-      <div className="loader">
-        <div className="sk-folding-cube">
-        <div className="sk-cube1 sk-cube"></div>
-        <div className="sk-cube2 sk-cube"></div>
-        <div className="sk-cube4 sk-cube"></div>
-        <div className="sk-cube3 sk-cube"></div>
-        </div>
-      </div>
+    <div className="loader">
+      <svg viewBox="0 0 36 36">
+        <path
+          strokeDasharray="0, 100"
+          d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+      </svg>
     </div>
   )
 }
