@@ -1,0 +1,53 @@
+{
+  "header": {
+    "home": {
+      "title": "Home",
+      "subtitle": "Welcome"
+    },
+    "about": {
+      "title": "About",
+      "subtitle": "My skills"
+    },
+    "works": {
+      "title": "Works",
+      "subtitle": "My projects"
+    }
+  },
+  "hero": {
+    "title": "Hi, I'm Sergei!",
+    "paragraph": "A front-end web developer from Vladivostok with 3+ years of coding experience and a passion for creating visually stunning and intuitive websites.",
+    "contact": "Contact",
+    "download_cv": "Download CV"
+  },
+  "about": {
+    "section_title": {
+      "title": "About me",
+      "subtitle": "My skills and what I do"
+    },
+    "description": {
+      "title": "Life in a Web",
+      "paragraph": "Web Development contains two things than I really love the most - design and puzzles. Once found out about it, I couldn't stop evolving in this amazing field. Web Development for me is like spider's web - caught and seems to never let me go."
+    },
+    "skills": {
+      "title": "My Skills"
+    }
+  },
+  "works": {
+    "amv-theatres": {
+      "title": "AMV Theatres",
+      "desc": "Cinema's website that was created as a part of university course project."
+    },
+    "fefu-open-day": {
+      "title": "FEFU Open Day",
+      "desc": "A website made for Far Eastern Federal University Open Day event."
+    },
+    "optic-shop": {
+      "title": "Optic Shop",
+      "desc": "A simple colorful home page of an optician's web shop."
+    },
+    "detectme": {
+      "title": "DetectMe Browser",
+      "desc": "A website of anti-detect browser for crypto community made in a team."
+    }
+  }
+}

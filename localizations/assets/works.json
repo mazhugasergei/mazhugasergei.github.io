@@ -1,0 +1,20 @@
+{
+  "works": {
+    "amv-theatres": {
+      "used": ["Next.js", "Firebase"],
+      "url": "https://amvtheatres.vercel.app"
+    },
+    "detectme": {
+      "used": ["React", "React Router"],
+      "url": "https://detectme.pro"
+    },
+    "fefu-open-day": {
+      "used": ["Next.js", "TypeScript"],
+      "url": "https://dod.dvfu.ru"
+    },
+    "optic-shop": {
+      "used": ["React"],
+      "url": "https://mazhugasergei.github.io/optic-shop"
+    }
+  }
+}
