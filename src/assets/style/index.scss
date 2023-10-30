@@ -9,8 +9,13 @@ html{
 }
 
 body{
+  overflow: hidden;
   cursor: default;
   margin-inline: auto;
+}
+
+.content{
+  opacity: 0;
 }
 
 @import "./ui/animations";
