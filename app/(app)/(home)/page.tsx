@@ -8,33 +8,36 @@ import profile from "@/public/profile.jpeg"
 export default function Page() {
   return (
     <Post title="Mazhuga Sergei" subtitle="June 2024">
-      <Image src={profile} alt="profile" className="aspect-[5/3]" />
-
       {/* about */}
-      <section>
-        <h2>About</h2>
-        <p>
-          Hey, I'm Sergei, a web developer. Our team is currently building{" "}
-          <Link href="https://github.com/SVIT-Solutions/whale-hunter" external>
-            Whale Hunter
-          </Link>
-          , a tool for analyzing transactions in blockchains. Before Whale Hunter I was building{" "}
-          <Link href="https://github.com/stars/mazhugasergei/lists/commercial" external>
-            commercial projects
-          </Link>
-          . I have also created{" "}
-          <Link href="https://www.npmjs.com/package/tgreports" external>
-            Telegram Catcher Bot
-          </Link>{" "}
-          that catches errors and sends them to your Telegram.
-        </p>
+      <section className="grid grid-cols-1 sm:grid-cols-[1fr_3fr] items-center gap-4">
+        <Image src={profile} alt="profile" className="max-w-[9rem] aspect-square rounded-full mx-auto" />
+        <div>
+          <h2 className="pt-0">About</h2>
+          <p>
+            Hey, I'm Sergei, a web developer. I currently work at{" "}
+            <Link href="https://energy-vokstok.ru" external>
+              Energy Vostok
+            </Link>
+            . Before that I was busy with some{" "}
+            <Link href="https://github.com/stars/mazhugasergei/lists/commercial" external>
+              commercial projects
+            </Link>
+            . I have also created{" "}
+            <Link href="https://www.npmjs.com/package/tgreports" external>
+              Telegram Catcher
+            </Link>{" "}
+            library that catches errors and sends them to your Telegram.
+          </p>
+        </div>
       </section>
 
       {/* projects */}
       <section>
         <h2>Projects</h2>
         <div className="space-y-1.5">
+          <OnlineLink href="https://energy-vokstok.ru" title="Energy Vostok" action="Visit" />
           <OnlineLink href="https://dod.dvfu.ru" title="FEFU Open Day" action="Visit" />
+          <OnlineLink href="https://dvz-tim.ru" title="TVZ TIM Construction" action="Visit" />
           <OnlineLink href="https://kancoo.tech" title="KANCOO" action="Visit" />
         </div>
       </section>
