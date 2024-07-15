@@ -15,8 +15,8 @@ export default function Page() {
           <h2 className="pt-0">About</h2>
           <p>
             Hey, I'm Sergei, a web developer. I currently work at{" "}
-            <Link href="https://energy-vokstok.ru" external>
-              Energy Vostok
+            <Link href="https://molotov-group.vercel.app" external>
+              Molotov Group
             </Link>
             . Before that I was busy with some{" "}
             <Link href="https://github.com/stars/mazhugasergei/lists/commercial" external>
