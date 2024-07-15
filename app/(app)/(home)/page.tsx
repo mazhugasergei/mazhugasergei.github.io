@@ -5,7 +5,7 @@ import OnlineLink from "@/components/OnlineLink"
 import map from "@/public/map.png"
 import profile from "@/public/profile.jpeg"
 
-export default function Page() {
+export default function Home() {
   return (
     <Post title="Mazhuga Sergei" subtitle="June 2024">
       {/* about */}

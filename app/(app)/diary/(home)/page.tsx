@@ -1,7 +1,7 @@
 import Link from "@/components/Link"
 import Post from "@/components/Post"
 
-export default function Page() {
+export default function Diary() {
   const pages = ["Test page"]
 
   return (

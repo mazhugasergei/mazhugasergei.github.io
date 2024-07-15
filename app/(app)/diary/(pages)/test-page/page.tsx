@@ -5,7 +5,7 @@ import Link from "@/components/Link"
 import Post from "@/components/Post"
 import testImage from "@/public/test.jpg"
 
-export default () => {
+export default function TestPage() {
   return (
     <Post title="Test Page" subtitle="June 2024">
       <section id="">
