@@ -27,6 +27,10 @@ export default function Dock() {
       name: "Diary",
       href: "/diary",
     },
+    {
+      name: "Gallery",
+      href: "/gallery",
+    },
   ]
 
   const currentRoute = routes.find((route) => route.href === "/" + pathname.split("/")[1])
