@@ -1,14 +1,12 @@
 import CopyURL from "@/components/CopyURL"
 
-export default function Post({
-  title,
-  subtitle,
-  children,
-}: {
+interface Props {
   title?: string
   subtitle?: string
   children: React.ReactNode
-}) {
+}
+
+export default function Post({ title, subtitle, children }: Props) {
   return (
     <>
       {title && (
