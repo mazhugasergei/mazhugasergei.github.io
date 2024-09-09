@@ -17,8 +17,8 @@ export default function Home() {
             Hey, I'm Sergei, a web developer. I currently work at{" "}
             <Link href="https://molotov-group.vercel.app" external>
               Molotov Group
-            </Link>
-            . Before that I was busy with some{" "}
+            </Link>{" "}
+            in Vladivostok. Before that I was busy with some{" "}
             <Link href="https://github.com/stars/mazhugasergei/lists/commercial" external>
               commercial projects
             </Link>

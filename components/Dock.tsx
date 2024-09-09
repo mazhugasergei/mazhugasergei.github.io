@@ -52,8 +52,8 @@ export default function Dock() {
   ]
 
   return (
-    <div>
-      <div className="select-none"> </div> {/* <- white space at the bottom */}
+    <div className="select-none">
+      <div> </div> {/* <- white space at the bottom */}
       <div className="container w-full fixed bottom-2 left-1/2 -translate-x-1/2 flex justify-center text-[0.875rem]">
         {/* visible dock */}
         <div className="relative max-w-full bg-background-lighter rounded-full shadow p-0.5">
