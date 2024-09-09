@@ -1,6 +1,6 @@
+import { ThemeProvider } from "@/components/theme-provide"
 import { Metadata } from "next"
 import "./styles/globals.scss"
-import { ThemeProvider } from "@/components/ThemeProvide"
 
 export const metadata: Metadata = {
   title: {

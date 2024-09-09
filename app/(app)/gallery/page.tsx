@@ -1,6 +1,6 @@
+import opticShop from "@/public/gallery/optic-shop.jpg"
 import Image from "next/image"
 import Link from "next/link"
-import opticShop from "@/public/gallery/optic-shop.jpg"
 
 export default function Gallery() {
   const items = [

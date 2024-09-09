@@ -1,6 +1,6 @@
-import Nav from "./Nav"
-import Resolution from "./Resolution"
-import ThemeSwitch from "./ThemeSwitch"
+import Nav from "./nav"
+import Resolution from "./resolution"
+import ThemeSwitch from "./theme-switch"
 
 export default function Aside() {
   return (

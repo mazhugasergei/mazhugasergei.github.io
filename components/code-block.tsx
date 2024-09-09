@@ -1,9 +1,9 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
-import Prism from "prismjs"
-import "@/app/styles/prism.scss"
+import "@/app/styles/code-block.scss"
 import { Check, Clipboard } from "lucide-react"
+import Prism from "prismjs"
+import { useEffect, useRef, useState } from "react"
 import { Button } from "./ui/button"
 
 const CodeBlock = ({ code, language }: { code: string; language: string }) => {

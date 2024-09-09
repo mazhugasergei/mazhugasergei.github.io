@@ -1,4 +1,4 @@
-import Link from "@/components/Link"
+import Link from "@/components/link"
 import { Ghost } from "lucide-react"
 
 export default function NotFound() {

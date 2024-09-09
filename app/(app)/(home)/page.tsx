@@ -1,7 +1,7 @@
-import Image from "@/components/Image"
-import Link from "@/components/Link"
-import Post from "@/components/Post"
-import OnlineLink from "@/components/OnlineLink"
+import Image from "@/components/image"
+import Link from "@/components/link"
+import OnlineLink from "@/components/online-link"
+import Post from "@/components/post"
 import map from "@/public/map.png"
 import profile from "@/public/profile.jpeg"
 
@@ -35,10 +35,11 @@ export default function Home() {
       <section>
         <h2>Projects</h2>
         <div className="space-y-1.5">
+          <OnlineLink href="https://mspvl.ru" title="Монтажстрой Подряд" action="Visit" />
           <OnlineLink href="https://energy-vokstok.ru" title="Energy Vostok" action="Visit" />
           <OnlineLink href="https://dod.dvfu.ru" title="FEFU Open Day" action="Visit" />
           <OnlineLink href="https://dvz-tim.ru" title="TVZ TIM Construction" action="Visit" />
-          <OnlineLink href="https://kancoo.tech" title="KANCOO" action="Visit" />
+          <OnlineLink href="https://kancoo.tech" title="Dalian Kancoo" action="Visit" />
         </div>
       </section>
 
@@ -55,7 +56,7 @@ export default function Home() {
       {/* map */}
       <section>
         <div>
-          <Image src={map} alt="map" className="aspect-[944/502]" border />
+          <Image src={map} alt="map" className="aspect-[5/3]" border />
           <div className="flex items-center justify-end gap-2 text-sm text-muted mt-2">
             <svg
               width="12"

@@ -1,8 +1,8 @@
-import CodeBlock from "@/components/CodeBlock"
-import Video from "@/components/Video"
-import Image from "@/components/Image"
-import Link from "@/components/Link"
-import Post from "@/components/Post"
+import CodeBlock from "@/components/code-block"
+import Image from "@/components/image"
+import Link from "@/components/link"
+import Post from "@/components/post"
+import Video from "@/components/video"
 import testImage from "@/public/test.jpg"
 
 export default function TestPage() {

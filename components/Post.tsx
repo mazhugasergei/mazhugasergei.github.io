@@ -1,4 +1,4 @@
-import CopyURL from "@/components/CopyURL"
+import CopyURL from "@/components/copy-url"
 
 interface Props {
   title?: string

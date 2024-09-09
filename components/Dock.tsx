@@ -4,7 +4,7 @@ import { Menu } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
-import ThemeSwitch from "./ThemeSwitch"
+import ThemeSwitch from "./theme-switch"
 
 export default function Dock() {
   const pathname = usePathname()

@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import Contents from './Contents'
+import Link from "next/link"
+import Contents from "./contents"
 
 export default function AsideAlt({ title, href, className }: { title: string; href: string; className?: string }) {
   return (

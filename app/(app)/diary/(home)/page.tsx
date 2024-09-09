@@ -1,5 +1,5 @@
-import Link from "@/components/Link"
-import Post from "@/components/Post"
+import Link from "@/components/link"
+import Post from "@/components/post"
 
 export default function Diary() {
   const pages = ["Test page"]
