@@ -1,6 +1,6 @@
 import Link from "@/components/link"
 
-export default function Diary() {
+export default function Page() {
   const pages = ["Test page"]
 
   return (

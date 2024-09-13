@@ -5,7 +5,7 @@ import Post from "@/components/post"
 import Video from "@/components/video"
 import testImage from "@/public/test.jpg"
 
-export default function TestPage() {
+export default function Page() {
   return (
     <main>
       <Post title="Test Page" subtitle="June 2024">
