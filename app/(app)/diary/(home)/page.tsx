@@ -1,12 +1,15 @@
 import Link from "@/components/link"
-import Post from "@/components/post"
 
 export default function Diary() {
   const pages = ["Test page"]
 
   return (
-    <Post>
-      <h1>Diary</h1>
+    <main>
+      <div className="mb-4">
+        <h1 className="text-4xl">Diary</h1>
+        <p>View noted development.</p>
+      </div>
+
       <section>
         <ul>
           {pages.map((title, i) => (
@@ -20,6 +23,6 @@ export default function Diary() {
           ))}
         </ul>
       </section>
-    </Post>
+    </main>
   )
 }

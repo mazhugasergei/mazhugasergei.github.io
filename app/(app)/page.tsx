@@ -1,13 +1,13 @@
 import Image from "@/components/image"
 import Link from "@/components/link"
 import OnlineLink from "@/components/online-link"
-import Post from "@/components/post"
 import map from "@/public/map.png"
 import profile from "@/public/profile.jpeg"
+import { MapPin } from "lucide-react"
 
-export default function Home() {
+export default function Page() {
   return (
-    <Post title="Mazhuga Sergei" subtitle="June 2024">
+    <main>
       {/* about */}
       <section className="grid grid-cols-1 sm:grid-cols-[1fr_3fr] items-center gap-4">
         <Image src={profile} alt="profile" className="max-w-[9rem] aspect-square rounded-full mx-auto" />
@@ -57,24 +57,12 @@ export default function Home() {
       <section>
         <div>
           <Image src={map} alt="map" className="aspect-[5/3]" border />
-          <div className="flex items-center justify-end gap-2 text-sm text-muted mt-2">
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
+          <div className="flex items-center justify-end gap-1 text-sm text-muted mt-2">
+            <MapPin size={12} />
             <span>Vladivostok, Primorsky Krai</span>
           </div>
         </div>
       </section>
-    </Post>
+    </main>
   )
 }
