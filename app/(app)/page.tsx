@@ -36,7 +36,7 @@ export default function Page() {
         <h2>Projects</h2>
         <div className="space-y-1.5">
           <OnlineLink href="https://mspvl.ru" title="Монтажстрой Подряд" action="Visit" />
-          <OnlineLink href="https://energy-vokstok.ru" title="Energy Vostok" action="Visit" />
+          <OnlineLink href="https://energy-vostok.ru" title="Energy Vostok" action="Visit" />
           <OnlineLink href="https://dod.dvfu.ru" title="FEFU Open Day" action="Visit" />
           <OnlineLink href="https://dvz-tim.ru" title="TVZ TIM Construction" action="Visit" />
           <OnlineLink href="https://kancoo.tech" title="Dalian Kancoo" action="Visit" />
