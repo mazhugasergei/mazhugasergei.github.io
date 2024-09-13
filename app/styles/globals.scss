@@ -4,57 +4,57 @@
 
 @layer base {
   :root {
-    --background: #fdfdfd;
-    --background-darker: #aaa;
-    --background-lighter: #ccc;
-    --foreground: #3cd3ad;
+    --background: 0 0% 99%;
+    --background-darker: 0 0% 67%;
+    --background-lighter: 0 0% 80%;
+    --foreground: 165 63% 53%;
 
-    --primary: #171717;
-    --primary-foreground: #000000;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: #6f6f6f;
-    --secondary-foreground: #3cd3ad;
+    --secondary: 0 0% 44%;
+    --secondary-foreground: 165 63% 53%;
 
-    --muted: #a0a0a0;
-    --muted-foreground: #a3a3a3;
+    --muted: 0 0% 63%;
+    --muted-foreground: 0 0% 64%;
 
-    --accent: #d0ebff;
-    --accent-foreground: #3cd3ad;
+    --accent: 206 100% 91%;
+    --accent-foreground: 165 63% 53%;
 
-    --destructive: #ff5555;
-    --destructive-foreground: #000000;
+    --destructive: 0 100% 67%;
+    --destructive-foreground: 0 0% 0%;
 
-    --border: #00000012;
-    --input: #a9cce3;
-    --ring: #3cd3ad;
+    --border: 0 0% 0%;
+    --input: 204 51% 78%;
+    --ring: 165 63% 53%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: #171717;
-    --background-darker: #111;
-    --background-lighter: #303030;
-    --foreground: #ffffff;
+    --background: 0 0% 9%;
+    --background-darker: 0 0% 7%;
+    --background-lighter: 0 0% 19%;
+    --foreground: 0 0% 100%;
 
-    --primary: #ededed;
-    --primary-foreground: #ffffff;
+    --primary: 0 0% 93%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: #a0a0a0;
-    --secondary-foreground: #ffffff;
+    --secondary: 0 0% 63%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: #737373;
-    --muted-foreground: #a3a3a3;
+    --muted: 0 0% 45%;
+    --muted-foreground: 0 0% 64%;
 
-    --accent: #56b2ca;
-    --accent-foreground: #ffffff;
+    --accent: 192 52% 56%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: #ff5555;
-    --destructive-foreground: #ffffff;
+    --destructive: 0 100% 67%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: #282828;
-    --input: #56b2ca;
-    --ring: #ffffff;
+    --border: 0 0% 16%;
+    --input: 192 52% 56%;
+    --ring: 0 0% 100%;
   }
 }
 
@@ -80,6 +80,12 @@ body {
 .scrollbar-hidden {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+main {
+  width: 100%;
+  max-width: 42rem;
+  margin-inline: auto;
 }
 
 h1,

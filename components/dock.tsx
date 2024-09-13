@@ -33,9 +33,6 @@ export default function Dock() {
     },
   ]
 
-  const currentRoute = routes.find((route) => route.href === "/" + pathname.split("/")[1])
-  const restRoutes = routes.filter((route) => route.href !== "/" + pathname.split("/")[1])
-
   const links = [
     {
       name: "Twitter",
@@ -79,21 +76,20 @@ export default function Dock() {
           <div className="overflow-auto scrollbar-hidden rounded-full flex">
             {/* menu btn */}
             <button
+              className="bg-primary text-background dark:text-background rounded-full px-4 p-2"
               ref={menuBtn}
               onClick={() => setMenuOpened(!menuOpened)}
-              className="flex items-center gap-2 bg-primary text-background dark:text-background rounded-full px-4 py-2"
             >
-              {currentRoute ? currentRoute.name : "404 Not Found"}
               <Menu size={14} />
             </button>
 
             {/* links */}
-            {restRoutes.map((route, i) => (
+            {routes.map((route, i) => (
               <Link
                 key={route.name}
                 href={route.href}
                 className={`bg-background p-2 ${i === 0 ? "rounded-l-full pl-4" : ""} ${
-                  i === restRoutes.length - 1 ? "rounded-r-full pr-4" : ""
+                  i === routes.length - 1 ? "rounded-r-full pr-4" : ""
                 }`}
               >
                 {route.name}
