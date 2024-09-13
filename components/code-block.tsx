@@ -6,7 +6,7 @@ import Prism from "prismjs"
 import { useEffect, useRef, useState } from "react"
 import { Button } from "./ui/button"
 
-const CodeBlock = ({ code, language }: { code: string; language: string }) => {
+export default function CodeBlock({ code, language }: { code: string; language: string }) {
   const ref = useRef<HTMLElement>(null)
   const [copied, setCopied] = useState(false)
 
@@ -52,5 +52,3 @@ const CodeBlock = ({ code, language }: { code: string; language: string }) => {
     </div>
   )
 }
-
-export default CodeBlock
