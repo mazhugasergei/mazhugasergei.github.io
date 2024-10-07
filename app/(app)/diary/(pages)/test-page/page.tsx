@@ -3,7 +3,7 @@ import Image from "@/components/image"
 import Link from "@/components/link"
 import Post from "@/components/post"
 import Video from "@/components/video"
-import testImage from "@/public/test.jpg"
+import testImage from "./images/test.jpg"
 
 export default function Page() {
   return (

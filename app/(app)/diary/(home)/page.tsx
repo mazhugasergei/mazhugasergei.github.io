@@ -1,7 +1,7 @@
 import Link from "@/components/link"
 
 export default function Page() {
-  const pages = ["Test page"]
+  const pages = ["Energy Vostok renewing"]
 
   return (
     <main>
