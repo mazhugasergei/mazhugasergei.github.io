@@ -1,7 +1,7 @@
 import Link from "@/components/link"
 
 export default function Page() {
-  const pages = ["Energy Vostok renewing"]
+  const pages = ["Energy Vostok renewing", "FEFU Open Day"]
 
   return (
     <main>

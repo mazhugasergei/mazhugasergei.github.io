@@ -38,7 +38,7 @@ export default function Page() {
           <OnlineLink href="https://mspvl.ru" title="Монтажстрой Подряд" action="Visit" />
           <OnlineLink href="https://energy-vostok.ru" title="Energy Vostok" action="Visit" />
           <OnlineLink href="https://dvz-tim.ru" title="DVZ TIM Construction" action="Visit" />
-          <OnlineLink href="https://dod.dvfu.ru" title="FEFU Open Day" action="Visit" />
+          <OnlineLink href="/diary/fefu-open-day" title="FEFU Open Day" action="Visit" />
           <OnlineLink href="https://kancoo.tech" title="Dalian Kancoo" action="Visit" />
         </div>
       </section>
