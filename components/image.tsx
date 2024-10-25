@@ -28,7 +28,7 @@ export default function CustomImage({
   const [zoomLevel, setZoomLevel] = React.useState(1)
 
   return (
-    <Dialog>
+    <Dialog onOpenChange={() => setZoomLevel(1)}>
       <DialogTrigger className="cursor-zoom-in rounded-[.75rem] overflow-hidden my-3">
         <Image
           src={src}
