@@ -2,33 +2,33 @@ import Image from "@/components/image"
 import Link from "@/components/link"
 import OnlineLink from "@/components/online-link"
 import map from "@/public/map.png"
-import profile from "@/public/profile.jpeg"
 import { MapPin } from "lucide-react"
 
 export default function Page() {
   return (
     <main>
       {/* about */}
-      <section className="grid grid-cols-1 sm:grid-cols-[1fr_3fr] items-center gap-4">
-        <Image src={profile} alt="profile" className="max-w-[9rem] aspect-square rounded-full mx-auto" />
+      <section>
         <div>
-          <h2 className="pt-0">About</h2>
-          <p>
-            Hey, I'm Sergei, a web developer. I currently work at{" "}
-            <Link href="https://molotov-group.vercel.app" external>
-              Molotov Group
-            </Link>{" "}
-            in Vladivostok. Before that I was busy with some{" "}
-            <Link href="https://github.com/stars/mazhugasergei/lists/commercial" external>
-              commercial projects
-            </Link>
-            . I have also created{" "}
-            <Link href="https://www.npmjs.com/package/tgreports" external>
-              Telegram Catcher
-            </Link>{" "}
-            library that catches errors and sends them to your Telegram.
-          </p>
+          <h1 className="text-4xl">Sergei Mazhuga</h1>
+          <p>Front-end Web Developer</p>
         </div>
+
+        <p>
+          A web developer with a passion for creating visually stunning, intuitive websites and web services. I
+          currently work at the{" "}
+          <Link href="https://molotov-group.vercel.app" external>
+            Molotov Group
+          </Link>{" "}
+          in Vladivostok, where I develop public websites and internal tools that optimize workflow efficiency. Prior to
+          this, I was engaged in various commercial projects, honing my skills in both front-end and backend
+          development. Additionally, I created the{" "}
+          <Link href="https://www.npmjs.com/package/tgreports" external>
+            Telegram Catcher
+          </Link>{" "}
+          library, which captures errors and delivers them directly to Telegram, making error handling more efficient
+          for developers.
+        </p>
       </section>
 
       {/* projects */}
