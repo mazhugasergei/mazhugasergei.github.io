@@ -1,5 +1,6 @@
 "use client"
 
+import { cn } from "@/lib/utils"
 import { useEffect, useState } from "react"
 
 export default function Resolution({ className }: { className?: string }) {
@@ -16,7 +17,7 @@ export default function Resolution({ className }: { className?: string }) {
   }, [])
 
   return (
-    <div className={width && height ? "opacity-1000" : "opacity-0"}>
+    <div className={cn("text-muted font-mono text-xs", width && height ? "opacity-1000" : "opacity-0", className)}>
       {width} x {height}
     </div>
   )

@@ -7,7 +7,7 @@
     --background: 0 0% 99%;
     --background-darker: 0 0% 67%;
     --background-lighter: 0 0% 80%;
-    --foreground: 165 63% 53%;
+    --foreground: 0 0% 20%;
 
     --primary: 0 0% 9%;
     --primary-foreground: 0 0% 0%;
@@ -82,7 +82,7 @@ html {
   scrollbar-width: none;
 }
 
-main {
+.wrapper {
   width: 100%;
   max-width: 42rem;
   margin-inline: auto;

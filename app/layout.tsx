@@ -40,11 +40,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <div className="container text-[0.9375rem] text-[#171717] dark:text-[#ededed] bg-background">
-          <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
-            {children}
-          </ThemeProvider>
-        </div>
+        <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
+          {/* <Header /> */}
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

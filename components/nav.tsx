@@ -1,5 +1,6 @@
 "use client"
 
+import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -15,20 +16,27 @@ export default function Nav({ className }: { className?: string }) {
       name: "Diary",
       href: "/diary",
     },
+    {
+      name: "Gallery",
+      href: "/gallery",
+    },
   ]
 
   return (
     <nav className={className}>
-      <ul className="max-lg:flex max-lg:items-center max-lg:gap-2 lg:my-6">
-        {routes.map((route) => (
-          <li key={route.name}>
+      <ul>
+        {routes.map(({ name, href }) => (
+          <li key={name}>
             <Link
-              href={route.href}
-              className={`"block text-[0.8125rem] text-${
-                pathname === route.href ? "primary" : "muted"
-              } hover:text-primary transition p-1 -mx-1"`}
+              href={href}
+              className={cn(
+                "block text-[0.8125rem] transition p-1",
+                (href === "/" ? pathname === "/" : pathname.startsWith(href))
+                  ? "text-primary"
+                  : "text-muted hover:text-primary"
+              )}
             >
-              {route.name}
+              {name}
             </Link>
           </li>
         ))}

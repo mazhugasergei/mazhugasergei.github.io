@@ -4,19 +4,25 @@ import ThemeSwitch from "./theme-switch"
 
 export default function Aside() {
   return (
-    <aside className="max-w-[42rem] lg:h-screen lg:fixed top-0 flex lg:flex-col max-lg:items-center max-lg:justify-between max-lg:pb-[inherit] lg:py-[inherit] lg:px-6 max-lg:mx-auto">
+    <aside>
+      <AsideContent />
+    </aside>
+  )
+}
+
+const AsideContent = () => (
+  <div className="max-xl:hidden sticky top-0 h-screen p-4 pr-0">
+    <div className="flex flex-col h-full bg-[#00000010] dark:bg-[#ffffff10] rounded-lg p-6">
       <h2 className="text-[1rem]">
         Mazhuga <br />
         Sergei
       </h2>
 
-      <Nav className="max-lg:flex max-lg:justify-center lg:my-2" />
+      <Nav className="my-4" />
 
-      <ThemeSwitch className="lg:self-start" />
+      <ThemeSwitch />
 
-      <div className="max-lg:hidden text-muted font-mono text-xs mt-auto">
-        <Resolution />
-      </div>
-    </aside>
-  )
-}
+      <Resolution className="mt-auto" />
+    </div>
+  </div>
+)
