@@ -56,7 +56,7 @@ export default function Page() {
       {/* map */}
       <section>
         <div>
-          <Image src={map} alt="map" className="aspect-[5/3]" border />
+          <Image src={map} alt="map" className="aspect-[5/3]" />
           <div className="flex items-center justify-end gap-1 text-sm text-muted mt-2">
             <MapPin size={12} />
             <span>Vladivostok, Primorsky Krai</span>
