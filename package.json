@@ -1,12 +1,8 @@
 {
-  "name": "mazhugasergei.github.io",
-  "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "react": "19.0.0-rc-66855b96-20241106",
