@@ -1,7 +1,19 @@
 import type { Config } from "tailwindcss"
 
 export default {
-  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
-  theme: {},
+  darkMode: ["class"],
+  content: ["./app/**/*.{ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        secondary: {
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
+        },
+      },
+    },
+  },
   plugins: [],
 } satisfies Config
