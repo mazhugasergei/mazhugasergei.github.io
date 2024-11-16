@@ -1,11 +1,11 @@
-import { Poppins, Roboto } from "next/font/google"
+import { Doto as Headings, PT_Mono as Main } from "next/font/google"
 
-export const mainFont = Roboto({
+export const headingFont = Headings({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
 })
 
-export const headingFont = Poppins({
-  weight: ["400", "500", "700"],
+export const mainFont = Main({
+  weight: ["400"],
   subsets: ["latin"],
 })

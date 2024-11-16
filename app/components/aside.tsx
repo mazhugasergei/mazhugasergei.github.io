@@ -8,7 +8,7 @@ export const Aside = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLD
     return (
       <aside ref={ref} {...props} className={className}>
         <div className="h-full bg-secondary rounded-lg space-y-4 p-6">
-          <Link href="/" className={cn(headingFont.className, "grid")}>
+          <Link href="/" className={cn(headingFont.className, "grid text-2xl leading-7 font-bold")}>
             <span>Mazhuga</span>
             <span>Sergei</span>
           </Link>
