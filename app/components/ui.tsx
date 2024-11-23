@@ -12,7 +12,11 @@ interface LinkProps extends React.ComponentProps<typeof NextLink> {
 export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
   ({ children, className, external, ...props }, ref) => {
     return (
-      <NextLink ref={ref} className={cn("inline-flex items-start text-blue-400 underline", className)} {...props}>
+      <NextLink
+        ref={ref}
+        className={cn("text-primary inline-flex items-start justify-center underline", className)}
+        {...props}
+      >
         {children}
         {external && <ArrowUpRight size={13} />}
       </NextLink>
