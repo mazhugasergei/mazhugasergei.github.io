@@ -5,6 +5,7 @@
 :root {
   --background: #fdfdfd;
   --foreground: #333;
+  --primary: #60aaff;
   --secondary: #ededed;
   --secondary-foreground: #a1a1a1;
 }
