@@ -30,7 +30,7 @@ const Intro = () => {
         <Link
           download="Mazhuga Sergei CV"
           href="/resume.pdf"
-          className="flex items-center gap-2 rounded bg-foreground px-4 py-2 text-background no-underline"
+          className="flex items-center gap-2 bg-foreground px-4 py-2 font-bold text-background no-underline hover:underline"
         >
           Download CV
         </Link>
