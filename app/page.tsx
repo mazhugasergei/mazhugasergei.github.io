@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils"
 import { Link, SymbolTransitionText } from "./components/ui"
 import { headingFont } from "./fonts"
+import { cn } from "./lib/utils"
 
 export default function Home() {
   return (
@@ -13,12 +13,12 @@ export default function Home() {
 const Intro = () => {
   return (
     <section className="pt-2">
-      <div className="grid md:grid-cols-[1fr_auto] items-start gap-4">
+      <div className="grid items-start gap-4 md:grid-cols-[1fr_auto]">
         <div>
           <h1 className={cn(headingFont.className, "text-5xl font-bold")}>
             <SymbolTransitionText text="Mazhuga Sergei" />
           </h1>
-          <p className="text-balance mt-2">
+          <p className="mt-2 text-balance">
             Web developer with a passion for creating visually stunning and intuitive websites. Former contributor and
             maintainer of{" "}
             <Link external target="_blank" href="https://molotov-group.ru">
@@ -30,7 +30,7 @@ const Intro = () => {
         <Link
           download="Mazhuga Sergei CV"
           href="/resume.pdf"
-          className="no-underline flex items-center gap-2 bg-foreground text-background rounded px-4 py-2"
+          className="flex items-center gap-2 rounded bg-foreground px-4 py-2 text-background no-underline"
         >
           Download CV
         </Link>

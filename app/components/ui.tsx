@@ -1,6 +1,6 @@
 "use client"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/app/lib/utils"
 import { ArrowUpRight } from "lucide-react"
 import NextLink from "next/link"
 import React from "react"
@@ -12,7 +12,7 @@ interface LinkProps extends React.ComponentProps<typeof NextLink> {
 export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
   ({ children, className, external, ...props }, ref) => {
     return (
-      <NextLink ref={ref} className={cn("inline-flex items-start underline text-blue-400", className)} {...props}>
+      <NextLink ref={ref} className={cn("inline-flex items-start text-blue-400 underline", className)} {...props}>
         {children}
         {external && <ArrowUpRight size={13} />}
       </NextLink>

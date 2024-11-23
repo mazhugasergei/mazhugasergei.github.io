@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils"
+import { cn } from "@/app/lib/utils"
 import Link from "next/link"
 import React from "react"
 import { headingFont } from "../fonts"
@@ -7,8 +7,8 @@ export const Aside = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLD
   ({ className, ...props }, ref) => {
     return (
       <aside ref={ref} {...props} className={className}>
-        <div className="h-full bg-secondary rounded-xl space-y-4 p-6">
-          <Link href="/" className={cn(headingFont.className, "grid text-2xl leading-7 font-bold")}>
+        <div className="h-full space-y-4 rounded-xl bg-secondary p-6">
+          <Link href="/" className={cn(headingFont.className, "grid text-2xl font-bold leading-7")}>
             <span>Mazhuga</span>
             <span>Sergei</span>
           </Link>
@@ -42,7 +42,7 @@ export const Nav = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDiv
             <li key={route.name}>
               <Link
                 href={route.href}
-                className="block leading-loose text-[0.8125rem] text-secondary-foreground hover:text-foreground transition"
+                className="block text-[0.8125rem] leading-loose text-secondary-foreground transition hover:text-foreground"
               >
                 {route.name}
               </Link>
