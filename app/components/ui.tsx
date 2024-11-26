@@ -14,7 +14,8 @@ export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
     return (
       <NextLink
         ref={ref}
-        className={cn("inline-flex items-start justify-center text-primary underline", className)}
+        target={external ? "_blank" : "_self"}
+        className={cn("inline-flex items-start text-primary underline", className)}
         {...props}
       >
         {children}
