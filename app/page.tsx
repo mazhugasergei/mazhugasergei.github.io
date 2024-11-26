@@ -1,4 +1,4 @@
-import { Nav } from "./components/aside"
+import { Projects } from "./components/aside"
 import { Link, SymbolTransitionText } from "./components/ui"
 import { headingFont } from "./fonts"
 import { cn } from "./lib/utils"
@@ -50,8 +50,8 @@ const Intro = () => {
       </div>
 
       <div className="space-y-2">
-        <h2>Navigation</h2>
-        <Nav />
+        <h2>Projects</h2>
+        <Projects />
       </div>
     </section>
   )
