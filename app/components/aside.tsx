@@ -27,12 +27,8 @@ export const Nav = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDiv
         href: "/",
       },
       {
-        name: "Diary",
-        href: "/diary",
-      },
-      {
-        name: "Gallery",
-        href: "/gallery",
+        name: "Craft",
+        href: "/craft",
       },
     ]
     return (
