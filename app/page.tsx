@@ -5,15 +5,18 @@ import { cn } from "./lib/utils"
 
 export default function Home() {
   return (
-    <main>
-      <Intro />
-    </main>
+    <>
+      <BG />
+      <main className="mx-auto grid min-h-screen max-w-7xl p-4 md:p-8">
+        <Intro />
+      </main>
+    </>
   )
 }
 
 const Intro = () => {
   return (
-    <section className="grid min-h-screen gap-8 max-md:place-content-center md:grid-cols-[3fr_1fr] md:items-center">
+    <section className="grid gap-8 max-md:place-content-center md:grid-cols-[3fr_1fr] md:items-center">
       <div>
         <h1 className={cn(headingFont.className, "text-5xl font-bold")}>
           <SymbolTransitionText text="Mazhuga Sergei" />
@@ -51,5 +54,27 @@ const Intro = () => {
         <Nav />
       </div>
     </section>
+  )
+}
+
+const BG = () => {
+  return (
+    <div className="absolute inset-2 isolate z-[-1] md:inset-4">
+      {/* top left */}
+      <div className="absolute left-0 top-0 z-[-1]">
+        {/* top */}
+        <div className="absolute left-0 top-0 h-1 w-20 bg-foreground" />
+        {/* left */}
+        <div className="absolute left-0 top-0 h-10 w-1 bg-foreground" />
+      </div>
+
+      {/* bottom right */}
+      <div className="absolute bottom-0 right-0 z-[-1]">
+        {/* bottom */}
+        <div className="absolute bottom-0 right-0 h-1 w-20 bg-foreground" />
+        {/* right */}
+        <div className="absolute bottom-0 right-0 h-10 w-1 bg-foreground" />
+      </div>
+    </div>
   )
 }

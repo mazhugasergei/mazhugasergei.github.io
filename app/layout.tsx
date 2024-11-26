@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
-          <main className="mx-auto max-w-7xl px-4 md:px-8">{children}</main>
+          {children}
         </ThemeProvider>
       </body>
     </html>
