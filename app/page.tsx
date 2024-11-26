@@ -1,3 +1,4 @@
+import NextLink from "next/link"
 import { Projects } from "./components/aside"
 import { Link, SymbolTransitionText } from "./components/ui"
 import { headingFont } from "./fonts"
@@ -32,20 +33,20 @@ const Intro = () => {
         </p>
 
         <div className="mt-4 inline-grid grid-cols-2 gap-2">
-          <Link
+          <NextLink
             href="mailto:ghbdtnghbdtn8@gmail.com"
-            className="bg-foreground px-4 py-2 font-bold text-background no-underline hover:underline"
+            className="bg-foreground px-4 py-2 text-center font-bold text-background no-underline hover:underline"
           >
             Contact me
-          </Link>
+          </NextLink>
 
-          <Link
+          <NextLink
             download="Mazhuga Sergei CV"
             href="/resume.pdf"
-            className="px-4 py-2 text-foreground no-underline hover:underline"
+            className="px-4 py-2 text-center text-foreground no-underline hover:underline"
           >
             Download CV
-          </Link>
+          </NextLink>
         </div>
       </div>
 
