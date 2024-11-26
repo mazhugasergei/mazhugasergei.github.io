@@ -14,11 +14,11 @@ export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
     return (
       <NextLink
         ref={ref}
-        className={cn("text-primary inline-flex items-start justify-center underline", className)}
+        className={cn("inline-flex items-start justify-center text-primary underline", className)}
         {...props}
       >
         {children}
-        {external && <ArrowUpRight size={13} />}
+        {external && <ArrowUpRight size={12} />}
       </NextLink>
     )
   }
