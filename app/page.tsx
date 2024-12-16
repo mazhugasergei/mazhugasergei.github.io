@@ -42,7 +42,7 @@ const Intro = () => {
 
           <NextLink
             download="Mazhuga Sergei CV"
-            href="/resume.pdf"
+            href="/CV - Sergei Mazhuga.pdf"
             className="px-4 py-2 text-center text-foreground no-underline hover:underline"
           >
             Download CV
