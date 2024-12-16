@@ -59,6 +59,10 @@ export const Projects = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HT
   ({ className, ...props }, ref) => {
     const projects = [
       {
+        name: "KANCOO",
+        href: "https://www.kancoo.tech",
+      },
+      {
         name: "Molotov Group",
         href: "https://molotov-group.ru",
       },
@@ -71,8 +75,8 @@ export const Projects = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HT
         href: "https://dvz-tim.ru",
       },
       {
-        name: "KANCOO",
-        href: "https://www.kancoo.tech",
+        name: "EverestAvto",
+        href: "https://everestavtovl.ru",
       },
       {
         name: "MSP",
