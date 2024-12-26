@@ -19,8 +19,8 @@ const Intro = () => {
   return (
     <section className="grid gap-8 max-md:place-content-center md:grid-cols-[3fr_1fr] md:items-center">
       <div>
-        <h1 className={cn(headingFont.className, "text-5xl font-bold")}>
-          <SymbolTransitionText text="Mazhuga Sergei" />
+        <h1 className={cn(headingFont.className, "flex flex-wrap text-5xl font-bold")}>
+          <SymbolTransitionText text="Mazhuga" /> <SymbolTransitionText text="Sergei" />
         </h1>
 
         <p className="mt-3 text-balance">
