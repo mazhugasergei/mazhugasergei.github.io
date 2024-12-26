@@ -17,7 +17,7 @@ export default function Home() {
 
 const Intro = () => {
   return (
-    <section className="grid gap-8 max-md:place-content-center md:grid-cols-[3fr_2fr] md:items-center">
+    <section className="grid gap-8 max-md:place-content-center md:grid-cols-[3fr_1fr] md:items-center">
       <div>
         <h1 className={cn(headingFont.className, "text-5xl font-bold")}>
           <SymbolTransitionText text="Mazhuga Sergei" />
@@ -28,7 +28,7 @@ const Intro = () => {
           <Link external target="_blank" href="https://molotov-group.ru">
             Molotov Group's
           </Link>{" "}
-          public and internal projects.
+          projects.
         </p>
 
         <div className="mt-4 inline-grid grid-cols-2 gap-2">
