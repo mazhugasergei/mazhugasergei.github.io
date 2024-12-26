@@ -22,4 +22,5 @@ body {
   background: var(--background);
   font-family: monospace;
   font-size: 0.875rem;
+  user-select: none;
 }
