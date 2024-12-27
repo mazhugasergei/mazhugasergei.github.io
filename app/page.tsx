@@ -6,12 +6,12 @@ import { cn } from "./lib/utils"
 
 export default function Home() {
   return (
-    <>
+    <div className="relative">
       <BG />
-      <main className="mx-auto grid min-h-screen max-w-7xl p-4 md:p-8">
+      <main className="mx-auto grid min-h-screen max-w-7xl px-8 py-20">
         <Intro />
       </main>
-    </>
+    </div>
   )
 }
 
