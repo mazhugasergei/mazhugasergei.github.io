@@ -91,9 +91,9 @@ const ParentsBusiness = () => {
         src={businessCardEn}
         alt=""
         placeholder="blur"
-        className="mx-auto w-full max-w-lg rounded-[2vw] lg:hidden"
+        className="mx-auto w-full max-w-lg rounded-[min(3vw,2rem)] lg:hidden"
       />
-      <Image src={banner} alt="" placeholder="blur" className="rounded-[min(3.5vw,4rem)] max-lg:hidden" />
+      <Image src={banner} alt="" placeholder="blur" className="rounded-[min(2vw,3rem)] max-lg:hidden" />
     </section>
   )
 }
