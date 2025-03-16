@@ -1,6 +1,7 @@
 import { Projects } from "@/components/aside"
 import { SymbolTransitionText } from "@/components/ui"
 import { Link } from "@/components/ui/link"
+import { PolaroidImage } from "@/components/ui/pfp"
 import { headingFont } from "@/fonts"
 import bg from "@/images/bg.jpg"
 import pfp from "@/images/pfp.jpg"
@@ -23,7 +24,7 @@ export default function Home() {
       <div className="flex min-h-screen flex-col justify-center py-10">
         <div className="border-y">
           <div className="mx-auto flex max-w-5xl flex-col items-center px-10">
-            <Intro className="py-10" />
+            <Intro className="py-16" />
           </div>
         </div>
       </div>
@@ -35,15 +36,9 @@ const Intro = ({ className }: { className?: string }) => {
   return (
     <section className={cn("mx-auto flex flex-col gap-8", className)}>
       <div className="flex flex-col sm:items-center">
-        <Image
-          src={pfp}
-          alt=""
-          width={50}
-          height={50}
-          className="mb-6 -rotate-6 border-[.2rem] border-b-[.5rem] border-[#fff]"
-        />
+        <PolaroidImage src={pfp} className="mb-6" />
 
-        <h1 className={cn(headingFont.className, "flex flex-wrap text-4xl font-bold")}>
+        <h1 className={cn(headingFont.className, "flex flex-wrap text-3xl font-bold")}>
           <SymbolTransitionText text="Mazhuga" /> <SymbolTransitionText text="Sergei" />
         </h1>
 
