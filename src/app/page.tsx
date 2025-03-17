@@ -36,7 +36,7 @@ const Intro = ({ className }: { className?: string }) => {
   return (
     <section className={cn("mx-auto flex flex-col gap-8", className)}>
       <div className="flex flex-col sm:items-center">
-        <PolaroidImage src={pfp} className="mb-6" />
+        <PfpWithLink className="mb-6" />
 
         <h1 className={cn(headingFont.className, "flex flex-wrap text-3xl font-bold")}>
           <SymbolTransitionText text="Mazhuga" /> <SymbolTransitionText text="Sergei" />
@@ -51,20 +51,8 @@ const Intro = ({ className }: { className?: string }) => {
         </p>
 
         <div className="mt-4 inline-grid grid-cols-2 gap-2">
-          <NextLink
-            href="mailto:ghbdtnghbdtn8@gmail.com"
-            className="rounded-md bg-foreground px-3 py-1 text-center font-bold text-background no-underline hover:underline"
-          >
-            Contact me
-          </NextLink>
-
-          <NextLink
-            download="Mazhuga Sergei CV"
-            href="/CV - Sergei Mazhuga.pdf"
-            className="rounded-md px-3 py-1 text-center text-foreground no-underline hover:underline"
-          >
-            Download CV
-          </NextLink>
+          <ContactButton />
+          <DownloadCVButton />
         </div>
       </div>
 
@@ -75,3 +63,30 @@ const Intro = ({ className }: { className?: string }) => {
     </section>
   )
 }
+
+const PfpWithLink = (props: React.HTMLAttributes<HTMLAnchorElement>) => {
+  return (
+    <NextLink href="https://x.com/mazhugasergei" target="_blank" {...props}>
+      <PolaroidImage src={pfp} />
+    </NextLink>
+  )
+}
+
+const ContactButton = () => (
+  <NextLink
+    href="mailto:ghbdtnghbdtn8@gmail.com"
+    className="rounded-md bg-foreground px-3 py-1 text-center font-bold text-background no-underline hover:underline"
+  >
+    Contact me
+  </NextLink>
+)
+
+const DownloadCVButton = () => (
+  <NextLink
+    download="Mazhuga Sergei CV"
+    href="/CV - Sergei Mazhuga.pdf"
+    className="rounded-md px-3 py-1 text-center text-foreground no-underline hover:underline"
+  >
+    Download CV
+  </NextLink>
+)
