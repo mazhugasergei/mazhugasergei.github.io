@@ -1,23 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #fdfdfd;
-  --foreground: #333;
-  --primary: #60aaff;
-  --secondary: #ededed;
-  --secondary-foreground: #a1a1a1;
-  --border: #e5e5e5;
-}
-
-.dark {
-  --background: #171717;
-  --foreground: #fff;
-  --secondary: #262626;
-  --secondary-foreground: #737373;
-  --border: #333;
-}
+@import "tailwindcss";
 
 * {
   border-color: var(--border);
