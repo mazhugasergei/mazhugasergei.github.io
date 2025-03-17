@@ -1,5 +1,6 @@
 import { Projects } from "@/components/aside"
 import { SymbolTransitionText } from "@/components/ui"
+import { buttonVariants } from "@/components/ui/button"
 import { Link } from "@/components/ui/link"
 import { PolaroidImage } from "@/components/ui/pfp"
 import { headingFont } from "@/fonts"
@@ -16,7 +17,7 @@ export default function Home() {
       <NoiseOverlay />
       <BG />
 
-      <div className="absolute bottom-0 left-10 right-10 top-0 -z-10 mx-auto max-w-5xl border-x" />
+      <div className="absolute top-0 right-10 bottom-0 left-10 -z-10 mx-auto max-w-5xl border-x" />
 
       <div className="flex min-h-screen flex-col justify-center py-10">
         <div className="border-y">
@@ -89,10 +90,7 @@ const PfpWithLink = (props: React.HTMLAttributes<HTMLAnchorElement>) => {
 }
 
 const ContactButton = () => (
-  <NextLink
-    href="mailto:ghbdtnghbdtn8@gmail.com"
-    className="rounded-md bg-foreground px-3 py-1 text-center font-bold text-background no-underline hover:underline"
-  >
+  <NextLink href="mailto:ghbdtnghbdtn8@gmail.com" className={buttonVariants()}>
     Contact me
   </NextLink>
 )
@@ -101,7 +99,7 @@ const DownloadCVButton = () => (
   <NextLink
     download="Mazhuga Sergei CV"
     href="/CV - Sergei Mazhuga.pdf"
-    className="rounded-md px-3 py-1 text-center text-foreground no-underline hover:underline"
+    className={buttonVariants({ variant: "link" })}
   >
     Download CV
   </NextLink>
