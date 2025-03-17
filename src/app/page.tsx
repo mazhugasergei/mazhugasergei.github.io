@@ -1,4 +1,3 @@
-import { Projects } from "@/components/aside"
 import { SymbolTransitionText } from "@/components/ui"
 import { buttonVariants } from "@/components/ui/button"
 import { Link } from "@/components/ui/link"
@@ -73,10 +72,7 @@ const Intro = ({ className }: { className?: string }) => {
         </div>
       </div>
 
-      <div className="space-y-2">
-        <h2>Projects</h2>
-        <Projects />
-      </div>
+      <Projects />
     </section>
   )
 }
@@ -104,3 +100,50 @@ const DownloadCVButton = () => (
     Download CV
   </NextLink>
 )
+
+export const Projects = () => {
+  const projects = [
+    {
+      name: "KANCOO",
+      href: "https://www.kancoo.tech",
+    },
+    {
+      name: "Molotov Group",
+      href: "https://molotov-group.ru",
+    },
+    {
+      name: "Energy Vostok",
+      href: "https://energy-vostok.ru",
+    },
+    {
+      name: "DVZ-TIM",
+      href: "https://dvz-tim.ru",
+    },
+    {
+      name: "EverestAvto",
+      href: "https://everestavtovl.ru",
+    },
+    {
+      name: "MSP",
+      href: "https://mspvl.ru",
+    },
+  ]
+  return (
+    <div className="space-y-2">
+      <h2>Projects</h2>
+      <ul>
+        {projects.map(({ name, href }) => (
+          <li key={name}>
+            <Link
+              external
+              href={href}
+              className="text-foreground/50 hover:text-foreground text-xs leading-loose no-underline transition"
+            >
+              {name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
