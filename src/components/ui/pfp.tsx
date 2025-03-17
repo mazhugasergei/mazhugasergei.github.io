@@ -16,7 +16,7 @@ export const PolaroidImage = React.forwardRef<HTMLImageElement, Props>(
         alt={alt}
         width={45}
         height={45}
-        className={cn("-rotate-6 border-[.2rem] border-b-[.5rem] border-[#fff]", className)}
+        className={cn("relative z-50 -rotate-6 border-[.2rem] border-b-[.5rem] border-[#fff]", className)}
         {...props}
       />
     )

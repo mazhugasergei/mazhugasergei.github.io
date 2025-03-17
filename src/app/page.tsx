@@ -4,6 +4,7 @@ import { Link } from "@/components/ui/link"
 import { PolaroidImage } from "@/components/ui/pfp"
 import { headingFont } from "@/fonts"
 import bg from "@/images/bg.jpg"
+import noise from "@/images/noise.png"
 import pfp from "@/images/pfp.jpg"
 import { cn } from "@/utils"
 import Image from "next/image"
@@ -12,12 +13,8 @@ import NextLink from "next/link"
 export default function Home() {
   return (
     <main className="relative isolate min-h-screen">
-      <Image
-        src={bg}
-        alt=""
-        placeholder="blur"
-        className="absolute inset-0 -z-10 h-full w-full object-cover brightness-50"
-      />
+      <NoiseOverlay />
+      <BG />
 
       <div className="absolute bottom-0 left-10 right-10 top-0 -z-10 mx-auto max-w-5xl border-x" />
 
@@ -31,6 +28,25 @@ export default function Home() {
     </main>
   )
 }
+
+const NoiseOverlay = () => (
+  <div
+    className="pointer-events-none absolute z-50 h-full w-full object-cover mix-blend-overlay"
+    style={{
+      backgroundImage: `url(${noise.src})`,
+      backgroundSize: "200px 200px",
+    }}
+  />
+)
+
+const BG = () => (
+  <Image
+    src={bg}
+    alt=""
+    placeholder="blur"
+    className="absolute -z-10 h-full w-full object-cover brightness-[.15] grayscale"
+  />
+)
 
 const Intro = ({ className }: { className?: string }) => {
   return (
