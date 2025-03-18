@@ -120,4 +120,8 @@
     font-family: monospace;
     font-size: 0.875rem;
   }
+
+  .wrapper {
+    @apply mx-auto max-w-5xl;
+  }
 }
