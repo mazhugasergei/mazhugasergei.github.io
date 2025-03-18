@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 const NoiseOverlay = () => (
   <div
-    className="pointer-events-none absolute z-50 h-full w-full object-cover mix-blend-overlay"
+    className="pointer-events-none absolute z-50 h-full w-full object-cover opacity-12"
     style={{
       backgroundImage: `url(${noise.src})`,
       backgroundSize: "200px 200px",

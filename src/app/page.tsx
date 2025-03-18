@@ -1,7 +1,7 @@
 import { buttonVariants } from "@/components/ui/button"
 import { CustomAnimatedText } from "@/components/ui/custom-animated-text"
 import { Link } from "@/components/ui/link"
-import { PolaroidImage } from "@/components/ui/pfp"
+import { PolaroidImage } from "@/components/ui/polaroid-image"
 import { headingFont } from "@/fonts"
 import pfp from "@/images/pfp.jpg"
 import { cn } from "@/utils"
@@ -19,7 +19,7 @@ const Intro = () => {
   return (
     <section className="grid place-content-start gap-8 py-16 sm:place-content-center">
       <div className="flex flex-col sm:items-center">
-        <PfpWithLink className="mb-6" />
+        <PolaroidImage src={pfp} className="mb-6" />
 
         <h1 className={cn(headingFont.className, "flex flex-wrap text-3xl font-bold")}>
           <CustomAnimatedText text="Mazhuga" /> <CustomAnimatedText text="Sergei" />
@@ -41,14 +41,6 @@ const Intro = () => {
 
       <Projects />
     </section>
-  )
-}
-
-const PfpWithLink = (props: React.HTMLAttributes<HTMLAnchorElement>) => {
-  return (
-    <NextLink href="https://x.com/mazhugasergei" target="_blank" {...props}>
-      <PolaroidImage src={pfp} />
-    </NextLink>
   )
 }
 
