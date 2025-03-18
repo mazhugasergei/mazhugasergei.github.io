@@ -60,7 +60,7 @@ const DownloadCVButton = () => (
   </NextLink>
 )
 
-export const Projects = () => {
+const Projects = () => {
   const projects = [
     {
       name: "Optic Shop",
