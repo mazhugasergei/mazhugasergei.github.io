@@ -1,12 +1,11 @@
 import { ContactButton } from "@/components/shared/contact-button"
-import { buttonVariants } from "@/components/ui/button"
+import { DownloadCVButton } from "@/components/shared/download-cv-button"
 import { CustomAnimatedText } from "@/components/ui/custom-animated-text"
 import { Link } from "@/components/ui/link"
 import { PolaroidImage } from "@/components/ui/polaroid-image"
 import { headingFont } from "@/fonts"
 import pfp from "@/images/pfp.jpg"
 import { cn } from "@/utils"
-import NextLink from "next/link"
 
 export default function Home() {
   return (
@@ -44,16 +43,6 @@ const Intro = () => {
     </section>
   )
 }
-
-const DownloadCVButton = () => (
-  <NextLink
-    download="Mazhuga Sergei CV"
-    href="/CV - Sergei Mazhuga.pdf"
-    className={buttonVariants({ variant: "outline" })}
-  >
-    Download CV
-  </NextLink>
-)
 
 const Projects = () => {
   const projects = [
