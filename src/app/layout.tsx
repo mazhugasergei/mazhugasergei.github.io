@@ -58,11 +58,11 @@ const BG = () => (
 
 const Header = () => (
   <header className="border-b">
-    <Wrapper className="py-4"></Wrapper>
+    <Wrapper className="py-4"> </Wrapper>
   </header>
 )
 const Footer = () => (
   <footer className="border-t">
-    <Wrapper className="py-4"></Wrapper>
+    <Wrapper className="py-4"> </Wrapper>
   </footer>
 )
