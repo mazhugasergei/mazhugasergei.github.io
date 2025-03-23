@@ -2,6 +2,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { CustomAnimatedText } from "@/components/ui/custom-animated-text"
 import { Link } from "@/components/ui/link"
 import { PolaroidImage } from "@/components/ui/polaroid-image"
+import { ContactButton } from "@/components/ui/shared/contact-button"
 import { headingFont } from "@/fonts"
 import pfp from "@/images/pfp.jpg"
 import { cn } from "@/utils"
@@ -43,12 +44,6 @@ const Intro = () => {
     </section>
   )
 }
-
-const ContactButton = () => (
-  <NextLink href="mailto:ghbdtnghbdtn8@gmail.com" className={buttonVariants()}>
-    Contact me
-  </NextLink>
-)
 
 const DownloadCVButton = () => (
   <NextLink
