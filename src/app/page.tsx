@@ -49,7 +49,7 @@ const DownloadCVButton = () => (
   <NextLink
     download="Mazhuga Sergei CV"
     href="/CV - Sergei Mazhuga.pdf"
-    className={buttonVariants({ variant: "link" })}
+    className={buttonVariants({ variant: "outline" })}
   >
     Download CV
   </NextLink>
