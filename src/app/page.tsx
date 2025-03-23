@@ -33,7 +33,7 @@ const Intro = () => {
           team.
         </p>
 
-        <div className="mt-4 inline-grid grid-cols-2 gap-2">
+        <div className="mt-4 inline-grid grid-cols-2 gap-3">
           <ContactButton />
           <DownloadCVButton />
         </div>
