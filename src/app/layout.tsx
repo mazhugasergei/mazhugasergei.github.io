@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider"
-import { Wrapper } from "@/components/wrapper"
+import { Wrapper } from "@/components/ui/wrapper"
 import bg from "@/images/bg.jpg"
 import noise from "@/images/noise.png"
 import "@/styles/index.css"
