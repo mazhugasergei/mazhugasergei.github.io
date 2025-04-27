@@ -45,13 +45,14 @@ const NoiseOverlay = () => (
 )
 
 const BG = () => (
-  <div className="absolute isolate -z-10 h-screen w-full">
+  <div className="absolute isolate -z-10 h-full w-full">
     <Image
       src={bg}
       alt=""
       placeholder="blur"
       className="absolute h-full w-full object-cover brightness-[.15] grayscale select-none"
     />
+    <div className="absolute inset-0 backdrop-blur" />
     {/* <div className="absolute inset-0 shadow-[inset_0_-15rem_5rem_-5rem_var(--background)]" /> */}
   </div>
 )

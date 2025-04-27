@@ -17,7 +17,7 @@ export default function Home() {
 
 const Intro = () => {
   return (
-    <section className="grid place-content-start gap-8 py-16 backdrop-blur sm:place-content-center">
+    <section className="grid place-content-start gap-8 py-16 sm:place-content-center">
       <div className="flex flex-col sm:items-center">
         <PolaroidImage src={pfp} className="mb-6" />
 
