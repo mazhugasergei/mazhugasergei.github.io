@@ -47,6 +47,10 @@ const Intro = () => {
 const Projects = () => {
   const projects = [
     {
+      name: "Cleopatra Trading Co.",
+      href: "https://cleopatrading.com",
+    },
+    {
       name: "Optic Shop",
       href: "https://mazhugasergei.github.io/optic-shop",
     },
