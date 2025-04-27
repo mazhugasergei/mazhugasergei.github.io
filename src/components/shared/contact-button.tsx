@@ -22,7 +22,7 @@ const ContactLinks = [
     href: "https://t.me/mazhugasergei",
   },
   {
-    label: "WatsApp",
+    label: "WhatsApp",
     icon: MessageCircleIcon,
     href: "https://wa.me/message/ALDKJYRQH7LIE1",
   },
