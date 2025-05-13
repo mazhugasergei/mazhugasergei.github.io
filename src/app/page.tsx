@@ -25,13 +25,7 @@ const Intro = () => {
           <CustomAnimatedText text="Mazhuga" /> <CustomAnimatedText text="Sergei" />
         </h1>
 
-        <p className="mt-3 text-balance">
-          Web developer. Part of{" "}
-          <Link target="_blank" href="https://friendlee.pro/">
-            friend Lee
-          </Link>{" "}
-          team.
-        </p>
+        <p className="mt-3 text-balance">Web developer.</p>
 
         <div className="mt-4 inline-grid grid-cols-2 gap-3">
           <ContactButton />
