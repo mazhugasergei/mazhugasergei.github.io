@@ -40,38 +40,15 @@ const Intro = () => {
 
 const Projects = () => {
   const projects = [
-    {
-      name: "Cleopatra Trading Co.",
-      href: "https://cleopatrading.com",
-    },
-    {
-      name: "Optic Shop",
-      href: "https://mazhugasergei.github.io/optic-shop",
-    },
-    {
-      name: "KANCOO",
-      href: "https://www.kancoo.tech",
-    },
-    {
-      name: "Molotov Group",
-      href: "https://molotov-group.ru",
-    },
-    {
-      name: "Energy Vostok",
-      href: "https://energy-vostok.ru",
-    },
-    {
-      name: "DVZ-TIM",
-      href: "https://dvz-tim.ru",
-    },
-    {
-      name: "EverestAvto",
-      href: "https://everestavtovl.ru",
-    },
-    {
-      name: "MSP",
-      href: "https://mspvl.ru",
-    },
+    { name: "Cleopatra Trading Co.", href: "https://cleopatrading.com" },
+    { name: "Nimbus", href: "https://github.com/logscore/Nimbus" },
+    { name: "Optic Shop", href: "https://mazhugasergei.github.io/optic-shop" },
+    { name: "KANCOO", href: "https://www.kancoo.tech" },
+    { name: "Molotov Group", href: "https://molotov-group.ru" },
+    { name: "Energy Vostok", href: "https://energy-vostok.ru" },
+    { name: "DVZ-TIM", href: "https://dvz-tim.ru" },
+    { name: "EverestAvto", href: "https://everestavtovl.ru" },
+    { name: "Монтажстрой Подряд", href: "https://mspvl.ru" },
   ]
 
   return (
