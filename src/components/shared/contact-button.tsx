@@ -21,7 +21,7 @@ export const ContactButton = () => (
     <DialogTrigger asChild>
       <Button className="cursor-pointer">Contact me</Button>
     </DialogTrigger>
-    <DialogContent>
+    <DialogContent className="!max-w-md">
       <DialogHeader>
         <DialogTitle>Let's get in touch</DialogTitle>
         <DialogDescription>Choose a way to message me</DialogDescription>
