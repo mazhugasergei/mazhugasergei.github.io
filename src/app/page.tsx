@@ -53,7 +53,7 @@ const Projects = () => {
 
   return (
     <div className="space-y-2">
-      <h2>Projects</h2>
+      <h2>Recent Projects</h2>
       <ul>
         {projects.map(({ name, href }) => (
           <li key={name}>
