@@ -1,4 +1,3 @@
-import { Wrapper } from "@/components/shared/wrapper"
 import { ThemeProvider } from "@/components/theme-provider"
 import bg from "@/images/bg.jpg"
 import noise from "@/images/noise.png"
@@ -23,11 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
           <NoiseOverlay />
           <BG />
-          <div className="grid flex-1 grid-rows-[auto_1fr_auto]">
-            <Header />
-            <Wrapper>{children}</Wrapper>
-            <Footer />
-          </div>
+          <div className="p-6">{children}</div>
         </ThemeProvider>
       </body>
     </html>
@@ -53,17 +48,5 @@ const BG = () => (
       className="absolute h-full w-full object-cover brightness-[.15] grayscale select-none"
     />
     <div className="absolute inset-0 backdrop-blur" />
-    {/* <div className="absolute inset-0 shadow-[inset_0_-15rem_5rem_-5rem_var(--background)]" /> */}
   </div>
-)
-
-const Header = () => (
-  <header className="border-b">
-    <Wrapper className="py-4"> </Wrapper>
-  </header>
-)
-const Footer = () => (
-  <footer className="border-t">
-    <Wrapper className="py-4"> </Wrapper>
-  </footer>
 )
