@@ -111,6 +111,17 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@keyframes slide-in-x {
+  0% {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50 selection:bg-primary selection:text-primary-foreground;
@@ -120,8 +131,12 @@
     font-family: monospace;
     font-size: 0.875rem;
   }
+}
 
-  .wrapper {
-    @apply mx-auto max-w-5xl;
+@layer utilities {
+  .animate-slide-in-x {
+    opacity: 0;
+    transform: translateX(-1rem);
+    animation: slide-in-x 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   }
 }

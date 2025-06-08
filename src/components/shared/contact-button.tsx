@@ -5,7 +5,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
+} from "@/components/shared/dialog"
 import { MailIcon, MessageCircleIcon, SendIcon } from "lucide-react"
 import Link from "next/link"
 import { Button, buttonVariants } from "../ui/button"

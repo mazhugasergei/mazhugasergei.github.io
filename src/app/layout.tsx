@@ -1,5 +1,5 @@
+import { Wrapper } from "@/components/shared/wrapper"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Wrapper } from "@/components/ui/wrapper"
 import bg from "@/images/bg.jpg"
 import noise from "@/images/noise.png"
 import "@/styles/index.css"
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="relative flex min-h-screen flex-col">
+      <body className="relative flex min-h-screen flex-col select-none">
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
           <NoiseOverlay />
           <BG />
