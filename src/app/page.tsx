@@ -40,6 +40,7 @@ const Clients = (props: React.HTMLAttributes<HTMLDivElement>) => {
     { name: "Energy Vostok", href: "https://energy-vostok.ru", year: 24, service: "Frontend Development" },
     { name: "DVZ-TIM", href: "https://dvz-tim.ru", year: 24, service: "Frontend Development" },
     { name: "Монтажстрой Подряд", href: "https://mspvl.ru", year: 24, service: "Frontend Development" },
+    { name: "STAKEME", href: "https://stakeme.pro", year: 22, service: "Web Development" },
     { name: "KANCOO", href: "https://www.kancoo.tech", year: 21, service: "Web Development" },
   ]
 
@@ -65,12 +66,6 @@ const Clients = (props: React.HTMLAttributes<HTMLDivElement>) => {
 const Projects = (props: React.HTMLAttributes<HTMLDivElement>) => {
   const projects = [
     { name: "Nimbus", href: "https://github.com/logscore/Nimbus", year: 25, service: "Frontend Contribution" },
-    {
-      name: "Optic Shop",
-      href: "https://mazhugasergei.github.io/optic-shop",
-      year: 22,
-      service: "Frontend Development",
-    },
   ]
 
   return (
