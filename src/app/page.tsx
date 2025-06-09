@@ -7,7 +7,8 @@ export default function Page() {
   return (
     <main className="max-w-xl space-y-6">
       <Intro className="animate-slide-in-x" />
-      <Projects className="animate-slide-in-x" style={{ animationDelay: "150ms" }} />
+      <Clients className="animate-slide-in-x" style={{ animationDelay: "100ms" }} />
+      <Projects className="animate-slide-in-x" style={{ animationDelay: "200ms" }} />
       <Contacts className="animate-slide-in-x" style={{ animationDelay: "300ms" }} />
     </main>
   )
@@ -31,28 +32,49 @@ const Intro = (props: React.HTMLAttributes<HTMLDivElement>) => {
   )
 }
 
-const Projects = (props: React.HTMLAttributes<HTMLDivElement>) => {
-  const projects = [
-    { name: "Cleopatra Trading Co.", href: "https://cleopatrading.com" },
-    { name: "Nimbus", href: "https://github.com/logscore/Nimbus" },
-    { name: "Optic Shop", href: "https://mazhugasergei.github.io/optic-shop" },
-    { name: "KANCOO", href: "https://www.kancoo.tech" },
-    { name: "Molotov Group", href: "https://molotov-group.ru" },
-    { name: "Energy Vostok", href: "https://energy-vostok.ru" },
-    { name: "DVZ-TIM", href: "https://dvz-tim.ru" },
-    { name: "EverestAvto", href: "https://everestavtovl.ru" },
-    { name: "Монтажстрой Подряд", href: "https://mspvl.ru" },
+const Clients = (props: React.HTMLAttributes<HTMLDivElement>) => {
+  const clients = [
+    { name: "Cleopatra Trading Co.", href: "https://cleopatrading.com", year: 25 },
+    { name: "EverestAvto", href: "https://everestavtovl.ru", year: 25 },
+    { name: "Molotov Group", href: "https://molotov-group.ru", year: 24 },
+    { name: "Energy Vostok", href: "https://energy-vostok.ru", year: 24 },
+    { name: "DVZ-TIM", href: "https://dvz-tim.ru", year: 24 },
+    { name: "Монтажстрой Подряд", href: "https://mspvl.ru", year: 24 },
+    { name: "KANCOO", href: "https://www.kancoo.tech", year: 21 },
   ]
 
   return (
     <section {...props}>
-      <h2 className="opacity-75">Clients</h2>
+      <h2 className="text-secondary-foreground font-bold">Clients</h2>
 
       <ul className="mt-2">
-        {projects.map(({ name, href }) => (
+        {clients.map(({ name, href, year }) => (
           <li key={name}>
-            <Link href={href} className="text-foreground/50 hover:text-foreground text-xs no-underline transition">
-              {name}
+            <Link href={href} className="text-xs no-underline opacity-70 transition hover:opacity-100">
+              {name} <span className="opacity-50">'{year}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
+const Projects = (props: React.HTMLAttributes<HTMLDivElement>) => {
+  const projects = [
+    { name: "Nimbus", href: "https://github.com/logscore/Nimbus", year: 25 },
+    { name: "Optic Shop", href: "https://mazhugasergei.github.io/optic-shop", year: 22 },
+  ]
+
+  return (
+    <section {...props}>
+      <h2 className="text-secondary-foreground font-bold">Projects</h2>
+
+      <ul className="mt-2">
+        {projects.map(({ name, href, year }) => (
+          <li key={name}>
+            <Link href={href} className="text-xs no-underline opacity-70 transition hover:opacity-100">
+              {name} <span className="opacity-50">'{year}</span>
             </Link>
           </li>
         ))}
@@ -69,16 +91,12 @@ const Contacts = (props: React.HTMLAttributes<HTMLDivElement>) => {
 
   return (
     <section {...props}>
-      <h2 className="opacity-75">Contacts</h2>
+      <h2 className="text-secondary-foreground font-bold">Contacts</h2>
 
       <ul className="mt-2">
         {contactLinks.map(({ label, href }) => (
           <li key={label}>
-            <Link
-              href={href}
-              target="_blank"
-              className="text-foreground/50 hover:text-foreground text-xs no-underline transition"
-            >
+            <Link href={href} target="_blank" className="text-xs no-underline opacity-60 transition hover:opacity-100">
               {label}
             </Link>
           </li>
