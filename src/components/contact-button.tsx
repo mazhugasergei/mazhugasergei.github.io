@@ -1,14 +1,7 @@
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/shared/dialog"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/dialog"
 import { MailIcon, MessageCircleIcon, SendIcon } from "lucide-react"
 import Link from "next/link"
-import { Button, buttonVariants } from "../ui/button"
+import { Button, buttonVariants } from "./ui/button"
 
 const ContactLinks = [
   { label: "Email", icon: MailIcon, href: "mailto:ghbdtnghbdtn8@gmail.com" },

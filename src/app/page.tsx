@@ -1,4 +1,4 @@
-import { CustomAnimatedText } from "@/components/shared/custom-animated-text"
+import { CustomAnimatedText } from "@/components/custom-animated-text"
 import { headingFont } from "@/fonts"
 import { cn } from "@/utils"
 import Link from "next/link"
@@ -44,8 +44,8 @@ const lists: List[] = [
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen max-w-xl flex-col gap-6 p-6 text-xs">
-      <section className="animate-slide-in-x">
+    <main className="flex min-h-screen flex-col gap-6 p-6 text-xs">
+      <section className="animate-slide-in-x max-w-xl">
         <h1 className={cn(headingFont.className, "text-xl font-bold")}>
           <CustomAnimatedText>Mazhuga</CustomAnimatedText> <CustomAnimatedText>Sergei</CustomAnimatedText>
         </h1>
@@ -62,7 +62,7 @@ export default function Page() {
       {lists.map((list, index) => (
         <section
           key={list.title}
-          className={cn("animate-slide-in-x space-y-2", index === lists.length - 1 && "mt-auto")}
+          className={cn("animate-slide-in-x max-w-xl space-y-2", index === lists.length - 1 && "mt-auto")}
           style={{ animationDelay: `${(index + 1) * 100}ms` }}
         >
           <h2 className="text-secondary-foreground font-bold">{list.title}</h2>

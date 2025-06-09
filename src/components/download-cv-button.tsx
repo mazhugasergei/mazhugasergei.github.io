@@ -1,5 +1,5 @@
 import NextLink from "next/link"
-import { buttonVariants } from "../ui/button"
+import { buttonVariants } from "./ui/button"
 
 export const DownloadCVButton = () => (
   <NextLink
