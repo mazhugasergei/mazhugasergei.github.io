@@ -3,10 +3,10 @@
 import React from "react"
 
 interface Props extends React.HTMLAttributes<HTMLSpanElement> {
-  text: string
+  children: string
 }
 
-export const CustomAnimatedText = React.forwardRef<HTMLSpanElement, Props>(({ text, className, ...props }, ref) => {
+export const CustomAnimatedText = ({ children, className, ...props }: Props) => {
   const symbols = "!@#$%^&*()_+-=[]{}|;:',.<>?/"
 
   // Function to generate a deterministic placeholder based on the text
@@ -29,23 +29,23 @@ export const CustomAnimatedText = React.forwardRef<HTMLSpanElement, Props>(({ te
   }
 
   // Generate a pseudo-random but deterministic placeholder based on the text
-  const deterministicPlaceholder = generateDeterministicPlaceholder(text, symbols)
+  const deterministicPlaceholder = generateDeterministicPlaceholder(children, symbols)
 
   const [displayedText, setDisplayedText] = React.useState<string>(deterministicPlaceholder)
 
   React.useEffect(() => {
-    const finalTextArray = text.split("")
+    const finalTextArray = children.split("")
     const currentTextArray = displayedText.split("")
     const revealedIndices = new Set<number>()
     const maxIterations = 20
     let iterations = 0
 
     const interval = setInterval(() => {
-      if (revealedIndices.size < text.length) {
+      if (revealedIndices.size < children.length) {
         // Reveal a random character
         let randomIndex: number
         do {
-          randomIndex = Math.floor(Math.random() * text.length)
+          randomIndex = Math.floor(Math.random() * children.length)
         } while (revealedIndices.has(randomIndex))
 
         currentTextArray[randomIndex] = finalTextArray[randomIndex]
@@ -59,20 +59,18 @@ export const CustomAnimatedText = React.forwardRef<HTMLSpanElement, Props>(({ te
       setDisplayedText(updatedTextArray.join(""))
 
       iterations++
-      if (revealedIndices.size === text.length || iterations > maxIterations) {
+      if (revealedIndices.size === children.length || iterations > maxIterations) {
         clearInterval(interval)
         setDisplayedText(finalTextArray.join(""))
       }
     }, 50)
 
     return () => clearInterval(interval)
-  }, [text])
+  }, [children])
 
   return (
-    <span ref={ref} {...props} className={className}>
+    <span {...props} className={className}>
       {displayedText}
     </span>
   )
-})
-
-CustomAnimatedText.displayName = "CustomAnimatedText"
+}

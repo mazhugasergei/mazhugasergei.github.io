@@ -47,10 +47,10 @@ export default function Page() {
     <main className="flex min-h-screen max-w-xl flex-col gap-6 p-6 text-xs">
       <section className="animate-slide-in-x">
         <h1 className={cn(headingFont.className, "text-xl font-bold")}>
-          <CustomAnimatedText text="Mazhuga" /> <CustomAnimatedText text="Sergei" />
+          <CustomAnimatedText>Mazhuga</CustomAnimatedText> <CustomAnimatedText>Sergei</CustomAnimatedText>
         </h1>
 
-        <CustomAnimatedText text="Frontend Developer" className="text-xs" />
+        <CustomAnimatedText>Frontend Developer</CustomAnimatedText>
 
         <p className="mt-4 text-xs text-balance">
           A web developer based in Vladivostok, Russia, occasionally residing in Incheon, South Korea. I craft
