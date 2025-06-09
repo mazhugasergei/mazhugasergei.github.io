@@ -1,4 +1,5 @@
 import { CustomAnimatedText } from "@/components/custom-animated-text"
+import { VladivostokClock } from "@/components/vladivostok-clock"
 import { headingFont } from "@/fonts"
 import { cn } from "@/utils"
 import Link from "next/link"
@@ -44,42 +45,48 @@ const lists: List[] = [
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col gap-6 p-6 text-xs">
-      <section className="animate-slide-in-x max-w-xl">
-        <h1 className={cn(headingFont.className, "text-xl font-bold")}>
-          <CustomAnimatedText>Mazhuga</CustomAnimatedText> <CustomAnimatedText>Sergei</CustomAnimatedText>
-        </h1>
+    <main className="grid flex-1 grid-cols-2 gap-6 p-6 text-xs">
+      <div className="flex flex-col gap-6">
+        <section className="animate-slide-in-x">
+          <h1 className={cn(headingFont.className, "text-xl font-bold")}>
+            <CustomAnimatedText>Mazhuga</CustomAnimatedText> <CustomAnimatedText>Sergei</CustomAnimatedText>
+          </h1>
 
-        <CustomAnimatedText>Frontend Developer</CustomAnimatedText>
+          <CustomAnimatedText>Frontend Developer</CustomAnimatedText>
 
-        <p className="mt-4 text-xs text-balance">
-          A web developer based in Vladivostok, Russia, occasionally residing in Incheon, South Korea. I craft
-          intuitive, purposeful websites and web services with a focus on clarity and usability. Passionate about open
-          source and committed to shaping the future of the web through thoughtful, collaborative development.
-        </p>
-      </section>
-
-      {lists.map((list, index) => (
-        <section
-          key={list.title}
-          className={cn("animate-slide-in-x max-w-xl space-y-2", index === lists.length - 1 && "mt-auto")}
-          style={{ animationDelay: `${(index + 1) * 100}ms` }}
-        >
-          <h2 className="text-secondary-foreground font-bold">{list.title}</h2>
-
-          <ul>
-            {list.items.map((item) => (
-              <li key={item.name}>
-                <Link href={item.href} target="_blank" className="group flex items-center gap-1 leading-5">
-                  <span className="group-hover:underline">{item.name}</span>
-                  {item.year && <span className="opacity-50">'{item.year}</span>}
-                  {item.service && <span className="ml-auto">{item.service}</span>}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <p className="mt-4 text-xs text-balance">
+            A web developer based in Vladivostok, Russia, occasionally residing in Incheon, South Korea. I craft
+            intuitive, purposeful websites and web services with a focus on clarity and usability. Passionate about open
+            source and committed to shaping the future of the web through thoughtful, collaborative development.
+          </p>
         </section>
-      ))}
+
+        {lists.map((list, index) => (
+          <section
+            key={list.title}
+            className={cn("animate-slide-in-x space-y-2", index === lists.length - 1 && "mt-auto")}
+            style={{ animationDelay: `${(index + 1) * 100}ms` }}
+          >
+            <h2 className="text-secondary-foreground font-bold">{list.title}</h2>
+
+            <ul>
+              {list.items.map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} target="_blank" className="group flex items-center gap-1 leading-5">
+                    <span className="group-hover:underline">{item.name}</span>
+                    {item.year && <span className="opacity-50">'{item.year}</span>}
+                    {item.service && <span className="ml-auto">{item.service}</span>}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+
+      <div className="relative">
+        <VladivostokClock className="absolute right-0 bottom-0" />
+      </div>
     </main>
   )
 }
