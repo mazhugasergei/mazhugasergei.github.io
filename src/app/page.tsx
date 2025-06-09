@@ -1,11 +1,11 @@
 import { CustomAnimatedText } from "@/components/shared/custom-animated-text"
-import { Link } from "@/components/shared/link"
 import { headingFont } from "@/fonts"
 import { cn } from "@/utils"
+import Link from "next/link"
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen max-w-xl flex-col gap-6 p-6">
+    <main className="flex min-h-screen max-w-xl flex-col gap-6 p-6 text-xs">
       <Intro className="animate-slide-in-x" />
       <Clients className="animate-slide-in-x" style={{ animationDelay: "100ms" }} />
       <Projects className="animate-slide-in-x" style={{ animationDelay: "200ms" }} />
@@ -34,13 +34,13 @@ const Intro = (props: React.HTMLAttributes<HTMLDivElement>) => {
 
 const Clients = (props: React.HTMLAttributes<HTMLDivElement>) => {
   const clients = [
-    { name: "Cleopatra Trading Co.", href: "https://cleopatrading.com", year: 25 },
-    { name: "EverestAvto", href: "https://everestavtovl.ru", year: 25 },
-    { name: "Molotov Group", href: "https://molotov-group.ru", year: 24 },
-    { name: "Energy Vostok", href: "https://energy-vostok.ru", year: 24 },
-    { name: "DVZ-TIM", href: "https://dvz-tim.ru", year: 24 },
-    { name: "Монтажстрой Подряд", href: "https://mspvl.ru", year: 24 },
-    { name: "KANCOO", href: "https://www.kancoo.tech", year: 21 },
+    { name: "Cleopatra Trading Co.", href: "https://cleopatrading.com", year: 25, service: "Web Development" },
+    { name: "EverestAvto", href: "https://everestavtovl.ru", year: 25, service: "Web Development" },
+    { name: "Molotov Group", href: "https://molotov-group.ru", year: 24, service: "Frontend Development" },
+    { name: "Energy Vostok", href: "https://energy-vostok.ru", year: 24, service: "Frontend Development" },
+    { name: "DVZ-TIM", href: "https://dvz-tim.ru", year: 24, service: "Frontend Development" },
+    { name: "Монтажстрой Подряд", href: "https://mspvl.ru", year: 24, service: "Frontend Development" },
+    { name: "KANCOO", href: "https://www.kancoo.tech", year: 21, service: "Web Development" },
   ]
 
   return (
@@ -48,12 +48,13 @@ const Clients = (props: React.HTMLAttributes<HTMLDivElement>) => {
       <h2 className="text-secondary-foreground font-bold">Clients</h2>
 
       <ul className="mt-2">
-        {clients.map(({ name, href, year }) => (
+        {clients.map(({ name, href, year, service }) => (
           <li key={name}>
-            <Link href={href} className="text-xs no-underline opacity-70 transition hover:opacity-100">
-              {name}
-            </Link>{" "}
-            <span className="opacity-50">'{year}</span>
+            <Link href={href} target="_blank" className="group flex items-center gap-1 leading-5">
+              <span className="group-hover:underline">{name}</span>
+              <span className="opacity-50">'{year}</span>
+              <span className="ml-auto">{service}</span>
+            </Link>
           </li>
         ))}
       </ul>
@@ -63,8 +64,13 @@ const Clients = (props: React.HTMLAttributes<HTMLDivElement>) => {
 
 const Projects = (props: React.HTMLAttributes<HTMLDivElement>) => {
   const projects = [
-    { name: "Nimbus", href: "https://github.com/logscore/Nimbus", year: 25 },
-    { name: "Optic Shop", href: "https://mazhugasergei.github.io/optic-shop", year: 22 },
+    { name: "Nimbus", href: "https://github.com/logscore/Nimbus", year: 25, service: "Frontend Contribution" },
+    {
+      name: "Optic Shop",
+      href: "https://mazhugasergei.github.io/optic-shop",
+      year: 22,
+      service: "Frontend Development",
+    },
   ]
 
   return (
@@ -72,12 +78,13 @@ const Projects = (props: React.HTMLAttributes<HTMLDivElement>) => {
       <h2 className="text-secondary-foreground font-bold">Projects</h2>
 
       <ul className="mt-2">
-        {projects.map(({ name, href, year }) => (
+        {projects.map(({ name, href, year, service }) => (
           <li key={name}>
-            <Link href={href} className="text-xs no-underline opacity-70 transition hover:opacity-100">
-              {name}
-            </Link>{" "}
-            <span className="opacity-50">'{year}</span>
+            <Link href={href} target="_blank" className="group flex items-center gap-1 leading-5">
+              <span className="group-hover:underline">{name}</span>
+              <span className="opacity-50">'{year}</span>
+              <span className="ml-auto">{service}</span>
+            </Link>
           </li>
         ))}
       </ul>
@@ -98,8 +105,8 @@ const Contacts = (props: React.HTMLAttributes<HTMLDivElement>) => {
       <ul className="mt-2">
         {contactLinks.map(({ label, href }) => (
           <li key={label}>
-            <Link href={href} target="_blank" className="text-xs no-underline opacity-60 transition hover:opacity-100">
-              {label}
+            <Link href={href} target="_blank" className="group flex items-center gap-1 leading-5">
+              <span className="group-hover:underline">{label}</span>
             </Link>
           </li>
         ))}
