@@ -112,11 +112,7 @@
 }
 
 @keyframes slide-in-x {
-  0% {
-    opacity: 0;
-    transform: translateX(-1rem);
-  }
-  100% {
+  to {
     opacity: 1;
     transform: translateX(0);
   }
