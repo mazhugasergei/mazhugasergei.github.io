@@ -5,11 +5,11 @@ import { cn } from "@/utils"
 
 export default function Page() {
   return (
-    <main className="max-w-xl space-y-6">
+    <main className="flex min-h-screen max-w-xl flex-col gap-6 p-6">
       <Intro className="animate-slide-in-x" />
       <Clients className="animate-slide-in-x" style={{ animationDelay: "100ms" }} />
       <Projects className="animate-slide-in-x" style={{ animationDelay: "200ms" }} />
-      <Contacts className="animate-slide-in-x" style={{ animationDelay: "300ms" }} />
+      <Contacts className="animate-slide-in-x mt-auto" style={{ animationDelay: "300ms" }} />
     </main>
   )
 }
