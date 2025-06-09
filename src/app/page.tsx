@@ -51,8 +51,9 @@ const Clients = (props: React.HTMLAttributes<HTMLDivElement>) => {
         {clients.map(({ name, href, year }) => (
           <li key={name}>
             <Link href={href} className="text-xs no-underline opacity-70 transition hover:opacity-100">
-              {name} <span className="opacity-50">'{year}</span>
-            </Link>
+              {name}
+            </Link>{" "}
+            <span className="opacity-50">'{year}</span>
           </li>
         ))}
       </ul>
@@ -74,8 +75,9 @@ const Projects = (props: React.HTMLAttributes<HTMLDivElement>) => {
         {projects.map(({ name, href, year }) => (
           <li key={name}>
             <Link href={href} className="text-xs no-underline opacity-70 transition hover:opacity-100">
-              {name} <span className="opacity-50">'{year}</span>
-            </Link>
+              {name}
+            </Link>{" "}
+            <span className="opacity-50">'{year}</span>
           </li>
         ))}
       </ul>
