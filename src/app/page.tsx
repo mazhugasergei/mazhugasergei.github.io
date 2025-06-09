@@ -23,7 +23,7 @@ const Intro = (props: React.HTMLAttributes<HTMLDivElement>) => {
 
       <CustomAnimatedText text="Frontend Developer" className="text-xs" />
 
-      <p className="mt-2 text-xs text-balance">
+      <p className="mt-4 text-xs text-balance">
         A web developer based in Vladivostok, Russia, occasionally residing in Incheon, South Korea. I craft intuitive,
         purposeful websites and web services with a focus on clarity and usability. Passionate about open source and
         committed to shaping the future of the web through thoughtful, collaborative development.
