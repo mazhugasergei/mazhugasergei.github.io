@@ -45,7 +45,7 @@ const lists: List[] = [
 
 export default function Page() {
   return (
-    <main className="grid flex-1 grid-cols-2 gap-6 p-6 text-xs">
+    <main className="grid flex-1 grid-cols-1 gap-6 p-6 text-xs md:grid-cols-2">
       <div className="flex flex-col gap-6">
         <section className="animate-slide-in-x">
           <h1 className={cn(headingFont.className, "text-xl font-bold")}>
