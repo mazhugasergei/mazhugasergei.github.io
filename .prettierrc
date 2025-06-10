@@ -3,5 +3,5 @@
   "trailingComma": "es5",
   "singleQuote": false,
   "printWidth": 120,
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"]
 }
