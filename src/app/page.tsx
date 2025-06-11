@@ -67,7 +67,10 @@ export default function Page() {
             className={cn("animate-slide-in-x space-y-2", index === lists.length - 1 && "mt-auto")}
             style={{ animationDelay: `${(index + 1) * 100}ms` }}
           >
-            <h2 className="text-secondary-foreground font-bold">{list.title}</h2>
+            <div className="text-secondary-foreground flex items-center justify-between">
+              <h2 className="font-bold">{list.title}</h2>
+              {index !== lists.length - 1 && <span>{list.title.toLocaleLowerCase()}.json</span>}
+            </div>
 
             <ul>
               {list.items.map((item) => (
