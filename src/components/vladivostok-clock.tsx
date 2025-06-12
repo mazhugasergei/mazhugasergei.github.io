@@ -24,7 +24,10 @@ export const VladivostokClock = ({ className, ...props }: React.HTMLAttributes<H
 
   return (
     <span
-      className={cn("border-foreground rounded-full border px-3 py-1 text-[.65rem] font-bold", className)}
+      className={cn(
+        "border-foreground rounded-full border px-3 py-1 text-[.65rem] font-bold whitespace-nowrap",
+        className
+      )}
       {...props}
     >
       VLADIVOSTOK {time}
