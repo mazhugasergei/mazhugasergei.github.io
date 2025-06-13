@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mazhuga Sergei",
     description: "Frontend developer",
+    images: [
+      {
+        url: "../images/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Mazhuga Sergei",
+      },
+    ],
   },
 }
 
