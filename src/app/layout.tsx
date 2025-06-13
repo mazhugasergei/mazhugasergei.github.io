@@ -10,9 +10,13 @@ export const metadata: Metadata = {
     template: "%s | Mazhuga Sergei",
     default: "Mazhuga Sergei",
   },
-  description: "A web developer with a passion for creating visually stunning and intuitive websites",
+  description: "Frontend developer",
   authors: [{ name: "Mazhuga Sergei", url: "https://mazhugasergei.github.io" }],
   creator: "Mazhuga Sergei",
+  openGraph: {
+    title: "Mazhuga Sergei",
+    description: "Frontend developer",
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
