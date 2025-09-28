@@ -72,7 +72,7 @@ export default function Page() {
 							{index !== lists.length - 1 && <span>{list.title.toLocaleLowerCase()}.json</span>}
 						</div>
 
-						<ul>
+						<ul className="max-md:space-y-1">
 							{list.items.map((item) => (
 								<li key={item.name}>
 									{item.href.startsWith("/archive/") ? (
