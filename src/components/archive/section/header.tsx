@@ -53,22 +53,22 @@ export function Header(props: Props) {
 		<header {...props} ref={headerRef} className={cn("group relative cursor-pointer", props.className)}>
 			<h2 className="text-3xl font-bold">{props.title}</h2>
 
-			<div className="text-muted-foreground absolute top-0 -left-5.5">
+			<div className="text-muted-foreground absolute top-0 -left-7 max-md:hidden">
 				<CopyCheckIcon
 					className={cn(
-						"absolute top-1.5 size-4 scale-80 opacity-0 transition duration-150",
+						"absolute top-2 size-5 scale-80 opacity-0 transition duration-150",
 						clicked && copiedTimes.current !== 5 && "scale-100 opacity-100 delay-100 duration-250"
 					)}
 				/>
 				<EggIcon
 					className={cn(
-						"absolute top-1.5 size-4 scale-80 opacity-0 transition duration-150",
+						"absolute top-2 size-5 scale-80 opacity-0 transition duration-150",
 						clicked && copiedTimes.current === 5 && "scale-100 opacity-100 delay-100 duration-250"
 					)}
 				/>
 				<HashIcon
 					className={cn(
-						"absolute top-1.5 size-4 opacity-0 transition duration-250 group-hover:opacity-100",
+						"absolute top-2 size-5 opacity-0 transition duration-250 group-hover:opacity-100",
 						clicked && "scale-80 !opacity-0"
 					)}
 				/>

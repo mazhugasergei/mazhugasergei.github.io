@@ -9,7 +9,7 @@ import search from "./images/search.png"
 
 export const EnergyVostok = {
 	id: "energy-vostok",
-	title: "Energy Vostok",
+	title: "Energy Vostok renewing",
 	children: (
 		<Post title="Energy Vostok renewing" subtitle="October 2024">
 			<Section id="" title="The story">
