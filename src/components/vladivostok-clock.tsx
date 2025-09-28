@@ -33,7 +33,7 @@ export const VladivostokClock = ({ className, ...props }: React.HTMLAttributes<H
 					alt="map"
 					width={400}
 					height={400}
-					className="aspect-[5/3] w-auto max-w-[25rem] rounded-md border object-cover"
+					className="aspect-[5/3] w-full max-w-[25rem] rounded-md border object-cover"
 				/>
 				<span className="absolute right-2 bottom-2 rounded-full bg-black px-4 py-2 text-[.65rem] font-bold whitespace-nowrap text-white">
 					{time}
