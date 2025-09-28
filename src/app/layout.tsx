@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
 					<NoiseOverlay />
 					<BG />
-					{children}
+					<div className="grid min-h-screen p-6 text-xs">{children}</div>
 				</ThemeProvider>
 			</body>
 		</html>

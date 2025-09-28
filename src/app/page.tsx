@@ -23,7 +23,7 @@ const lists: List[] = [
 			{ name: "Cleopatra Trading Co.", href: "https://cleopatrading.com", year: 25, service: "Web Development" },
 			{ name: "EverestAvto", href: "https://everestavtovl.ru", year: 25, service: "Web Development" },
 			{ name: "Molotov Group", href: "https://molotov-group.ru", year: 24, service: "Frontend Development" },
-			{ name: "Energy Vostok", href: "https://energy-vostok.ru", year: 24, service: "Frontend Development" },
+			{ name: "Energy Vostok", href: "/archive/energy-vostok", year: 24, service: "Frontend Development" },
 			{ name: "DVZ-TIM", href: "https://dvz-tim.ru", year: 24, service: "Frontend Development" },
 			{ name: "Монтажстрой Подряд", href: "https://mspvl.ru", year: 24, service: "Frontend Development" },
 			{ name: "STAKEME", href: "https://stakeme.pro", year: 22, service: "Web Development" },
@@ -45,7 +45,7 @@ const lists: List[] = [
 
 export default function Page() {
 	return (
-		<main className="grid grid-cols-1 gap-6 p-6 text-xs md:flex-1 md:grid-cols-[1fr_auto]">
+		<main className="grid grid-cols-1 gap-6 md:flex-1 md:grid-cols-[1fr_auto]">
 			<div className="flex max-w-xl flex-col gap-6">
 				<section className="animate-slide-in-x">
 					<h1 className={cn(headingFont.className, "text-xl font-bold")}>
@@ -75,11 +75,19 @@ export default function Page() {
 						<ul>
 							{list.items.map((item) => (
 								<li key={item.name}>
-									<Link href={item.href} target="_blank" className="group flex items-center gap-1 leading-5">
-										<span className="group-hover:underline">{item.name}</span>
-										{item.year && <span className="opacity-50">'{item.year}</span>}
-										{item.service && <span className="ml-auto">{item.service}</span>}
-									</Link>
+									{item.href.startsWith("/archive/") ? (
+										<Link href={item.href as `/archive/${string}`} className="group flex items-center gap-1 leading-5">
+											<span className="group-hover:underline">{item.name}</span>
+											{item.year && <span className="opacity-50">'{item.year}</span>}
+											{item.service && <span className="ml-auto">{item.service}</span>}
+										</Link>
+									) : (
+										<a href={item.href} target="_blank" className="group flex items-center gap-1 leading-5">
+											<span className="group-hover:underline">{item.name}</span>
+											{item.year && <span className="opacity-50">'{item.year}</span>}
+											{item.service && <span className="ml-auto">{item.service}</span>}
+										</a>
+									)}
 								</li>
 							))}
 						</ul>
