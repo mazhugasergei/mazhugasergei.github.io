@@ -9,7 +9,7 @@ interface PostProps extends ComponentProps<"div"> {
 
 export default function Post(props: PostProps) {
 	return (
-		<div {...props} className={cn("py-6", props.className)}>
+		<div {...props} className={cn("py-10", props.className)}>
 			<div className="mb-10 space-y-2">
 				<h1 className="text-4xl font-bold">{props.title}</h1>
 				<p className="text-muted-foreground">{props.subtitle}</p>

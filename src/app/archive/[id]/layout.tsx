@@ -1,3 +1,4 @@
+import { Header } from "@/components/archive/header"
 import { items } from "@/lib/archive"
 
 export function generateStaticParams() {
@@ -16,5 +17,10 @@ export const generateMetadata = async (props: LayoutProps<"/archive/[id]">) => {
 }
 
 export default function Layout(props: LayoutProps<"/archive/[id]">) {
-	return <main className="mx-auto max-w-5xl">{props.children}</main>
+	return (
+		<div className="mx-auto max-w-5xl">
+			<Header />
+			<main>{props.children}</main>
+		</div>
+	)
 }
