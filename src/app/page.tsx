@@ -1,9 +1,7 @@
-import map from "@/assets/images/map.png"
 import { CustomAnimatedText } from "@/components/custom-animated-text"
+import { VladivostokClock } from "@/components/vladivostok-clock"
 import { headingFont } from "@/fonts"
 import { cn } from "@/utils"
-import { MapPin } from "lucide-react"
-import Image from "next/image"
 import Link from "next/link"
 
 interface List {
@@ -90,12 +88,7 @@ export default function Page() {
 			</div>
 
 			<div className="flex flex-col items-end justify-end gap-2">
-				<Image src={map} alt="map" className="aspect-[5/3] w-auto rounded-md border object-cover" />
-				<div className="flex items-center justify-end gap-1 text-sm">
-					<MapPin size={12} />
-					<span>Vladivostok, Primorsky Krai</span>
-				</div>
-				{/* <VladivostokClock /> */}
+				<VladivostokClock />
 			</div>
 		</main>
 	)
