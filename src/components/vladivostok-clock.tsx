@@ -6,7 +6,7 @@ import { MapPin } from "lucide-react"
 import Image from "next/image"
 import React from "react"
 
-export const VladivostokClock = ({ className, ...props }: React.HTMLAttributes<HTMLSpanElement>) => {
+export const VladivostokClock = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
 	const [time, setTime] = React.useState("00:00 AM")
 
 	React.useEffect(() => {
@@ -31,14 +31,15 @@ export const VladivostokClock = ({ className, ...props }: React.HTMLAttributes<H
 				<Image
 					src={map}
 					alt="map"
-					width={200}
-					height={200}
-					className="aspect-[5/3] w-auto rounded-md border object-cover"
+					width={400}
+					height={400}
+					className="aspect-[5/3] w-auto max-w-[25rem] rounded-md border object-cover"
 				/>
 				<span className="absolute right-2 bottom-2 rounded-full bg-black px-4 py-2 text-[.65rem] font-bold whitespace-nowrap text-white">
 					{time}
 				</span>
 			</div>
+
 			<div className="flex items-center justify-end gap-1 text-sm">
 				<MapPin size={12} />
 				<span>Vladivostok, Primorsky Krai</span>

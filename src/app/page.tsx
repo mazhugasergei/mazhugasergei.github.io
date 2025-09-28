@@ -87,9 +87,7 @@ export default function Page() {
 				))}
 			</div>
 
-			<div className="flex flex-col items-end justify-end gap-2">
-				<VladivostokClock />
-			</div>
+			<VladivostokClock />
 		</main>
 	)
 }
