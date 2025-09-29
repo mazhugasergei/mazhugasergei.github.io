@@ -6,8 +6,8 @@ import { MapPin } from "lucide-react"
 import Image from "next/image"
 import React from "react"
 
-export const VladivostokClock = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
-	const [time, setTime] = React.useState("00:00 AM")
+export const Map = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
+	const [time, setTime] = React.useState("--:-- AM")
 
 	React.useEffect(() => {
 		const update = () => {
@@ -27,16 +27,9 @@ export const VladivostokClock = ({ className, ...props }: React.HTMLAttributes<H
 
 	return (
 		<div className={cn("flex flex-col items-end justify-end gap-2", className)} {...props}>
-			<div className="relative">
-				<Image
-					src={map}
-					alt="map"
-					width={400}
-					height={400}
-					placeholder="blur"
-					className="aspect-[5/3] w-full max-w-[25rem] rounded-md border object-cover"
-				/>
-				<span className="absolute right-2 bottom-2 rounded-full bg-black px-4 py-2 text-[.65rem] font-bold whitespace-nowrap text-white">
+			<div className="relative aspect-[5/3] w-full max-w-[25rem] overflow-hidden rounded-md border">
+				<Image src={map} alt="map" width={400} className="max-w-[25rem] object-cover" />
+				<span className="absolute right-2 bottom-2 rounded-md bg-black px-4 py-2 text-[.65rem] font-bold whitespace-nowrap text-white">
 					{time}
 				</span>
 			</div>

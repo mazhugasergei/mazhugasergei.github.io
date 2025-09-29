@@ -1,5 +1,5 @@
 import { CustomAnimatedText } from "@/components/custom-animated-text"
-import { VladivostokClock } from "@/components/vladivostok-clock"
+import { Map } from "@/components/map"
 import { headingFont } from "@/fonts"
 import { cn } from "@/utils"
 import Link from "next/link"
@@ -95,7 +95,7 @@ export default function Page() {
 				))}
 			</div>
 
-			<VladivostokClock />
+			<Map />
 		</main>
 	)
 }
