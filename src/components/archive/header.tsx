@@ -17,6 +17,7 @@ export function Header({ title, ...props }: Props) {
 			setScrollY(window.scrollY)
 		}
 
+		handleScroll()
 		window.addEventListener("scroll", handleScroll)
 
 		return () => {
