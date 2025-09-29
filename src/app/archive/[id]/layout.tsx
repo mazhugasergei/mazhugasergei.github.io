@@ -1,3 +1,4 @@
+import { Footer } from "@/components/archive/footer"
 import { Header } from "@/components/archive/header"
 import { items } from "@/lib/archive"
 import { notFound } from "next/navigation"
@@ -27,6 +28,7 @@ export default async function Layout(props: LayoutProps<"/archive/[id]">) {
 		<div>
 			<Header title={_item.title} />
 			<main className="mx-auto px-4 md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">{props.children}</main>
+			<Footer />
 		</div>
 	)
 }
