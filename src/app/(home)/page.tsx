@@ -61,7 +61,7 @@ export default function Page() {
 							download
 							className={buttonVariants({
 								variant: "outline",
-								className: "order-0 row-span-2 self-center rounded-none",
+								className: "order-0 row-span-2 self-center",
 							})}
 						>
 							Download CV
