@@ -1,5 +1,6 @@
 import { CustomAnimatedText } from "@/components/custom-animated-text"
 import { Map } from "@/components/map"
+import { buttonVariants } from "@/components/ui/button"
 import { headingFont } from "@/fonts"
 import { cn } from "@/utils"
 import Link from "next/link"
@@ -48,11 +49,24 @@ export default function Page() {
 		<main className="grid grid-cols-1 gap-6 md:flex-1 md:grid-cols-[1fr_auto]">
 			<div className="flex max-w-xl flex-col gap-6">
 				<section className="animate-slide-in-x">
-					<h1 className={cn(headingFont.className, "text-xl font-bold")}>
-						<CustomAnimatedText>Mazhuga</CustomAnimatedText> <CustomAnimatedText>Sergei</CustomAnimatedText>
-					</h1>
+					<div className="grid grid-cols-[1fr_auto] gap-2">
+						<h1 className={cn(headingFont.className, "text-xl font-bold")}>
+							<CustomAnimatedText>Mazhuga</CustomAnimatedText> <CustomAnimatedText>Sergei</CustomAnimatedText>
+						</h1>
 
-					<CustomAnimatedText>Frontend Developer</CustomAnimatedText>
+						<CustomAnimatedText className="order-1">Frontend Developer</CustomAnimatedText>
+
+						<a
+							href="/CV - Sergei Mazhuga.pdf"
+							download
+							className={buttonVariants({
+								variant: "outline",
+								className: "order-0 row-span-2 self-center rounded-none",
+							})}
+						>
+							Download CV
+						</a>
+					</div>
 
 					<p className="mt-4 text-xs text-balance">
 						A web developer based in Vladivostok, Russia, occasionally residing in Incheon, South Korea. I craft
