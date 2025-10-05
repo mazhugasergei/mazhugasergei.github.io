@@ -2,11 +2,14 @@ import Image from "@/components/archive/image"
 import { Paragraph } from "@/components/archive/paragraph"
 import Post from "@/components/archive/post"
 import Section from "@/components/archive/section"
-import main_after from "./images/main_after.png"
-import main_before from "./images/main_before.png"
-import product_after from "./images/product_after.png"
-import product_before from "./images/product_before.png"
-import search from "./images/search.png"
+import catalog_before from "./images/catalog_before.jpg"
+import header_catalog from "./images/header_catalog.jpg"
+import header_catalog_mobile from "./images/header_catalog_mobile.jpg"
+import main_after from "./images/main_after.jpg"
+import main_before from "./images/main_before.jpg"
+import product_after from "./images/product_after.jpg"
+import product_before from "./images/product_before.jpg"
+import search from "./images/search.jpg"
 
 export const EnergyVostok = {
 	id: "energy-vostok",
@@ -30,6 +33,22 @@ export const EnergyVostok = {
 					After restructuring, the header became more functional and provided space for the new search entry point:
 				</Paragraph>
 				<Image src={main_after} alt="main page after redesign" />
+			</Section>
+
+			<Section id="header_catalog" title="Header catalog">
+				<Paragraph>
+					The header catalog was redesigned to provide users with quick access to the full product catalog. Below is the
+					original catalog layout before redesign:
+				</Paragraph>
+				<Image src={catalog_before} alt="catalog" />
+
+				<Paragraph>
+					After the redesign, the header catalog now shows a clear hierarchy of categories for intuitive navigation.
+					Hovering over a category reveals subcategories, and the layout adapts seamlessly for both desktop and mobile
+					screens:
+				</Paragraph>
+				<Image src={header_catalog} alt="header catalog" />
+				<Image src={header_catalog_mobile} alt="header catalog mobile" />
 			</Section>
 
 			<Section id="search" title="Search">
