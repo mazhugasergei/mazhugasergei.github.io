@@ -1,7 +1,5 @@
-import bg from "@/assets/images/bg.jpg"
 import noise from "@/assets/images/noise.png"
 import "@/assets/styles/globals.css"
-import Image from "next/image"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
@@ -15,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 const NoiseOverlay = () => (
 	<div
-		className="pointer-events-none absolute z-50 h-full w-full object-cover opacity-12"
+		className="pointer-events-none absolute z-50 h-full w-full object-cover opacity-10"
 		style={{
 			backgroundImage: `url(${noise.src})`,
 			backgroundSize: "200px 200px",
@@ -25,12 +23,7 @@ const NoiseOverlay = () => (
 
 const BG = () => (
 	<div className="absolute isolate -z-10 h-full w-full">
-		<Image
-			src={bg}
-			alt=""
-			placeholder="blur"
-			className="absolute h-full w-full object-cover brightness-[.15] grayscale select-none"
-		/>
+		<div className="absolute inset-0 bg-[#000]" />
 		<div className="absolute inset-0 backdrop-blur" />
 	</div>
 )
