@@ -23,10 +23,10 @@ const lists: List[] = [
 		items: [
 			{ name: "Cleopatra Trading Co.", href: "https://cleopatrading.com", year: 25, service: "Web Development" },
 			{ name: "EverestAvto", href: "https://everestavtovl.ru", year: 25, service: "Web Development" },
-			{ name: "Molotov Group", href: "https://molotov-group.ru", year: 24, service: "Frontend Development" },
+			{ name: "Molotov Group", href: "/archive/molotov-group", year: 24, service: "Frontend Development" },
 			{ name: "Energy Vostok", href: "/archive/energy-vostok", year: 24, service: "Frontend Development" },
-			{ name: "DVZ-TIM", href: "https://dvz-tim.ru", year: 24, service: "Frontend Development" },
-			{ name: "Монтажстрой Подряд", href: "https://mspvl.ru", year: 24, service: "Frontend Development" },
+			{ name: "DVZ-TIM", href: "/archive/dvz-tim", year: 24, service: "Frontend Development" },
+			{ name: "Монтажстрой Подряд", href: "/archive/mspvl", year: 24, service: "Frontend Development" },
 			{ name: "FEFU", href: "/archive/fefu", year: 23, service: "Frontend Development" },
 			{ name: "STAKEME", href: "https://stakeme.pro", year: 22, service: "Web Development" },
 			{ name: "KANCOO", href: "https://www.kancoo.tech", year: 21, service: "Web Development" },
