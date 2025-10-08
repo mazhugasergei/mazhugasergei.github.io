@@ -56,7 +56,7 @@ export default function Page() {
 							<h1 className={cn(headingFont.className, "text-xl font-bold")}>
 								<CustomAnimatedText>Mazhuga</CustomAnimatedText> <CustomAnimatedText>Sergei</CustomAnimatedText>
 							</h1>
-							<CustomAnimatedText>Software Developer</CustomAnimatedText>
+							<CustomAnimatedText>Software Engineer</CustomAnimatedText>
 						</div>
 
 						<a
