@@ -28,7 +28,7 @@ const lists: List[] = [
 			{ name: "Energy Vostok", href: "/archive/energy-vostok", year: 24, service: "Frontend Development" },
 			{ name: "DVZ-TIM", href: "/archive/dvz-tim", year: 24, service: "Frontend Development" },
 			{ name: "Монтажстрой Подряд", href: "/archive/mspvl", year: 24, service: "Frontend Development" },
-			{ name: "FEFU", href: "/archive/fefu", year: 23, service: "Frontend Development" },
+			{ name: "FEFU", href: "/archive/fefu", year: 23, service: "Web Development" },
 			{ name: "STAKEME", href: "https://stakeme.pro", year: 22, service: "Web Development" },
 			{ name: "KANCOO", href: "https://www.kancoo.tech", year: 21, service: "Web Development" },
 		],
