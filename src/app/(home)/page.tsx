@@ -50,24 +50,24 @@ export default function Page() {
 		<main className="grid grid-cols-1 gap-6 md:flex-1 md:grid-cols-[1fr_auto]">
 			<div className="flex max-w-xl flex-col gap-6">
 				<section className="animate-slide-in-x">
-					<div className="grid grid-cols-[1fr_auto] gap-2">
-						<h1 className={cn(headingFont.className, "text-xl font-bold")}>
-							<CustomAnimatedText>Mazhuga</CustomAnimatedText> <CustomAnimatedText>Sergei</CustomAnimatedText>
-						</h1>
-
-						<CustomAnimatedText className="order-1">Frontend Developer</CustomAnimatedText>
+					<header className="flex items-center justify-between gap-2">
+						<div>
+							<h1 className={cn(headingFont.className, "text-xl font-bold")}>
+								<CustomAnimatedText>Mazhuga</CustomAnimatedText> <CustomAnimatedText>Sergei</CustomAnimatedText>
+							</h1>
+							<CustomAnimatedText>Frontend Developer</CustomAnimatedText>
+						</div>
 
 						<a
 							href="/CV - Sergei Mazhuga.pdf"
 							download
 							className={buttonVariants({
 								variant: "outline",
-								className: "order-0 row-span-2 self-center",
 							})}
 						>
 							Download CV
 						</a>
-					</div>
+					</header>
 
 					<p className="mt-4 text-xs text-balance">
 						A web developer based in Vladivostok, Russia, occasionally residing in Incheon, South Korea. I craft
