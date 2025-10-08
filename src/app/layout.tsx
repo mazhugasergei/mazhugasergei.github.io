@@ -1,8 +1,6 @@
 import "@/assets/styles/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { mainFont } from "@/fonts"
 import { BASE_URL } from "@/lib/constants/config"
-import { cn } from "@/utils"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -31,7 +29,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className={cn(mainFont.className, "relative flex min-h-screen flex-col select-none")}>
+			<body className="relative flex min-h-screen flex-col select-none">
 				<ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
 					{children}
 				</ThemeProvider>

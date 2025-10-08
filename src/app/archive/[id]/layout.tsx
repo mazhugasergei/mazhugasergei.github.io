@@ -25,7 +25,7 @@ export default async function Layout(props: LayoutProps<"/archive/[id]">) {
 	if (!_item) return notFound()
 
 	return (
-		<div>
+		<div className="grid min-h-screen grid-rows-[auto_1fr_auto]">
 			<Header title={_item.title} />
 			<main className="mx-auto px-4 md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">{props.children}</main>
 			<Footer />

@@ -2,7 +2,7 @@
 
 import { BASE_URL } from "@/lib/constants/config"
 import { cn } from "@/utils"
-import { CopyCheckIcon, EggIcon, HashIcon } from "lucide-react"
+import { ClipboardCheckIcon, EggIcon, HashIcon } from "lucide-react"
 import { usePathname } from "next/navigation"
 import { ComponentProps, useEffect, useRef, useState } from "react"
 
@@ -54,7 +54,7 @@ export function Header(props: Props) {
 			<h2 className="text-3xl font-bold">{props.title}</h2>
 
 			<div className="text-muted-foreground absolute top-0 -left-7 max-md:hidden">
-				<CopyCheckIcon
+				<ClipboardCheckIcon
 					className={cn(
 						"absolute top-2 size-5 scale-80 opacity-0 transition duration-150",
 						clicked && copiedTimes.current !== 5 && "scale-100 opacity-100 delay-100 duration-250"
