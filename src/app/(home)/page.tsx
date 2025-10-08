@@ -3,6 +3,7 @@ import { Map } from "@/components/map"
 import { buttonVariants } from "@/components/ui/button"
 import { headingFont } from "@/fonts"
 import { cn } from "@/utils"
+import { replaceLastSpaceWithNbsp } from "@/utils/text"
 import Link from "next/link"
 
 interface List {
@@ -55,7 +56,7 @@ export default function Page() {
 							<h1 className={cn(headingFont.className, "text-xl font-bold")}>
 								<CustomAnimatedText>Mazhuga</CustomAnimatedText> <CustomAnimatedText>Sergei</CustomAnimatedText>
 							</h1>
-							<CustomAnimatedText>Frontend Developer</CustomAnimatedText>
+							<CustomAnimatedText>Software Developer</CustomAnimatedText>
 						</div>
 
 						<a
@@ -69,10 +70,10 @@ export default function Page() {
 						</a>
 					</header>
 
-					<p className="mt-4 text-xs text-balance">
-						A web developer based in Vladivostok, Russia, occasionally residing in Incheon, South Korea. I craft
-						intuitive, purposeful websites and web services with a focus on clarity and usability. Passionate about open
-						source and committed to shaping the future of the web through thoughtful, collaborative development.
+					<p className="mt-4 text-xs">
+						{replaceLastSpaceWithNbsp(
+							"A software developer based in Vladivostok, Russia, occasionally residing in Incheon, South Korea. I craft intuitive, purposeful websites and web services with a focus on clarity and usability. Passionate about open source and committed to shaping the future of the web through thoughtful, collaborative development."
+						)}
 					</p>
 				</section>
 
