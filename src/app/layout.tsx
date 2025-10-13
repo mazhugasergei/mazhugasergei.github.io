@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 		description: "Frontend developer",
 		images: [
 			{
-				url: "../assets/images/og.jpg",
+				url: BASE_URL + "/og.jpg",
 				width: 1200,
 				height: 630,
 				alt: "Mazhuga Sergei",
