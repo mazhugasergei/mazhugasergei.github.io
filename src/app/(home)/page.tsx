@@ -83,7 +83,7 @@ export default function Page() {
 				{lists.map((list, index) => (
 					<section
 						key={list.title}
-						className={cn("animate-slide-in-x space-y-2", index === lists.length - 1 && "mt-auto")}
+						className="animate-slide-in-x space-y-2 last:mt-auto"
 						style={{ animationDelay: `${(index + 1) * 100}ms` }}
 					>
 						<div className="text-secondary-foreground flex items-center justify-between">
