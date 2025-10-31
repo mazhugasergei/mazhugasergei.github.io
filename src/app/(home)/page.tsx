@@ -43,7 +43,7 @@ const lists: List[] = [
 	{
 		title: "Contacts",
 		items: [
-			{ name: "ghbdtnghbdtn8@gmail.com", href: "mailto:ghbdtnghbdtn8@gmail.com" },
+			{ name: "mazhugasergei8@gmail.com", href: "mailto:mazhugasergei8@gmail.com" },
 			{ name: "@mazhugasergei", href: "https://x.com/mazhugasergei" },
 		],
 	},
