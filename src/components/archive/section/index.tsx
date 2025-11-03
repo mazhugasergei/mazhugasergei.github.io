@@ -9,7 +9,7 @@ interface Props extends ComponentProps<"section"> {
 
 export default function Section(props: Props) {
 	return (
-		<section {...props} id={props.id} className={cn("space-y-4", props.className)}>
+		<section {...props} id={props.id} className={cn("scroll-m-22 space-y-4", props.className)}>
 			{props.title && <Header id={props.id} title={props.title} />}
 
 			{props.children}
