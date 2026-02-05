@@ -38,6 +38,7 @@ const lists: List[] = [
 		items: [
 			{ name: "Nimbus", href: "https://github.com/logscore/Nimbus", year: 25, service: "Frontend Contribution" },
 			{ name: "(moon)", href: "/the-moon", year: 25, service: "Web Development" },
+			{ name: "Dot Image Generator", href: "/dot-image-generator", year: 26, service: "Web Development" },
 		],
 	},
 	{
