@@ -9,12 +9,12 @@ export const metadata: Metadata = {
 		template: "%s | Mazhuga Sergei",
 		default: "Mazhuga Sergei",
 	},
-	description: "Frontend developer",
+	description: "Software developer",
 	authors: [{ name: "Mazhuga Sergei", url: BASE_URL }],
 	creator: "Mazhuga Sergei",
 	openGraph: {
 		title: "Mazhuga Sergei",
-		description: "Frontend developer",
+		description: "Software developer",
 		images: [
 			{
 				url: BASE_URL + "/og.jpg",
