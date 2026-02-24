@@ -33,8 +33,8 @@ function RandomMessage() {
 			return Math.abs(hash)
 		}
 
-		// Use the current URL path as seed for consistent message selection
-		const seed = createHash(window.location.pathname)
+		// Use the current URL path + timestamp for more variety
+		const seed = createHash(window.location.pathname + Date.now().toString())
 		const messageIndex = seed % messages.length
 		setMessage(messages[messageIndex])
 	}, [])
