@@ -9,12 +9,26 @@ export const metadata: Metadata = {
 		template: "%s | Mazhuga Sergei",
 		default: "Mazhuga Sergei",
 	},
-	description: "Software developer",
+	description:
+		"Software developer based in Vladivostok, Russia. Crafting intuitive, purposeful websites and web services with focus on clarity and usability. Passionate about open source and committed to shaping future of web through thoughtful, collaborative development.",
 	authors: [{ name: "Mazhuga Sergei", url: BASE_URL }],
 	creator: "Mazhuga Sergei",
+	keywords: ["software developer", "web development", "frontend", "full-stack", "portfolio", "vladivostok", "russia"],
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+		},
+	},
 	openGraph: {
 		title: "Mazhuga Sergei",
-		description: "Software developer",
+		description:
+			"Software developer based in Vladivostok, Russia. Crafting intuitive, purposeful websites and web services with focus on clarity and usability.",
+		type: "website",
+		siteName: "Mazhuga Sergei",
+		locale: "en_US",
 		images: [
 			{
 				url: BASE_URL + "/og.jpg",
@@ -23,6 +37,14 @@ export const metadata: Metadata = {
 				alt: "Mazhuga Sergei",
 			},
 		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		site: "@mazhugasergei",
+		creator: "Mazhuga Sergei",
+	},
+	verification: {
+		google: BASE_URL,
 	},
 }
 
