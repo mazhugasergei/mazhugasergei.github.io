@@ -1,6 +1,7 @@
 "use client"
 
 import map from "@/assets/images/map.png"
+import { LOCATION } from "@/lib/constants/data"
 import { cn } from "@/utils"
 import { MapPin } from "lucide-react"
 import Image from "next/image"
@@ -13,7 +14,7 @@ export const MapSection = ({ className, ...props }: React.HTMLAttributes<HTMLDiv
 		const update = () => {
 			const now = new Date()
 			const time = now.toLocaleTimeString("en-US", {
-				timeZone: "Asia/Vladivostok",
+				timeZone: LOCATION.timezone,
 				hour: "2-digit",
 				minute: "2-digit",
 			})
@@ -28,7 +29,7 @@ export const MapSection = ({ className, ...props }: React.HTMLAttributes<HTMLDiv
 	return (
 		<aside className={cn("flex flex-col items-end justify-end gap-2", className)} {...props}>
 			<figure className="relative aspect-[5/3] w-full max-w-[25rem] overflow-hidden rounded-md border">
-				<Image src={map} alt="Map showing Vladivostok location" width={400} className="max-w-[25rem] object-cover" />
+				<Image src={map} alt="Map showing city location" width={400} className="max-w-[25rem] object-cover" />
 				<figcaption className="absolute right-2 bottom-2 rounded-md bg-black px-4 py-2 text-[.65rem] font-bold whitespace-nowrap text-white">
 					{time}
 				</figcaption>
@@ -36,7 +37,9 @@ export const MapSection = ({ className, ...props }: React.HTMLAttributes<HTMLDiv
 
 			<address className="flex items-center justify-end gap-1 text-sm not-italic">
 				<MapPin size={12} />
-				<span>Vladivostok, Primorsky Krai</span>
+				<span>
+					{LOCATION.city}, {LOCATION.region}
+				</span>
 			</address>
 		</aside>
 	)

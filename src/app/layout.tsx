@@ -1,6 +1,7 @@
 import "@/assets/styles/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { BASE_URL } from "@/lib/constants/config"
+import { DESCRIPTION, DESCRIPTION_SHORT, LOCATION } from "@/lib/constants/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -9,11 +10,18 @@ export const metadata: Metadata = {
 		template: "%s | Mazhuga Sergei",
 		default: "Mazhuga Sergei",
 	},
-	description:
-		"Software developer based in Vladivostok, Russia. Crafting intuitive, purposeful websites and web services with focus on clarity and usability. Passionate about open source and committed to shaping future of web through thoughtful, collaborative development.",
+	description: DESCRIPTION,
 	authors: [{ name: "Mazhuga Sergei", url: BASE_URL }],
 	creator: "Mazhuga Sergei",
-	keywords: ["software developer", "web development", "frontend", "full-stack", "portfolio", "vladivostok", "russia"],
+	keywords: [
+		"software developer",
+		"web development",
+		"frontend",
+		"full-stack",
+		"portfolio",
+		LOCATION.city.toLowerCase(),
+		LOCATION.country.toLowerCase(),
+	],
 	robots: {
 		index: true,
 		follow: true,
@@ -24,8 +32,7 @@ export const metadata: Metadata = {
 	},
 	openGraph: {
 		title: "Mazhuga Sergei",
-		description:
-			"Software developer based in Vladivostok, Russia. Crafting intuitive, purposeful websites and web services with focus on clarity and usability.",
+		description: DESCRIPTION_SHORT,
 		type: "website",
 		siteName: "Mazhuga Sergei",
 		locale: "en_US",

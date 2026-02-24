@@ -2,7 +2,7 @@ import { CustomAnimatedText } from "@/components/custom-animated-text"
 import { MapSection } from "@/components/map-section"
 import { buttonVariants } from "@/components/ui/button"
 import { headingFont } from "@/fonts"
-import { lists } from "@/lib/constants/data"
+import { LOCATION, lists } from "@/lib/constants/data"
 import { cn } from "@/utils"
 import { replaceLastSpaceWithNbsp } from "@/utils/text"
 import Link from "next/link"
@@ -33,7 +33,7 @@ export default function Page() {
 
 					<p className="mt-4 text-xs">
 						{replaceLastSpaceWithNbsp(
-							"A software developer based in Vladivostok, Russia, occasionally residing in Incheon, South Korea. I craft intuitive, purposeful websites and web services with a focus on clarity and usability. Passionate about open source and committed to shaping the future of the web through thoughtful, collaborative development."
+							`A software developer based in ${LOCATION.city}, ${LOCATION.country}, occasionally residing in Incheon, South Korea. I craft intuitive, purposeful websites and web services with a focus on clarity and usability. Passionate about open source and committed to shaping the future of the web through thoughtful, collaborative development.`
 						)}
 					</p>
 				</section>
