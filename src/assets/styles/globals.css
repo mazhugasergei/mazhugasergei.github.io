@@ -118,6 +118,13 @@
 	}
 }
 
+@keyframes slide-in-y {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 @layer base {
 	* {
 		@apply border-border outline-ring/50 selection:bg-primary selection:text-primary-foreground;
@@ -134,6 +141,12 @@
 		opacity: 0;
 		transform: translateX(-1rem);
 		animation: slide-in-x 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+	}
+
+	.animate-slide-in-y {
+		opacity: 0;
+		transform: translateY(-1rem);
+		animation: slide-in-y 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 	}
 }
 
