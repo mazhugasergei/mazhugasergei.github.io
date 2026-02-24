@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./viewport.css";
 
 @plugin "tailwindcss-animate";
 

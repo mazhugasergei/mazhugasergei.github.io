@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className="relative flex min-h-screen flex-col select-none">
+			<body className="min-h-100dvh relative flex flex-col select-none">
 				<ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
 					{children}
 				</ThemeProvider>

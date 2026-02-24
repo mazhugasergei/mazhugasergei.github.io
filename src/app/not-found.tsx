@@ -44,7 +44,7 @@ function RandomMessage() {
 
 export default function NotFound() {
 	return (
-		<main className="grid min-h-screen place-items-center p-6">
+		<main className="min-h-100dvh grid place-items-center p-6">
 			<div className="flex max-w-xl flex-col items-center gap-6 text-center">
 				<section className="animate-slide-in-y space-y-4">
 					<header className="space-y-2">

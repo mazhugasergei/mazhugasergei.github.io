@@ -3,10 +3,10 @@ import "@/assets/styles/globals.css"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<div className="relative flex min-h-screen flex-col select-none">
+		<div className="min-h-100dvh relative flex flex-col select-none">
 			<NoiseOverlay />
 			<BG />
-			<div className="grid min-h-screen p-6 text-xs">{children}</div>
+			<div className="min-h-100dvh grid p-6 text-xs">{children}</div>
 		</div>
 	)
 }
