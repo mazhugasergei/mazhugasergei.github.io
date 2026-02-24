@@ -2,6 +2,8 @@ import { BASE_URL } from "@/lib/constants/config"
 import { lists } from "@/lib/constants/data"
 import { MetadataRoute } from "next"
 
+export const dynamic = "force-static"
+
 export default function sitemap(): MetadataRoute.Sitemap {
 	// static pages
 	const staticPages = [
