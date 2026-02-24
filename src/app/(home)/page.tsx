@@ -1,5 +1,5 @@
 import { CustomAnimatedText } from "@/components/custom-animated-text"
-import { Map } from "@/components/map"
+import { MapSection } from "@/components/map-section"
 import { buttonVariants } from "@/components/ui/button"
 import { headingFont } from "@/fonts"
 import { lists } from "@/lib/constants/data"
@@ -9,8 +9,8 @@ import Link from "next/link"
 
 export default function Page() {
 	return (
-		<main className="grid grid-cols-1 gap-6 md:flex-1 md:grid-cols-[1fr_auto]">
-			<div className="flex max-w-xl flex-col gap-6">
+		<main className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_auto]">
+			<div className="flex flex-col gap-6 lg:max-w-xl">
 				<section className="animate-slide-in-x">
 					<header className="flex items-center justify-between gap-2">
 						<div>
@@ -46,10 +46,12 @@ export default function Page() {
 					>
 						<div className="text-secondary-foreground flex items-center justify-between">
 							<h2 className="font-bold">{list.title}</h2>
-							{index !== lists.length - 1 && <span>{list.title.toLocaleLowerCase()}.json</span>}
+							<span className={cn(index === lists.length - 1 && "lg:hidden")}>
+								{list.title.toLocaleLowerCase()}.json
+							</span>
 						</div>
 
-						<ul className="max-md:space-y-1">
+						<ul className="max-lg:space-y-1">
 							{list.items.map((item) => (
 								<li key={item.name}>
 									{item.href.startsWith("/archive/") ? (
@@ -72,7 +74,7 @@ export default function Page() {
 				))}
 			</div>
 
-			<Map />
+			<MapSection />
 		</main>
 	)
 }
