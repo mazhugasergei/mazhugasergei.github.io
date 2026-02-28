@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 		creator: "Mazhuga Sergei",
 	},
 	verification: {
-		google: BASE_URL,
+		google: "DmO9E-54YBJoBz2iTfzU-oqiHiLvt21sRXtARTNbGvM",
 	},
 }
 
