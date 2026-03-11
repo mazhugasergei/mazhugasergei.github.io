@@ -64,10 +64,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					{children}
 				</ThemeProvider>
 				<Script
-					defer
 					src="https://my-analytics-three.vercel.app/asdasdasd.js"
 					data-website-id="f35ea190-8cf9-458c-9364-25360e92c39c"
-					strategy="afterInteractive"
+					strategy="lazyOnload"
+					onError={(e) => {
+						console.error("Analytics failed to load, but the app is still running.", e)
+					}}
 				/>
 			</body>
 		</html>
