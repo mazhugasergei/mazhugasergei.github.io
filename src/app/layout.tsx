@@ -1,9 +1,9 @@
 import "@/assets/styles/globals.css"
+import { Analytics } from "@/components/analytics"
 import { ThemeProvider } from "@/components/theme-provider"
 import { BASE_URL } from "@/lib/constants/config"
 import { DESCRIPTION, DESCRIPTION_SHORT, LOCATION } from "@/lib/constants/data"
 import type { Metadata } from "next"
-import Script from "next/script"
 
 export const metadata: Metadata = {
 	metadataBase: new URL(BASE_URL),
@@ -63,14 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
 					{children}
 				</ThemeProvider>
-				<Script
-					src="https://my-analytics-three.vercel.app/asdasdasd.js"
-					data-website-id="f35ea190-8cf9-458c-9364-25360e92c39c"
-					strategy="lazyOnload"
-					onError={(e) => {
-						console.error("Analytics failed to load, but the app is still running.", e)
-					}}
-				/>
+				<Analytics />
 			</body>
 		</html>
 	)
