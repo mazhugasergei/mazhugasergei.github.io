@@ -7,13 +7,13 @@ export function cn(...inputs: ClassValue[]) {
 
 export const validateUrl = (url: string | undefined): string => {
 	if (!url) {
-		throw new Error("NEXT_PUBLIC_SITE_URL is required but not provided")
+		throw new Error("URL is required but not provided")
 	}
 
 	try {
 		new URL(url)
 		return url
 	} catch {
-		throw new Error(`Invalid URL in NEXT_PUBLIC_SITE_URL: ${url}`)
+		throw new Error(`Invalid URL: ${url}`)
 	}
 }
