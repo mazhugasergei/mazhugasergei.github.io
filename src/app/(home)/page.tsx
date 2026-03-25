@@ -23,11 +23,9 @@ export default function Page() {
 						<a
 							href="/CV - Sergei Mazhuga.pdf"
 							download
-							className={buttonVariants({
-								variant: "outline",
-							})}
+							className={buttonVariants()}
 						>
-							Download CV
+							View CV
 						</a>
 					</header>
 
