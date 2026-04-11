@@ -45,6 +45,10 @@ export const lists: List[] = [
 		],
 	},
 	{
+		title: "Components",
+		items: [{ name: "Animated components", href: "/components", year: 26, service: "Web Development" }],
+	},
+	{
 		title: "Contacts",
 		items: [
 			{ name: "mazhugasergei8@gmail.com", href: "mailto:mazhugasergei8@gmail.com" },
