@@ -23,7 +23,7 @@ const NoiseOverlay = () => (
 
 const BG = () => (
 	<div className="absolute isolate -z-10 h-full w-full">
-		<div className="absolute inset-0 bg-[#000]" />
+		<div className="absolute inset-0 bg-[#101010]" />
 		<div className="absolute inset-0 backdrop-blur" />
 	</div>
 )
