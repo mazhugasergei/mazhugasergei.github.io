@@ -39,14 +39,11 @@ export const lists: List[] = [
 	{
 		title: "Projects",
 		items: [
-			{ name: "Nimbus", href: "https://github.com/logscore/Nimbus", year: 25, service: "Frontend Contribution" },
 			{ name: "(moon)", href: "/the-moon", year: 25, service: "Web Development" },
+			{ name: "Nimbus", href: "https://github.com/logscore/Nimbus", year: 25, service: "Frontend Contribution" },
+			{ name: "Components", href: "/components", year: 26, service: "Web Development" },
 			{ name: "Dot Image Generator", href: "/dot-image-generator", year: 26, service: "Web Development" },
 		],
-	},
-	{
-		title: "Components",
-		items: [{ name: "Animated components", href: "/components", year: 26, service: "Web Development" }],
 	},
 	{
 		title: "Contacts",
