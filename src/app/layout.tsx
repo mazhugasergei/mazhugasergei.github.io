@@ -1,5 +1,4 @@
 import "@/assets/styles/globals.css"
-import { Analytics } from "@/components/analytics"
 import { ThemeProvider } from "@/components/theme-provider"
 import { BASE_URL } from "@/lib/constants/config"
 import { DESCRIPTION, DESCRIPTION_SHORT, LOCATION } from "@/lib/constants/data"
@@ -63,7 +62,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
 					{children}
 				</ThemeProvider>
-				<Analytics />
 			</body>
 		</html>
 	)
