@@ -1,5 +1,4 @@
 import { CustomAnimatedText } from "@/components/custom-animated-text"
-import { MapSection } from "@/components/map-section"
 import { buttonVariants } from "@/components/ui/button"
 import { headingFont } from "@/fonts"
 import { LOCATION, lists } from "@/lib/constants/data"
@@ -20,11 +19,7 @@ export default function Page() {
 							<CustomAnimatedText>Software Engineer</CustomAnimatedText>
 						</div>
 
-						<a
-							href="/CV - Sergei Mazhuga.pdf"
-							download
-							className={buttonVariants()}
-						>
+						<a href="/CV - Sergei Mazhuga.pdf" download className={buttonVariants()}>
 							View CV
 						</a>
 					</header>
@@ -72,7 +67,7 @@ export default function Page() {
 				))}
 			</div>
 
-			<MapSection />
+			{/* <MapSection /> */}
 		</main>
 	)
 }
