@@ -1,4 +1,4 @@
-import { replaceLastSpaceWithNbsp } from "@/utils/text"
+import { preventOrphan } from "@/utils/text"
 import { ComponentProps } from "react"
 
 interface Props extends ComponentProps<"p"> {
@@ -6,5 +6,5 @@ interface Props extends ComponentProps<"p"> {
 }
 
 export const Paragraph = ({ children, ...props }: Props) => {
-	return <p {...props}>{replaceLastSpaceWithNbsp(children)}</p>
+	return <p {...props}>{preventOrphan(children)}</p>
 }

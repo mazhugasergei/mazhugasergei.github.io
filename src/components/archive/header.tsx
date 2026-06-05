@@ -1,6 +1,6 @@
 "use client"
 
-import { cn } from "@/utils"
+import { cn } from "@/utils/classname"
 import { ChevronLeftIcon } from "lucide-react"
 import Link from "next/link"
 import { ComponentProps, useEffect, useState } from "react"

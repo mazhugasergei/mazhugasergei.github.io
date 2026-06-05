@@ -1,4 +1,4 @@
-import { cn } from "@/utils"
+import { cn } from "@/utils/classname"
 import NextImage from "next/image"
 import { ComponentProps } from "react"
 

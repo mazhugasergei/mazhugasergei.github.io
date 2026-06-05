@@ -1,5 +1,5 @@
 import { mainSansFont } from "@/fonts"
-import { cn } from "@/utils"
+import { cn } from "@/utils/classname"
 import { ComponentProps } from "react"
 
 interface PostProps extends ComponentProps<"article"> {

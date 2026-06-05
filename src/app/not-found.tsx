@@ -3,7 +3,7 @@
 import { CustomAnimatedText } from "@/components/custom-animated-text"
 import { buttonVariants } from "@/components/ui/button"
 import { headingFont } from "@/fonts"
-import { cn } from "@/utils"
+import { cn } from "@/utils/classname"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
