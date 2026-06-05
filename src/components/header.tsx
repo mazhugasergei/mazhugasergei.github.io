@@ -1,17 +1,24 @@
 import { CustomAnimatedText } from "@/components/custom-animated-text"
 import { Paragraph } from "@/components/paragraph"
 import { buttonVariants } from "@/components/ui/button"
+import { SHOW_UI_OUTLINE } from "@/lib/constants/config"
 import { LOCATION } from "@/lib/constants/data"
+import { cn } from "@/utils/classname"
 
-export function Header() {
+export function Header({ className, ...props }: React.ComponentProps<"header">) {
 	return (
-		<header className="animate-slide-in-x">
+		<header className={cn("", className)} {...props}>
 			<div className="flex items-center justify-between gap-2">
-				<div>
-					<CustomAnimatedText className="text-muted-foreground mb-2 text-sm tracking-widest uppercase">
+				<div className="mb-3">
+					<CustomAnimatedText
+						className={cn(
+							"text-muted-foreground mb-2 text-sm tracking-widest uppercase",
+							SHOW_UI_OUTLINE && "border-r border-b"
+						)}
+					>
 						Software Engineer
 					</CustomAnimatedText>
-					<h1 className="mb-3 text-3xl leading-snug font-medium">
+					<h1 className="text-3xl leading-snug font-medium">
 						<CustomAnimatedText>Mazhuga</CustomAnimatedText> <CustomAnimatedText>Sergei</CustomAnimatedText>
 					</h1>
 				</div>

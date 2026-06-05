@@ -6,7 +6,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<div className="min-h-100dvh relative flex flex-col select-none">
 			<NoiseOverlay />
 			<BG />
-			<div className="min-h-100dvh grid p-6 text-xs">{children}</div>
+			<div className="min-h-100dvh grid text-xs">{children}</div>
 		</div>
 	)
 }

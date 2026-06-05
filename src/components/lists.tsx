@@ -2,19 +2,25 @@ import { lists } from "@/lib/constants/data"
 import { cn } from "@/utils/classname"
 import Link from "next/link"
 
-export function Lists() {
-	return lists.map((list, index) => <List key={list.title} title={list.title} index={index} items={list.items} />)
+export function Lists({ className }: { className?: string }) {
+	return lists.map((list, index) => (
+		<List key={list.title} title={list.title} index={index} items={list.items} className={className} />
+	))
 }
 
-interface ListProps {
+interface ListProps extends React.ComponentProps<"section"> {
 	index: number
 	title: string
 	items: (typeof lists)[0]["items"]
 }
 
-export function List({ title, index, items }: ListProps) {
+export function List({ title, index, items, className, ...props }: ListProps) {
 	return (
-		<section className="animate-slide-in-x space-y-2 last:mt-auto" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
+		<section
+			className={cn("animate-slide-in-x space-y-2 last:mt-auto", className)}
+			style={{ animationDelay: `${(index + 1) * 100}ms` }}
+			{...props}
+		>
 			<div className="text-muted-foreground flex items-center justify-between">
 				<h2 className="font-bold">{title}</h2>
 				<span className={cn(index === lists.length - 1 && "lg:hidden")}>{title.toLocaleLowerCase()}.json</span>
