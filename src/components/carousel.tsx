@@ -1,0 +1,206 @@
+"use client"
+
+import { cn } from "@/utils/classname"
+import { ComponentProps, ReactNode, useCallback, useEffect, useRef, useState } from "react"
+import { AudioPlayer } from "./ui/audio-player"
+
+const SLIDE_DURATION = 10000
+
+interface Slide {
+	id: number
+	label: string
+	title: string
+	content: ReactNode
+}
+
+const slides: Slide[] = [
+	{
+		id: 0,
+		label: "Latest Release",
+		title: "Audio Player",
+		content: <AudioPlayer />,
+	},
+	{
+		id: 1,
+		label: "Latest Release",
+		title: "Audio Recorder",
+		content: <>a</>,
+	},
+	{
+		id: 2,
+		label: "Latest Release",
+		title: "Lorem Ipsum",
+		content: <>a</>,
+	},
+	{
+		id: 3,
+		label: "Latest Release",
+		title: "Lorem Ipsum",
+		content: <>a</>,
+	},
+]
+
+interface Props extends ComponentProps<"div"> {}
+
+export function Carousel({ className, ...props }: Props) {
+	const [current, setCurrent] = useState(0)
+	const [progress, setProgress] = useState(0)
+	const [paused, setPaused] = useState(false)
+	const [direction, setDirection] = useState<"forward" | "backward">("forward")
+
+	const rafRef = useRef<number | null>(null)
+	const startTimeRef = useRef<number | null>(null)
+	const resettingRef = useRef(false)
+
+	const resetTimer = () => {
+		startTimeRef.current = null
+		setProgress(0)
+	}
+
+	const goTo = useCallback(
+		(index: number) => {
+			resettingRef.current = true
+			setDirection(index > current ? "forward" : "backward")
+			setCurrent(index)
+			resetTimer()
+		},
+		[current]
+	)
+
+	const goNext = useCallback(() => {
+		resettingRef.current = true
+		setDirection("forward")
+		setCurrent((c) => (c + 1) % slides.length)
+		resetTimer()
+	}, [])
+
+	useEffect(() => {
+		const handleVisibility = () => {
+			if (document.hidden) {
+				setPaused(true)
+			} else {
+				// reset so the current slide gets a fresh timer on return
+				resetTimer()
+				setPaused(false)
+			}
+		}
+		document.addEventListener("visibilitychange", handleVisibility)
+		return () => document.removeEventListener("visibilitychange", handleVisibility)
+	}, [])
+
+	useEffect(() => {
+		if (paused) {
+			if (rafRef.current) cancelAnimationFrame(rafRef.current)
+			rafRef.current = null
+			return
+		}
+
+		const tick = (timestamp: number) => {
+			if (!startTimeRef.current) {
+				startTimeRef.current = timestamp
+			}
+			const elapsed = timestamp - startTimeRef.current
+			const pct = Math.min(elapsed / SLIDE_DURATION, 1)
+			resettingRef.current = false
+			setProgress(pct)
+
+			if (pct < 1) {
+				rafRef.current = requestAnimationFrame(tick)
+			} else {
+				goNext()
+			}
+		}
+
+		rafRef.current = requestAnimationFrame(tick)
+		return () => {
+			if (rafRef.current) {
+				cancelAnimationFrame(rafRef.current)
+				rafRef.current = null
+			}
+		}
+	}, [paused, current])
+
+	const handleMouseLeave = () => {
+		// reset current slide timer so it gets a fresh full duration
+		resetTimer()
+		setPaused(false)
+	}
+
+	const slide = slides[current]
+	const isResetting = resettingRef.current
+	const contentAnimClass = direction === "forward" ? "-animate-slide-in-x-750" : "animate-slide-in-x-750"
+	const titleAnimClass = direction === "forward" ? "-animate-slide-in-x-500" : "animate-slide-in-x-500"
+
+	return (
+		<div
+			className={cn(
+				"relative mb-6 flex flex-col items-center justify-center overflow-hidden rounded-xl bg-[#131313] lg:mt-6",
+				className
+			)}
+			onMouseEnter={() => setPaused(true)}
+			onMouseLeave={handleMouseLeave}
+			{...props}
+		>
+			{/* slides — all mounted, only active one visible */}
+			{slides.map((s) => (
+				<div
+					key={s.id}
+					aria-hidden={s.id !== current}
+					className="flex w-full items-center justify-center"
+					style={{ display: s.id === current ? "flex" : "none" }}
+				>
+					<div
+						key={`${current}-content`}
+						className={cn("flex w-full items-center justify-center p-12", contentAnimClass)}
+					>
+						{s.content}
+					</div>
+				</div>
+			))}
+
+			{/* bottom overlay */}
+			<div className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/60 to-transparent px-4 pt-6 pb-3">
+				<div className="mb-3">
+					<p
+						key={`${current}-label`}
+						className={cn("text-[11px] font-medium tracking-widest text-white/40 uppercase", titleAnimClass)}
+					>
+						{slide.label}
+					</p>
+					<h2 key={`${current}-title`} className={cn("text-lg leading-tight font-semibold text-white", titleAnimClass)}>
+						{slide.title}
+					</h2>
+				</div>
+
+				<div className="flex gap-1.5">
+					{slides.map((s, i) => {
+						const isCurrent = i === current
+						const isPast = i < current
+						const fillPct = isCurrent ? progress : isPast ? 1 : 0
+						const noTransition = isResetting || isCurrent
+
+						return (
+							<button
+								key={s.id}
+								onClick={() => goTo(i)}
+								aria-label={`Go to slide ${i + 1}: ${s.title}`}
+								className="group relative h-[3px] flex-1 cursor-pointer rounded-full bg-white/15 before:absolute before:inset-x-0 before:-inset-y-2 before:content-[''] focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
+							>
+								<div className="absolute inset-0 overflow-hidden rounded-full">
+									<div
+										className="absolute inset-y-0 left-0 rounded-full bg-white"
+										style={{
+											width: `${fillPct * 100}%`,
+											opacity: isCurrent ? 0.9 : isPast ? 0.5 : 0,
+											transition: noTransition ? "none" : "width 0.15s ease, opacity 0.15s ease",
+										}}
+									/>
+								</div>
+							</button>
+						)
+					})}
+				</div>
+			</div>
+		</div>
+	)
+}

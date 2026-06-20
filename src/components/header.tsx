@@ -23,7 +23,7 @@ export function Header({ className, ...props }: React.ComponentProps<"header">) 
 					</h1>
 				</div>
 
-				<a href="/CV - Sergei Mazhuga.pdf" download className={buttonVariants()}>
+				<a href="/CV - Sergei Mazhuga.pdf" download className={buttonVariants({ className: "rounded-full!" })}>
 					View CV
 				</a>
 			</div>
