@@ -178,7 +178,7 @@ export function AudioRecorder({ className, ...props }: ComponentProps<"div">) {
 
 	return (
 		<div
-			className={`w-full max-w-md space-y-4 rounded-xl border border-neutral-800 bg-neutral-900/60 p-4 ${className || ""}`}
+			className={`w-full max-w-md space-y-4 rounded-xl border border-neutral-800 bg-neutral-900 p-4 ${className || ""}`}
 			{...props}
 		>
 			<div className="flex justify-between gap-4">

@@ -219,7 +219,7 @@ export function AudioPlayer({ className, variant = 1, showDecorativeSpeakers = t
 
 	return (
 		<div
-			className={`w-full max-w-md rounded-xl border border-neutral-800 bg-neutral-900/60 p-4 ${className || ""}`}
+			className={`w-full max-w-md rounded-xl border border-neutral-800 bg-neutral-900 p-4 ${className || ""}`}
 			{...props}
 		>
 			<div className="flex items-center justify-between">
