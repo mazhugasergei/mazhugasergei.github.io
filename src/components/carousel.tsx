@@ -1,5 +1,6 @@
 "use client"
 
+import { AnimatedButtonExample } from "@/components/examples/animated-button"
 import { AudioPlayer } from "@/components/ui/audio-player"
 import { AudioRecorder } from "@/components/ui/audio-recorder"
 import { cn } from "@/utils/classname"
@@ -27,6 +28,12 @@ const slides: Slide[] = [
 		title: "Audio Recorder",
 		content: <AudioRecorder />,
 		href: "/components/audio-recorder",
+	},
+	{
+		label: "Open Source",
+		title: "Personal UI Library",
+		content: <AnimatedButtonExample />,
+		href: "/components",
 	},
 ]
 
