@@ -29,19 +29,15 @@ export function List({ title, index, items, className, ...props }: ListProps) {
 			<ul className="max-lg:space-y-1">
 				{items.map((item) => (
 					<li key={item.name}>
-						{item.href.startsWith("/archive/") ? (
-							<SoundLink href={item.href as `/archive/${string}`} className="group flex items-center gap-1 leading-5">
-								<span className="group-hover:underline">{item.name}</span>
-								{item.year && <span className="text-muted-foreground">'{item.year}</span>}
-								{item.service && <span className="ml-auto">{item.service}</span>}
-							</SoundLink>
-						) : (
-							<SoundLink href={item.href} target="_blank" className="group flex items-center gap-1 leading-5">
-								<span className="group-hover:underline">{item.name}</span>
-								{item.year && <span className="text-muted-foreground">'{item.year}</span>}
-								{item.service && <span className="ml-auto">{item.service}</span>}
-							</SoundLink>
-						)}
+						<SoundLink
+							href={item.href}
+							target={item.href.startsWith("/archive/") ? "_self" : "_blank"}
+							className="group flex items-center gap-1 leading-5"
+						>
+							<span className="group-hover:underline">{item.name}</span>
+							{item.year && <span className="text-muted-foreground">'{item.year}</span>}
+							{item.service && <span className="ml-auto">{item.service}</span>}
+						</SoundLink>
 					</li>
 				))}
 			</ul>

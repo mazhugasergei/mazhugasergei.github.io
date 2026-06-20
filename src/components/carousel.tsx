@@ -3,6 +3,7 @@
 import { AnimatedButtonExample } from "@/components/examples/animated-button"
 import { AudioPlayer } from "@/components/ui/audio-player"
 import { AudioRecorder } from "@/components/ui/audio-recorder"
+import { SoundLink } from "@/components/ui/sounds"
 import { cn } from "@/utils/classname"
 import { ArrowUpRightIcon } from "lucide-react"
 import { ComponentProps, ReactNode, useCallback, useEffect, useRef, useState } from "react"
@@ -155,7 +156,7 @@ export function Carousel({ className, ...props }: Props) {
 
 			{/* visit link */}
 			{slide.href && (
-				<a
+				<SoundLink
 					key={`${current}-href`}
 					href={slide.href}
 					target="_blank"
@@ -167,7 +168,7 @@ export function Carousel({ className, ...props }: Props) {
 				>
 					Visit
 					<ArrowUpRightIcon size={12} />
-				</a>
+				</SoundLink>
 			)}
 
 			{/* bottom overlay */}
