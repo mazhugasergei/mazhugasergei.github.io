@@ -1,13 +1,13 @@
 "use client"
 
+import { AudioPlayer } from "@/components/ui/audio-player"
+import { AudioRecorder } from "@/components/ui/audio-recorder"
 import { cn } from "@/utils/classname"
 import { ComponentProps, ReactNode, useCallback, useEffect, useRef, useState } from "react"
-import { AudioPlayer } from "./ui/audio-player"
 
 const SLIDE_DURATION = 10000
 
 interface Slide {
-	id: number
 	label: string
 	title: string
 	content: ReactNode
@@ -15,28 +15,14 @@ interface Slide {
 
 const slides: Slide[] = [
 	{
-		id: 0,
 		label: "Latest Release",
 		title: "Audio Player",
 		content: <AudioPlayer />,
 	},
 	{
-		id: 1,
 		label: "Latest Release",
 		title: "Audio Recorder",
-		content: <>a</>,
-	},
-	{
-		id: 2,
-		label: "Latest Release",
-		title: "Lorem Ipsum",
-		content: <>a</>,
-	},
-	{
-		id: 3,
-		label: "Latest Release",
-		title: "Lorem Ipsum",
-		content: <>a</>,
+		content: <AudioRecorder />,
 	},
 ]
 
@@ -142,12 +128,12 @@ export function Carousel({ className, ...props }: Props) {
 			{...props}
 		>
 			{/* slides — all mounted, only active one visible */}
-			{slides.map((s) => (
+			{slides.map((s, index) => (
 				<div
-					key={s.id}
-					aria-hidden={s.id !== current}
+					key={index}
+					aria-hidden={index !== current}
 					className="flex w-full items-center justify-center"
-					style={{ display: s.id === current ? "flex" : "none" }}
+					style={{ display: index === current ? "flex" : "none" }}
 				>
 					<div
 						key={`${current}-content`}
@@ -181,7 +167,7 @@ export function Carousel({ className, ...props }: Props) {
 
 						return (
 							<button
-								key={s.id}
+								key={i}
 								onClick={() => goTo(i)}
 								aria-label={`Go to slide ${i + 1}: ${s.title}`}
 								className="group relative h-[3px] flex-1 cursor-pointer rounded-full bg-white/15 before:absolute before:inset-x-0 before:-inset-y-2 before:content-[''] focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
