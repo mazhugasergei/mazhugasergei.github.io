@@ -3,6 +3,7 @@
 import { AudioPlayer } from "@/components/ui/audio-player"
 import { AudioRecorder } from "@/components/ui/audio-recorder"
 import { cn } from "@/utils/classname"
+import { ArrowUpRightIcon } from "lucide-react"
 import { ComponentProps, ReactNode, useCallback, useEffect, useRef, useState } from "react"
 
 const SLIDE_DURATION = 10000
@@ -11,6 +12,7 @@ interface Slide {
 	label: string
 	title: string
 	content: ReactNode
+	href?: string
 }
 
 const slides: Slide[] = [
@@ -18,11 +20,13 @@ const slides: Slide[] = [
 		label: "Latest Release",
 		title: "Audio Player",
 		content: <AudioPlayer />,
+		href: "/components/audio-player",
 	},
 	{
-		label: "Latest Release",
+		label: "New Component",
 		title: "Audio Recorder",
 		content: <AudioRecorder />,
+		href: "/components/audio-recorder",
 	},
 ]
 
@@ -65,7 +69,6 @@ export function Carousel({ className, ...props }: Props) {
 			if (document.hidden) {
 				setPaused(true)
 			} else {
-				// reset so the current slide gets a fresh timer on return
 				resetTimer()
 				setPaused(false)
 			}
@@ -107,7 +110,6 @@ export function Carousel({ className, ...props }: Props) {
 	}, [paused, current])
 
 	const handleMouseLeave = () => {
-		// reset current slide timer so it gets a fresh full duration
 		resetTimer()
 		setPaused(false)
 	}
@@ -143,6 +145,23 @@ export function Carousel({ className, ...props }: Props) {
 					</div>
 				</div>
 			))}
+
+			{/* visit link */}
+			{slide.href && (
+				<a
+					key={`${current}-href`}
+					href={slide.href}
+					target="_blank"
+					rel="noopener noreferrer"
+					className={cn(
+						"text-muted-foreground absolute top-2 right-2 flex items-center gap-0.75 p-2 text-xs hover:underline",
+						"animate-fade-in"
+					)}
+				>
+					Visit
+					<ArrowUpRightIcon size={12} />
+				</a>
+			)}
 
 			{/* bottom overlay */}
 			<div className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/60 to-transparent px-4 pt-6 pb-3">
