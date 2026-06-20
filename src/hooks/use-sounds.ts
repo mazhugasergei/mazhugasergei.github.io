@@ -8,11 +8,11 @@ export type SoundKey = "hover" | "click" | "disabled" | "sound-on" | "sound-off"
 const SOUNDS_PACK = "electro"
 
 export const SOUNDS: Record<SoundKey, string[]> = {
-	hover: ["/sounds/" + SOUNDS_PACK + "/hover.mp3"],
-	click: ["/sounds/" + SOUNDS_PACK + "/click.mp3"],
-	disabled: ["/sounds/" + SOUNDS_PACK + "/disabled.mp3"],
-	"sound-on": ["/sounds/" + SOUNDS_PACK + "/sound-on.mp3", "/sounds/" + SOUNDS_PACK + "/click.mp3"],
-	"sound-off": ["/sounds/" + SOUNDS_PACK + "/sound-off.mp3", "/sounds/" + SOUNDS_PACK + "/click.mp3"],
+	hover: ["/sounds/" + SOUNDS_PACK + "/hover.webm"],
+	click: ["/sounds/" + SOUNDS_PACK + "/click.webm"],
+	disabled: ["/sounds/" + SOUNDS_PACK + "/disabled.webm"],
+	"sound-on": ["/sounds/" + SOUNDS_PACK + "/sound-on.webm", "/sounds/" + SOUNDS_PACK + "/click.webm"],
+	"sound-off": ["/sounds/" + SOUNDS_PACK + "/sound-off.webm", "/sounds/" + SOUNDS_PACK + "/click.webm"],
 }
 
 export function useSounds() {
