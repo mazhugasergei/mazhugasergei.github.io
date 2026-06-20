@@ -6,9 +6,9 @@ import { ComponentProps, useCallback, useEffect, useRef, useState } from "react"
 import { ListIcon, NextIcon, PauseIcon, PlayIcon, PrevIcon } from "./icons"
 
 export const TRACKS = [
-	"audio/Elysium_Sound_-_Cosmic_Dreamer.mp3",
-	"audio/Greg_Kirkelie_-_1980s_Synthwave.mp3",
-	"audio/Elysium_Sound_-_Stellar_Sunset_Middle.mp3",
+	"audio/Elysium_Sound_-_Cosmic_Dreamer.webm",
+	"audio/Greg_Kirkelie_-_1980s_Synthwave.webm",
+	"audio/Elysium_Sound_-_Stellar_Sunset_Middle.webm",
 ]
 
 const formatTime = (t: number) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, "0")}`
@@ -20,36 +20,7 @@ export interface AudioPlayerProps extends ComponentProps<"div"> {
 
 const getFilenameFromSrc = (src: string): string => {
 	const filename = src.split("/").pop() || src
-	return filename.replace(/\.[^/.]+$/, "").replace(/_/g, " ") // clean display name
-}
-
-// metadata extraction
-const extractId3v1Title = async (url: string): Promise<string | null> => {
-	try {
-		const res = await fetch(url)
-		if (!res.ok) return null
-		const arrayBuffer = await res.arrayBuffer()
-		const dv = new DataView(arrayBuffer)
-
-		const fileSize = arrayBuffer.byteLength
-		if (fileSize < 128) return null
-
-		const tagOffset = fileSize - 128
-		const tag = String.fromCharCode(dv.getUint8(tagOffset), dv.getUint8(tagOffset + 1), dv.getUint8(tagOffset + 2))
-
-		if (tag !== "TAG") return null
-
-		let title = ""
-		for (let i = 0; i < 30; i++) {
-			const byte = dv.getUint8(tagOffset + 3 + i)
-			if (byte === 0) break
-			title += String.fromCharCode(byte)
-		}
-
-		return title.trim() || null
-	} catch {
-		return null
-	}
+	return filename.replace(/\.[^/.]+$/, "").replace(/_/g, " ")
 }
 
 export function AudioPlayer({ className, variant = 1, showDecorativeSpeakers = true, ...props }: AudioPlayerProps) {
@@ -147,13 +118,11 @@ export function AudioPlayer({ className, variant = 1, showDecorativeSpeakers = t
 		const player = audioPlayerRef.current
 		if (!player) return
 
-		// if we've passed 3 seconds, restart the current track from the beginning
 		if (currentTime >= 3) {
 			player.currentTime = 0
 			setProgress(0)
 			setCurrentTime(0)
 
-			// ensure it's playing
 			if (!isPlaying) {
 				player.play().catch(() => {
 					setIsPlaying(false)
@@ -161,7 +130,6 @@ export function AudioPlayer({ className, variant = 1, showDecorativeSpeakers = t
 				setIsPlaying(true)
 			}
 		} else {
-			// otherwise go to the previous track
 			const idx = (trackIndex - 1 + TRACKS.length) % TRACKS.length
 			playTrack(idx, true)
 		}
@@ -226,13 +194,11 @@ export function AudioPlayer({ className, variant = 1, showDecorativeSpeakers = t
 				<p className="text-[0.6875rem] tracking-[0.075rem] text-neutral-500 uppercase">audio player</p>
 			</div>
 
-			{/* screen */}
 			<div className="relative mt-4 grid items-center overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900">
 				<Display analyser={analyser} isActive={isPlaying} barOrigin="center" className="py-1" />
 				{variant === 1 && <PlayList isOpen={isPlayListOpen} currentTrackIndex={trackIndex} onTrackSelect={playTrack} />}
 			</div>
 
-			{/* buttons */}
 			<div className="mt-4 flex gap-3 max-sm:flex-col sm:items-center">
 				<div className="flex items-center gap-2">
 					<PrevButton size="icon-sm" onClick={prevTrack} />
@@ -318,7 +284,6 @@ export function Display({ analyser, isActive, barOrigin = "bottom", className, .
 		ctx.clearRect(0, 0, w, h)
 
 		for (let i = 0; i < barCount; i++) {
-			// outer edges = loudest (high binIndex), center = quietest (binIndex 0)
 			const binIndex = i < half ? half - 1 - i : i - half
 
 			const level = levelsRef.current[binIndex] ?? 0
@@ -540,7 +505,7 @@ export function SeekBar({ progress, disabled, className, onSeek, ...props }: See
 				value={progress}
 				disabled={disabled}
 				onChange={(e) => onSeek?.(Number(e.target.value))}
-				className={`absolute inset-0 h-full w-full appearance-none bg-transparent [&::-moz-range-thumb]:h-3 [&::-moz-range-thumb]:w-3 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:bg-transparent [&::-moz-range-track]:bg-transparent [&::-webkit-slider-runnable-track]:bg-transparent [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-transparent`}
+				className="absolute inset-0 h-full w-full appearance-none bg-transparent [&::-moz-range-thumb]:h-3 [&::-moz-range-thumb]:w-3 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:bg-transparent [&::-moz-range-track]:bg-transparent [&::-webkit-slider-runnable-track]:bg-transparent [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-transparent"
 			/>
 		</div>
 	)
@@ -554,23 +519,6 @@ interface PlayListProps {
 }
 
 export function PlayList({ variant = 1, isOpen, currentTrackIndex, onTrackSelect }: PlayListProps) {
-	const [trackNames, setTrackNames] = useState<string[]>([])
-
-	// load metadata for all tracks
-	useEffect(() => {
-		const loadAllMetadata = async () => {
-			const names = await Promise.all(
-				TRACKS.map(async (track) => {
-					const metaTitle = await extractId3v1Title(track)
-					return metaTitle || getFilenameFromSrc(track)
-				})
-			)
-			setTrackNames(names)
-		}
-
-		loadAllMetadata()
-	}, [])
-
 	return (
 		<div
 			className={`overflow-hidden transition-all duration-150 ease-in-out ${
@@ -586,24 +534,20 @@ export function PlayList({ variant = 1, isOpen, currentTrackIndex, onTrackSelect
 			<ScrollArea
 				className={variant === 1 ? "flex h-full flex-col gap-1 p-2" : variant === 2 ? "flex flex-col gap-1" : ""}
 			>
-				{TRACKS.map((track, i) => {
-					const displayName = trackNames[i] ?? getFilenameFromSrc(track)
-
-					return (
-						<button
-							key={track}
-							onClick={() => onTrackSelect(i, true)}
-							className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-left transition-colors ${
-								i === currentTrackIndex
-									? "bg-neutral-800 text-neutral-100"
-									: "text-neutral-500 hover:bg-neutral-800/50 hover:text-neutral-300"
-							}`}
-						>
-							<span className="w-4 shrink-0 text-center text-[0.6875rem] text-neutral-600 tabular-nums">{i + 1}</span>
-							<span className="text-[0.6875rem] tracking-[0.075rem]">{displayName}</span>
-						</button>
-					)
-				})}
+				{TRACKS.map((track, i) => (
+					<button
+						key={track}
+						onClick={() => onTrackSelect(i, true)}
+						className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-left transition-colors ${
+							i === currentTrackIndex
+								? "bg-neutral-800 text-neutral-100"
+								: "text-neutral-500 hover:bg-neutral-800/50 hover:text-neutral-300"
+						}`}
+					>
+						<span className="w-4 shrink-0 text-center text-[0.6875rem] text-neutral-600 tabular-nums">{i + 1}</span>
+						<span className="text-[0.6875rem] tracking-[0.075rem]">{getFilenameFromSrc(track)}</span>
+					</button>
+				))}
 			</ScrollArea>
 		</div>
 	)
