@@ -20,7 +20,6 @@ export function useSounds() {
 	if (!ctx) throw new Error("useSounds must be used within SoundsProvider")
 	return {
 		soundsEnabled: ctx.soundsEnabled,
-		soundsReady: ctx.soundsReady,
 		toggleSounds: ctx.toggle,
 		playSound: (key: SoundKey) => ctx.play(key),
 	}
