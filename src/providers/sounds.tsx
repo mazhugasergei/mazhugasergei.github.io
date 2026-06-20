@@ -4,7 +4,8 @@ import { SoundKey, SOUNDS } from "@/hooks/use-sounds"
 import { createContext, useEffect, useRef, useState } from "react"
 
 interface SoundsContext {
-	enabled: boolean
+	soundsEnabled: boolean
+	soundsReady: boolean
 	toggle: () => void
 	play: (key: SoundKey) => void
 }
@@ -13,7 +14,8 @@ export const SoundsContext = createContext<SoundsContext | null>(null)
 
 export function SoundsProvider({ children }: { children: React.ReactNode }) {
 	const audioRefs = useRef<Partial<Record<SoundKey, HTMLAudioElement>>>({})
-	const [enabled, setEnabled] = useState(true)
+	const [soundsEnabled, setSoundsEnabled] = useState(true)
+	const [soundsReady, setSoundsReady] = useState(false)
 
 	// Preload all sounds once on mount
 	useEffect(() => {
@@ -30,14 +32,16 @@ export function SoundsProvider({ children }: { children: React.ReactNode }) {
 				}
 			}
 
-			setEnabled(localStorage.getItem("sounds-enabled") !== "false")
+			setSoundsEnabled(localStorage.getItem("sounds-enabled") !== "false")
 
 			tryNext(0)
 		})
+
+		setSoundsReady(true)
 	}, [])
 
 	const toggle = () => {
-		setEnabled((prev) => {
+		setSoundsEnabled((prev) => {
 			const next = !prev
 			localStorage.setItem("sounds-enabled", String(next))
 			return next
@@ -51,5 +55,7 @@ export function SoundsProvider({ children }: { children: React.ReactNode }) {
 		audio.play().catch(() => {})
 	}
 
-	return <SoundsContext.Provider value={{ enabled, toggle, play }}>{children}</SoundsContext.Provider>
+	return (
+		<SoundsContext.Provider value={{ soundsEnabled, soundsReady, toggle, play }}>{children}</SoundsContext.Provider>
+	)
 }
