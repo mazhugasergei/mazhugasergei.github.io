@@ -2,6 +2,7 @@ import "@/assets/styles/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { BASE_URL } from "@/lib/constants/config"
 import { DESCRIPTION, DESCRIPTION_SHORT, LOCATION } from "@/lib/constants/data"
+import { SoundsProvider } from "@/providers/sounds"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -60,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang="en" suppressHydrationWarning>
 			<body className="min-h-100dvh relative flex flex-col select-none">
 				<ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
-					{children}
+					<SoundsProvider>{children}</SoundsProvider>
 				</ThemeProvider>
 			</body>
 		</html>

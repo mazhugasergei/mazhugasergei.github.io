@@ -1,49 +1,16 @@
-import { useEffect, useRef, useState } from "react"
+"use client"
 
-type SoundKey = "hover" | "click" | "disabled"
-
-const SOUNDS: Record<SoundKey, string> = {
-	hover: "/sounds/hover.mp3",
-	click: "/sounds/click.mp3",
-	disabled: "/sounds/disabled_click.mp3",
-}
+import { SoundsContext } from "@/providers/sounds"
+import { useContext } from "react"
 
 export function useSounds() {
-	const audioRefs = useRef<Partial<Record<SoundKey, HTMLAudioElement>>>({})
-
-	const [enabled, setEnabled] = useState<boolean | null>(null)
-
-	useEffect(() => {
-		setEnabled(localStorage.getItem("sounds-enabled") !== "false")
-	}, [])
-
-	const toggle = () => {
-		setEnabled((prev) => {
-			const next = !prev
-			localStorage.setItem("sounds-enabled", String(next))
-			return next
-		})
-	}
-
-	const play = (key: SoundKey) => {
-		if (typeof window === "undefined") return
-		if (enabled === null) return
-		if (localStorage.getItem("sounds-enabled") === "false") return
-
-		if (!audioRefs.current[key]) {
-			audioRefs.current[key] = new Audio(SOUNDS[key])
-		}
-
-		const audio = audioRefs.current[key]!
-		audio.currentTime = 0
-		audio.play().catch(() => {})
-	}
-
+	const ctx = useContext(SoundsContext)
+	if (!ctx) throw new Error("useSounds must be used within SoundsProvider")
 	return {
-		enabled,
-		toggle,
-		playHover: () => play("hover"),
-		playClick: () => play("click"),
-		playDisabled: () => play("disabled"),
+		enabled: ctx.enabled,
+		toggle: ctx.toggle,
+		playHover: () => ctx.play("hover"),
+		playClick: () => ctx.play("click"),
+		playDisabled: () => ctx.play("disabled"),
 	}
 }

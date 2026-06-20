@@ -1,3 +1,11 @@
+import { SoundKey } from "@/lib/types"
+
+export const SOUNDS: Record<SoundKey, string> = {
+	hover: "/sounds/hover.mp3",
+	click: "/sounds/click.mp3",
+	disabled: "/sounds/disabled_click.mp3",
+}
+
 export const LOCATION = {
 	city: "Vladivostok",
 	country: "Russia",
