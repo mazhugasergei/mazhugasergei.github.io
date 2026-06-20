@@ -2,9 +2,9 @@ import { lists } from "@/lib/constants/data"
 import { cn } from "@/utils/classname"
 import Link from "next/link"
 
-export function Lists({ className }: { className?: string }) {
+export function Lists(props: { className?: string }) {
 	return lists.map((list, index) => (
-		<List key={list.title} title={list.title} index={index} items={list.items} className={className} />
+		<List key={list.title} title={list.title} index={index} items={list.items} {...props} />
 	))
 }
 

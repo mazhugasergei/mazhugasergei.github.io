@@ -189,7 +189,7 @@ export function AudioRecorder({ className, ...props }: ComponentProps<"div">) {
 			<Dsplay
 				analyser={analyser}
 				isActive={isRecording}
-				className="rounded-xl border border-neutral-800 bg-neutral-900"
+				className="rounded-xl border border-neutral-800 bg-neutral-900 py-1"
 			/>
 
 			<div className="flex items-center gap-3">

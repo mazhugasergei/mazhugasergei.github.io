@@ -227,8 +227,8 @@ export function AudioPlayer({ className, variant = 1, showDecorativeSpeakers = t
 			</div>
 
 			{/* screen */}
-			<div className="relative mt-4 grid items-center overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900 max-sm:aspect-3/2">
-				<Display analyser={analyser} isActive={isPlaying} barOrigin="center" className="my-1" />
+			<div className="relative mt-4 grid items-center overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900">
+				<Display analyser={analyser} isActive={isPlaying} barOrigin="center" className="py-1" />
 				{variant === 1 && <PlayList isOpen={isPlayListOpen} currentTrackIndex={trackIndex} onTrackSelect={playTrack} />}
 			</div>
 
