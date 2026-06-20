@@ -26,6 +26,9 @@ export function Header({ className, ...props }: React.ComponentProps<"header">) 
 				</div>
 
 				<div className="flex gap-3">
+					{/* <SoundButton variant="outline" size="icon" disabled>
+						oh
+					</SoundButton> */}
 					<DisableSoundsButton className="text-muted-foreground rounded-full!" />
 					<SoundLink
 						href="/CV - Sergei Mazhuga.pdf"

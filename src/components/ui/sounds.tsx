@@ -1,9 +1,13 @@
 "use client"
-import { useSounds } from "@/hooks/use-sounds"
+import { SoundKey, useSounds } from "@/hooks/use-sounds"
 import { cn } from "@/utils/classname"
 import Link from "next/link"
 import { ComponentProps } from "react"
 import { Button } from "./button"
+
+interface SoundButtonProps extends ComponentProps<typeof Button> {
+	clickSound?: SoundKey
+}
 
 export function SoundButton({
 	onMouseEnter,
@@ -11,9 +15,10 @@ export function SoundButton({
 	disabled,
 	children,
 	className,
+	clickSound = "click",
 	...props
-}: ComponentProps<typeof Button>) {
-	const { playHover, playClick, playDisabled } = useSounds()
+}: SoundButtonProps) {
+	const { soundsEnabled, playSound } = useSounds()
 
 	return (
 		<span className={cn("relative isolate", className)}>
@@ -23,16 +28,16 @@ export function SoundButton({
 					disabled ? "pointer-events-auto" : "pointer-events-none"
 				)}
 				onClick={() => {
-					if (disabled) playDisabled()
+					if (soundsEnabled && disabled) playSound("disabled")
 				}}
 			/>
 			<Button
 				onMouseEnter={(e) => {
-					playHover()
+					soundsEnabled && playSound("hover")
 					onMouseEnter?.(e)
 				}}
 				onClick={(e) => {
-					playClick()
+					soundsEnabled && playSound(clickSound)
 					onClick?.(e)
 				}}
 				disabled={disabled}
@@ -46,16 +51,16 @@ export function SoundButton({
 }
 
 export function SoundLink({ children, onMouseEnter, onClick, ...props }: ComponentProps<typeof Link>) {
-	const { playHover, playClick, playDisabled } = useSounds()
+	const { soundsEnabled, playSound } = useSounds()
 
 	return (
 		<Link
 			onMouseEnter={(e) => {
-				playHover()
+				soundsEnabled && playSound("hover")
 				onMouseEnter?.(e)
 			}}
 			onClick={(e) => {
-				playClick()
+				soundsEnabled && playSound("click")
 				onClick?.(e)
 			}}
 			{...props}
