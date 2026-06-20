@@ -129,7 +129,7 @@ export function Carousel({ className, ...props }: Props) {
 	return (
 		<div
 			className={cn(
-				"relative mb-6 flex flex-col items-center justify-center overflow-hidden rounded-xl bg-[#131313] lg:mt-6",
+				"relative mb-6 flex flex-col items-center justify-center overflow-hidden rounded-xl bg-[#151515] lg:mt-6",
 				className
 			)}
 			onMouseEnter={() => setPaused(true)}
