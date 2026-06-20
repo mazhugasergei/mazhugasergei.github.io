@@ -1,6 +1,6 @@
+import { SoundLink } from "@/components/ui/sounds"
 import { lists } from "@/lib/constants/data"
 import { cn } from "@/utils/classname"
-import Link from "next/link"
 
 export function Lists(props: { className?: string }) {
 	return lists.map((list, index) => (
@@ -30,17 +30,17 @@ export function List({ title, index, items, className, ...props }: ListProps) {
 				{items.map((item) => (
 					<li key={item.name}>
 						{item.href.startsWith("/archive/") ? (
-							<Link href={item.href as `/archive/${string}`} className="group flex items-center gap-1 leading-5">
+							<SoundLink href={item.href as `/archive/${string}`} className="group flex items-center gap-1 leading-5">
 								<span className="group-hover:underline">{item.name}</span>
 								{item.year && <span className="text-muted-foreground">'{item.year}</span>}
 								{item.service && <span className="ml-auto">{item.service}</span>}
-							</Link>
+							</SoundLink>
 						) : (
-							<a href={item.href} target="_blank" className="group flex items-center gap-1 leading-5">
+							<SoundLink href={item.href} target="_blank" className="group flex items-center gap-1 leading-5">
 								<span className="group-hover:underline">{item.name}</span>
 								{item.year && <span className="text-muted-foreground">'{item.year}</span>}
 								{item.service && <span className="ml-auto">{item.service}</span>}
-							</a>
+							</SoundLink>
 						)}
 					</li>
 				))}

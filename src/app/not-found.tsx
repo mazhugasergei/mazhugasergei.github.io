@@ -2,9 +2,9 @@
 
 import { CustomAnimatedText } from "@/components/custom-animated-text"
 import { buttonVariants } from "@/components/ui/button"
+import { SoundLink } from "@/components/ui/sounds"
 import { headingFont } from "@/fonts"
 import { cn } from "@/utils/classname"
-import Link from "next/link"
 import { useEffect, useState } from "react"
 
 const messages = [
@@ -60,9 +60,9 @@ export default function NotFound() {
 				</section>
 
 				<section className="animate-slide-in-y" style={{ animationDelay: "200ms" }}>
-					<Link href="/" className={buttonVariants({ variant: "outline" })}>
+					<SoundLink href="/" className={buttonVariants({ variant: "outline", className: "rounded-full!" })}>
 						Go Home
-					</Link>
+					</SoundLink>
 				</section>
 			</div>
 		</main>

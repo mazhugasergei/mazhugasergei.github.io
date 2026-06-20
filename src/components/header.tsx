@@ -1,6 +1,8 @@
 import { CustomAnimatedText } from "@/components/custom-animated-text"
+import { DisableSoundsButton } from "@/components/disable-sounds-button"
 import { Paragraph } from "@/components/paragraph"
 import { buttonVariants } from "@/components/ui/button"
+import { SoundLink } from "@/components/ui/sounds"
 import { SHOW_UI_OUTLINE } from "@/lib/constants/config"
 import { LOCATION } from "@/lib/constants/data"
 import { cn } from "@/utils/classname"
@@ -23,9 +25,16 @@ export function Header({ className, ...props }: React.ComponentProps<"header">) 
 					</h1>
 				</div>
 
-				<a href="/CV - Sergei Mazhuga.pdf" download className={buttonVariants({ className: "rounded-full!" })}>
-					View CV
-				</a>
+				<div className="flex gap-3">
+					<DisableSoundsButton className="text-muted-foreground rounded-full!" />
+					<SoundLink
+						href="/CV - Sergei Mazhuga.pdf"
+						download
+						className={buttonVariants({ className: "rounded-full!" })}
+					>
+						View CV
+					</SoundLink>
+				</div>
 			</div>
 
 			<Paragraph className="text-muted-foreground max-w-md text-xs text-pretty">

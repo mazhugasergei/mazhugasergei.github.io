@@ -1,8 +1,8 @@
 "use client"
 
+import { SoundLink } from "@/components/ui/sounds"
 import { cn } from "@/utils/classname"
 import { ChevronLeftIcon } from "lucide-react"
-import Link from "next/link"
 import { ComponentProps, useEffect, useState } from "react"
 
 interface Props extends ComponentProps<"header"> {
@@ -35,9 +35,9 @@ export function Header({ title, ...props }: Props) {
 			)}
 		>
 			<div className="mx-auto flex items-center gap-6 px-4 md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
-				<Link href={"/"} className="flex items-center gap-1">
+				<SoundLink href={"/"} className="flex items-center gap-1">
 					<ChevronLeftIcon size={18} />
-				</Link>
+				</SoundLink>
 
 				<span className={cn("truncate text-lg font-bold opacity-0 transition", scrollY > 100 && "opacity-100")}>
 					{title}
