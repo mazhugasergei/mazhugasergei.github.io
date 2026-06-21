@@ -32,9 +32,9 @@ export function List({ title, index, items, className, ...props }: ListProps) {
 						<SoundLink
 							href={item.href}
 							target={item.href.startsWith("/archive/") ? "_self" : "_blank"}
-							className="group flex items-center gap-1 leading-5"
+							className="group focus-visible:bg-accent -mx-2 flex items-center gap-1 rounded px-2 py-1 leading-5 outline-0"
 						>
-							<span className="group-hover:underline">{item.name}</span>
+							<span className="group-hover:underline group-focus-visible:underline">{item.name}</span>
 							{item.year && <span className="text-muted-foreground">'{item.year}</span>}
 							{item.service && <span className="ml-auto">{item.service}</span>}
 						</SoundLink>

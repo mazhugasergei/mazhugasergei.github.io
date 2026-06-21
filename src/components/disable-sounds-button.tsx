@@ -6,7 +6,7 @@ import { ComponentProps } from "react"
 import { Button } from "./ui/button"
 import { SoundButton } from "./ui/sounds"
 
-export function DisableSoundsButton(props: ComponentProps<typeof Button>) {
+export function DisableSoundsButton({ onClick, ...props }: ComponentProps<typeof Button>) {
 	const { soundsEnabled, toggleSounds, playSound } = useSounds()
 
 	return (
@@ -14,11 +14,11 @@ export function DisableSoundsButton(props: ComponentProps<typeof Button>) {
 			aria-label={soundsEnabled ? "Mute sounds" : "Unmute sounds"}
 			variant="outline"
 			size="icon"
-			clickSound={"sound-off"}
+			clickSound={soundsEnabled ? "sound-off" : "sound-on"}
 			onMouseEnter={() => soundsEnabled && playSound("hover")}
-			onClick={() => {
-				!soundsEnabled && playSound("sound-on")
+			onClick={(e) => {
 				toggleSounds()
+				onClick?.(e)
 			}}
 			{...props}
 		>

@@ -10,7 +10,9 @@ interface SoundButtonProps extends ComponentProps<typeof Button> {
 }
 
 export function SoundButton({
-	onMouseEnter,
+	onPointerEnter,
+	onPointerDown,
+	onKeyDown,
 	onClick,
 	disabled,
 	children,
@@ -20,6 +22,8 @@ export function SoundButton({
 }: SoundButtonProps) {
 	const { soundsEnabled, playSound } = useSounds()
 
+	const shouldPlay = (key: SoundKey) => soundsEnabled || key === "sound-on" || key === "sound-off"
+
 	return (
 		<span className={cn("relative isolate", className)}>
 			<div
@@ -27,17 +31,17 @@ export function SoundButton({
 					"absolute inset-0 z-0 rounded-[inherit]",
 					disabled ? "pointer-events-auto" : "pointer-events-none"
 				)}
-				onClick={() => {
-					if (soundsEnabled && disabled) playSound("disabled")
+				onPointerDown={() => {
+					if (disabled && soundsEnabled) playSound("disabled")
 				}}
 			/>
 			<Button
-				onMouseEnter={(e) => {
+				onPointerEnter={(e) => {
 					soundsEnabled && playSound("hover")
-					onMouseEnter?.(e)
+					onPointerEnter?.(e)
 				}}
 				onClick={(e) => {
-					soundsEnabled && playSound(clickSound)
+					if (shouldPlay(clickSound)) playSound(clickSound)
 					onClick?.(e)
 				}}
 				disabled={disabled}
@@ -50,14 +54,14 @@ export function SoundButton({
 	)
 }
 
-export function SoundLink({ children, onMouseEnter, onClick, ...props }: ComponentProps<typeof Link>) {
+export function SoundLink({ children, onPointerEnter, onClick, ...props }: ComponentProps<typeof Link>) {
 	const { soundsEnabled, playSound } = useSounds()
 
 	return (
 		<Link
-			onMouseEnter={(e) => {
+			onPointerEnter={(e) => {
 				soundsEnabled && playSound("hover")
-				onMouseEnter?.(e)
+				onPointerEnter?.(e)
 			}}
 			onClick={(e) => {
 				soundsEnabled && playSound("click")

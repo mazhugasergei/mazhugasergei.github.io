@@ -2,7 +2,7 @@ import { CustomAnimatedText } from "@/components/custom-animated-text"
 import { DisableSoundsButton } from "@/components/disable-sounds-button"
 import { Paragraph } from "@/components/paragraph"
 import { buttonVariants } from "@/components/ui/button"
-import { SoundLink } from "@/components/ui/sounds"
+import { SoundButton, SoundLink } from "@/components/ui/sounds"
 import { SHOW_UI_OUTLINE } from "@/lib/constants/config"
 import { LOCATION } from "@/lib/constants/data"
 import { cn } from "@/utils/classname"
@@ -26,9 +26,9 @@ export function Header({ className, ...props }: React.ComponentProps<"header">) 
 				</div>
 
 				<div className="flex gap-3">
-					{/* <SoundButton variant="outline" size="icon" disabled>
+					<SoundButton variant="outline" size="icon" disabled>
 						oh
-					</SoundButton> */}
+					</SoundButton>
 					<DisableSoundsButton className="text-muted-foreground rounded-full!" />
 					<SoundLink
 						href="/CV - Sergei Mazhuga.pdf"

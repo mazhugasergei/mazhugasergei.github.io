@@ -4,6 +4,7 @@ import { SoundLink } from "@/components/ui/sounds"
 import { cn } from "@/utils/classname"
 import { ChevronLeftIcon } from "lucide-react"
 import { ComponentProps, useEffect, useState } from "react"
+import { buttonVariants } from "../ui/button"
 
 interface Props extends ComponentProps<"header"> {
 	title: string
@@ -35,7 +36,7 @@ export function Header({ title, ...props }: Props) {
 			)}
 		>
 			<div className="mx-auto flex items-center gap-6 px-4 md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
-				<SoundLink href={"/"} className="flex items-center gap-1">
+				<SoundLink href={"/"} className={buttonVariants({ variant: "ghost", size: "icon-sm" })}>
 					<ChevronLeftIcon size={18} />
 				</SoundLink>
 

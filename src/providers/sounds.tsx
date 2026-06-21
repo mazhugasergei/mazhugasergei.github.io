@@ -18,18 +18,37 @@ export function SoundsProvider({ children }: { children: React.ReactNode }) {
 	const [soundsEnabled, setSoundsEnabled] = useState(true)
 
 	useEffect(() => {
-		setSoundsEnabled(localStorage.getItem("sounds-enabled") !== "false")
+		try {
+			setSoundsEnabled(localStorage.getItem("sounds-enabled") !== "false")
+		} catch (e) {
+			setSoundsEnabled(true)
+		}
 	}, [])
 
 	const toggle = () => {
 		setSoundsEnabled((prev) => {
 			const next = !prev
-			localStorage.setItem("sounds-enabled", String(next))
+			try {
+				localStorage.setItem("sounds-enabled", String(next))
+			} catch (e) {
+				// ignore
+			}
 			return next
 		})
 	}
 
+	// simple per-key rate limiting to avoid massive overlapping clones
+	const lastPlayedRef = useRef<Partial<Record<SoundKey, number>>>({})
+
 	const play = (key: SoundKey) => {
+		// allow on/off feedback sounds even when sounds are currently disabled
+		if (!soundsEnabled && key !== "sound-on" && key !== "sound-off") return
+
+		const now = Date.now()
+		const last = lastPlayedRef.current[key] ?? 0
+		if (now - last < 80) return
+		lastPlayedRef.current[key] = now
+
 		if (audioRefs.current[key] === undefined) {
 			const paths = SOUNDS[key]
 			const tryNext = (index: number) => {
@@ -38,6 +57,7 @@ export function SoundsProvider({ children }: { children: React.ReactNode }) {
 					return
 				}
 				const audio = new Audio(paths[index])
+				audio.preload = "auto"
 				audio.onerror = () => {
 					audioRefs.current[key] = undefined // reset so next error can try next path
 					tryNext(index + 1)
@@ -51,6 +71,7 @@ export function SoundsProvider({ children }: { children: React.ReactNode }) {
 		if (!audio || audio === SOUND_UNAVAILABLE) return
 
 		const clone = audio.cloneNode() as HTMLAudioElement
+		clone.preload = "auto"
 		clone.play().catch(() => {})
 	}
 
