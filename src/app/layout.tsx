@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className="min-h-100dvh relative flex flex-col select-none">
+			<body className="min-h-100dvh text-foreground bg-background relative flex flex-col font-mono select-none">
 				<ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
 					<UISoundsProvider>{children}</UISoundsProvider>
 				</ThemeProvider>

@@ -17,7 +17,7 @@ export default function Post(props: PostProps) {
 					<p className="text-muted-foreground">{props.subtitle}</p>
 				</div>
 
-				<DisableSoundsButton className="text-muted-foreground rounded-full! bg-transparent!" />
+				<DisableSoundsButton />
 			</header>
 
 			<div className={cn(mainSansFont.className, "space-y-10 text-base")}>{props.children}</div>

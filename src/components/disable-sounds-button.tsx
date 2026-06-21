@@ -1,12 +1,13 @@
 "use client"
 
+import { Button } from "@/components/ui/button"
+import { SoundButton } from "@/components/ui/sounds"
 import { useSounds } from "@/hooks/use-sounds"
+import { cn } from "@/utils/classname"
 import { Volume2Icon, VolumeOffIcon } from "lucide-react"
 import { ComponentProps } from "react"
-import { Button } from "./ui/button"
-import { SoundButton } from "./ui/sounds"
 
-export function DisableSoundsButton({ onClick, ...props }: ComponentProps<typeof Button>) {
+export function DisableSoundsButton({ onClick, className, ...props }: ComponentProps<typeof Button>) {
 	const { soundsEnabled, toggleSounds, playSound } = useSounds()
 
 	return (
@@ -20,6 +21,7 @@ export function DisableSoundsButton({ onClick, ...props }: ComponentProps<typeof
 				toggleSounds()
 				onClick?.(e)
 			}}
+			className={cn("text-muted-foreground rounded-full! bg-transparent!", className)}
 			{...props}
 		>
 			{soundsEnabled ? <Volume2Icon className="size-3.5" /> : <VolumeOffIcon className="size-3.5" />}

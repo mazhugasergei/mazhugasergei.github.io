@@ -41,7 +41,7 @@
 }
 
 .dark {
-	--background: oklch(0.2 0 0);
+	--background: oklch(0.173 0 0);
 	--foreground: oklch(0.985 0 0);
 	--card: oklch(0.205 0 0);
 	--card-foreground: oklch(0.985 0 0);
@@ -115,11 +115,6 @@
 @layer base {
 	* {
 		@apply border-border outline-ring/50 selection:bg-primary selection:text-primary-foreground;
-	}
-	body {
-		@apply bg-background text-foreground;
-		font-family: monospace;
-		font-size: 0.875rem;
 	}
 }
 

@@ -29,7 +29,7 @@ export function Header({ className, ...props }: React.ComponentProps<"header">) 
 					{/* <SoundButton variant="outline" size="icon" disabled>
 						oh
 					</SoundButton> */}
-					<DisableSoundsButton className="text-muted-foreground rounded-full!" />
+					<DisableSoundsButton />
 					<SoundLink
 						href="/CV - Sergei Mazhuga.pdf"
 						download

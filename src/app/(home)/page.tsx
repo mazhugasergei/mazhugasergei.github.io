@@ -36,7 +36,7 @@ export default function Page() {
 				{SHOW_UI_OUTLINE && <div className="bg-border animate-slide-in-x h-0.25 lg:hidden" />}
 
 				{/* right */}
-				<div className="relative grid pr-6 max-lg:hidden max-lg:pl-6">
+				<div className="h-100dvh relative top-0 grid pr-6 max-lg:hidden max-lg:pl-6 lg:sticky">
 					{/* lg: left border */}
 					{SHOW_UI_OUTLINE && (
 						<div className="animate-slide-in-x bg-border absolute top-0 bottom-0 left-0 z-50 w-0.25" />

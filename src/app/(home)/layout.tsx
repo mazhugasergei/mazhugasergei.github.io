@@ -1,5 +1,4 @@
 import noise from "@/assets/images/noise.png"
-import "@/assets/styles/globals.css"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
@@ -23,7 +22,7 @@ const NoiseOverlay = () => (
 
 const BG = () => (
 	<div className="absolute isolate -z-10 h-full w-full">
-		<div className="absolute inset-0 bg-[#101010]" />
+		<div className="absolute inset-0" />
 		<div className="absolute inset-0 backdrop-blur" />
 	</div>
 )
