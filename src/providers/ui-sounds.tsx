@@ -9,11 +9,11 @@ interface SoundsContext {
 	play: (key: SoundKey) => void
 }
 
-export const SoundsContext = createContext<SoundsContext | null>(null)
+export const UISoundsContext = createContext<SoundsContext | null>(null)
 
 const SOUND_UNAVAILABLE = Symbol("unavailable")
 
-export function SoundsProvider({ children }: { children: React.ReactNode }) {
+export function UISoundsProvider({ children }: { children: React.ReactNode }) {
 	const audioRefs = useRef<Partial<Record<SoundKey, HTMLAudioElement | typeof SOUND_UNAVAILABLE>>>({})
 	const [soundsEnabled, setSoundsEnabled] = useState(true)
 
@@ -75,5 +75,5 @@ export function SoundsProvider({ children }: { children: React.ReactNode }) {
 		clone.play().catch(() => {})
 	}
 
-	return <SoundsContext.Provider value={{ soundsEnabled, toggle, play }}>{children}</SoundsContext.Provider>
+	return <UISoundsContext.Provider value={{ soundsEnabled, toggle, play }}>{children}</UISoundsContext.Provider>
 }

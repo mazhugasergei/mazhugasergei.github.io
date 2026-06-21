@@ -1,22 +1,28 @@
 "use client"
 
-import { SoundsContext } from "@/providers/sounds"
+import { UISoundsContext } from "@/providers/ui-sounds"
 import { useContext } from "react"
 
 export type SoundKey = "hover" | "click" | "disabled" | "sound-on" | "sound-off"
 
-const SOUNDS_PACK = "electro"
+const SOUNDS_PACK = "/assets/sfx/main"
 
 export const SOUNDS: Record<SoundKey, string[]> = {
-	hover: ["/sounds/" + SOUNDS_PACK + "/hover.webm"],
-	click: ["/sounds/" + SOUNDS_PACK + "/click.webm"],
-	disabled: ["/sounds/" + SOUNDS_PACK + "/disabled.webm"],
-	"sound-on": ["/sounds/" + SOUNDS_PACK + "/sound-on.webm", "/sounds/" + SOUNDS_PACK + "/click.webm"],
-	"sound-off": ["/sounds/" + SOUNDS_PACK + "/sound-off.webm", "/sounds/" + SOUNDS_PACK + "/click.webm"],
+	hover: [SOUNDS_PACK + "/hover.webm"],
+	click: [SOUNDS_PACK + "/click.webm"],
+	disabled: [SOUNDS_PACK + "/disabled.webm"],
+	"sound-on": [
+		// SOUNDS_PACK + "/sound-on.webm",
+		SOUNDS_PACK + "/click.webm",
+	],
+	"sound-off": [
+		// SOUNDS_PACK + "/sound-off.webm",
+		SOUNDS_PACK + "/click.webm",
+	],
 }
 
 export function useSounds() {
-	const ctx = useContext(SoundsContext)
+	const ctx = useContext(UISoundsContext)
 	if (!ctx) throw new Error("useSounds must be used within SoundsProvider")
 	return {
 		soundsEnabled: ctx.soundsEnabled,
