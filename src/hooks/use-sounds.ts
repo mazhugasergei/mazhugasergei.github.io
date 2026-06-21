@@ -17,7 +17,7 @@ export const SOUNDS: Record<SoundKey, string[]> = {
 	],
 	"sound-off": [
 		// SOUNDS_PACK + "/sound-off.webm",
-		SOUNDS_PACK + "/click.webm",
+		// SOUNDS_PACK + "/click.webm",
 	],
 }
 
