@@ -6,9 +6,9 @@ import { ComponentProps, useCallback, useEffect, useRef, useState } from "react"
 import { ListIcon, NextIcon, PauseIcon, PlayIcon, PrevIcon } from "./icons"
 
 export const TRACKS = [
-	"assets/music/Elysium_Sound_-_Cosmic_Dreamer.webm",
-	"assets/music/Greg_Kirkelie_-_1980s_Synthwave.webm",
-	"assets/music/Elysium_Sound_-_Stellar_Sunset_Middle.webm",
+	"/components/assets/music/Elysium_Sound_-_Cosmic_Dreamer.webm",
+	"/components/assets/music/Greg_Kirkelie_-_1980s_Synthwave.webm",
+	"/components/assets/music/Elysium_Sound_-_Stellar_Sunset_Middle.webm",
 ]
 
 const formatTime = (t: number) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, "0")}`
