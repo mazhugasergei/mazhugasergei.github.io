@@ -2,7 +2,7 @@
 	"scripts": {
 		"dev": "next dev --turbopack",
 		"build": "next build",
-		"start": "next start",
+		"start": "npx serve@latest out",
 		"format": "prettier --write ."
 	},
 	"dependencies": {
