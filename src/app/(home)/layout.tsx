@@ -1,10 +1,10 @@
 import noise from "@/assets/images/noise.png"
+import { ComponentProps } from "react"
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function HomeLayout({ children }: ComponentProps<"div">) {
 	return (
 		<div className="min-h-100dvh relative flex flex-col select-none">
 			<NoiseOverlay />
-			<BG />
 			<div className="min-h-100dvh grid text-xs">{children}</div>
 		</div>
 	)
@@ -18,11 +18,4 @@ const NoiseOverlay = () => (
 			backgroundSize: "200px 200px",
 		}}
 	/>
-)
-
-const BG = () => (
-	<div className="absolute isolate -z-10 h-full w-full">
-		<div className="absolute inset-0" />
-		<div className="absolute inset-0 backdrop-blur" />
-	</div>
 )
