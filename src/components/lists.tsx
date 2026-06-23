@@ -8,9 +8,24 @@ interface List {
 
 interface ListItem {
 	name: string
-	href: string
+	href?: string
 	year?: number
 	details?: string
+}
+
+export function ListItem({ href, ...props }: Partial<React.ComponentProps<typeof SoundLink>>) {
+	if (!href) {
+		return <span {...props} />
+	}
+
+	return (
+		<SoundLink
+			href={href}
+			target={href.toString().startsWith("/archive/") ? "_self" : "_blank"}
+			rel={href.toString().startsWith("/archive/") ? undefined : "noreferrer"}
+			{...props}
+		/>
+	)
 }
 
 export const lists: List[] = [
@@ -28,7 +43,7 @@ export const lists: List[] = [
 	{
 		title: "Clients",
 		items: [
-			{ name: "Cleopatra Trading Co.", href: "", year: 25, details: "Web Development" },
+			{ name: "Cleopatra Trading Co.", year: 25, details: "Web Development" },
 			{ name: "EverestAvto", href: "https://everestavtovl.ru", year: 25, details: "Web Development" },
 			{ name: "Molotov Group", href: "/archive/molotov-group", year: 24, details: "Frontend Development" },
 			{ name: "Energy Vostok", href: "/archive/energy-vostok", year: 24, details: "Frontend Development" },
@@ -46,6 +61,13 @@ export const lists: List[] = [
 			{ name: "(moon)", href: "/the-moon", year: 25, details: "Web Development" },
 			{ name: "Dot Image Generator", href: "/dot-image-generator", year: 26, details: "Web Development" },
 			{ name: "Nimbus", href: "https://github.com/logscore/Nimbus", year: 25, details: "Frontend Contribution" },
+		],
+	},
+	{
+		title: "Languages",
+		items: [
+			{ name: "English", details: "C1" },
+			{ name: "Russian", details: "Native" },
 		],
 	},
 	{
@@ -82,20 +104,22 @@ export function List({ title, index, items, className, ...props }: ListProps) {
 			</div>
 
 			<ul className="max-lg:space-y-1">
-				{items.map((item) => (
-					<li key={item.name}>
-						<SoundLink
-							href={item.href}
-							target={item.href.startsWith("/archive/") ? "_self" : "_blank"}
-							rel={item.href.startsWith("/archive/") ? undefined : "noreferrer"}
-							className="group focus-visible:bg-accent -mx-2 flex items-center gap-1 rounded px-2 py-1 leading-5 outline-0"
-						>
-							<span className="group-hover:underline group-focus-visible:underline">{item.name}</span>
-							{item.year && <span className="text-muted-foreground">'{item.year}</span>}
-							{item.details && <span className="ml-auto">{item.details}</span>}
-						</SoundLink>
-					</li>
-				))}
+				{items.map((item) => {
+					return (
+						<li key={item.name}>
+							<ListItem
+								href={item.href}
+								className="group focus-visible:bg-accent -mx-2 flex items-center gap-1 rounded px-2 py-1 leading-5 outline-0"
+							>
+								<span className={cn(item.href && "group-hover:underline group-focus-visible:underline")}>
+									{item.name}
+								</span>
+								{item.year && <span className="text-muted-foreground">'{item.year}</span>}
+								{item.details && <span className="ml-auto">{item.details}</span>}
+							</ListItem>
+						</li>
+					)
+				})}
 			</ul>
 		</section>
 	)
