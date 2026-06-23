@@ -10,31 +10,42 @@ interface ListItem {
 	name: string
 	href: string
 	year?: number
-	service?: string
+	details?: string
 }
 
 export const lists: List[] = [
 	{
+		title: "Education",
+		items: [
+			{
+				name: "Far Eastern Federal University",
+				href: "https://dvfu.ru",
+				year: 24,
+				details: "Bachelor of Computer Science",
+			},
+		],
+	},
+	{
 		title: "Clients",
 		items: [
-			{ name: "Cleopatra Trading Co.", href: "https://cleopatrading.com", year: 25, service: "Web Development" },
-			{ name: "EverestAvto", href: "https://everestavtovl.ru", year: 25, service: "Web Development" },
-			{ name: "Molotov Group", href: "/archive/molotov-group", year: 24, service: "Frontend Development" },
-			{ name: "Energy Vostok", href: "/archive/energy-vostok", year: 24, service: "Frontend Development" },
-			{ name: "DVZ-TIM", href: "/archive/dvz-tim", year: 24, service: "Frontend Development" },
-			{ name: "Монтажстрой Подряд", href: "/archive/mspvl", year: 24, service: "Frontend Development" },
-			{ name: "FEFU", href: "/archive/fefu", year: 23, service: "Web Development" },
-			{ name: "STAKEME", href: "https://stakeme.pro", year: 22, service: "Web Development" },
-			{ name: "KANCOO", href: "https://www.kancoo.tech", year: 21, service: "Web Development" },
+			{ name: "Cleopatra Trading Co.", href: "", year: 25, details: "Web Development" },
+			{ name: "EverestAvto", href: "https://everestavtovl.ru", year: 25, details: "Web Development" },
+			{ name: "Molotov Group", href: "/archive/molotov-group", year: 24, details: "Frontend Development" },
+			{ name: "Energy Vostok", href: "/archive/energy-vostok", year: 24, details: "Frontend Development" },
+			{ name: "DVZ-TIM", href: "/archive/dvz-tim", year: 24, details: "Frontend Development" },
+			{ name: "Монтажстрой Подряд", href: "/archive/mspvl", year: 24, details: "Frontend Development" },
+			{ name: "FEFU", href: "/archive/fefu", year: 23, details: "Web Development" },
+			{ name: "STAKEME", href: "https://stakeme.pro", year: 22, details: "Web Development" },
+			{ name: "KANCOO", href: "https://www.kancoo.tech", year: 21, details: "Web Development" },
 		],
 	},
 	{
 		title: "Projects",
 		items: [
-			{ name: "Components", href: "/components", year: 26, service: "Web Development" },
-			{ name: "(moon)", href: "/the-moon", year: 25, service: "Web Development" },
-			{ name: "Dot Image Generator", href: "/dot-image-generator", year: 26, service: "Web Development" },
-			{ name: "Nimbus", href: "https://github.com/logscore/Nimbus", year: 25, service: "Frontend Contribution" },
+			{ name: "Components", href: "/components", year: 26, details: "Web Development" },
+			{ name: "(moon)", href: "/the-moon", year: 25, details: "Web Development" },
+			{ name: "Dot Image Generator", href: "/dot-image-generator", year: 26, details: "Web Development" },
+			{ name: "Nimbus", href: "https://github.com/logscore/Nimbus", year: 25, details: "Frontend Contribution" },
 		],
 	},
 	{
@@ -76,11 +87,12 @@ export function List({ title, index, items, className, ...props }: ListProps) {
 						<SoundLink
 							href={item.href}
 							target={item.href.startsWith("/archive/") ? "_self" : "_blank"}
+							rel={item.href.startsWith("/archive/") ? undefined : "noreferrer"}
 							className="group focus-visible:bg-accent -mx-2 flex items-center gap-1 rounded px-2 py-1 leading-5 outline-0"
 						>
 							<span className="group-hover:underline group-focus-visible:underline">{item.name}</span>
 							{item.year && <span className="text-muted-foreground">'{item.year}</span>}
-							{item.service && <span className="ml-auto">{item.service}</span>}
+							{item.details && <span className="ml-auto">{item.details}</span>}
 						</SoundLink>
 					</li>
 				))}
