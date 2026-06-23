@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	const archivePages =
 		lists
 			.find((list) => list.title === "Clients")
-			?.items.filter((item) => item.href.startsWith("/archive"))
+			?.items.filter((item) => item.href && item.href.startsWith("/archive"))
 			.map((item) => ({
 				url: `${BASE_URL}${item.href}`,
 				lastModified: new Date(),
@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	const projectPages =
 		lists
 			.find((list) => list.title === "Projects")
-			?.items.filter((item) => item.href.startsWith("/"))
+			?.items.filter((item) => item.href && item.href.startsWith("/"))
 			.map((item) => ({
 				url: `${BASE_URL}${item.href}`,
 				lastModified: new Date(),
