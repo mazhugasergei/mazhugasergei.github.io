@@ -66,10 +66,10 @@ export const lists: List[] = [
 	{
 		title: "Languages",
 		items: [
-			{ name: "English", details: "C1" },
+			{ name: "English", details: "C1 (Advanced)" },
 			{ name: "Russian", details: "Native" },
-			{ name: "German", details: "A2" },
-			{ name: "Japanese", details: "N4" },
+			{ name: "German", details: "A2 (Elementary)" },
+			{ name: "Japanese", details: "N4 (Elementary)" },
 		],
 	},
 	{
