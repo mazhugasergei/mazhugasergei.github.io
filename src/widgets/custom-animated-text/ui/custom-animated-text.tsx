@@ -1,12 +1,9 @@
 "use client"
 
-import React from "react"
+import { useEffect, useState } from "react"
+import { CustomAnimatedTextProps } from ".."
 
-interface Props extends React.ComponentProps<"span"> {
-	children: string
-}
-
-export const CustomAnimatedText = ({ children, className, ...props }: Props) => {
+export const CustomAnimatedText = ({ children, className, ...props }: CustomAnimatedTextProps) => {
 	const symbols = "!@#$%^&*()_+-=[]{}|;:',.<>?/"
 
 	// Function to generate a deterministic placeholder based on the text
@@ -31,9 +28,9 @@ export const CustomAnimatedText = ({ children, className, ...props }: Props) => 
 	// Generate a pseudo-random but deterministic placeholder based on the text
 	const deterministicPlaceholder = generateDeterministicPlaceholder(children, symbols)
 
-	const [displayedText, setDisplayedText] = React.useState<string>(deterministicPlaceholder)
+	const [displayedText, setDisplayedText] = useState<string>(deterministicPlaceholder)
 
-	React.useEffect(() => {
+	useEffect(() => {
 		const finalTextArray = children.split("")
 		const currentTextArray = displayedText.split("")
 		const revealedIndices = new Set<number>()

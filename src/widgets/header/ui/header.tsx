@@ -1,9 +1,9 @@
-import { CustomAnimatedText } from "@/components/custom-animated-text"
 import { LOCATION, SHOW_UI_OUTLINE } from "@/shared/config/constants"
 import { buttonVariants } from "@/shared/ui/button"
 import { Paragraph } from "@/shared/ui/paragraph"
 import { SoundLink } from "@/shared/ui/sound-link"
 import { cn } from "@/shared/utils"
+import { CustomAnimatedText } from "@/widgets/custom-animated-text"
 import { DisableSoundsButton } from "@/widgets/disable-sounds-button"
 
 export function Header({ className, ...props }: React.ComponentProps<"header">) {

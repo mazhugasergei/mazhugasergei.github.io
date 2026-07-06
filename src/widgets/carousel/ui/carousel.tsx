@@ -1,46 +1,15 @@
 "use client"
 
-import { AnimatedButtonExample } from "@/components/examples/animated-button"
 import { SoundLink } from "@/shared/ui/sound-link"
 import { cn } from "@/shared/utils"
-import { AudioPlayer } from "@/widgets/audio-player"
-import { AudioRecorder } from "@/widgets/audio-recorder"
 import { ArrowUpRightIcon } from "lucide-react"
-import { ComponentProps, ReactNode, useCallback, useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
+import type { CarouselProps } from "../model"
+import { carouselSlides } from "../model"
 
 const SLIDE_DURATION = 10000
 
-interface Slide {
-	label: string
-	title: string
-	content: ReactNode
-	href?: string
-}
-
-const slides: Slide[] = [
-	{
-		label: "Latest Release",
-		title: "Audio Player",
-		content: <AudioPlayer />,
-		href: "/components/audio-player",
-	},
-	{
-		label: "New Component",
-		title: "Audio Recorder",
-		content: <AudioRecorder />,
-		href: "/components/audio-recorder",
-	},
-	{
-		label: "Open Source",
-		title: "Personal UI Library",
-		content: <AnimatedButtonExample />,
-		href: "/components",
-	},
-]
-
-interface Props extends ComponentProps<"div"> {}
-
-export function Carousel({ className, ...props }: Props) {
+export function Carousel({ className, ...props }: CarouselProps) {
 	const [current, setCurrent] = useState(0)
 	const [progress, setProgress] = useState(0)
 	const [paused, setPaused] = useState(false)
@@ -68,7 +37,7 @@ export function Carousel({ className, ...props }: Props) {
 	const goNext = useCallback(() => {
 		resettingRef.current = true
 		setDirection("forward")
-		setCurrent((c) => (c + 1) % slides.length)
+		setCurrent((c) => (c + 1) % carouselSlides.length)
 		resetTimer()
 	}, [])
 
@@ -122,7 +91,7 @@ export function Carousel({ className, ...props }: Props) {
 		setPaused(false)
 	}
 
-	const slide = slides[current]
+	const slide = carouselSlides[current]
 	const isResetting = resettingRef.current
 	const contentAnimClass = direction === "forward" ? "-animate-slide-in-x-750" : "animate-slide-in-x-750"
 	const titleAnimClass = direction === "forward" ? "-animate-slide-in-x-500" : "animate-slide-in-x-500"
@@ -138,7 +107,7 @@ export function Carousel({ className, ...props }: Props) {
 			{...props}
 		>
 			{/* slides — all mounted, only active one visible */}
-			{slides.map((s, index) => (
+			{carouselSlides.map((s, index) => (
 				<div
 					key={index}
 					aria-hidden={index !== current}
@@ -186,7 +155,7 @@ export function Carousel({ className, ...props }: Props) {
 				</div>
 
 				<div className="flex gap-1.5">
-					{slides.map((s, i) => {
+					{carouselSlides.map((s, i) => {
 						const isCurrent = i === current
 						const isPast = i < current
 						const fillPct = isCurrent ? progress : isPast ? 1 : 0

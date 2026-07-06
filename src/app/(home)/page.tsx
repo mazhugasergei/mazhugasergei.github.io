@@ -1,6 +1,6 @@
-import { Carousel } from "@/components/carousel"
 import { SHOW_UI_OUTLINE } from "@/shared/config/constants"
 import { cn } from "@/shared/utils"
+import { Carousel } from "@/widgets/carousel"
 import { Header } from "@/widgets/header"
 import { Lists } from "@/widgets/lists"
 

@@ -1,10 +1,10 @@
 "use client"
 
 import { headingFont } from "@/app/styles/fonts"
-import { CustomAnimatedText } from "@/components/custom-animated-text"
 import { buttonVariants } from "@/shared/ui/button"
 import { SoundLink } from "@/shared/ui/sound-link"
 import { cn } from "@/shared/utils"
+import { CustomAnimatedText } from "@/widgets/custom-animated-text"
 import { useEffect, useState } from "react"
 
 const messages = [
