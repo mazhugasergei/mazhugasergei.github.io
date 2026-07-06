@@ -1,4 +1,4 @@
-import { BASE_URL } from "@/lib/constants/config"
+import { BASE_URL } from "@/shared/config/constants"
 import { MetadataRoute } from "next"
 
 export const dynamic = "force-static"

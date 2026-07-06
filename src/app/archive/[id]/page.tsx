@@ -1,4 +1,4 @@
-import { items } from "@/lib/archive"
+import { items } from "@/shared/lib/archive"
 import { notFound } from "next/navigation"
 
 export default async function Page(props: PageProps<"/archive/[id]">) {

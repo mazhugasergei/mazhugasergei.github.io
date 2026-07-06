@@ -1,10 +1,10 @@
 "use client"
 
 import { AnimatedButtonExample } from "@/components/examples/animated-button"
-import { AudioPlayer } from "@/components/ui/audio-player"
-import { AudioRecorder } from "@/components/ui/audio-recorder"
-import { SoundLink } from "@/components/ui/sounds"
-import { cn } from "@/utils/classname"
+import { SoundLink } from "@/shared/ui/sound-link"
+import { cn } from "@/shared/utils"
+import { AudioPlayer } from "@/widgets/audio-player"
+import { AudioRecorder } from "@/widgets/audio-recorder"
 import { ArrowUpRightIcon } from "lucide-react"
 import { ComponentProps, ReactNode, useCallback, useEffect, useRef, useState } from "react"
 

@@ -1,4 +1,4 @@
-import noise from "@/assets/images/noise.png"
+import noise from "@/shared/assets/images/noise.png"
 import { ComponentProps } from "react"
 
 export default function HomeLayout({ children }: ComponentProps<"div">) {

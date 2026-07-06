@@ -1,6 +1,6 @@
-import { DisableSoundsButton } from "@/components/disable-sounds-button"
-import { mainSansFont } from "@/fonts"
-import { cn } from "@/utils/classname"
+import { mainSansFont } from "@/app/styles/fonts"
+import { cn } from "@/shared/utils"
+import { DisableSoundsButton } from "@/widgets/disable-sounds-button"
 import { ComponentProps } from "react"
 
 interface PostProps extends ComponentProps<"article"> {

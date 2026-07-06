@@ -1,4 +1,4 @@
-import { preventOrphan } from "@/utils/text"
+import { preventOrphan } from "@/shared/utils/text"
 import { ComponentProps } from "react"
 
 interface Props extends ComponentProps<"p"> {

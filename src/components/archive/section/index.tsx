@@ -1,4 +1,4 @@
-import { cn } from "@/utils/classname"
+import { cn } from "@/shared/utils"
 import { ComponentProps } from "react"
 import { Header } from "./header"
 

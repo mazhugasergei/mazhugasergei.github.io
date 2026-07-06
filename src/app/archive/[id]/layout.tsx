@@ -1,6 +1,6 @@
 import { Footer } from "@/components/archive/footer"
 import { Header } from "@/components/archive/header"
-import { items } from "@/lib/archive"
+import { items } from "@/shared/lib/archive"
 import { notFound } from "next/navigation"
 
 export function generateStaticParams() {

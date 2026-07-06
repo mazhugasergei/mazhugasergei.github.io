@@ -1,8 +1,8 @@
 import { Carousel } from "@/components/carousel"
-import { Header } from "@/components/header"
-import { Lists } from "@/components/lists"
-import { SHOW_UI_OUTLINE } from "@/lib/constants/config"
-import { cn } from "@/utils/classname"
+import { SHOW_UI_OUTLINE } from "@/shared/config/constants"
+import { cn } from "@/shared/utils"
+import { Header } from "@/widgets/header"
+import { Lists } from "@/widgets/lists"
 
 export default function Page() {
 	return (

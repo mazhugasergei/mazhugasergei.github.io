@@ -1,7 +1,7 @@
 "use client"
 
-import { BASE_URL } from "@/lib/constants/config"
-import { cn } from "@/utils/classname"
+import { BASE_URL } from "@/shared/config/constants"
+import { cn } from "@/shared/utils"
 import { ClipboardCheckIcon, EggIcon, HashIcon } from "lucide-react"
 import { usePathname } from "next/navigation"
 import { ComponentProps, useEffect, useRef, useState } from "react"

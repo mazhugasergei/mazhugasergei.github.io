@@ -1,9 +1,8 @@
-import "@/assets/styles/globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { BASE_URL } from "@/lib/constants/config"
-import { DESCRIPTION, DESCRIPTION_SHORT, LOCATION } from "@/lib/constants/data"
-import { UISoundsProvider } from "@/providers/ui-sounds"
+import { ThemeProvider } from "@/app/providers/theme-provider"
+import { UISoundsProvider } from "@/app/providers/ui-sounds-provider"
+import { BASE_URL, DESCRIPTION, DESCRIPTION_SHORT, LOCATION } from "@/shared/config/constants"
 import type { Metadata } from "next"
+import "./styles/globals.css"
 
 export const metadata: Metadata = {
 	metadataBase: new URL(BASE_URL),

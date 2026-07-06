@@ -1,6 +1,6 @@
 "use client"
 
-import { AnimatedButton } from "@/components/ui/animated-button"
+import { AnimatedButton } from "@/shared/ui/animated-button"
 import React from "react"
 
 const LABELS = ["Click me", "I'm clicked!", "Clicked again!"]
