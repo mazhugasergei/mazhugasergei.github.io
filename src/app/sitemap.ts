@@ -1,5 +1,5 @@
-import { lists } from "@/components/lists"
 import { BASE_URL } from "@/shared/config/constants"
+import { lists } from "@/widgets/lists"
 import { MetadataRoute } from "next"
 
 export const dynamic = "force-static"
