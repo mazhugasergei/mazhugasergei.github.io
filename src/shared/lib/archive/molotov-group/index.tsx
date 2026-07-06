@@ -1,7 +1,7 @@
-import Image from "@/components/archive/image"
-import { Paragraph } from "@/components/archive/paragraph"
-import Post from "@/components/archive/post"
-import Section from "@/components/archive/section"
+import Image from "@/shared/ui/archive/ui/image/ui/image"
+import { Paragraph } from "@/shared/ui/archive/ui/paragraph/ui/paragraph"
+import Post from "@/shared/ui/archive/ui/post/ui/post"
+import Section from "@/widgets/archive/ui/section/ui/section"
 import molotov_group from "./images/molotov-group.jpg"
 
 export const MolotovGroup = {

@@ -4,14 +4,10 @@ import { BASE_URL } from "@/shared/config/constants"
 import { cn } from "@/shared/utils"
 import { ClipboardCheckIcon, EggIcon, HashIcon } from "lucide-react"
 import { usePathname } from "next/navigation"
-import { ComponentProps, useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import { SectionHeaderProps } from ".."
 
-interface Props extends ComponentProps<"header"> {
-	id: string
-	title: string
-}
-
-export function Header(props: Props) {
+export function SectionHeader(props: SectionHeaderProps) {
 	const pathname = usePathname()
 	const headerRef = useRef<HTMLDivElement>(null)
 	const [clicked, setClicked] = useState(false)

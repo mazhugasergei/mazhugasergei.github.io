@@ -1,12 +1,7 @@
 import { mainSansFont } from "@/app/styles/fonts"
 import { cn } from "@/shared/utils"
 import { DisableSoundsButton } from "@/widgets/disable-sounds-button"
-import { ComponentProps } from "react"
-
-interface PostProps extends ComponentProps<"article"> {
-	title: string
-	subtitle: string
-}
+import { PostProps } from ".."
 
 export default function Post(props: PostProps) {
 	return (

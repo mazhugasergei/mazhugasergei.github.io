@@ -1,16 +1,13 @@
 "use client"
 
+import { buttonVariants } from "@/shared/ui/button"
 import { SoundLink } from "@/shared/ui/sound-link"
 import { cn } from "@/shared/utils"
 import { ChevronLeftIcon } from "lucide-react"
-import { ComponentProps, useEffect, useState } from "react"
-import { buttonVariants } from "../ui/button"
+import { useEffect, useState } from "react"
+import { HeaderProps } from ".."
 
-interface Props extends ComponentProps<"header"> {
-	title: string
-}
-
-export function Header({ title, ...props }: Props) {
+export function Header({ title, ...props }: HeaderProps) {
 	const [scrollY, setScrollY] = useState(0)
 
 	useEffect(() => {
