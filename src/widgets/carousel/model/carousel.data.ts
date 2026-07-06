@@ -1,4 +1,4 @@
-import { AnimatedButtonExample } from "@/components/examples/animated-button"
+import { AnimatedButtonExample } from "@/shared/ui/animated-button"
 import { AudioPlayer } from "@/widgets/audio-player"
 import { AudioRecorder } from "@/widgets/audio-recorder"
 import { createElement } from "react"
