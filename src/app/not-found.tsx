@@ -1,6 +1,6 @@
 "use client"
 
-import { headingFont } from "@/app/styles/fonts"
+import { headingFont } from "@/app/styles"
 import { buttonVariants } from "@/shared/ui/button"
 import { SoundLink } from "@/shared/ui/sound-link"
 import { cn } from "@/shared/utils"

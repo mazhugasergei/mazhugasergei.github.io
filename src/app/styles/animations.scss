@@ -1,0 +1,56 @@
+$ease: cubic-bezier(0.25, 1, 0.5, 1);
+$slide-dist: 1rem;
+$variants: ("" 1.5s, "-500" 0.5s, "-750" 0.75s);
+
+@keyframes slide-in-x {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes slide-in-y {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fade-in {
+	to {
+		opacity: 1;
+	}
+}
+
+@layer utilities {
+	@each $suffix, $time in $variants {
+		.animate-slide-in-x#{$suffix} {
+			opacity: 0;
+			transform: translateX(-$slide-dist);
+			animation: slide-in-x $time $ease forwards;
+		}
+
+		.-animate-slide-in-x#{$suffix} {
+			opacity: 0;
+			transform: translateX($slide-dist);
+			animation: slide-in-x $time $ease forwards;
+		}
+
+		.animate-slide-in-y#{$suffix} {
+			opacity: 0;
+			transform: translateY(-$slide-dist);
+			animation: slide-in-y $time $ease forwards;
+		}
+
+		.-animate-slide-in-y#{$suffix} {
+			opacity: 0;
+			transform: translateY($slide-dist);
+			animation: slide-in-y $time $ease forwards;
+		}
+	}
+
+	.animate-fade-in {
+		opacity: 0;
+		animation: fade-in 0.75s $ease forwards;
+	}
+}

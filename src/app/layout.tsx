@@ -2,7 +2,7 @@ import { ThemeProvider } from "@/app/providers/theme-provider"
 import { UISoundsProvider } from "@/app/providers/ui-sounds-provider"
 import { BASE_URL, DESCRIPTION, DESCRIPTION_SHORT, LOCATION } from "@/shared/config/constants"
 import type { Metadata } from "next"
-import "./styles/globals.css"
+import "./styles"
 
 export const metadata: Metadata = {
 	metadataBase: new URL(BASE_URL),

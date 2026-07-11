@@ -1,4 +1,4 @@
-import { mainSansFont } from "@/app/styles/fonts"
+import { mainSansFont } from "@/app/styles"
 import { cn } from "@/shared/utils"
 import { DisableSoundsButton } from "@/widgets/disable-sounds-button"
 import { PostProps } from "."
