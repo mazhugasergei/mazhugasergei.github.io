@@ -3,7 +3,7 @@
 import { useSounds } from "@/shared/lib/hooks/use-sounds"
 import { Button } from "@/shared/ui/button"
 import { cn } from "@/shared/utils"
-import { SoundButtonProps, SoundKey } from ".."
+import { SoundButtonProps, SoundKey } from "."
 
 export function SoundButton({
 	onPointerEnter,

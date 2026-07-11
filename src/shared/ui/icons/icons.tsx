@@ -1,4 +1,6 @@
-import { DEFAULT_ICON_SIZE, IconProps, RecordIconProps } from ".."
+import { IconProps, RecordIconProps } from "."
+
+export const DEFAULT_ICON_SIZE = 14
 
 export function PlayIcon({ size = DEFAULT_ICON_SIZE, ...props }: IconProps) {
 	const left = (size * 3) / 14

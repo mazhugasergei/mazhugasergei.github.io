@@ -1,7 +1,7 @@
 import { mainSansFont } from "@/app/styles/fonts"
 import { cn } from "@/shared/utils"
 import { DisableSoundsButton } from "@/widgets/disable-sounds-button"
-import { PostProps } from ".."
+import { PostProps } from "."
 
 export default function Post(props: PostProps) {
 	return (

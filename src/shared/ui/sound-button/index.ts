@@ -1,2 +1,2 @@
-export * from "./model"
-export * from "./ui"
+export * from "./sound-button"
+export * from "./sound-button.types"

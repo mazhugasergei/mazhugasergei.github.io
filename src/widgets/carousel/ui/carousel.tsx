@@ -4,8 +4,7 @@ import { SoundLink } from "@/shared/ui/sound-link"
 import { cn } from "@/shared/utils"
 import { ArrowUpRightIcon } from "lucide-react"
 import { useCallback, useEffect, useRef, useState } from "react"
-import type { CarouselProps } from "../model"
-import { carouselSlides } from "../model"
+import { CarouselProps, carouselSlides } from ".."
 
 const SLIDE_DURATION = 10000
 
