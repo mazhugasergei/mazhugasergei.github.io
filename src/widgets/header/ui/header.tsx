@@ -29,12 +29,8 @@ export function Header({ className, ...props }: React.ComponentProps<"header">) 
 						oh
 					</SoundButton> */}
 					<DisableSoundsButton />
-					<SoundLink
-						href="/CV - Sergei Mazhuga.pdf"
-						download
-						className={buttonVariants({ className: "rounded-full!" })}
-					>
-						View CV
+					<SoundLink href="/archive" className={buttonVariants({ className: "rounded-full!" })}>
+						See Archive
 					</SoundLink>
 				</div>
 			</div>

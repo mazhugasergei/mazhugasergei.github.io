@@ -33,13 +33,24 @@ export function Header({ title, ...props }: HeaderProps) {
 			)}
 		>
 			<div className="mx-auto flex items-center gap-6 px-4 md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
-				<SoundLink href={"/"} className={buttonVariants({ variant: "ghost", size: "icon-sm" })}>
+				<SoundLink
+					href={title === "Archive" ? "/" : "/archive"}
+					className={buttonVariants({ variant: "ghost", size: "icon-sm" })}
+				>
 					<ChevronLeftIcon size={18} />
 				</SoundLink>
 
-				<span className={cn("truncate text-lg font-bold opacity-0 transition", scrollY > 100 && "opacity-100")}>
-					{title}
-				</span>
+				{title && (
+					<span
+						className={cn(
+							"truncate text-lg font-bold transition",
+							title !== "Archive" && "opacity-0",
+							scrollY > 100 && "opacity-100"
+						)}
+					>
+						{title}
+					</span>
+				)}
 			</div>
 		</header>
 	)

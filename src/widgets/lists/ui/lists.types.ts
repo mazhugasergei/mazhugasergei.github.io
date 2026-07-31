@@ -13,7 +13,7 @@ export interface TListItem {
 }
 
 export interface ListProps extends React.ComponentProps<"section"> {
-	index: number
+	index?: number
 	title: string
 	items: (typeof lists)[0]["items"]
 }

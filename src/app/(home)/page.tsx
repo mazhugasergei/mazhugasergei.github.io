@@ -2,7 +2,7 @@ import { SHOW_UI_OUTLINE } from "@/shared/config/constants"
 import { cn } from "@/shared/utils"
 import { Carousel } from "@/widgets/carousel"
 import { Header } from "@/widgets/header"
-import { Lists } from "@/widgets/lists"
+import { List, lists } from "@/widgets/lists"
 
 export default function Page() {
 	return (
@@ -23,7 +23,16 @@ export default function Page() {
 							className={cn("animate-fade-in mx-6 aspect-square sm:aspect-video lg:hidden", SHOW_UI_OUTLINE && "mb-0")}
 						/>
 						{SHOW_UI_OUTLINE && <div className="bg-border animate-slide-in-x h-0.25 lg:hidden" />}
-						<Lists className="pl-6 max-lg:pr-6" />
+						{lists.map((list, index) => (
+							<List
+								key={list.title}
+								title={list.title}
+								index={index}
+								items={list.items}
+								style={{ animationDelay: `${(index + 1) * 100}ms` }}
+								className="animate-slide-in-x pl-6 max-lg:pr-6"
+							/>
+						))}
 					</div>
 
 					{/* lg: right border */}

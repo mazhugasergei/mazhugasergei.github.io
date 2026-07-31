@@ -7,5 +7,5 @@ export default async function Page(props: PageProps<"/archive/[id]">) {
 	const item = items.find((item) => item.id === _params.id)
 	if (!item) return notFound()
 
-	return item.children
+	return <main className="mx-auto px-4 md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">{item.children}</main>
 }
