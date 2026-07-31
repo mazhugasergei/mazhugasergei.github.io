@@ -33,6 +33,7 @@ export const lists: TList[] = [
 			{ name: "(moon)", href: "/the-moon", year: 25, details: "Web Development" },
 			{ name: "Dot Image Generator", href: "/dot-image-generator", year: 26, details: "Web Development" },
 			{ name: "Nimbus", href: "https://github.com/logscore/Nimbus", year: 25, details: "Frontend Contribution" },
+			{ name: "Рецепты от Наташи", href: "/recipes", year: 26, details: "Web Development" },
 		],
 	},
 	{
